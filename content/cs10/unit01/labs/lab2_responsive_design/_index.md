@@ -1,7 +1,7 @@
 ---
 title: "2: Responsive Design"
 weight: 10
-draft: true
+#draft: true
 ---
 
 
@@ -46,38 +46,40 @@ open index.html
 
 ## [0] Mobile Queries
 
-{{< code-action >}} **Let's start by opening the `Inspect` tool so we can view the site on mobile.** As you can see, the content on the site does not get adjusted for the phone. The buttons are no longer visible and some of the text is mis-aligned. 
-> Click the computer/phone icon to switch to mobile mode
+{{< code-action >}} **Let's start by resizing the window.** As you resize the window, the content on the site does not get adjusted for the phone. The buttons are no longer visible and some of the text is mis-aligned. 
 
-{{< figure src="images/courses/cs10/unit01/02_responsive_0.png" width="25%" >}}
+{{< figure src="images/courses/cs10/unit01/02_responsive_10.png" width="25%" >}}
 
-👀 **This is what the site would look like on an iPhone 12 Pro.** 
-> Try changing the dimension settings by clicking on the drop down.
 
-{{< figure src="images/courses/cs10/unit01/02_responsive_1.png" width="50%" >}}
 
-💻 **Let's start by looking at the media query at the bottom of the `styles.css` file.** 
-> Media queries change the CSS properties for specific screen sizes - *learn more [here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)*
+💻 **First, let's look at the media query at the bottom of the `styles.css` file.** 
+> Media queries change the CSS properties for specific screen sizes 
+
+- *learn more [here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)*
 
 ```css
-* FOR MOBILE SCREEN SIZE */
+/* FOR SCREEN SIZE SMALLER THAN 767 PX */
 
-@media only screen and (min-width: 375px) and (max-width: 767px)
-{
+@media (max-width: 767px) {
     .container {
-        display: flex;
+        display: block;
         margin-top: 0px;
     }
 }
 ```
+- by defining css rules inside the media query, you can overwrite specific properties
+- by changing `display: block` to `display: flex`, this forces the items to stack on top of each other
 
 💻 **Let's change our `display` property to `block` instead of `flex`, so the content to stack on top of each other, instead of side by side.** It's looking better!
 
-{{< figure src="images/courses/cs10/unit01/02_responsive_3.png" width="25%" >}}
+{{< figure src="images/courses/cs10/unit01/02_responsive_11.png" width="25%" >}}
 
 
 💻 **Now, it's up to you to edit the exisitng CSS rules and add more specific CSS rules in the media query!** Try to match the screenshots below. 
 > *Don't forget to scroll to the bottom and check the 'back to the top' text*
+- You must:
+    - add additional properties to the `.container` rule
+    - create new rules for html elements in the media query
 
 {{< columns >}}
 {{< figure src="images/courses/cs10/unit01/02_responsive_2.png" width="50%" >}}
@@ -119,6 +121,16 @@ You can link to an internal part of your site by setting an `id` to an `HTML` el
 
 ---
 
+💻 **Try clicking on the `back to top` link.** It should jump you to top of the page, but it currently doesn't work.
+
+
+{{< figure src="images/courses/cs10/unit01/02_responsive_9.png" width="25%" >}}
+
+💻 **Fix the link by refering th reference link to `"#"`** The single hashtag represents the top of the page.
+
+
+---
+
 ### [Gradients]
 
 💻 **Experiment with CSS graidents at [cssgradient.io](https://cssgradient.io/)**
@@ -144,8 +156,26 @@ You can link to an internal part of your site by setting an `id` to an `HTML` el
 
 {{< figure src="images/courses/cs10/unit01/02_responsive_7.png" width="75%" >}}
 
+---
 
+### [Animations]
 
+📖 **For simple animations, we will use the `Animate.css` library: [animate.style](https://animate.style/)**
+
+You can see an example of an animation when you refresh the site, the `👋 Hi I'm a cat` flips in from the top of the screen.
+
+```css
+h1{
+    animation: flipInX;
+    animation-duration: 1s;
+}
+```
+
+💻 **Customize your site by adding more animations!** When adding an animation to the CSs properties, it MUST include the `animation` and `animation-duration` properties.
+- view the animation options by clicking the options at [animate.style](https://animate.style/)
+- experiment with animations when you hover an element
+
+---
 
 ## [2] Deliverables
 
@@ -166,5 +196,5 @@ You can link to an internal part of your site by setting an `id` to an `HTML` el
 
 ## [3] Extension: CSS  
 
-💻 **Experiment with UX/UI design by customizing this site!** This is the last practice lab before your make your own site, so us this as opportunity to test ideas. 
+💻 **Experiment with UX/UI design by customizing this site!** This is one of the last practice labs before your make your own site, so us this as opportunity to test ideas. 
 
