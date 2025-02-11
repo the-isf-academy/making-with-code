@@ -1,7 +1,6 @@
 ---
 title: "2: Responsive Design"
 weight: 10
-#draft: true
 ---
 
 
@@ -191,6 +190,8 @@ h1{
 - git push
 
 {{< /deliverables >}}
+
+
 
 
 
