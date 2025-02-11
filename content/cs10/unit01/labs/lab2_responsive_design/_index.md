@@ -17,7 +17,7 @@ In this lab, you will learn how to differentiate CSS for mobile viewing and cont
 
 {{< code-action "Start by cloning your starter code." >}} Be sure to change `yourgithubusername` to your actual Github username.
 ```shell
-cd ~/desktop/making_with_code/cs10/unit01_webdesign
+cd ~/desktop/making_with_code/unit04_webdesign
 git clone https://github.com/the-isf-academy/lab_responsive_design_yourgithubusername
 ```
 

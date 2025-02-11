@@ -31,7 +31,7 @@ In this lab, you will start learning to write `CSS` code! CSS defines the design
 
 {{< code-action "Start by cloning your starter code." >}} Be sure to change `yourgithubusername` to your actual Github username.
 ```shell
-cd ~/desktop/making_with_code/cs10/unit01_webdesign
+cd ~/desktop/making_with_code/unit04_webdesign
 git clone https://github.com/the-isf-academy/lab_css_yourgithubusername
 ```
 
