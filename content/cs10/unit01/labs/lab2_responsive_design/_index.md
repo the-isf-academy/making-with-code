@@ -60,7 +60,7 @@ open index.html
 /* FOR SCREEN SIZE SMALLER THAN 767 PX */
 
 @media (max-width: 767px) {
-    .container {
+    .flexbox {
         display: block;
         margin-top: 0px;
     }
@@ -77,7 +77,7 @@ open index.html
 💻 **Now, it's up to you to edit the exisitng CSS rules and add more specific CSS rules in the media query!** Try to match the screenshots below. 
 > *Don't forget to scroll to the bottom and check the 'back to the top' text*
 - You must:
-    - add additional properties to the `.container` rule
+    - add additional properties to the `.flexbox` rule
     - create new rules for html elements in the media query
 
 {{< columns >}}
