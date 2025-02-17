@@ -21,23 +21,25 @@ To be successful in this project, you should **find a topic that is both interes
 
 ## [1] Timeline
 
-1️⃣ **Firstly, you will plan your project and choose a research question.**
+1️⃣ **Plan your project and choose a research question.**
 
-2️⃣ **Secondly, you will conduct the data analysis and create data visusalizations.**
+2️⃣ **Conduct the data analysis and create data visualizations.**
 
-3️⃣ **Thirdly, you will create a research poster to communicate your finding.**
+3️⃣ **Create a research poster to communicate your findings.**
 
-4️⃣ **Fourthly, you will present your findings to the class.**
+4️⃣ **Present your findings to the class.**
 
-5️⃣ **Lastly, if interested, you may present your findings at Shuyuan Research Week in May.**  This is not required. 
+5️⃣ **If interested, you may present your findings at Shuyuan Research Week in May.**  This is not required. 
 
 ---
 
-📅 **You will have 4 in-class blocks to complete this project.** 
+📅 **You will have 6 in-class blocks to plan and complete the coding portion of this project.** 
 
-| section | due date |
+| section | code due date |
 |---------|----------|
-| cs10.1  | 22 January   |
+| cs9.1  | 4 March   |
+| cs9.2  | 3 March   |
+| cs9.3  | 27 Feb   |
 
 ---
 
@@ -45,7 +47,7 @@ To be successful in this project, you should **find a topic that is both interes
 
 {{< code-action >}} **You can find your project in your Google Drive:** `Project: Data Science.ipynb`
 
-✏️ **For the poster, you may use Canva or any other service.** It will be A3 size. You will begin the poster after LNY.
+✏️ **For the poster, you may use Canva or any other service.** It will be A3 size. You will begin the poster after you finish the coding portion.
 
 ---
 
@@ -54,8 +56,8 @@ To be successful in this project, you should **find a topic that is both interes
 ✅ **The assessment is broken down into four criteria:**
 - Project Planning  
 - Data Analysis
-- Data Visualizations 
-- Data Communication Communication
+- Data Visualization 
+- Data Communication
 
 
 **For each criteria you will be assigned a score from 0-3:**
