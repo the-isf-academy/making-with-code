@@ -1,6 +1,6 @@
 ---
 title: 7. Enemies
-# draft: True
+draft: True
 ---
 
 # Enemies

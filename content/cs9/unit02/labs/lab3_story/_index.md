@@ -1,6 +1,6 @@
 ---
 title: 3. Story Lab
-# draft: true
+draft: true
 ---
 
 # Story Lab
