@@ -176,6 +176,7 @@ You may find it necessary to work outside of school, however if you are focused 
 - [Escape Room](https://escape.wolfie.dev/)
 - [dribbble](https://dribbble.com/shots/popular/web-design)
 - [css examples](https://css-examples.wizardzines.com/)
+- [awwwards - web design awards](https://www.awwwards.com/)
 - Personal website examples
     - [jennylihan.com](https://jennylihan.com/)
     - [wolfei.dev](https://wolfie.dev/)
