@@ -1,9 +1,9 @@
 ---
-title: 1. Pet Lab
-draft: true
+title: 1. Pet Lab [extended]
+# draft: true
 ---
 
-# Pet Lab
+# Pet Lab [extended]
 
 
 
@@ -19,23 +19,11 @@ cd ~/desktop/making_with_code/unit02_games
 
 {{< code-action "Then, clone your starter code." >}} Be sure to change `YOUR-GITHUB-USERNAME` to your actual Github username.
 ```shell
-git clone https://github.com/the-isf-academy/lab_pet_YOUR-GITHUB-USERNAME
-cd lab_pet_YOUR-GITHUB-USERNAME
+git clone https://github.com/the-isf-academy/lab_pet_extended_YOUR-GITHUB-USERNAME
+cd lab_pet_extended_YOUR-GITHUB-USERNAME
 ```
 
 {{< code-action "Enter the Poetry shell and install the requirements:" >}}
-```shell
-poetry shell
-poetry install
-```
-
-{{< code-action >}} `cd` **into the lab**
-```shell
-cd lab_pet_YOUR-GITHUB-USERNAME
-```
-
-
-{{< code-action "Enter the Poetry Shell and install the required packages." >}} *Each line should go one at a time.*
 ```shell
 poetry shell
 poetry install
@@ -201,47 +189,8 @@ Wooooo, running!
 True
 Dog
 ```
----
-
-
-
-## [3] Pet Simulator
-
-
-👾 **Now that you have experienced the backend of the `Pet`, let's play the game!** The `Pet` now has a nice Terminal interface where you can interact with it through a menu system, just like a lo-fi text-based video game.
-```shell
-python game_interface.py
-```
-
-
-
-
-```shell
------------------------------------
----- Welcome to Pet Simulator ----
------------------------------------ 
-
-What would you like to name your pet?
- > Peanut
--------------------------
-Your pet is ready!
--------------------------
-> Introduce                                                                                                                
-  Quit         
-```
 
 ---
-
-### Add play()
-
-{{< code-action >}} **Edit `game_interface.py` so you can `play()` with your `Pet`!** Start by reading through the code to make sure you understand how it works. Then make small edits to add in `play()`. Be sure to look for:
-- how are menu options being displayed? 
-- how are the different functions being ran based on the user selection? 
-
-{{< code-action >}} **Play test it!** `python game_interface.py`
-
----
-
 
 ### Add tired feature
 
@@ -251,10 +200,50 @@ Your pet is ready!
 - What property will you add? 
 - What method will you add?
 
-{{< code-action >}} **Edit `game_interface.py` so you can tell your `Pet` to `nap()`!**
+{{< code-action >}} **Edit `test_pet.py` to ensure its working properly**
 
-🎮 **Play test it!** `python game_interface.py`
 
+---
+
+
+
+## [3] Pet Simulator
+
+
+👾 **Now that you have experienced the backend of the `Pet`, let's make it into a game!** Your `Pet` will have a nice Terminal interface where you can interact with it through a menu system, just like a lo-fi text-based video game.
+
+
+✏️  **Draw a flow chart of how the game will work.** The user should be able to access all of the features of the `Pet()` through a user friendly interface. 
+
+
+{{< expand "Here is an example of a flowchart">}}
+
+{{< figure src="images/courses/cs9/unit02/lab_pet_extended_flowchart.png" width="100%" >}}
+
+{{< /expand >}}
+
+
+{{< code-action >}} **Implement your flow chart in  `game_interface.py` so you can interact with your `Pet`!** The finished version should look something like this:
+
+```shell
+python game_interface.py
+```
+
+```shell
+-----------------------------------
+---- Welcome to Pet Simulator ----
+----------------------------------- 
+
+What would you like to name your pet?
+ > Peanut
+-------------------------
+Peanut pet is ready!
+-------------------------
+> Introduce  
+  Play
+  Nap                                                                                                                
+  Quit         
+```
 
 ---
 
@@ -270,7 +259,7 @@ Your pet is ready!
 - git status
 - git add -A
 - git status
-- git commit -m "describe your drawing and your process here"
+- git commit -m "describe your changes"
   > be sure to customize this message, do not copy and paste this line
 - git push
 
@@ -283,7 +272,7 @@ Your pet is ready!
 {{< aside >}}
 If you have your own ideas, build on the `Pet` however you would like! 
 
-But if you're unsure where to start, there are a few ideas below. 
+But if you're unsure where to start, there are 3 ideas below. 
 {{< /aside >}}
 
 ### Add a hunger level
@@ -303,6 +292,16 @@ At this point, you have a working `Pet`, but it's pretty basic. Most pets, get h
 
 {{< code-action >}} **Play test it:** `python game_interface.py`
 
+--- 
+
+### Add a status check 
+
+{{< code-action >}}  **Add a feature to check the status of the `Pet`. You should be able to see the:**
+- bored, tired, and hunger levels
+
+You will need to write a new method in the `Pet()` class. 
+
+
 ---
 
 ### Tamagotchi Features
@@ -316,13 +315,22 @@ This lab was inspired by the Tamagotchi!
 For example:
 - happiness 
 - sickness 
-- life cycle (baby, child, teen, adult)
+- life cycle (baby, child, teen, adult) 
+
 
 ---
 
 ### Customize the look of your game
 
 {{< code-action >}} **Experiment with the [Colorama Library](https://pypi.org/project/colorama/) to implement colors into your Terminal interface**
+
+
+---
+
+### Add multiple pets
+
+{{< code-action >}} **Allow the user to have multiple pets!** The user should be able to customize and interact with all of their pets. 
+
 
 ---
 
