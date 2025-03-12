@@ -1,6 +1,6 @@
 ---
 title: "Unit 01: Data Science"
-# bookCollapseSection: true
+bookCollapseSection: true
 # weight: 20
 # draft: true
 ---
