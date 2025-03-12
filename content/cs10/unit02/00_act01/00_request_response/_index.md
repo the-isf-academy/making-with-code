@@ -250,7 +250,7 @@ Some class-based views are provided for you at the bottom of
 `color_app/views.py`. We need to do a little work to wire these in
 to the app. 
 
-{{< code-action >}} **Open `color_app/urls.py` and add the highlighted lines:**
+{{< code-action >}} **Open `color_app/urls.py` and uncomment the highlighted lines:**
 
 ```python {linenos=table, hl_lines=[8, 9]}
 from django.urls import path
