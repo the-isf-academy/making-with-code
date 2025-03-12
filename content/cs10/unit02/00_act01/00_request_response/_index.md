@@ -36,19 +36,20 @@ the request/response lifecycle.
  
 ```shell
 cd ~/desktop/making-with-code/cs10
-mkdir unit_web_apps
-cd unit_web_apps
+mkdir unit05_webapps
+cd unit05_webapps
 ```
 
-{{< code-action >}} **Fork your repository, go to [https://github.com/the-isf-academy/lab_colorama](https://github.com/the-isf-academy/lab_colorama).**
-
+{{< code-action "Start by cloning your starter code." >}} Be sure to change `yourgithubusername` to your actual Github username.
+```shell
+git clone https://github.com/the-isf-academy/lab_colorama
+```
 
 {{< code-action "Enter the poetry shell and install the required packages." >}}
 ```shell
 poetry shell
 poetry install
 ```
-
 
 {{< code-action >}} **Open the repository in VSCode:** `code .` 
 
@@ -105,14 +106,14 @@ from color_app import views
 
 app_name = "color_app"
 urlpatterns = [
-    path('', views.home_view, name="index"),
-    path('random/', views.random_color_view, name="random_color"),
+    path('', views.home, name="index"),
+    path('random/', views.random_color, name="random_color"),
 ]
 ```
 > Two views are defined. If you go to [`localhost:8000/`](http://localhost:8000) (homepage), 
-the request will be handled by `views.home_view`. And if you go to 
+the request will be handled by `views.home`. And if you go to 
 [`localhost:8000/random/`](http://localhost:8000/random), the request will be handled by
-`views.random_color_view`.
+`views.random`.
 
 {{< code-action >}} **Let's look at these views. You can see that they are imported from `color_app.views`, so we'll open `color_app/views.py`.**
 
@@ -178,7 +179,7 @@ commands tell Django what to do.
   and `colorama.com` when you're ready to go public. 
 
 ### [Models]
-In addition to a template, `home_view` also uses a *model* called `Color` (`color_app/views.py`, line 11). 
+In addition to a template, `home` also uses a *model* called `Color` (`color_app/views.py`, line 11). 
 **Think of views as connecters, and think of models as objects that do most of the work.**
 
 {{< code-action >}} **The `Color` model has some neat abilities; let's check them out by opening
@@ -233,7 +234,7 @@ shortly.
 ✏️  **B.2:** If you didn't already check it out, go to the [random color page](http://localhost:8000/random).
   You'll notice that the color swatch changes every time you load the page, and 
   the background changes to an opposite color. **Explain how this works.** *(Hint:
-  We previously noticed that `/color/random` is served by `color_app.views.random_color_view`,
+  We previously noticed that `/color/random` is served by `color_app.views.random_color`,
   so start there. Figure out which template is being used. Look in the
   template to figure out how the background color gets set. Make sure you
   explain how the `Color` model is involved too.)*
@@ -257,10 +258,10 @@ from color_app import views
 
 app_name = "color_app"
 urlpatterns = [
-    path('', views.home_view, name="index"),
-    path('random/', views.random_color_view, name="random_color"),
-    path('colors/', views.ColorListView.as_view(), name="color_list"),
-    path('colors/new', views.NewColorView.as_view(), name="new_color"),
+    path('', views.home, name="index"),
+    path('random/', views.random_color, name="random_color"),
+    path('colors/', views.color_list, name="color_list"),
+    path('colors/new', views.new_color, name="new_color")
 ]
 ```
 
@@ -271,49 +272,49 @@ you'll need to restart it (just run `python manage.py runserver` again).
 {{< code-action >}} **Now go to [`/colors`](http://localhost:8000/colors), and play around.** You can now add new colors and see a list of all the colors. If your app were live online, many users could all contribute colors. 
 
 Once again, let's have a look at the code that made this possible. We added two
-new URL routes, `colors` and `color/new`, and routed them to `ColorListView`
-and `NewColorView`, respectively. 
+new URL routes, `colors` and `color/new`, and routed them to `color_list`
+and `def new_color(request):`, respectively. 
 
-{{< code-action >}} **Let's look at the bottom of `color_app/views.py` for the `Class Based Views`:**
+{{< code-action >}} **Let's look at `color_app/views.py` functions:**
 ```python                                                                              
-class ColorListView(ListView):                                                                                         
-    model = Color                                                                                                      
-    template_name = "color_app/color_list.html"                                                                       
-    queryset = Color.objects.order_by("name")                                                                          
-                                                                                                                       
-class NewColorView(CreateView):                                                                                        
-    model = Color                                                                                                      
-    form_class = ColorForm                                                                                             
-    template_name = "color_app/color_form.html"                                                                       
-    success_url = reverse_lazy("color_app:color_list")    
+def color_list(request): 
+    # renders all colors in database
+
+    color_list = Color.objects.all().order_by("name")
+    params = {"color_list": color_list}
+
+    return render(request, 'color_app/color_list.html', params)
+
+def new_color(request):
+    # processes new color form 
+    
+    if request.method == "POST":
+        form = ColorForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse("color_app:color_list"))
+    else:
+        form = ColorForm()
+    
+    return render(request, "color_app/color_form.html", {"form": form})  
 ```
 *That's it???* 
 
-> **Here's the idea: by breaking up the work of a view into methods of a class, we can use a *generic view class* which just needs a little information and then will work the way most web apps need it to work.**
->
-> If you need the behavior to be a little bit different from standard, you can write a custom method for just that part, and leave the rest alone. It takes more work to learn how these work,
-but then using class-based views can save you TONS of time. 
+- For `color_list()`,It set all the colors from the database, sort them somehow,
+and then gives them to the template for rendering. 
 
-- For `ColorListView`, you can imagine what needs to be done: Get all the colors
-from the database, sort them somehow, and then give them to the template for
-rendering. The three properties listed here are enough; the generic view can
-handle the rest. 
-
-- `NewColorView` actually does quite a bit more: It creates an empty `ColorForm` (e.g.
+- `new_color()`, creates an empty `ColorForm` (e.g.
 the name isn't filled in and the colors aren't set) and gives it to the
 template, which renders a response. The user sees a page with sliders and a
 text field to name the color. 
   > When the user submits the form (this is a `POST`
 request because it's making a change; all the previous requests have been `GET`
-requests), `NewColorView` again receives the request. This time, since it's a
+requests), `new_color()` again receives the request. This time, since it's a
 `POST` with form data (name, color values), it creates a `ColorForm`, checks to
 make sure the data is valid, and if so, creates a `Color`, saves it to the
-databaase, and then sends a redirect response telling the user to go to
+database, and then sends a redirect response telling the user to go to
 `/colors`. 
 
-All this logic is *generic*; when the class is given a few necessary parameters,
-it can do the rest because it's following the same old pattern. (Even though
-it's actually a pretty complicated pattern and it's completely new to you!)
 
 {{< figure src="images/courses/cs10/unit02/02_post_request_response.jpg" width="100%" title="POST Request/response lifecycle diagram" >}}
 
