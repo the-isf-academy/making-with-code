@@ -17,7 +17,7 @@ In this lab, you will create a typing game! You will be re-introduced to the Ter
 
 {{< figure src="images/courses/cs9/unit02/00_monkey_type.png" width="100%" >}}
 
-{{< write-action "Once you understand the game, re-arrange the pseudocode in the correct order." >}} Check with a teacher before moving on to the setup. 
+<!-- {{< write-action "Once you understand the game, re-arrange the pseudocode in the correct order." >}} Check with a teacher before moving on to the setup.  -->
 
 
 ---
@@ -78,21 +78,25 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 {{< code-action "Start by running the game: " >}} `python typing_game.py`. As you can see the welcome screen, rules, and countdown to the start of the game already coded. Now that you understand how the logical flow of the game, it's up to you to finish it!
 
----
-
-### Game Logic
-
-
-
-{{< code-action "Translate the pseudocode to Python code in" >}} `typing_game.py`. The pseudocode is in the correct order in the comments of the file. 
- 
 {{< look-action "A successful game should run like this:" >}} 
 
 {{< figure src="images/courses/cs9/unit02/00_typing_game_ex1.png" width="100%" >}}
 
-{{< aside "Be sure to constantly play test your game!" >}}
+---
 
-Do not be afraid to run your game after every change you make to the code: `python typing_game.py`
+### Game Logic
+
+{{< code-action "Open the folder in Visual Studio Code:" >}}
+```shell
+code .
+```
+
+{{< code-action "Translate the pseudocode to Python code in" >}} `typing_game.py`. The pseudocode is in the correct order in the comments of the file. 
+ 
+
+{{< aside "Be sure to constantly test your game!" >}}
+
+Run your game after every change you make to the code: `python typing_game.py`
 
 Testing is the key to successful debugging!
 {{< /aside >}}
@@ -137,7 +141,7 @@ number_rounded = round(2.555,2)
 
 ---
 
-### Calculate the user's accuracy
+### Calculate Accuracy
 
 Now that you have the logic of the game complete, let's communicate the **accuracy of the user's input**. Words per Minute (WPM) means nothing without accuracy!
 
@@ -161,11 +165,11 @@ Accuracy: 92.2%
 
 ---
 
-## [4] Deliverables
+## [2] Deliverables
 
 {{< deliverables  >}}
 
-**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSf6GflWtY1GS6D0Sv1cXMtldnHFSO-lL4XYPHdsaGhHejP7ew/viewform?usp=sf_link)**.
+**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLScE7I19nWJtvK6z9bXo5AlQkrt7ikLA9o1c9okFmC3NsGbb_Q/viewform?usp=header)**.
 
 
 {{< code-action "Push your work to Github:" >}}
@@ -182,7 +186,7 @@ Accuracy: 92.2%
 ---
 
 
-## [3] Extension
+## [3] Extensions
 
 {{< look-action >}} **Choose from any of the extension activities below.** Be sure to push to Github any work you do on either of the extensions. 
 
@@ -219,7 +223,7 @@ Typing games often increase the difficulty by having the prompts be random words
 
 ---
 
-### Difficult levels
+### Difficulty levels
 
 As you may have noticed, the prompts are quite simple. There is no punctuation, hardly any capital letters, no numbers, or special symbols. It is up to you to create an easy, medium, and hard difficulty level of the game. 
 
