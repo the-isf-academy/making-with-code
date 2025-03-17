@@ -1,6 +1,6 @@
 ---
 title: 2. Runtime Lifecycle
-draft: true
+# draft: true
 ---
 
 # Django Runtime
@@ -15,7 +15,7 @@ requests and responses.
 {{< code-action "Let's begin by starting the Colorama app in a Terminal window." >}} This lab picks up where [Part I](courses/cs10/unit_02/00_request_response/_index.md) left off.
 
 ```shell
-cd ~/desktop/making-with-code/cs10/unit_web_apps/lab_colorama_yourgithubusername
+cd ~/desktop/making-with-code/unit05_webapps/lab_colorama_yourgithubusername
 ```
 
 ```shell
@@ -59,8 +59,6 @@ python manage.py dumpdata > backup.json
 > *Try `dumpdata` without `> backup.json`; you'll see all the data printed to your Terminal window.*
 
 
-
-
 {{< code-action "Now that you have a backup of your database, let's test it, shall we? Delete your app's database." >}} 
 
 ```shell 
@@ -69,7 +67,6 @@ rm db.sqlite3
 > *Careful! This is permanent. Your backup should work, but we're only suggesting
 this because we assume you won't be heart-broken if you lose the colors you
 previously created.*
-
 
 {{< code-action "Let's see what happened by starting to server." >}}  
 ```shell
@@ -96,295 +93,94 @@ python3 manage.py loaddata backup.json
 > Double-check the [color list page](http://localhost:8000/colors); all your
 colors should be back. 
 
-{{< aside >}}
 
-**🛑 If are you in CS10.1 STOP and update a file.**  
-
-1) Find the file `color_app/fixtures/wikipedia_colors.json`
-
-2) Replace all of its content with this updated version: [wikipedia_colors.json](https://raw.githubusercontent.com/the-isf-academy/lab_colorama/main/color_app/fixtures/wikipedia_colors.json)
-
-{{< /aside >}}
+## B. Adding color detail page
 
 
-{{< code-action " Now delete your colors again and instead load in" >}}
-[all the colors listed on Wikipedia](https://en.wikipedia.org/wiki/Lists_of_colors).
-```shell 
-rm db.sqlite3
-python manage.py migrate
-python manage.py loaddata wikipedia_colors.json
-```
-
-
-{{< figure src="images/courses/cs10/unit02/02_colors.png" width="100%" title="Screenshot of app full of colors" >}}
-
-{{< checkpoint >}}
-
-{{< write-action "A.0" >}}  What is the last color when you load in the wikipedia colors?
-
-{{< write-action "A.1" >}} What does it mean to migrate your data?
-
-{{< write-action "A.2" >}} Why is it important to backup your data? 
-
-{{</checkpoint>}}
-
-### [Django Shell]
-
-**Django's shell, like the Banjo shell, is particularly useful for working with models.** The shell is a regular Python shell, but it's loaded in the context of your app and its data.
-
-{{< code-action "Let's explore some of the capabilities of" >}} `Color`.
-```shell
-python3 manage.py shell
-``` 
-
-{{< look-action " First, we'll see some built-in capabilities of any Django model object." >}}
-
-```python
->>> from color_app.models import Color
->>> Color.objects.count()
-865
->>> Color.objects.first()
-<Color Air Force Blue (Raf) (93, 138, 168)>
->>> Color.objects.last()
-<Color Zinnwaldite Brown (44, 22, 8)>
->>> Color.objects.filter(red=255).count()
-110
->>> Color.objects.filter(green__gt=200).count() # green > 200
-186
->>> Color.objects.filter(name__startswith="R").count()
-59
->>> Color.objects.filter(red=255, blue=0).order_by("green")[0:4]
-<QuerySet [<Color Red (255, 0, 0)>, <Color Candy Apple Red (255, 8, 0)>, 
-<Color Scarlet (255, 36, 0)>, <Color Ferrari Red (255, 40, 0)>]>
-```
-
-> **Usually, these kinds of model queries will be used within your app's views.** For
-example, if you built a search page, the request might contain values for red,
-green, or blue. The view would execute the query and format the result using a
-template. 
-
-{{< checkpoint >}}
-
-{{< code-action "These questions require you to use the Django Shell." >}}
-
-{{< write-action "A.3" >}} How many colors start with the letter 'M'?
-
-{{< write-action "A.4" >}}  How many colors have maximum blue and maximum green?
-
-{{< write-action "A.5" >}}  Of the colors with maximum blue and maximum green, which color is lightest? Which color is darkest? 
-
-{{< write-action "A.6" >}} Write the names of all colors containing only blue, sorted by how much blue they contain. 
-
-{{</checkpoint>}}
-
-
-### [Messing with color]
-{{< columns >}}
-{{< figure src="images/courses/cs10/unit02/02_rgb.png" width="100%" title="Visualizing RGB color definition" >}}
-<--->
-{{< figure src="images/courses/cs10/unit02/02_hsv.png" width="100%" title="Visualizing HSV color definition" >}}
-{{< /columns >}}
-
-
-
-**`Color` also has some custom methods, which we implemented in `color_app/models.py`.**
-As it turns out, red/green/blue is not a very convenient color space for finding
-related colors. Hue/saturation/value works much better. 
-
-*In the images above, see how you can just rotate the hue to get related colors of the same saturation and value?* The methods below
-translate our RGB colors into HSV, adjust the hue, saturation, or value, and
-then translate the result back into RGB. Each returns a new `Color`.
-
-{{< look-action " Look at the custom methods of" >}} `Color`.
-
-```python
->>> red = Color(name="red", red=255, green=0, blue=0)
->>> red.hex_code()
-'#ff0000'
->>> red.inverted()
-<Color red inverted (0, 255, 255)>
->>> red.inverted().hex_code()
-'#00ffff'
->>> red_hue = red.adjust_hue(0.5, name="red hue")
->>> red_hue
-<Color  (0, 255, 255)>
->>> red_sat = red.adjust_saturation(-0.5, name="red sat")
-<Color  (255, 127, 127)>
->>> red_val = red.adjust_value(-0.5, name="red val")
-<Color  (127, 0, 0)>
->>> red_hue.save()
->>> red_sat.save()
->>> red_val.save()
-```
-
-{{< checkpoint >}}
-
-The next two questions ask about how colors look to you. (Since you saved your reds, 
-you can see them down at the end of the [color list page](http://localhost:8000/colors))
-
-{{< write-action "A.7" >}} **How many colors start with the letter 'M'?**
- Adjusting red's hue by 0.5 moved the color halfway around the circle.
-*Describe how the resulting color looks to you.*
-
-{{< write-action "A.8" >}} How many colors start with the letter 'M'?
- Describe the perceptual difference between reducing red's saturation by 0.5
-  and reducing red's value by 0.5. 
-
-{{</checkpoint>}}
-
-If you're sad that we juet messed up your Wikipedia colors with these reds, you
-can just run `red_hue.delete()`, etc. or run `Color.objects.last().delete()` three times.
-
---- 
-
-## B. Adding color palettes to the app
-
-**Now let's add a new feature to the app: a page for each color which shows a color palette of colors that go nicely together.** This is going to require
-extending the app at every level we've studied so far. We'll start at the
-"outside" with URL routing, and work our way "in" to the models. 
-
+**Now let's add a new feature to the app: a detailed page for each color** This is going to require
+extending the app at every level we've studied so far. We'll start at the "outside" with URL routing, and work our way "in" to the models. 
 - **We need to add a URL route** for showing a color. Wo avoid ambiguity, we'll 
   refer to colors by the unique ID each is assigned by the database. These URLs
   will have the form `colors/23`, `colors/155`, etc. 
 - **We need a new view** to handle these URLs. 
 - **We'll update the color list template** so that each color swatch is a link to
   that color's page.
-- **We need a new template** for showing a color.
-- **We need to use some settings** to specify how many colors should be shown in the
-  palette. 
 
-**Even though we planned this new feature from the outside in, we're going to
-implement it from the inside out.** This is a common way to work while designing
-web apps. 
 
-{{< code-action "Make the following changes to your files." >}}  You won't
-understand it all yet. We highly recommend typing this in yourself rather than
-copy-pasting.
+{{< code-action "Add a view to handle the color detail route:" >}}  `color_app/views.py`:
+```python {linenos=table}
+def color_detail(request, pk):
+    color = Color.objects.get(id = pk)
+    params = {"color": color}
 
-{{< aside >}}
-The highlighted lines of the code below show the changes you need to make!
-{{</ aside >}}
-
-{{< code-action "Add to the bottom of the settings file" >}} : `mysite/settings.py`
-```python {linenos=table, hl_lines=["1-3"],linenostart=170}
-HUES_TO_SHOW = [-0.16, -0.08, 0, 0.08, 0.16]
-SATURATIONS_TO_SHOW = [-0.2, -0.1, 0, 0.1, 0.2]
-VALUES_TO_SHOW = [-0.2, -0.1, 0, 0.1, 0.2]
+    return render(request, "color_app/color_detail.html", params)
 ```
+- *What do you think the purpose of the `pk` parameter is?*
 
-{{< code-action "Create a new file for the color detail template:" >}}  `color_app/templates/color_app/color_detail.html`
-```html {linenos=table, hl_lines=["1-25"]}
+{{< code-action "Add a URL route." >}} What file does this path go in?
+```python {linenos=table, hl_lines=[3, 11]}
+path('colors/<int:pk>', views.color_detail, name="color_detail")
+```
+- *How do you think you will access this new URL path?*
+
+{{< code-action "Create a new file for the color detail template:" >}}  `color_app/templates/color_app/color_detail.html`.  
+
+```html {linenos=table}
 {% extends "base.html" %}
 {% load static %}
+
+{% block head %}
+  {{ block.super }}
+  <title>COLORAMA</title>
+{% endblock %}
 
 {% block content %}
   <div class="row">
     <div class="col text-center">
-      <h1>{{color.name}}</h1>
-      <p>{{color.hex_code}}</p>
-      <p>
-        <a href="{% url 'color_app:color_list' %}">
-          Back to the color list        
-        </a>  
-      </p>
-    </div>      
+      <h1>Color detail</h1>
+      <p>Name: {{color.name}}</p>
+      {% include "color_app/swatch.html" %}
+    </div>
   </div>
-  <h2>Hues</h2>
-  <div class="swatches">
-    {% for color in hues %}
-      <div class="swatch">
-        {% include "color_app/swatch.html" %}
-      </div>      
-    {% endfor %}
-  </div>
-  <script src="{% static 'color_app/offset_swatches.js' %}"></script>
 {% endblock %}
 ```
+- *How can you display the other fields from the Model (red, green, blue)?*
 
-{{< code-action "Add links to thr color list template:" >}}  `color_app/templates/color_app/color_list.html`
-```python {linenos=table, hl_lines=[2, 6],linenostart=17}
-     {% for color in object_list %}
-       <a href="{% url 'color_app:color_detail' color.id %}">
-       <div class="swatch">
-         {% include "color_app/swatch.html" %}
-       </div>  
-       </a>
-     {% endfor %}
+{{< code-action "Add a link from the color list template page to the color detail:" >}}  `color_app/templates/color_app/color_list.html`. Here is the link pattern. How should you use it? 
+```python {linenos=table}
+<a href="{% url 'color_app:color_detail' pk=color.id %}"></a>
 ```
 
-{{< code-action "Add a view to handle the color detail route:" >}}  `color_app/views.py`:
-```python {linenos=table, hl_lines=[5, "18-36"]}
-from django.views.generic import DetailView, ListView, CreateView
-from django.urls import reverse_lazy
-from color_app.models import Color
-from color_app.forms import ColorForm
-from django.conf import settings
 
-class ColorListView(ListView):
-    model = Color
-    template_name = "color_app/color_list.html"
-    queryset = Color.objects.order_by("name")
 
-class NewColorView(CreateView):
-    model = Color
-    form_class = ColorForm
-    template_name = "color_app/color_form.html"
-    success_url = reverse_lazy("color_app:color_list")
+**Congratulations! You just added a new feature to the app!**
 
-class ColorDetailView(DetailView):
-    model = Color
-    template_name = "color_app/color_detail.html"
-      
-    def get_context_data(self, *args, **kwargs):
-        "Adds properties to the context dict sent to the template" 
-        context = super().get_context_data(*args, **kwargs)
-        color = self.get_object()
-        hues = []
-        for adjustment in settings.HUES_TO_SHOW:
-            if adjustment == 0:
-                hues.append(color)
-            else:
-                hue = color.adjust_hue(adjustment)
-                hue.name = hue.hex_code()
-                hues.append(hue)
-        context['color'] = color
-        context['hues'] = hues
-        return context
-```
 
-{{< code-action "Add a URL route:" >}} `color_app/urls.py`:
-```python {linenos=table, hl_lines=[3, 11]}
-from django.urls import path
-from color_app import views
-from color_app.views import NewColorView, ColorListView, ColorDetailView
+## C. Palette Generator 
 
-app_name = "color_app"
-urlpatterns = [
-    path('', views.home_view, name="index"),
-    path('colors/random', views.random_color_view, name="random_color"),
-    path('colors/new', NewColorView.as_view(), name='new_color'),
-    path('colors', ColorListView.as_view(), name='color_list'),
-    path('colors/<int:pk>', ColorDetailView.as_view(), name='color_detail'),
-]
-```
+Now, let's use the methods in the `Color` model to create a palette generator. Each color detail page will shows a color palette of colors that go nicely together.
 
-**Congratulations! You just added a new feature to the app, and you have a pretty decent color palette generator.**
+{{< figure src="images/courses/cs10/unit02/02_colors2.png" width="100%" >}}
 
-{{<checkpoint>}}
+You will need to: 
+- edit the `color_detail` view 
+- edit the `color_app/color_detail.html`
+- understand how `adjust_hue()` works 
 
-{{< write-action "B.0" >}} Choose a color palette that you particularly like. What are the hex color values? 
+## D. Deliverables
 
-{{< write-action "B.1" >}}  Try changing `HUES_TO_SHOW` in `mysite/settings.py` to display a different number of hues or a different range of adjustment values. You should see the effects on the color detail pages. **What setting of `HUES_TO_SHOW` do you like best?**
 
-{{< write-action "B.2" >}}  We also defined settings for `SATURATIONS_TO_SHOW` and `VALUES_TO_SHOW`, but we're not showing palettes of saturations or values on the color detail
-  pages. **Explain the changes you would need to make to show a palette of
-  saturations and a palette of values on the color detail page under the 
-  palette of hues.**
+{{< deliverables "Once you've successfully completed the lab:" >}}  
 
-{{</checkpoint>}}
+{{< code-action "Push your code to Github." >}}
+- git status
+- git add -A
+- git status
+- git commit -m "describe your code and your process here"
+  > be sure to customize this message, do not copy and paste this line
+- git push
 
-## C. If you finish early...
+{{< /deliverables >}}
 
-Implement the changes you described in B.2 :)
 
 
