@@ -148,11 +148,12 @@ path('colors/<int:pk>', views.color_detail, name="color_detail")
 
 {{< code-action "Add a link from the color list template page to the color detail:" >}}  `color_app/templates/color_app/color_list.html`. Here is the link pattern. How should you use it? 
 ```python {linenos=table}
-<a href="{% url 'color_app:color_detail' color.id %}"></a>
+<a href="{% url 'color_app:color_detail' pk=color.id %}"></a>
 ```
 
 
-**Congratulations! You just added a new feature to the app!
+
+**Congratulations! You just added a new feature to the app!**
 
 
 ## C. Palette Generator 
