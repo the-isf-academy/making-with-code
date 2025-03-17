@@ -1,6 +1,6 @@
 ---
 title: 5. Arcade Examples
-# draft: True
+draft: True
 ---
 
 # Python Aracde Intro Lab

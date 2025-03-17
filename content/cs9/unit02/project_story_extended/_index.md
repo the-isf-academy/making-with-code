@@ -1,5 +1,5 @@
 ---
-Title: Project Story
+Title: Project Story [extended]
 draft: true
 ---
 
@@ -15,7 +15,6 @@ It is totally up to you what type of story you make. For example you could make:
 - exploration game
 - puzzle game 
 - narrative story game
-
 
 
 {{< figure src="https://steamuserimages-a.akamaihd.net/ugc/1791848543425884907/18A8A93A2B7215E654F50350F4C896FFE463B456/" width="70%" >}}
@@ -35,7 +34,9 @@ This is a big project with a lot of room for customization. It is important for 
 
 You will need to:<br>
 1️⃣ plan the implementation of an additional feature <br>
+- UML diagram
 2️⃣ outline your story in a graph diagram 
+3️⃣ create a flowchart of the game flow 
 
 🧠 Some idea for features:
 - branches that come back together into the same Node
@@ -94,19 +95,19 @@ This repo includes the following files:
     - I can track the development of my project by successfully committing to Github a minimum of each class work day, preferably after each work session
     - I can write descriptive commit messages that accurately describe the changes made
     - I can systematically break down my project into smaller chunks  
-- **Readability [3]**
-    - I can write easily understandable code (another CS student could understand it)
-    - I can use descriptive names for modules, variables, classes, and methods
-    - I can write descriptive comments to describe complex pieces of the code
-    - I included a short description of my game in `README.md`
+    - I can keep track of my progress in the project management system
 - **Feature Implementation [3]**
     - I can independently edit or add the necessary class(es) with appropriate properties and/or methods
     - I can add a feature that is well abstracted
         - could be used in multiple situations 
         - could be easily adapted by another CS student
+    - I can use descriptive names for modules, variables, classes, and methods
+    - I can write descriptive comments to describe complex pieces of the code
 - **Game Implementation [3]**
     - I can implement my graph diagram
-    - I can design a `View` that is easily to read and understand 
+    - I can design a `View` that is easily to read and understand
+    - I can use descriptive names for modules, variables, classes, and methods
+    - I can write descriptive comments to describe complex pieces of the code 
 
 
 <!-- **For each criteria you will be assessed on a score from 0-3. With 5 criteria, there is a total of 15 potential points.** 

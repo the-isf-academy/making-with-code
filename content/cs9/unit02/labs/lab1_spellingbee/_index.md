@@ -1,6 +1,6 @@
 ---
 title: 2. Spelling Bee
-# draft: true
+draft: true
 ---
 
 # Spelling Bee

@@ -83,7 +83,7 @@ Make sure that at the end of your file, you include the code to run the game you
     if __name__ == '__main__':
         game = YOURGAMECLASSGame()
         game.run()
-```
+``` 
 ### Testing your feature
 As you are developing your feature, it's important that you don't break any other functionalities of the Quest library. To make sure, you can run all of the examples in the `examples` repo.
 

@@ -1,6 +1,6 @@
 ---
 title: 6. Map Making
-# draft: True
+draft: True
 ---
 
 # Map Making
