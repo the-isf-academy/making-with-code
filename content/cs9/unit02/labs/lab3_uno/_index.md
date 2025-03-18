@@ -1,14 +1,14 @@
 ---
-title: 3. Uno Lab
+title: 4. Uno Lab
 resources:
 - name: Uno
   src: images/courses/cs9/unit02/02_01_uno.jpg
-draft: true
+# draft: true
 ---
 
 # Uno Lab
 
-In this lab, you are going to go behind the scenes of the classic card game, Uno.
+In this lab, you are construct elements of the classic card game, Uno.
 
 {{< figure src="images/courses/cs9/unit02/02_01_uno.jpg" width="400px" >}}
 
@@ -16,13 +16,20 @@ In this lab, you are going to go behind the scenes of the classic card game, Uno
 
 🃏 **Let's start by playing the classic card game, Uno.** As you're playing, consider the different components and mechanics of the game. 
 
+{{< checkpoint >}}
+
+{{< write-action >}} **As you play, construct your model for the elements of Uno.**
+
+
+{{< /checkpoint >}}
+
 ---
 
 ## [0] Setup
 
 {{< code-action "Start by going into your" >}} `cs9/unit02_games` **folder.**
 ```shell
-cd ~/desktop/making_with_code/cs9/unit02_games
+cd ~/desktop/making_with_code/unit02_games
 ```
 
 {{< code-action "Clone your starter code." >}} Be sure to change `yourgithubusername` to your actual Github username.
@@ -42,41 +49,52 @@ This is the largest software package you have encountered and includes the follo
 - `deck.py`
 - `player.py`
 - `uno.py`
-- `game.py`
-- `view.py`
 - `uno_cards.csv`
-- `test_lab.py`
 
 ---
 
-## [2] Play Test
+## [2] Implement your Models
 
 
-{{< code-action >}} **Play through Uno in your Terminal.** 
+{{< code-action >}} **Impelment for model of the `Card`.** Test it to ensure it works as you expect. 
 
-```shell
-python game.py
-```
+{{< code-action >}} **Impelment for model of the `Deck`** Test it to ensure it works as you expect. 
 
-> If you're interested, you can find the [full rules of Uno here](http://play-k.kaserver5.org/Uno.html). Our implementation varies slightly. Can you identify the differences?
+{{< code-action >}} **Impelment for model of the `Player`** Test it to ensure it works as you expect. 
 
-🤔 Was the gameplay different than you expected? 
+{{< code-action >}} **Impelment for model of the `Uno`** Test it to ensure it works as you expect. 
 
 
+## [3] Deliverables
 
-{{< checkpoint >}}
+{{< deliverables  >}}
 
-{{< code-action >}} **Open up the code:** `code .`
+**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSeQKG6s2Z7LpDZHpKG3deH4IiPFg9Uoz8GcyYnN39fornqd3A/viewform?usp=sf_link)**.
 
-{{< write-action >}} **In your group, complete the worksheet.**
 
-{{< /checkpoint >}}
+{{< code-action "Push your work to Github:" >}}
+- git status
+- git add -A
+- git status
+- git commit -m "describe your drawing and your process here"
+  > be sure to customize this message, do not copy and paste this line
+- git push
 
+{{< /deliverables >}}
 
 ---
 
-## [3] StrategicComputerPlayer 
+## [4] Extension 
 
+{{< code-action >}} **Impelment the game loop for Uno** You will need to create two files:
+- `view.py`
+- `game.py`
+
+
+
+
+
+<!-- 
 As you've experienced, you are playing against a computer. The `ComputerPlayer` has 3 main methods.
 - `get_playable_cards()`
 - `play_card()`
@@ -108,27 +126,10 @@ python test_lab.py -k strategy
 
 ---
 
-## [5] Deliverables
 
-{{< deliverables  >}}
+--- -->
 
-**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSeQKG6s2Z7LpDZHpKG3deH4IiPFg9Uoz8GcyYnN39fornqd3A/viewform?usp=sf_link)**.
-
-
-{{< code-action "Push your work to Github:" >}}
-- git status
-- git add -A
-- git status
-- git commit -m "describe your drawing and your process here"
-  > be sure to customize this message, do not copy and paste this line
-- git push
-
-{{< /deliverables >}}
-
-
----
-
-
+<!-- 
 ## [6] Extension:
 
 Now that you've got a fully functional Uno game, let's expand its functionality. 
@@ -189,6 +190,6 @@ Cards are read into the deck as entries in a csv file. Look at the `deck.py` mod
     - [HumanPlayer](https://cs.fablearn.org/docs/uno/player.html#player.HumanPlayer)
     - [ComputerPlayer](https://cs.fablearn.org/docs/uno/player.html#player.ComputerPlayer)
         - [RandomComputerPlayer](https://cs.fablearn.org/docs/uno/player.html#player.RandomComputerPlayer)
-        - [StudentComputerPlayer](https://cs.fablearn.org/docs/uno/player.html#player.StudentComputerPlayer) -->
+        - [StudentComputerPlayer](https://cs.fablearn.org/docs/uno/player.html#player.StudentComputerPlayer) --> -->
 
 
