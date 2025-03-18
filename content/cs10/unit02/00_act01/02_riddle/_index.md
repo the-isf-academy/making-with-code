@@ -15,7 +15,7 @@ During the track lessons you will be creating a web app for the ISF Riddler. You
 {{< code-action "Download your repository with starter code for your project." >}}
 
 ```shell
-cd ~/desktop/making_with_code/cs10/unit_web_apps/
+cd ~/desktop/making-with-code/unit05_webapps
 git clone https://github.com/the-isf-academy/lab_riddler_django_yourgithubusername
 cd lab_riddler_django_yourgithubusername
 ```
