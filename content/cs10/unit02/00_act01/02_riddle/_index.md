@@ -139,6 +139,43 @@ python manage.py runserver
 
 ---
 
+### `new_riddle()` success message 
+
+The goal is for the user to be notifed they successfully added a new Riddle. There are multiple ways to solve this issue, it all depends on how you want to design the user experience. Two potential methods are:
+- create a new view, url, and template with the success message
+- re-render the new_riddle page with the filled out form and the success message
+
+
+To redirect, reference the code snippet OR try to solve it yourself. You may use AI. 
+
+{{< expand "code snipped" >}}
+
+```python
+def new_riddle(request):
+    if request.method == "POST":
+        form = NewRiddleForm(request.POST)
+        if form.is_valid():
+            new_riddle = form.save()
+
+            params = {
+                "form": NewRiddleForm(instance=new_riddle),  
+                "message": "Success! Your riddle has been saved.",  
+            }
+
+            return render(request, "riddle_app/new_riddle_form.html", params)
+    else:
+        form = NewRiddleForm()
+
+    params = {
+        "form": form
+    }
+    
+    return render(request, "riddle_app/new_riddle_form.html", params)
+```
+{{< /expand >}}
+
+---
+
 ## [4] Deliverables 
 
 {{< deliverables >}}
