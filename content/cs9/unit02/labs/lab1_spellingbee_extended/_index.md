@@ -50,7 +50,6 @@ poetry install
 
 This lab includes the following files to play the Spelling Bee game:
 - `model.py`
-- `test_model.py`
 - `game.py`
 - `view.py`
 - `wordslist.py`
@@ -79,6 +78,7 @@ classDiagram
         + guessed_words: [] str
         + check_guess(user_guess) boolean
         + check_keyletter(user_guess) boolean
+        + check_length(user_guess) boolean
         + check_letters(user_guess) boolean
         + check_already_guessed(user_guess) boolean
     }
@@ -110,10 +110,9 @@ if __name__ == "__main__":
     print(spelling_bee.check_keyletter("rot"))
 ```
 
-
 ---
 
-## [3] Implementing the game logic
+## [3] Implementing the view and the game logic
 
 **Begin by running the game. 🤔 It works perfectly, but is incomplete!**
 
@@ -131,9 +130,8 @@ Guesses must be more than 3 letters long
   -correct!-  
 ```
 
-{{< code-action >}} **Open the file `game.py` and `view.py` and complete the game logic.** You will need to use the `SpellingBee` methods and the `TerminalView` methods.
+{{< code-action >}} **Open the file `game.py` and `view.py` and complete the game logic.** You will need to use the `SpellingBee` methods and the `TerminalView` methods. 
 - enusre the game works like the actual game
-    - the user cannot enter the same word multiple times
 - only write `print()` statements in the `TerminalView` methods. Why do you think this is?
 
 
@@ -145,25 +143,7 @@ python game.py
 
 ---
 
-## [4] Score 
-
-**In the original Spelling Bee, you get points when you guess correct words.** To make this work, we will have to make changes in each of our three main files: `models.py`, `game.py`, and `view.py`.
-
-{{< code-action >}} **In `model.py`, implement a score feature in the `SpellingBee()` class.** You will need to:
-- create an attribute
-- update a method
-
-> How can you test if it worked?
-
-{{< code-action >}} **Now, incorporate the score into `view.py`. Write a new method `score()` to print out the user's score.** It should take the parameter `current_score`. 
-- which file should you call this method?
-
-👾 **Test our your game to see how the new feature works!** 
-
----
-
-
-## [5] Deliverables
+## [4] Deliverables
 
 {{< deliverables  >}}
 
@@ -183,9 +163,28 @@ python game.py
 
 ---
 
-## [6] Extensions
+
+## [5] Extensions 
 
 Choose one of the extensions below to improve your game!
+
+
+### Score
+
+**In the original Spelling Bee, you get points when you guess correct words.** To make this work, we will have to make changes in each of our three main files: `models.py`, `game.py`, and `view.py`.
+
+{{< code-action >}} **In `model.py`, implement a score feature in the `SpellingBee()` class.** You will need to:
+- create an attribute
+- update a method
+
+> How can you test if it worked?
+
+{{< code-action >}} **Now, incorporate the score into `view.py`. Write a new method `score()` to print out the user's score.** It should take the parameter `current_score`. 
+- which file should you call this method?
+
+👾 **Test our your game to see how the new feature works!** 
+
+---
 
 ### Advanced Scoring
 
