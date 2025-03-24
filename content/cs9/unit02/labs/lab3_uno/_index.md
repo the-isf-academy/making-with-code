@@ -64,6 +64,193 @@ This is the largest software package you have encountered and includes the follo
 
 {{< code-action >}} **Impelment for model of the `Uno`** Test it to ensure it works as you expect. 
 
+---
+
+### Solutions
+
+{{< expand "Card" >}}
+```python
+class Card():
+    def __init__(self, color, number, special=None):
+        
+        self.color = color
+        self.number = number
+        self.special = special
+
+    def __str__(self):  
+        if self.special:
+            if self.color: 
+                return f"{self.color} {self.special}"
+            
+            else:
+                return f"{self.special}"
+            
+        else:
+            return f"{self.color} {self.number}"
+```
+{{< /expand >}}
+
+{{< expand "Deck" >}}
+```python
+class Deck():
+    def __init__(self, filename=None):
+        if filename:
+            self.cards = self.read_cards_from_file(filename)
+        else:
+            self.cards = []
+        self.shuffle_deck()
+
+    def read_cards_from_file(self, filename):
+        try:
+            cards = []
+            deckDF = pd.read_csv(filename).fillna('')
+            for index, row in deckDF.iterrows():
+                cards.append(Card(row.color, row.number, row.special))
+            return cards
+        except Exception as e:
+            print("Exception while reading deck: ", e)
+
+    def add_card(self, card):
+        self.cards.append(card)
+
+    def shuffle_deck(self):
+        shuffle(self.cards)
+
+    def get_top_card(self):
+        return self.cards.pop()  
+
+    def get_num_cards(self):
+        return len(self.cards)
+```
+{{< /expand >}}
+
+{{< expand "Player" >}}
+```python
+class Player():
+    def __init__(self, name):
+        self.name = name
+        self.hand = []
+        
+    def add_to_hand(self, card):
+        self.hand.append(card)
+
+    def play_card(self,card):
+        card_index = self.hand.index(card)
+        chosen_card = self.hand[card_index]
+        self.hand.remove(chosen_card)
+        return card
+
+    def get_hand(self):
+        hand_for_view = []
+        for card in self.hand:
+            hand_for_view.append(str(card))
+
+        return hand_for_view 
+    
+    def choose_color(self):
+        return choice(['Red','Blue','Green','Blue'])
+
+    def check_win(self):
+        return len(self.hand) == 0
+```
+{{< /expand >}}
+
+{{< expand "Uno" >}}
+```python
+# class for Uno game
+# =============================================================================
+
+
+from deck import Deck
+from player import Player
+from random import choice
+
+class Uno():
+    def __init__(self, deck_file=None, human_name_list = None):
+        self.deck = Deck(deck_file)
+        self.discard = Deck()
+        self.direction = 1
+        self.top_card = self.deal_n_cards(1)[0]
+
+        if "wild" in self.top_card.special:
+            self.top_card.color = choice(["red", "blue", "green", "yellow"])
+
+        self.current_player_index = 0
+        self.top_card = self.deal_n_cards(1)[0]
+
+        self.players = []
+
+        for name in human_name_list:
+            self.players.append(Player(name))
+
+    def deal_starting_cards(self):
+        for i in range(7):
+            for player in self.players:
+                self.deal_n_cards(1,player)
+
+    def deal_n_cards(self, n, player=None):
+        cards = []
+        for i in range(n):
+            if self.deck.get_num_cards() == 0:
+                if self.discard.get_num_cards() == 0:
+                    return None
+                
+                self.discard.shuffle_deck()
+                empty_deck = self.deck
+                self.deck = self.discard
+                self.discard = empty_deck
+
+            card = self.deck.get_top_card()
+            cards.append(card)
+            
+            if player:
+                player.add_to_hand(card)
+
+        return cards
+    
+    def increment_player_num(self):
+        self.current_player_index = (self.current_player_index + self.direction) % len(self.players)
+
+    def get_current_player(self):
+        return self.players[self.current_player_index]
+    
+    def get_next_player(self):
+        next_player_index = (self.current_player_index + self.direction) % len(self.players)
+        return self.players[next_player_index]
+    
+    def play_valid_card(self, player_card):
+        self.discard.add_card(self.top_card)
+        self.top_card = player_card
+
+    def check_if_card_valid(self, card):
+        # 💻 You must finish this method yourself  
+
+        return 
+    
+    def special_card_action(self, card):
+        # 💻 You must finish this method yourself  
+
+        if card.special == 'wild':
+            new_color = self.current_player().choose_color()
+            self.top_card.color = new_color
+
+
+        
+if __name__ == "__main__":
+    print ("--- testing Uno features ---")
+
+    uno = Uno("uno_cards.csv", ["P1", "P2"])
+    uno.deal_starting_cards()
+
+    print("\n -- get_current_player() --")
+    print(uno.get_current_player(), uno.get_current_player().get_hand())
+
+    # 💻 test all of the features
+```
+{{< /expand >}}
+
+💻 **For `Uno()` you must finish `check_if_card_valid()` and `special_card_action()`** Be sure to test all of the methods at the bottom of the file.
+
 
 ## [3] Deliverables
 
@@ -190,6 +377,5 @@ Cards are read into the deck as entries in a csv file. Look at the `deck.py` mod
     - [HumanPlayer](https://cs.fablearn.org/docs/uno/player.html#player.HumanPlayer)
     - [ComputerPlayer](https://cs.fablearn.org/docs/uno/player.html#player.ComputerPlayer)
         - [RandomComputerPlayer](https://cs.fablearn.org/docs/uno/player.html#player.RandomComputerPlayer)
-        - [StudentComputerPlayer](https://cs.fablearn.org/docs/uno/player.html#player.StudentComputerPlayer) --> -->
-
+        - [StudentComputerPlayer](https://cs.fablearn.org/docs/uno/player.html#player.StudentComputerPlayer) --> 
 
