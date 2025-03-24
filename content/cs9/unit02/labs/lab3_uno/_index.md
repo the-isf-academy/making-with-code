@@ -175,18 +175,15 @@ class Uno():
         if "wild" in self.top_card.special:
             self.top_card.color = choice(["red", "blue", "green", "yellow"])
 
-        self.current_player_index = 0
-        self.top_card = self.deal_n_cards(1)[0]
 
         self.players = []
-
         for name in human_name_list:
             self.players.append(Player(name))
 
+        self.current_player_index = 0
+
     def deal_starting_cards(self):
-        for i in range(7):
-            for player in self.players:
-                self.deal_n_cards(1,player)
+        # 💻 You must finish this method  
 
     def deal_n_cards(self, n, player=None):
         cards = []
@@ -223,12 +220,12 @@ class Uno():
         self.top_card = player_card
 
     def check_if_card_valid(self, card):
-        # 💻 You must finish this method yourself  
+        # 💻 You must finish this method  
 
         return 
     
     def special_card_action(self, card):
-        # 💻 You must finish this method yourself  
+        # 💻 You must finish this method   
 
         if card.special == 'wild':
             new_color = self.current_player().choose_color()
@@ -240,23 +237,24 @@ if __name__ == "__main__":
     print ("--- testing Uno features ---")
 
     uno = Uno("uno_cards.csv", ["P1", "P2"])
-    uno.deal_starting_cards()
-
-    print("\n -- get_current_player() --")
-    print(uno.get_current_player(), uno.get_current_player().get_hand())
+   
 
     # 💻 test all of the features
 ```
 {{< /expand >}}
 
-💻 **For `Uno()` you must finish `check_if_card_valid()` and `special_card_action()`** Be sure to test all of the methods at the bottom of the file.
+💻 **For `Uno()` you must finish the following methods. Be sure to test all of the methods at the bottom of the file.**
+- `deal_starting_cards()`
+- `check_if_card_valid()` 
+- `special_card_action()`
 
+---
 
 ## [3] Deliverables
 
 {{< deliverables  >}}
 
-**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSeQKG6s2Z7LpDZHpKG3deH4IiPFg9Uoz8GcyYnN39fornqd3A/viewform?usp=sf_link)**.
+**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSdiDiJRG-og7HJPNvxWrdDk6w9D_0ZXoMBKQHY9XCRvC6J5fA/viewform?usp=sharing)**.
 
 
 {{< code-action "Push your work to Github:" >}}
