@@ -1,9 +1,9 @@
 ---
-title: 3. Story Lab
-draft: true
+title: 5. Story Lab [extended]
+# draft: true
 ---
 
-# Story Lab
+# Story Lab [extended]
 
 In this lab, you are introduced to the structure for writing a branching story. You will use this in your unit project.
 
@@ -24,12 +24,12 @@ cd ~/desktop/making_with_code/unit02_games
 
 {{< code-action "Clone your starter code." >}} Be sure to change `YOUR-GITHUB-USERNAME` to your actual Github username.
 ```shell
-git clone https://github.com/the-isf-academy/lab_story_example_YOUR-GITHUB-USERNAME
+git clone https://github.com/the-isf-academy/lab_story_extended_YOUR-GITHUB-USERNAME
 ```
 
 {{< code-action "cd into the lab" >}}
 ```shell
-cd lab_story_example_YOUR-GITHUB-USERNAME
+cd lab_story_extended_YOUR-GITHUB-USERNAME
 ```
 
 {{< code-action "Enter the Poetry shell and install the requirements:" >}}
@@ -55,77 +55,65 @@ This repo includes the following files:
 
 ### Node
 
-{{< look-action >}} Let's start by looking at the `Node` constructor:
+{{< look-action >}} Let's start by looking at the `Node` class:
 
-```python
-class Node():
-  def __init__(self, id, option_title, description):
-      # initializes a node object with its properties
+{{<mermaid align="left">}}
+classDiagram
+    class Node {
+        +id: str 
+        +option_title: str
+        +description: str
+        +children: [] Node
+        +Node(id, option_title, description)
+        +__ str __(): str
+        +__ repr __(): str
+        +add_child(Node)
+        +find(id): Node
+    }
+{{< /mermaid >}}
 
-      self.id = id # a unique id
-      self.children = []  # a list of node objects
-      self.option_title = option_title  # text for display in the menu          
-      self.description = description  # text to show if this option is selected
-```
-
-It has the following methods:
-- `__str__`: defines how a `Node` is printed
-- `add_child(child_node)`: this  adds `child_node` to its `children`
+A few things to take note of:
+- The `Node()` method is to describe how to create a Node - it requires 3 arguements
+- `__str__()`: defines how a `Node` is printed
+- `__repr__()`: defines how a `Node` is represented (this will help with debugging)
+- `add_child(child_node)`: this  apends `child_node` to its `children`
   - this is how the story pieces are connected to each other.
-- `find(id)` - searches through the nodes to return the node with the `id`
+- `find(id)` - searches through the Nodes to return the Node with the `id`
   
 
 ---
 
 ### Story
 
-**Now, let's look at the `Story()` constructor.** This is the primary class you will be interacting with when writing your story. 
-```python
-class Story():
-  def __init__(self, title, start_id, start_option_title, start_description):
-      # initializes a node object with its properties
+**Now, let's look at the `Story()` class.** This is the primary class you will be interacting with when writing your story. 
 
-      self.title = title # the title of your story
-      self.current_node = Node(start_id, start_option_title, start_description) #the current Node of your story
-      self.first_node = self.current_node # the first Node of your story
 
-```
+{{<mermaid align="left">}}
+classDiagram
+    class Story {
+        +title: str 
+        +first_node: Node
+        +current_node: Node
+        +Story(title, first_id,first_option_title, first_description)
+        +get_current_node(): Node
+        +get_current_children(self): [] Node
+        +chosen_node(current_node)
+        +add_new_children(parent_id, child_title, child_option_title, child_description)
+        +is_running(): Boolean
 
-**A `Story()` has 4 main methods.** Read the comment at the top of each method to know what it does
+    }
+{{< /mermaid >}}
 
-```python
-  def add_new_child(self, parent_id, child_id, child_option_title, child_description):
-      # adds a new child node to a parent node
-      parent_node = self.current_node.find(parent_id)
+A few things to take note of:
+- `first_node` - is a Node created from the arguements when a Story is created
+- `current_nodde` - when a Story is created, holds `first_note` - this changes as the Story progresses 
+- `add_new_children()` is used to to add new paths to your story
 
-      new_child_node = Node(
-          id = child_id,
-          option_title = child_option_title,
-          description= child_description
-      )
-
-      parent_node.add_child(new_child_node)
-
-  def get_current_children(self):
-      # returns a list of the children of the current node
-      return self.current_node.children
-
-  def set_current_node(self,chosen_node):
-      # sets the current node to the chosen node
-      self.current_node = chosen_node
-
-  def is_finished(self):
-      # returns True or False based on if the current node has children
-      if len(self.current_node.children) == 0:
-          return True
-      else:
-          return False 
-```
 ---
 
-## [2] Building your first story
+### Setting up a Story
 
-{{< look-action >}} **Let's start taking a look at `story_setup.py`** As you can see, the current story has only has 4 unique `Node()` objects and it calls `.add_new_child()` to build the story.
+👀 **Let's start taking a look at `story_setup.py`** As you can see, the current story has only has 4 unique `Node()` objects and it calls `.add_new_child()` to build the story.
 
 {{< expand "story_setup.py" >}}
 ```python
@@ -169,39 +157,21 @@ def story_setup():
 ```
 {{< /expand>}}
 
-{{< code-action >}} **Try to play through the short story in by running:** `python game.py`
-
-```shell
-$ python game.py
-==================================================
-Title: Lunch.
-
-Its lunch time.
-Where will you go?
-==================================================
-
-[what will you do?]
-❯ Head down to the basketball court.
-  Walk down to A Block Cafeteria.
-```
-
-
-🧐 *Hmmmmm.... it works, but the story does not continue with your choice.*
-
 ---
 
-### Finish game.py
+## [3] Implementing the Game Loop
 
-{{< code-action >}} **Finish `game.py` so it properly plays through the story.** It should:
+Now that we have a simple story, let's create the game loop so a user can play through it. 
 
-0. show a menu of all the options, and save the choice in a variable 
-0. whatever the user chose, set that to the new current node
-0. display the description for the new current node
-0. loop until there are no more options left
+{{< code-action >}} **Implement the game loop flow chart in `game.py` so it properly plays through the story.** 
+
+{{< figure src="images/courses/cs9/unit02/story0.png" width="50%" >}}
+
 
 🧐 *Consider...:*
-- *What methods exist in the `View()` and `Story()` that you could use?*
-- *how do you loop until a condition is met?*
+- *Try testing the classes before you implement the game*
+- *What methods exist in the `View()` and `Story()` that you should use?*
+- *How do you loop until a condition is met?*
 
 👾 **Be sure to play test the game to ensure it works as expected:** `python game.py`
 
@@ -242,7 +212,7 @@ Now that you've gotten a working `game.py`, let's build out the story.
 
 Come up with your own options to continue the story! We'll share out at the end of class. 
 
-{{< code-action >}} **"Continue the story, add at least 3 unique `Node()` objects.** Some ideas...
+{{< code-action >}} **Continue the story, add at least 3 unique `Node()` objects.** Some ideas...
 - add additional lunch options in ISF A Block Cafeteria
 - add options at the basketball court 
 - add other places to go for recess 
