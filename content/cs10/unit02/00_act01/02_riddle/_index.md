@@ -139,6 +139,43 @@ python manage.py runserver
 
 ---
 
+### `new_riddle()` success message 
+
+The goal is for the user to be notifed they successfully added a new Riddle. There are multiple ways to solve this issue, it all depends on how you want to design the user experience. Two potential methods are:
+- create a new view, url, and template with the success message
+- re-render the new_riddle page with the filled out form and the success message
+
+
+To redirect, reference the code snippet OR try to solve it yourself. You may use AI. 
+
+{{< expand "code snippet" >}}
+
+```python
+def new_riddle(request):
+    if request.method == "POST":
+        form = NewRiddleForm(request.POST)
+        if form.is_valid():
+            new_riddle = form.save()
+
+            params = {
+                "form": NewRiddleForm(instance=new_riddle),  
+                "message": "Success! Your riddle has been saved.",  
+            }
+
+            return render(request, "riddle_app/new_riddle_form.html", params)
+    else:
+        form = NewRiddleForm()
+
+    params = {
+        "form": form
+    }
+    
+    return render(request, "riddle_app/new_riddle_form.html", params)
+```
+{{< /expand >}}
+
+---
+
 ## [4] Deliverables 
 
 {{< deliverables >}}
@@ -150,6 +187,38 @@ python manage.py runserver
     - be sure to customize this message, do not copy and paste this line
 - `git push`
 {{< /deliverables >}}
+
+
+---
+
+## [5] Extensions
+
+### List of Riddles
+
+- Add the a page to view a list of riddles 
+- Add the feature to filter the page based on the difficuluty 
+    - consider how to use the URL paths `all/easy`, `all/medium`, `all/hard`
+
+--- 
+
+### Update a Riddle
+
+- Add the ability to update a Riddle after its been added to the database
+- Try using AI and referring to [this guide](https://www.geeksforgeeks.org/update-view-function-based-views-django/)
+
+
+
+---
+
+### CSS frameworks 
+
+CSS frameworks allow you to easily apply stylels to your web pages. There are many free frameworks. Two of the most common frameworks are Bootstrap and Tailwind. Feel free to test these or explore [other options](https://github.com/troxler/awesome-css-frameworks?tab=readme-ov-file).
+
+- [Boostrap Setup](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [Tailwind Setup](https://v3.tailwindcss.com/docs/installation/play-cdn)
+
+
+
 
 <!-- 
 ## [3] Django Shell

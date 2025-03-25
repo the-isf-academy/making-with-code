@@ -10,7 +10,6 @@ draft: true
 Act II focuses on planning and outlining a Web Application. Your will need to consider aesthetics, user experience, and backend architecture in order to create a comprehensive plan.
 
 
-
 ## [0] Project Overview
 
 🎨 **Design Brief:** In this project, you must create a social computing Web App for G6-G8 tutor groups. Students should be able to contribute, interact, view, and/or modify the Database. It is up to your team to decide what the App is its features. 
@@ -29,16 +28,20 @@ Act II focuses on planning and outlining a Web Application. Your will need to co
 
 ## [1] Design Document
 
-For this project, you will use a Miro board to design the frontend and backend of your Web App.
+For this project, you will use a Canva white-board to design the frontend and backend of your Web App.
 
 {{< look-action >}} **Open your Miro Board. You can find it by going to Miro.com or by referencing the invite email.  
 
 
 🖌 **You and your teammate(s) must work together to plan the frontend and backend of your social computing web app.**
+- For the backend,
+    - UML diagram
+    - data flow diagram
+    - user interaction flow chart 
 - For the frontend, 
-    - you must design a high-fidelity wireframe for each page of your site. It should look as close to your final design as possible. *([Inspiration for high-fidelity wireframes](https://dribbble.com/shots/popular/web-design))*
-- For the backend, 
-    - you must design the Model and Views of your app.
+    - you must design a low-fidelity wireframe for each page of your site. 
+- For the project tracking 
+    - you must write 10 success with a success case and a fail case 
 
 🔍 **A few resources:** 
 - [Django Model Field Types](https://docs.djangoproject.com/en/4.2/ref/models/fields/#field-types)
@@ -76,15 +79,19 @@ Your pitch should include:
         - Each View includes a corresponding url path
     - We can use descriptive names to support readability 
 - **Frontend Design [3]**
-    - We can design a high-fidelity wireframe for each necessary template
-    - We can display appropriate placeholder information in the layout
+    - We can design a low-fidelity wireframe for each necessary template in the MVP 
+    - We can include placeholder text from the Model to communicate the design
+
+- **Success Claims [3]**
+    - We can write clear testable success claims
+    - We can appropriately set a Minimum Viable Product goal
+    - We can create tasks to complete the MVP and assign them to team members  
+
+TAKE PITCH OUT OF ASSESSMENT??? 
 - **Pitch Presentation [3]**
     - We can present the Web App idea in a clear, engaging manner
     - We can design slides that are readable and include appropriate visual aids 
     - We can appropriately respond to audience feedback   
-- **MVP [3]**
-    - We can appropriately set a Minimum Viable Product goal
-    - We can create tasks to complete the MVP and assign them to team members  
 
 **For each criteria you will be assessed on a score from 0-3.** 
 - 0 - no evidence of the practice
@@ -100,8 +107,7 @@ Your pitch should include:
 {{< deliverables  >}}
 
 **🗓️ Due Dates**
-- CS10.1 - 18 April
-- CS10.2 - 15 April
+- CS10 - 18 April
 
 **📄 Deliverables**
 - A Miro Board with your Web App design specifications
