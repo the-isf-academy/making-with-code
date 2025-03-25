@@ -112,6 +112,34 @@ if __name__ == "__main__":
 
 ---
 
+### Using the `in` Keyword
+
+{{< look-action >}} **The keyword `in` can be very useful when working with strings:**
+
+#### 🔁 Looping
+
+```python
+word = "cobra"
+for letter in word:
+    print(letter)
+```
+
+#### 🔎 Checking for sub-strings using `in`
+
+```python
+word = "cobra"
+if "a" in word:
+    print("Here!")
+```
+
+```python
+word = "cobra"
+if "z" not in word:
+    print("Not here!")
+```
+
+---
+
 ## [3] Implementing the view and the game logic
 
 **Begin by running the game. 🤔 It works perfectly, but is incomplete!**
@@ -131,7 +159,7 @@ Guesses must be more than 3 letters long
 ```
 
 {{< code-action >}} **Open the file `game.py` and `view.py` and complete the game logic.** You will need to use the `SpellingBee` methods and the `TerminalView` methods. 
-- enusre the game works like the actual game
+- ensure the game works like the actual game
 - only write `print()` statements in the `TerminalView` methods. Why do you think this is?
 
 
@@ -154,7 +182,7 @@ python game.py
 - git status
 - git add -A
 - git status
-- git commit -m "describe your drawing and your process here"
+- git commit -m "describe your game and your process here"
   > be sure to customize this message, do not copy and paste this line
 - git push
 
