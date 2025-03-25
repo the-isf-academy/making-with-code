@@ -184,6 +184,18 @@ python manage.py runserver
 - `git push`
 {{< /deliverables >}}
 
+---
+
+## [5] Extensions
+
+- a feature to view a list of Riddles filtered by difficulty 
+- a new `ListView` to only see easy, medium, or hard riddles
+
+
+- a [`UpdateView`](https://docs.djangoproject.com/en/4.1/ref/class-based-views/generic-editing/#django.views.generic.edit.UpdateView) - to allow a user to change an existing `Riddle`
+- a non-destructive way to 'delete' riddles by 'archiving' them
+
+
 <!-- 
 ## [3] Django Shell
 

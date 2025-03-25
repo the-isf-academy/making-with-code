@@ -148,7 +148,7 @@ The goal is for the user to be notifed they successfully added a new Riddle. The
 
 To redirect, reference the code snippet OR try to solve it yourself. You may use AI. 
 
-{{< expand "code snipped" >}}
+{{< expand "code snippet" >}}
 
 ```python
 def new_riddle(request):
@@ -187,6 +187,38 @@ def new_riddle(request):
     - be sure to customize this message, do not copy and paste this line
 - `git push`
 {{< /deliverables >}}
+
+
+---
+
+## [5] Extensions
+
+### List of Riddles
+
+- Add the a page to view a list of riddles 
+- Add the feature to filter the page based on the difficuluty 
+    - consider how to use the URL paths `all/easy`, `all/medium`, `all/hard`
+
+--- 
+
+### Update a Riddle
+
+- Add the ability to update a Riddle after its been added to the database
+- Try using AI and referring to [this guide](https://www.geeksforgeeks.org/update-view-function-based-views-django/)
+
+
+
+---
+
+### CSS frameworks 
+
+CSS frameworks allow you to easily apply stylels to your web pages. There are many free frameworks. Two of the most common frameworks are Bootstrap and Tailwind. Feel free to test these or explore [other options](https://github.com/troxler/awesome-css-frameworks?tab=readme-ov-file).
+
+- [Boostrap Setup](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [Tailwind Setup](https://v3.tailwindcss.com/docs/installation/play-cdn)
+
+
+
 
 <!-- 
 ## [3] Django Shell
