@@ -1,6 +1,6 @@
 ---
 Title: Project Story [extended]
-draft: true
+draft: True
 ---
 
 # Unit 02 Games: Story Project
