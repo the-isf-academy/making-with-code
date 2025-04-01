@@ -1,6 +1,6 @@
 ---
 Title: Project Story
-draft: true
+draft: false
 ---
 
 # Unit 02 Games: Story Project
@@ -31,11 +31,16 @@ It is totally up to you what type of story you make. For example you could make:
 
 This is a big project with a lot of room for customization. It is important for you to plan the game prior to coding. 
 
-**✏️ Plan your game in your Google Doc:**  `Unit 02: Games  - Story Project Planning Document`. *Check with a teacher before moving on to the code.*
+**✏️ Plan your game in the Canva document:**  [`Unit 02: Games Project Planning Document `](https://www.canva.com/design/DAGizT2u_b4/vwyZ9k9cH6NviN_L7UUGxQ/edit?utm_content=DAGizT2u_b4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+- Open the Link
+- File > Make a Coopy
+- Share with teacher 
+- Change name of file to include name
 
-You will need to:<br>
-1️⃣ plan the implementation of an additional feature <br>
-2️⃣ outline your story in a graph diagram 
+1️⃣ outline your game overview <br>
+2️⃣ outline your feature <br>
+3️⃣ outline the feature implementation in the logic of the game<br>
+4️⃣ outline the story in a graph diagram 
 
 🧠 Some idea for features:
 - branches that come back together into the same Node
@@ -88,25 +93,26 @@ This repo includes the following files:
 ✅  **This project will be assessed on the following criteria:**
 - **Planning [3]** 
     - I can consider the components of my game before coding
+    - I can create a UML diagram my feature with appropriate data types
+    - I can consider how to implement the feature into the game logic
     - I can create a graph diagram to outline the branches of my story
-    - I can plan how to implement a new feature  
 - **Iterative Development [3]**
     - I can track the development of my project by successfully committing to Github a minimum of each class work day, preferably after each work session
     - I can write descriptive commit messages that accurately describe the changes made
     - I can systematically break down my project into smaller chunks  
-- **Readability [3]**
-    - I can write easily understandable code (another CS student could understand it)
-    - I can use descriptive names for modules, variables, classes, and methods
-    - I can write descriptive comments to describe complex pieces of the code
-    - I included a short description of my game in `README.md`
 - **Feature Implementation [3]**
-    - I can independently edit or add the necessary class(es) with appropriate properties and/or methods
-    - I can add a feature that is well abstracted
-        - could be used in multiple situations 
-        - could be easily adapted by another CS student
+    - I can independently design and implement the necessary class(es) with appropriate properties and methods to fully realize my feature(s).
+    - I can write a feature that is well abstracted
+        - can be used in multiple scenarios within the game  
+        - can be extended or adapted by another developer or student
+    - I can use descriptive names for modules, variables, classes, and methods to enhance code readability
+    - I can write descriptive comments to describe complex pieces of the code
 - **Game Implementation [3]**
-    - I can implement my graph diagram
-    - I can design a `View` that is easily to read and understand 
+    - I can test the game thoroughly to ensure the user interface behaves as expected and matches the Game Logic Flowchart
+    - I can implement a full functioning version of my graph diagram, ensuring all planned Nodes and connections are accurately represented
+    - I can design a `View` that is easily to read and understand
+    - I can use descriptive names for modules, variables, classes, and methods
+    - I can write descriptive comments to describe complex pieces of the code 
 
 
 <!-- **For each criteria you will be assessed on a score from 0-3. With 5 criteria, there is a total of 15 potential points.** 
@@ -135,7 +141,9 @@ The project is scored out of 15.
 
 ## [3] Deliverables
 
-{{< deliverables  "Projects are due on the first class of Week 32." >}}
+<!-- Projects are due during Week 31-32. -->
+
+{{< deliverables  "" >}}
 
 - A `Unit 02 Games Project: Planning Document` 
 - A `project_game_story` repository will include some if not all the following files:
@@ -145,7 +153,7 @@ The project is scored out of 15.
     - `model_story.py`
     - `model_node.py`
     - `README.md` - a brief description of your game
-
+<!-- 
 ---
 
 **🗓️ Timeline**
@@ -159,7 +167,7 @@ The project is scored out of 15.
 | 24 Apr       | 22 Apr       | Work Day                         |
 | 25 Apr       | 23 Apr       | Work Day                         |
 | 26 Apr       | 25 Apr       | Work Day                         |
-| 30 Apr       | 29 Apr       | Due at End of Class              |
+| 30 Apr       | 29 Apr       | Due at End of Class              | -->
 
 ---
 
@@ -184,12 +192,12 @@ The project is scored out of 15.
 - [Store front Example, variables](https://unfold.studio/stories/1065/)
 
 ---
-
+<!-- 
 ### ✏️ AI tools
 If you need help writing the text, feel free to use an AI service. Just be sure to cite your transcript in the Planning Doc.
 - [poe](https://poe.com/)
 - [rytr](https://rytr.me/)
-- [composeai](https://www.compose.ai/#:~:text=Compose%20AI%20is%20a%20free,some%20of%20our%20personalization%20features.)
+- [composeai](https://www.compose.ai/#:~:text=Compose%20AI%20is%20a%20free,some%20of%20our%20personalization%20features.) -->
 
 ---
 
