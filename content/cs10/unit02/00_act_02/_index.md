@@ -14,10 +14,9 @@ Act II focuses on planning and outlining a Web Application. Your will need to co
 🎨 **Design Brief:** In this project, you must create a social computing Web App for G6 tutor groups. Students should be able to contribute, interact, view, and/or modify the Database. It is up to your team to decide what the App is its features. 
 
 🤔 **Here are a few ideas:**
-- [r/place](https://www.washingtonpost.com/technology/2022/04/04/reddit-place-internet-communities/)
+- [last year's projects](http://sycs.student.isf.edu.hk/)
 - [fizz](https://techcrunch.com/2022/10/04/fizz-app-college-stanford-social/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAH3uremC98DEuII1DKx69s9ycEmzrJV-E_PMl9IiyByc4hGfRMYUdxeiecqmRsLhlwoYc6LAWsBzN6dCy_-TSemzSz_NNKRRRrYpY0vJ0Pz2LBZFc5wSwSsdh_-e3X49rtESewxxk_Z7O9PhmsiMUxjbiBjbia0r290AqDSjwoPa) or [YikYak](https://mashable.com/article/how-to-use-yik-yak)
 - [higher/lower game](https://www.stattogories.com/)
-- [isf compliments](https://www.instagram.com/qilincompliments/)
 - [list of fun APIs](https://developer.vonage.com/en/blog/the-ultimate-list-of-fun-apis-for-your-next-coding-project)
 - [lucky draw](https://luckydraw.wolfie.dev/)
 - [blessings](https://blessings.wolfie.dev/) - use `emma` as the password
