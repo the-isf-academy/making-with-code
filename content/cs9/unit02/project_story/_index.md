@@ -155,7 +155,6 @@ The project is scored out of 15.
     - `README.md` - a brief description of your game
 <!-- 
 ---
-
 **🗓️ Timeline**
 
 **You have 5 in class days to complete this project.**
