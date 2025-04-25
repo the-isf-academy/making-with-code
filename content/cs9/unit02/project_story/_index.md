@@ -101,7 +101,7 @@ This repo includes the following files:
     - I can write descriptive commit messages that accurately describe the changes made
     - I can systematically break down my project into smaller chunks  
 - **Feature Implementation [3]**
-    - I can independently design and implement the necessary class(es) with appropriate properties and methods to fully realize my feature(s).
+    - I can design and implement the necessary class(es) with appropriate properties and methods to fully realize my feature(s).
     - I can write a feature that is well abstracted
         - can be used in multiple scenarios within the game  
         - can be extended or adapted by another developer or student
