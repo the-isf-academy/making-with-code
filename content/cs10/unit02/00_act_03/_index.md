@@ -76,6 +76,49 @@ poetry install
 - `git push`
 {{< /deliverables >}}
 
+---
+
+## [3] Django Reminders 
+
+{{< code-action "To run a local server" >}}  
+```shell
+python manage.py runserver
+```
+
+{{< code-action "To prepare changes the Model fields in the database" >}}  
+```shell
+python manage.py makemigrations
+```
+
+{{< code-action "To apply changes the database" >}}  
+```shell
+python manage.py migrate
+```
+
+{{< code-action "To create a superuser." >}} 
+```shell
+python manage.py createsuperuser
+```
+
+---
+
+### [To add images from a file]
+
+{{< code-action "Add the image to the" >}} **`myapp/static` folder.**
+
+
+{{< code-action "In the HTML template, load the static folder" >}} 
+
+```html
+{% load static %}
+```
+
+
+{{< code-action "In the HTML template, reference the static folder in the image tag" >}} 
+
+```html
+<img src="{% static 'filename.png' %}">
+```
 
 
 ---
