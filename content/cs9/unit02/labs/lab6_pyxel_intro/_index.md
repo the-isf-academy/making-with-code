@@ -30,18 +30,24 @@ cd ~/desktop/making_with_code/unit02_games
 
 {{< code-action "Clone the repo." >}}  Be sure to change `YOUR-GITHUB-USERNAME` to your actual Github username.
 ```shell
-git clone https://github.com/the-isf-academy/lab_pxyel_intro_YOUR-GITHUB-USERNAME
+git clone https://github.com/the-isf-academy/lab_pyxel_intro_YOUR-GITHUB-USERNAME
 ```
 
 {{< code-action "cd into the lab" >}} 
 ```shell
-cd lab_pxyel_intro_YOUR-GITHUB-USERNAME
+cd lab_pyxel_intro_YOUR-GITHUB-USERNAME
+```
+
+{{< code-action "Install the package, copy each line one at a time" >}}
+```shell
+brew install pipx
+pipx ensurepath
+pipx install pyxel
 ```
 
 {{< code-action "Enter the Poetry shell and install the requirements:" >}}
 ```shell
 poetry shell
-poetry install
 ```
 
 This repo includes these key files:
