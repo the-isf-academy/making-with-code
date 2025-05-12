@@ -15,7 +15,7 @@ You finally get your hands on some code! During Act III you and your partner wil
 In this lab, you will be working in groups, storing your shared code in your group's repository.
 
 
-{{< code-action "Download your repository with starter code for your project." >}}
+our repository with starter code for your project." >}}
 
 ```shell
 cd ~/desktop/making_with_code/unit05_webapps/
