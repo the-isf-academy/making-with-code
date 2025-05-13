@@ -38,16 +38,12 @@ git clone https://github.com/the-isf-academy/lab_pyxel_intro_YOUR-GITHUB-USERNAM
 cd lab_pyxel_intro_YOUR-GITHUB-USERNAME
 ```
 
-{{< code-action "Install the package, copy each line one at a time" >}}
-```shell
-brew install pipx
-pipx ensurepath
-pipx install pyxel
-```
+
 
 {{< code-action "Enter the Poetry shell and install the requirements:" >}}
 ```shell
 poetry shell
+poetry install
 ```
 
 This repo includes these key files:
@@ -57,6 +53,15 @@ This repo includes these key files:
 - `coin.py`
 - `helpers.py`
 - `assets.pyxres`
+
+{{< expand "If issues with install..." >}}
+```shell
+brew install pipx
+pipx ensurepath
+pipx install pyxel
+```
+{{< /expand >}}
+
 
 ---
 
