@@ -22,12 +22,12 @@ cd ~/desktop/making_with_code/unit02_games
 
 {{< code-action "Clone the repo." >}}  Be sure to change `YOUR-GITHUB-USERNAME` to your actual Github username.
 ```shell
-git clone https://github.com/the-isf-academy/lab_pyxel_intro_YOUR-GITHUB-USERNAME
+git clone https://github.com/the-isf-academy/lab_pyxel_platformer_YOUR-GITHUB-USERNAME
 ```
 
 {{< code-action "cd into the lab" >}} 
 ```shell
-cd lab_pyxel_intro_YOUR-GITHUB-USERNAME
+cd https://github.com/the-isf-academy/lab_pyxel_platformer_YOUR-GITHUB-USERNAME
 ```
 
 
