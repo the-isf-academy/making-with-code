@@ -70,6 +70,9 @@ cd ~/desktop/making_with_code/unit02_games
 ```shell
 git clone https://github.com/the-isf-academy/project_game_story_yourgithubusername
 ```
+```shell
+cd project_game_story_yourgithubusername
+```
 
 {{< code-action "Enter the Poetry shell and install the requirements:" >}}
 ```shell
