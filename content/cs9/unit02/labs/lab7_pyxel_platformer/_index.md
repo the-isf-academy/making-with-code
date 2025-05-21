@@ -15,7 +15,7 @@ In this lab you explore a platformer game and designing tileset.
 
 
 
-{{< code-action "Start by going into your" >}} `cs9/unit02_games` **folder.**
+{{< code-action "Start by going into your" >}} `unit02_games` **folder.**
 ```shell
 cd ~/desktop/making_with_code/unit02_games
 ```
@@ -27,9 +27,8 @@ git clone https://github.com/the-isf-academy/lab_pyxel_platformer_YOUR-GITHUB-US
 
 {{< code-action "cd into the lab" >}} 
 ```shell
-cd https://github.com/the-isf-academy/lab_pyxel_platformer_YOUR-GITHUB-USERNAME
+cd lab_pyxel_platformer_YOUR-GITHUB-USERNAME
 ```
-
 
 
 {{< code-action "Enter the Poetry shell and install the requirements:" >}}
@@ -53,39 +52,60 @@ This repo includes these key files:
 
 ## [1] Tilesets
 
-💻 **First, play the game `python game.py`.** Note the gravity and notice the walls. There are multiple different tiles that are registered as walls.
+💻 **First, play the game `python game.py`.** Use the arrows `<` `>` to move sideways and `space` to jump. Note the gravity and note the walls. There are multiple different tiles that are registered as walls.
 
 
-💻 **Open the editor**
+
+---
+### Edit the Map
+
+💻 **Open the resource editor**
 
 ```shell
 pyxel edit assets.pyxres 
 ```
 
-👀 **Notice, the purple and blue tiles tiles are for the walls.** You can select the tiles on the bottom right. Then, draw with that selection in the map editor. 
+👀 **Go to the map editor. Notice, the purple and blue tiles are all solid walls.** You can select the tiles on the bottom right. Then, draw with that selection in the map editor.
 
 {{< figure src="images/courses/cs9/unit02/pyxel1.png" width="25%" >}}
 
-💻 **Go the map editor and add a few walls.** Then save, and replay the game.
+💻 **Add some new walls to the map.**  Then save, and replay the game.
 {{< figure src="images/courses/cs9/unit02/pyxel2.png" width="50%" >}}
 
-💻 **Open the editer and draw your own wall asset. Then add it to the map.** Be sure to draw it near the other wall tiles.
+---
+
+### Add Your Own Tiles
+
+💻 **Open the editer and draw your own wall asset.**  Be sure to draw it near the other wall tiles.     
+
 
 {{< figure src="images/courses/cs9/unit02/pyxel3.png" width="50%" >}}
 
-💻 **Becuase I added tiles below the exisitng tiles, I will need to find the new x,y cordinate range and edit `helpers.py`** By hovering over the tile on the bottom left, it displays the x,y cordinate on the top.
+💻 **Then add your new tile into the map.**   
+
+<br>
+
+{{< aside "Setting New Tiles as WALLS" >}}
+
+When new `WALL` tiles are added, you must update the code accordingly. 
+
+👀 ✏️ **Find the new x,y cordinate range of the WALL tiles.** By hovering over the tile on the bottom left, it displays the x,y cordinate on the top.    
+<br>
+In the screenshot, the new tile is located at `(0,5)`
 
 {{< figure src="images/courses/cs9/unit02/pyxel4.png" width="50%" >}}
 
-💻 **Now, I change the x,y range accordingly in the `helpers.py` file** Remember, `for loops` are exclusive, so you must go 1 above the number.
+💻 **In `helpers.py`, update the x,y range accordingly to your new tile range.** Remember, in `for i in range(start, stop)` the `stop` value is not inclusive. So your `stop` value must be **+1** above your desired number.
 
-```python
+```python {linenos=table, hl_lines=["4"],linenostart=33}
 WALL_TILE_POSITIONS = []
 # SET RANGES BASED ON X,Y IN MAP EDITOR
 for x in range(0,5):   
     for y in range(2,6):  
         WALL_TILE_POSITIONS.append((x,y))
 ```    
+
+{{< /aside  >}}
 
 💻 **Experiment and customize your own tileset!** Feel free to google `tileset pixel example` to reference 
 
@@ -96,7 +116,7 @@ for x in range(0,5):
 
 💻 **Experiment with gravity by customizing the attributes in the `Player` class.** 
 
-💻 **Experiment with the camera by experimenting with the `scroll_border_X` and `scroll_border_Y` in the `Game` class.** 
+💻 **Experiment with the camera by customizing the `scroll_border_X` and `scroll_border_Y` in the `Game` class.** 
 
 
 ---
@@ -114,6 +134,6 @@ for x in range(0,5):
 - git commit -m "describe your changes here"
   > be sure to customize this message, do not copy and paste this line
 - git push
-
+- remote
 
 {{< /deliverables >}}
