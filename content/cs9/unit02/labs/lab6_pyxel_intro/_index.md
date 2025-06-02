@@ -40,23 +40,36 @@ poetry shell
 poetry install
 ```
 
+More actions
+This repo includes these key files:
+- `game.py`
+- `sprite.py` 
+- `player.py`
+- `coin.py`
+- `helpers.py`
+- `assets.pyxres`
+
+{{< expand "If issues with install..." >}}
+```shell
+brew install pipx
+pipx ensurepath
+pipx install pyxel
+```
+{{< /expand >}}
+
+
 ---
 
 
-## [1] Experiment with making your own Tileset
+## [1] Explore the Maze
 
-💻 **First, play the game `python game.py`.** Note the gravity and notice the walls. There are multiple different tiles that are registered as walls.
+👾✏️ **Explore the maze, and follow along with the worksheet!** You can use the arrow keys to move around the level.
 
-
-💻 **Open the editor**
 
 ```shell
-pyxel edit assets.pyxres 
+python game.py 
 ```
-
-👀 **Notice, there are multiple tiles for the walls.**
-
-{{< figure src="images/courses/cs9/unit02/pyxel1.png" width="50%" >}}
+{{< figure src="images/courses/cs9/unit02/pyxel0.png" width="50%" >}}
 
 
 
