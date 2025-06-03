@@ -1,7 +1,7 @@
 ---
-title: "1. HTTP"
+title: "3. HTTP"
 type: lab
-draft: true
+# draft: true
 ---
 
 
@@ -47,6 +47,11 @@ This time the mail delivery person is able to retrieve it from the business. You
 ---
 
 ## [0] Set Up
+
+
+{{< code-action "Download Mac app of HTTPIE:" >}} [ httpie.io/download](https://httpie.io/download). We need to download the app to make local HTTP requests for testing purposes. In this lab, you will run a locally hosted riddle server on your laptop using Banjo.
+
+{{< figure src="https://httpie.io/Images/download-shape.svg" width="25%">}}
 
 {{< code-action >}} **Install `httpie`.** We will be using this command-line software throughout the unit to interact with websites in a new way. 
 ```shell

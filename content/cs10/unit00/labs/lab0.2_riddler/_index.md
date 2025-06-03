@@ -1,5 +1,5 @@
 ---
-title: "0.2 Review: Riddler"
+title: "0.1 Review: Riddler"
 type: lab
 slug: lab_riddler
 repo_url: https://github.com/the-isf-academy/lab-riddler
@@ -9,7 +9,7 @@ init_action: clone
 
 # Riddler
 
-In this lab we will remind ourselves of classes and object-oriented programming with a riddle guessing game. It's up to you to use the `Riddle` class to create working game.
+In this lab we will introduce interacting with an SQL database by making a Trivia game. 
 
 {{< figure src="https://play-lh.googleusercontent.com/DqluLBHRQ1VwCz13_2vIwSq3dEknwGjqXi3CXu10YC_Le-KRldpIZUtMOHgRPchui7A" width="25%"  >}}
 
