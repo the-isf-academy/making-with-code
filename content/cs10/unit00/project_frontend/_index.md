@@ -1,6 +1,6 @@
 ---
 Title: "Project: Frontend"
-# draft: true
+draft: true
 ---
 
 # Networking Frontend Project

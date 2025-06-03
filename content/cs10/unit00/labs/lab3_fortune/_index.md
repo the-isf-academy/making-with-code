@@ -3,7 +3,7 @@ title: "3. Banjo - Fortune"
 type: lab
 slug: lab_fortune_server
 
-# draft: true
+draft: true
 ---
 
 # Fortune Server

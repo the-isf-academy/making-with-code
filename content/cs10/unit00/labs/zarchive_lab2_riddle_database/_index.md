@@ -1,7 +1,7 @@
 ---
-title: "1. Banjo Database"
+title: "3. Banjo Database"
 type: lab
-# draft: true
+draft: true
 ---
 
 # Riddle Database
