@@ -89,6 +89,7 @@ Here is a cheatsheet of the Riddle endpoints, what parameters they take in their
 {{< code-action "Start by going into the unit folder and the lab." >}} Remember to replace `yourgithubusername` with your actual GitHub username.
 ```shell
 cd ~/desktop/making_with_code/unit03_networking/
+git clone https://github.com/the-isf-academy/lab_apiyourgithubusername
 cd lab_api_yourgithubusername
 ```
 
