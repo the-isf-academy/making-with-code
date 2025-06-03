@@ -1,7 +1,7 @@
 ---
 title: "5. GUI"
 type: lab
-# draft: true
+draft: true
 ---
 
 # GUI

@@ -1,7 +1,7 @@
 ---
 title: "6. GUI Game"
 type: lab
-# draft: true
+draft: true
 ---
 
 # GUI Game

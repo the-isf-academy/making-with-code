@@ -1,15 +1,16 @@
 ---
 Title: "Project: Backend"
-# draft: true
+draft: true
 ---
 
 # Networking: Social Computing Project
 
-In this unit there will be 2 mini-projects for you to create a social computing app. In this part of the project, you will create the Banjo backend. 
+In this unit there will be 2 mini-projects for you to create a social computing app. In this part of the project, you will create the SQL and Flask backend. 
 
-{{< aside "Reference: Banjo Documentation" >}}
+{{< aside "Reference Documentation" >}}
 
-[the-isf-academy.github.io/banjo_docs/](https://the-isf-academy.github.io/banjo_docs/)
+- [Flask](https://flask.palletsprojects.com/)
+- [SQL](https://docs.python.org/3/library/sqlite3.html)
 
 {{< /aside >}}
 
