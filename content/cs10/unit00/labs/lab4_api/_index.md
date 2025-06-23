@@ -1,5 +1,5 @@
 ---
-title: "4. API"
+title: "4. API" 
 type: lab
 slug: lab_riddle_server
 draft: false
