@@ -57,7 +57,7 @@ Here is a cheatsheet of the Riddle endpoints, what parameters they take in their
 | `GET`  | `/all`   |                      | Returns a list of all the riddles, without answers.                                      |
 | `GET`  | `/one`   | `id`                 | Returns the riddle if it exists |
 | `POST` | `/new`   | `question`, `answer` | Creates a new riddle (with an automatically-assigned id). Returns the riddle.            |
-| `POST` | `/guess` | `id`, `guess`        | Checks whether the guess is correct. In the response, `correct` is `True` or `False`.    |
+| `PUT` | `/guess` | `id`, `guess`        | Checks whether the guess is correct. In the response, `correct` is `True` or `False`.    |
 | `GET`  | `/difficulty`   | `id`                 | Returns the riddle if it exists with its difficulty score. (Otherwise, it returns an error with status code 404.)  |
 
 
