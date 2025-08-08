@@ -1,7 +1,7 @@
 ---
 title: "Unit 03: Networking" 
 bookFlatSection: false
-bookCollapseSection: True
+bookCollapseSection: false
 # draft: true
 ---
 

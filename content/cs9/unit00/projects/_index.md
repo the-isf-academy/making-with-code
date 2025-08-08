@@ -1,6 +1,6 @@
 ---
 Title: Project
-# draft: true
+draft: true
 ---
 
 # Animation Project

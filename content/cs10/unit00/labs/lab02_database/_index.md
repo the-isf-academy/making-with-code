@@ -2,7 +2,7 @@
 title: "2. Database"
 type: lab
 init_action: clone
-# draft: true
+draft: true
 ---
 
 # Lab: Database

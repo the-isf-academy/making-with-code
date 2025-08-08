@@ -2,7 +2,7 @@
 title: "01. Terminal Adventure"
 
 # numberHeaders: true
-# draft: true
+draft: true
 
 ---
 # Terminal Adventure
