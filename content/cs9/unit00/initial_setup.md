@@ -72,10 +72,10 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 
 
 (1) **Once the installation finishes, you will see a Finder window showing what was installed**.
-(If you closed the window, open Finder, click on "Applications," and then "Python 3.12" (or whatever version of Python you just installed).
+(If you closed the window, open Finder, click on "Applications," and then "Python 3.13" (or whatever version of Python you just installed).
 
 
-(2) **Check Python installed successfully by typing `python3.12 --version` into the Terminal.** You should see a version number above `3.12`.
+(2) **Check Python installed successfully by typing `python3 --version` into the Terminal.** You should see version number  `3.13`.
 
 {{< figure src="images/courses/cs9/unit00/-000_initialsetup14.png" width="50%" alt-text="mwc setup" >}}
 
@@ -124,9 +124,12 @@ bgenzlinger~/Documents$
 {{< figure src="images/courses/cs9/unit00/-000_initialsetup10.png" width="50%" alt-text="mwc setup" >}}
 
 
-{{< code-action "Run the below commands to add the Homebrew to the path." >}} 
+{{< code-action "Run the below commands one at a time." >}} 
 ```shell
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+```
+
+```shell
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
@@ -156,9 +159,9 @@ pipx ensurepath
 
 ## Testing your Setup
 
+💻 **Close your Terminal window and open a new Terminal window.**
 
-
-💻 **Run each of the following checks one at a time to check your setup.** If you do not see an `version number`, there was an error with the install.
+💻 **Run each of the following checks one at a time to check your setup.** If you do not see an `version number`, there was an error with the install. You can try to debug yourself by referencing the below `Debugging` section. 
 
 ✔️ *Checks `Visual Studio Code`*
 
@@ -197,7 +200,7 @@ poetry --version
 ✅ **Fill out this form to notify your teachers if your install was successfull:** [forms.gle/xSKm6Xv7G3NYQ4EF7](https://forms.gle/xSKm6Xv7G3NYQ4EF7)
 
 
-A successful setup will look something like this:
+A successful setup will look something like below. It is okay if the version numbers do not match. This just means the package has been updated. 
 
 {{< figure src="images/courses/cs9/unit00/-000_initialsetup15.png" width="80%" alt-text="mwc setup" >}}
 
