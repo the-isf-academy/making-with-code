@@ -1,5 +1,5 @@
 ---
-title: "2 Review: Riddler"
+title: "2. Review: Riddler"
 type: lab
 slug: lab_riddler
 repo_url: https://github.com/the-isf-academy/lab-riddler
