@@ -6,7 +6,7 @@ weight: 1
 # Check setup
 
 **Welcome back to CS! These instructions will help you get your computer set up for the class.**
-If you get stuck or are unsure what to do, send a screenshot of your error to Ms. Brown or Ms. Genzlinger.
+If you get stuck or are unsure what to do, first check out the debugging section at the bottom of the page. If you are still encountering an error, please send a screenshot of your error to Ms. Brown.
 
 
 ---
@@ -103,6 +103,11 @@ echo 'alias remote="open \"\$(git remote get-url origin | sed \"s/\.git\$//\")\"
 brew upgrade gh
 ```
 
+{{< code-action "Ensure you are logged into Github." >}} Follow the instructions. 
+```shell
+gh auth login
+```
+
 ---
 
 ## Testing your Setup
@@ -142,3 +147,34 @@ poetry --version
 
 
 {{< /deliverables >}}
+
+---
+
+## Debugging 
+
+**If `code --version` showes `EACCES: permission denied, unlink '/usr/local/bin/code'`**
+1.  First double check `VS Code` is in your “Applications” folder
+2.  In the top menu click `View > Comannd Palette...`
+3.  Type `uninstall code`, click the option 
+4.  Type `install code`, click the option
+5.  In Terminal, try `code --version`.
+6.  If you do not see a version number, run this command: `sudo chown -R your_user_name /usr/local/bin`
+7.  In Terminal, try `code --version`.
+3. If still does not show a verison number, ask a teacher.
+
+---
+
+**If `poetry --version` does NOT show a version number.** 
+1. Copy & Paste this command into the Terminal: `pipx ensurepath`
+2. Try `poetry --version` again. 
+3. If still does not show a verison number, ask a teacher.
+
+---
+
+**If `brew --version` does NOT show a version number.** 
+1. Copy & Paste the commands below into the Terminal.  Be sure to paste them one at a time. Each time, pressing `return` to run the command.
+    1. `echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile`
+    2. `eval "$(/opt/homebrew/bin/brew shellenv)"`
+2. Try `brew --version` again.
+3. If still does not show a verison number, ask a teacher.
+
