@@ -1,5 +1,5 @@
 ---
-title: "0.0 Review: Turtle"
+title: "0 Turtle"
 weight: 10
 ---
 
@@ -21,8 +21,8 @@ Now that you're in **Year 2** you need a new unit folder.
 
 ```shell
 cd ~/desktop/making_with_code
-mkdir unit03_networking
-cd unit03_networking
+mkdir year2_review
+cd year2_review
 ```
 
 
