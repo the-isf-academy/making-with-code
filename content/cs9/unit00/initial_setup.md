@@ -155,6 +155,11 @@ pipx install poetry
 pipx ensurepath
 ```
 
+{{< code-action "Run the below command to add the poetry shell plugin" >}} 
+```shell
+poetry self add poetry-plugin-shell
+```
+
 ---
 
 

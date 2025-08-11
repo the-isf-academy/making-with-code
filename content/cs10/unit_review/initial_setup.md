@@ -40,7 +40,7 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 (If you closed the window, open Finder, click on "Applications," and then "Python 3.12" (or whatever version of Python you just installed).
 
 
-(2) **Check Python installed successfully by typing `python --version` into the Terminal.** You should see a version number above `3.12`.
+(2) **Check Python installed successfully by typing `python --version` into the Terminal.** You should see the version number `3.13`.
 
 (3) **Double-click on "Install Certificates.command".** This will will open a Terminal window and run a bunch of commands. Once you see `[Process completed]`, you may close the window.
 
@@ -77,25 +77,30 @@ brew upgrade
 ---
 
 
-## Reinstall Poetry
-*Poetry makes sure your coding environment is set up to work for all your coding projects*
+## Upgrade Poetry
 
-{{< code-action "First we must uninstall poetry" >}} 
+{{< code-action "Upgrade Poetry " >}} 
 ```shell
-curl -sSL https://install.python-poetry.org | python3 - --uninstall
-```
-```shell
-curl -sSL https://install.python-poetry.org | POETRY_UNINSTALL=1 python3 -
+brew upgrade poetry
 ```
 
-{{< code-action "Run the below command to install Pipx with Brew." >}} We will nowuse `Pipx` to install and update Poetry.
+{{< code-action "Add the poetry shell plugin" >}} 
 ```shell
-brew install pipx
+poetry self add poetry-plugin-shell
 ```
 
-{{< code-action "Run the below command to install Poetry." >}} 
+---
+
+## Github Setup 
+
+{{< code-action "Add a shortcut command to easily open Github" >}} 
 ```shell
-pipx install poetry
+echo 'alias remote="open \"\$(git remote get-url origin | sed \"s/\.git\$//\")\""' >> ~/.zshrc
+```
+
+{{< code-action "Upgrade gh " >}} 
+```shell
+brew upgrade gh
 ```
 
 ---
