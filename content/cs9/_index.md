@@ -6,7 +6,7 @@ bookCollapseSection: true
 ---
 
 
-# Welcome to Year 1 CS
+# Welcome to Year 1 CS :)
 
 This is a high-level overview of the curricular units that comprise this introductory course.
 
