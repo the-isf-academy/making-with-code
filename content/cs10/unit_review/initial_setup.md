@@ -37,10 +37,10 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 
 
 (1) **Once the installation finishes, you will see a Finder window showing what was installed**.
-(If you closed the window, open Finder, click on "Applications," and then "Python 3.12" (or whatever version of Python you just installed).
+(If you closed the window, open Finder, click on "Applications," and then "Python 3.13" (or whatever version of Python you just installed).
 
 
-(2) **Check Python installed successfully by typing `python --version` into the Terminal.** You should see the version number `3.13`.
+(2) **Check Python installed successfully by typing `python3 --version` into the Terminal.** You should see the version number `3.13`.
 
 (3) **Double-click on "Install Certificates.command".** This will will open a Terminal window and run a bunch of commands. Once you see `[Process completed]`, you may close the window.
 
@@ -51,7 +51,7 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 
 {{< aside >}}
 **If you see a red "Permission denied" error message when running "Install Certificates.command"**:
-- open a Terminal window and run **`sudo "/Applications/Python 3.12/Install Certificates.command"`**
+- open a Terminal window and run **`sudo "/Applications/Python 3.13/Install Certificates.command"`**
 - You will be asked for an administrator password; you won't see any letters appearing as you enter the password. This is a security feature.
 {{</ aside >}}
 
