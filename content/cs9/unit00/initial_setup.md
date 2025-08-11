@@ -5,8 +5,10 @@ weight: 1
 
 # Initial setup
 
-**Welcome to CS! These instructions will help you get your computer set up for the class.**
-If you get stuck or are unsure what to do, send a screenshot of your error to Ms. Brown or Ms. Genzlinger.
+**Welcome to CS! These instructions will help you get your computer set up for the class.** This will require the admin password of your computer.
+
+If you get stuck or are unsure what to do, first check out the debugging section at the bottom of the page. If you are still encountering an error, please send a screenshot of your error to Ms. Brown or Ms. Genzlinger.
+
 
 
 ---
