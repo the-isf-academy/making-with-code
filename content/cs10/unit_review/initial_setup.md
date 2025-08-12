@@ -81,7 +81,7 @@ brew upgrade
 
 {{< code-action "Upgrade Poetry " >}} 
 ```shell
-brew upgrade poetry
+poetry self update
 ```
 
 {{< code-action "Add the poetry shell plugin" >}} 
@@ -128,9 +128,9 @@ python3 --version
 ```
 
 ✔️ *Checks `Homebrew`*
+brew --version
 
 ```shell
-brew --version
 ```
 
 ✔️ *Checks `Poetry`*
