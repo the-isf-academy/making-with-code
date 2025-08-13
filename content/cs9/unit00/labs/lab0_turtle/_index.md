@@ -6,7 +6,7 @@ title: "00. Turtle"
 
 # Welcome to Making with Code! 
 
-We're glad you're here! yay 😄
+We're glad you're here! yay 😄 :)
 
 
 {{< aside "FYI" >}}
