@@ -24,7 +24,6 @@ We are now going to look at Riddles that are hosted on the internet!
 {{< figure src="images/courses/cs10/unit00/02_banjo_05.png" alt-text="databases" >}}
 
 
-
 {{< code-action >}} **Do you know the answer? Try sending a `POST` request to make a guess.** This request to a different url `endpoint`: `/guess`
 
 0. Add a new request
