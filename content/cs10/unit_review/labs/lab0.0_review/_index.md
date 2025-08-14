@@ -83,7 +83,7 @@ code .
 - [Dictionaries](https://www.w3schools.com/python/python_dictionaries.asp)
 - [Functions with arguments](https://www.w3schools.com/python/python_functions.asp)
 
-{{< figure src="https://freshgadgets.nl/wp-content/uploads/2014/12/inspirograph2.jpg" width="50%">}}
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/9/90/Various_Spirograph_Designs.jpg" width="50%">}}
 
 ---
 

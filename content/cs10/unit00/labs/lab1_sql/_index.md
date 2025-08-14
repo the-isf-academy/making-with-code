@@ -4,7 +4,7 @@ type: lab
 slug: lab_riddler
 repo_url: https://github.com/the-isf-academy/lab-riddler
 init_action: clone
-draft: true
+# draft: true
 ---
 
 # Lab: SQL
@@ -26,7 +26,9 @@ SQL allows you to interact with databases that store tables of information.
 
 ## [1] SQL Murder
 
-💻  **With your newfound SQL knowledge, attempt the [SQL Murder Mystery](https://mystery.knightlab.com/).**
+👋 **Find a friend and get a whiteboard & marker** 
+
+💻  **Together with your newfound SQL knowledge, attempt the [SQL Murder Mystery](https://mystery.knightlab.com/).**
 
 
 
