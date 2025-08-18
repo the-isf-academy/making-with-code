@@ -50,6 +50,12 @@ We suggest not copying the path command, and instead using `cd` and `ls` to ensu
 brew install python-tk
 ```
 
+
+{{< code-action "Ensure Poetry uses the correct Python version" >}} 
+```shell
+poetry env use 3.13
+```
+
 {{< code-action "Enter the Poetry Shell." >}} Remember, we run this command at the start of each lab, but only when we are inside a lab folder.
 ```shell
 poetry shell
