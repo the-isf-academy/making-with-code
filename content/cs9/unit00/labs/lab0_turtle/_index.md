@@ -55,7 +55,7 @@ need do something that involves writing code or using your Terminal. You can use
 | end_fill  |       None     |   `end_fill()`   | Marks the end of the color fill           |
 | fillcolor  |       colorname     |   `fillcolor('purple') `  | Sets the color of the fill          |
 
-{{< figure src="https://freshgadgets.nl/wp-content/uploads/2014/12/inspirograph2.jpg" width="75%">}}
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/9/90/Various_Spirograph_Designs.jpg" width="50%">}}
 
 ---
 

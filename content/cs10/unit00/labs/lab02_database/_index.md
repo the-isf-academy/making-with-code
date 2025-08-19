@@ -2,7 +2,7 @@
 title: "2. Database"
 type: lab
 init_action: clone
-draft: true
+# draft: true
 ---
 
 # Lab: Database
@@ -68,9 +68,9 @@ CREATE TABLE IF NOT EXISTS riddles (
 );
 ```
 
-👀 **Take a look at `init_db.py`.** This is where the `database.sql` is created and new rows are added to the riddles table. The riddles are populated from [this repo](https://github.com/Code-Institute-Submissions/riddle-1/blob/master/riddles.json).
+👀 **Take a look at `init_db.py`.** This is where the `database.sql` is created and new rows are added to the riddles table. The riddles are populated from the `riddles.json` file which are cited from [this repo](https://github.com/Code-Institute-Submissions/riddle-1/blob/master/riddles.json).
 
-💻 **Run `init_db.py` to create your database.**
+💻 **Run `init_db.py` to initialize your database.**
 
 💻 **View the database by running `open database.db` in your Terminal** This should open DB Browser for SQLite.
 - click `Browse Data`
@@ -91,15 +91,31 @@ CREATE TABLE IF NOT EXISTS riddles (
 
 ## [2] SQL functions
 
-Now that you understand how the `riddles` are structured as `SQL`, it's up to you use it and re-create the guessing game with a database. First, we will need to write helper functions to execute SQL.
+Now that you understand how the `riddles` are structured as `SQL`, it's up to you use it and re-create the guessing game with a database. First, we will need to write a helper funcion to execute SQL.
 
 {{< code-action >}} **Open `helpers.py`. Here is where you will write the SQL queries in helper functions** Two functions are already written for you. 
 - `get_all_riddles()`
-- `increment_row_value(column, id)` 
+- `increment_riddle_column(column, id)` 
 
-{{< code-action >}} **You will need to write:**
-- `get_random_riddles(num_riddles)` - should return `num_riddles` of random riddles 
-- `increment_row_value(row, id)` 
+{{< code-action >}} **Run `helpers.py` to test the helper functions.** Be sure to refresh the database in the `DB Browser` to see Riddle #3 `total_guesses` increase by 1. 
+```python
+if __name__=="__main__":
+    # -- run python helpers.py to test your helper functions
+    # use comments to test section by section 
+
+    # gets all Riddles from db and prints each ID and question
+    all_riddles = get_all_riddles()
+    for riddle in all_riddles:
+        print(riddle['id'], riddle['question'])
+
+    # # increments the total_guesses for Riddle #3
+    increment_row_value('total_guesses', 3)
+```
+
+{{< code-action >}} **You will need to write `get_random_riddles(num)`**
+
+- input: an Integer representing the number of riddles to request 
+- output: return a list of random Riddles with the correct number of Riddles
 
 {{< expand "👾 A few helpful SQL commands"  >}}
 
@@ -124,16 +140,8 @@ conn.execute(
 ```
 {{< /expand >}}
 
+{{< code-action >}} **Test `get_random_riddles(num)` at the bottom of the file.** Be sure to use comments (`#`) to focus on testing specific functions. 
 
-💻 **Be sure to test your helpers functions at the bottom of the file.** You can execute it by running `python helpers.py`
-```python
-if __name__=="__main__":
-    # -- testing helper SQL functions
-
-    all_riddles = get_all_riddles()
-    for riddle in all_riddles:
-        print(riddle['id'], riddle['question'])
-```
 
 ---
 
