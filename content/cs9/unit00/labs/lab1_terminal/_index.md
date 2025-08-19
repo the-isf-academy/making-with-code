@@ -2,7 +2,7 @@
 title: "01. Terminal Adventure"
 
 # numberHeaders: true
-draft: true
+# draft: true
 
 ---
 # Terminal Adventure
@@ -277,7 +277,7 @@ Vimtutor is a built in tutorial for learning `vim`.
 ### Python Turtle
 
 
-💻 **Go to [bit.ly/day1_cs9](https://trinket.io/python/196e77f175) and continue experiementing with Python code.** Can you figure out how to: 
+💻 **Go to [bit.ly/day1_cs9](https://trinket.io/python/196e77f175) and continue experimenting with Python code.** Can you figure out how to: 
 - draw a polygon of any number of sides? *(triangle, hexagon, etc.)*
 - draw the [olympic rings](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Olympic_rings_without_rims.svg/1200px-Olympic_rings_without_rims.svg.png)
 - draw a [bullseye](https://compucademy.net/wp-content/uploads/2021/05/python-turtle-archery.png)
