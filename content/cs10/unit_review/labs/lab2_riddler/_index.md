@@ -1,17 +1,15 @@
 ---
-title: "2. Review: Riddler"
+title: "2. Riddler"
 type: lab
 slug: lab_riddler
 repo_url: https://github.com/the-isf-academy/lab-riddler
 init_action: clone
-draft: true
+# draft: true
 ---
 
 # Riddler
 
-In this lab we will introduce interacting with an SQL database by making a Trivia game. 
-
-{{< figure src="https://play-lh.googleusercontent.com/DqluLBHRQ1VwCz13_2vIwSq3dEknwGjqXi3CXu10YC_Le-KRldpIZUtMOHgRPchui7A" width="25%"  >}}
+In this lab we will continue to review classes by making a Trivia game. 
 
 
 
@@ -28,7 +26,7 @@ cd lab_riddler_yourgithubusername
 
 {{< code-action "Get the necessary packages:" >}}
 ```shell
-poetry update
+poetry install
 ```
 
 {{< code-action "Enter the Poetry shell" >}} 
@@ -71,26 +69,35 @@ class Riddle:
 ```
 > *To learn more about how `check_guess()` accepts guesses that are very close to the answer, you can visit the [fuzzywuzzy documentation](https://pypi.org/project/fuzzywuzzy/)*
 
-{{< code-action >}} **Open `riddle.py` inside the interactive Python shell.** As a reminder, the Python shell is a great way to run small tests.
-```shell
-python -i riddle.py
+{{< code-action >}} **Open `riddle.py` and look at the bottom of the file.**  We can use this section of the file to run tests on our `Riddle` to ensure it works as expected. 
+```python
+if __name__ == "__main__":
+    r = Riddle(
+        prompt = 'What has to be broken before you can use it?', 
+        answer = 'an egg')
+    
+    print(r.prompt)
+
+    # TODO: print the answer
+  
+
+
+    # TODO: call check_guess() and print the return value
 ```
 
-{{< code-action >}} **Create an instance of `Riddle`.**
+{{< code-action >}} **Run `riddle.py` to see the output.**
 ```shell
-r = Riddle('What has to be broken before you can use it?','an egg')
+What has to be broken before you can use it?
 ```
 
-{{< code-action >}} **Print the prompt and the answer to check you correctly created an instance of `Riddle`.**
+{{< code-action >}} **Complete the `TODO` items.** Print answer  and use `check_guess()`. Example output should like this this:
 ```shell
-r.prompt
-r.answer
+What has to be broken before you can use it?
+an egg
+False
 ```
 
-{{< code-action >}} **Try to guess the riddle by using the `check_guess(guess)` method.**
-```shell
-r.check_guess('a towel')
-```
+
 {{< aside "Exiting the python shell" >}}
 When you want to exit the shell, you can type `exit()` or `^D`
 {{< /aside >}}
