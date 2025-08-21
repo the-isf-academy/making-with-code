@@ -1,6 +1,7 @@
 ---
 title: "Initial Setup"
 weight: 1
+draft: false
 ---
 
 # Initial setup
