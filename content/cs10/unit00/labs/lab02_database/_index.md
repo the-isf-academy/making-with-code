@@ -17,10 +17,18 @@ In this lab we will learn how to create an SQL (Structured Query Language) datab
 {{< code-action "Download dbsqlite onto your computer:" >}} [sqlitebrowser.org/dl/](https://sqlitebrowser.org/dl/)
 
 
-{{< code-action "Let's start by cloning the repository" >}} in your `unit03_networking` folder.  Be sure to change `yourgithubusername` to your actual Github username.
+{{< code-action  >}} **In the Terminal, go into your `making_with_code` folder and create a `unit03_networking` folder.** If you no longer have a `making_with_code` folder, you will need to create one. 
 
 ```shell
-cd ~/desktop/making_with_code/unit03_networking
+cd ~/desktop/making_with_code
+mkdir unit03_networking
+cd unit03_networking
+```
+
+
+{{< code-action "Then clone your repository" >}} in your `unit03_networking` folder.  Be sure to change `yourgithubusername` to your actual Github username.
+
+```shell
 git clone https://github.com/the-isf-academy/lab_database_yourgithubusername
 cd lab_database_yourgithubusername
 ```
