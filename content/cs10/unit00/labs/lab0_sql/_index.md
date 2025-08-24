@@ -1,5 +1,5 @@
 ---
-title: "1. SQL"
+title: "0. SQL"
 type: lab
 slug: lab_riddler
 repo_url: https://github.com/the-isf-academy/lab-riddler
@@ -37,10 +37,9 @@ SQL allows you to interact with databases that store tables of information.
 
 {{< deliverables "Congrats on completing the lab!" >}}  
 
-Once you've successfully completed the lab, fill out [this Google form](https://forms.gle/HP5Cpp9j4ecrpWVm7).
+Once you've successfully completed the lab, fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLScb9a9WhVmLFvxp9EMBcHbdZcPpIrY9smJBGw5pjJbHpwuZ1Q/viewform?usp=dialog).
 
-- who waas the killer?
-- how confident do you feel using SQL
+
 {{< /deliverables >}}
 
 ---
