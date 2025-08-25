@@ -17,7 +17,7 @@ In this lab we will learn how to create an SQL (Structured Query Language) datab
 {{< code-action "Download dbsqlite onto your computer:" >}} [sqlitebrowser.org/dl/](https://sqlitebrowser.org/dl/)
 
 
-{{< code-action  >}} **In the Terminal, go into your `making_with_code` folder and create a `unit03_networking` folder.** If you no longer have a `making_with_code` folder, you will need to create one. 
+{{< code-action  >}} **In the Terminal, go into your `making_with_code` folder and create a `unit03_networking` folder.** 
 
 ```shell
 cd ~/desktop/making_with_code
@@ -75,6 +75,7 @@ CREATE TABLE IF NOT EXISTS riddles (
     difficulty TEXT DEFAULT 'easy'
 );
 ```
+
 
 👀 **Take a look at `init_db.py`.** This is where the `database.sql` is created and new rows are added to the riddles table. The riddles are populated from the `riddles.json` file which are cited from [this repo](https://github.com/Code-Institute-Submissions/riddle-1/blob/master/riddles.json).
 
@@ -185,7 +186,7 @@ Incorrect :(
 
 {{< deliverables "Congrats on completing the lab!" >}}  
 
-Once you've successfully completed the lab, fill out [this Google form](https://forms.gle/HP5Cpp9j4ecrpWVm7).
+Once you've successfully completed the lab, fill out [this Google form](https://forms.gle/7hpvnzyK5afAiEAp8).
 
 
 {{< code-action "Push your work to Github:" >}}
