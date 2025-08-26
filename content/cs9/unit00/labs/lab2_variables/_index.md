@@ -1,7 +1,7 @@
 ---
 title: 02. Variables
 
-draft: true
+# draft: true
 
 ---
 
@@ -209,7 +209,7 @@ age = int(input("How old are you? "))
 
 {{< deliverables  "Once you've successfully completed the responsive drawing:" >}}
 
-✔️   **Fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLScsVvy1k4qOm4MHAYpliMpBdXSiNsCG25tvrDvz6i6YMf7FUQ/viewform?usp=sf_link)**
+✔️   **Fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLScTSTeNibhIlyqwvkSJXOJHPxAvWikxC0N6Vf_eDqisGRKgrA/viewform?usp=sharing&ouid=115417948682041905230)**
 
 ✏️  **Add a piece of your code and a screenshot to the `CS Year 1 Code Log` in your Google Drive.** Add a comment either asking a question about your code OR describing a piece of code you are proud of. 
 
