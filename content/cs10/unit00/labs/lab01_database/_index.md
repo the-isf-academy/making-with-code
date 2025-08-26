@@ -1,8 +1,8 @@
 ---
-title: "2. Database"
+title: "1. Database"
 type: lab
 init_action: clone
-draft: true
+#draft: true
 ---
 
 # Lab: Database
@@ -14,7 +14,7 @@ In this lab we will learn how to create an SQL (Structured Query Language) datab
 
 ## [0] Setup
 
-{{< code-action "Download dbsqlite onto your computer:" >}} [sqlitebrowser.org/dl/](https://sqlitebrowser.org/dl/)
+{{< code-action "Download DB Browser for SQLite onto your computer:" >}} [sqlitebrowser.org/dl/](https://sqlitebrowser.org/dl/)
 
 
 {{< code-action  >}} **In the Terminal, go into your `making_with_code` folder and create a `unit03_networking` folder.** 
@@ -159,7 +159,6 @@ conn.execute(
 Now that you can access and update the database, you can write re-create the game.
 
 💻 **In `game.py`, re-create the riddle guessing game by using the helper functions that execute SQL.** Be sure to follow this flow chart:
-
 
 
 
