@@ -54,6 +54,8 @@ Here is a cheatsheet of the Riddle endpoints, what parameters they take in their
 | Method | URL                                | Required Payload     | Action                                                                                   |
 | ------ | ---------------------------------- | -------------------- | ---------------------------------------------------------------------------------------- |
 | `GET`  | `/all`   |                      | Returns a list of all the riddles, without answers.                                      |
+| `GET`  | `/random`   |                      | Returns a a random riddle.                                      |
+
 | `GET`  | `/one`   | `id`                 | Returns the riddle if it exists |
 | `POST` | `/new`   | `question`, `answer` | Creates a new riddle (with an automatically-assigned id). Returns the riddle.            |
 | `PUT` | `/guess` | `id`, `guess`        | Checks whether the guess is correct. In the response, `correct` is `True` or `False`.    |
@@ -147,8 +149,6 @@ Make sure you did all these steps:
 
 0. Change `all` to `new` in the url
 0. Change `GET` to `POST`
-0. Change `Params` to `Body`
-0. At the bottom, change `None` to `Form`
 0. Add the *payloads:* `question` and `answer`
 
 {{< /expand  >}}
@@ -332,7 +332,7 @@ http://127.0.0.1:8000/riddle/guess
 
 {{< deliverables >}}  
 
-**Once you've successfully completed the worksheet be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSchvEidsL2yaQuPA09E78HCAqlee7X7nhgys72ib9dtCl-Y6A/viewform?usp=sf_link).**
+**Once you've successfully completed the worksheet be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSf47hzW1CVgzYYI48_071Vaax5wfmDSA12JZ3mTXAp7r-KGtw/viewform?usp=dialog).**
 
 {{< code-action "Push your work to Github:" >}}
 - git status
@@ -362,7 +362,7 @@ if riddle is None:
 ```  
 
 ```python
-if not question or not answer:
+if 'question' not in request.args or 'answer' not in request.args:
     return {'error': 'Question and Answer are required.'}, 400
 ```
 
