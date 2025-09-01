@@ -16,7 +16,7 @@ In this lab we will continue to review classes by making a Trivia game.
 ## [0] Setup
 
 
-{{< code-action "Let's start by cloning the repository" >}} in your `unit03_networking` folder.  Be sure to change `yourgithubusername` to your actual Github username.
+{{< code-action "Let's start by cloning the repository" >}} in your `year2_revies` folder.  Be sure to change `yourgithubusername` to your actual Github username.
 
 ```shell
 cd ~/desktop/making_with_code/year2_review
