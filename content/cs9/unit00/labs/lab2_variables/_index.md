@@ -121,7 +121,7 @@ variable at different places in the code. What do you think will happen?
 $ python variable_test0.py
 Hello
 Emma
-Hello
+HELLO
 Britte
 
 ```

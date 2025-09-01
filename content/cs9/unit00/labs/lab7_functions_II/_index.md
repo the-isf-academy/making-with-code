@@ -76,7 +76,7 @@ Here are some helpful Turtle functions that may make this problem easier. You ar
 | end_fill  |       None     |   `end_fill()`   | Marks the end of the color fill           |
 | fillcolor  |       colorname     |   `fillcolor('purple')`  | Sets the color of the fill          |
 | pencolor  |       colorname     |   `pencolor('purple')`  | Sets the color of the pen          |
-| bgcolor  |       colorname     |   `bgcolor()`   | Changes the background of the turtle screen           |
+| bgcolor  |       colorname     |   `bgcolor('black')`   | Changes the background of the turtle screen           |
 | colormode  |       colorname     |   `colormode(255)`  | Changes the turtle color to accept rgb colors.  e.g. color(255,15,23)          |
 
 

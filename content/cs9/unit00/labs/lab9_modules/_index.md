@@ -186,7 +186,7 @@ cd ..
 Here you should have:
 - `/lab_modules`
   - `/drawing` package
-  - `fancy_drawing_example.py` - an example usage of the drawing package
+  - `example_fancy_drawing.py` - an example usage of the drawing package
   - `fancy_drawing.py` -  an empty file for you to create your own drawing
 
 ---

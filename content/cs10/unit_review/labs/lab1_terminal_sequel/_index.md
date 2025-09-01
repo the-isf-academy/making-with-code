@@ -26,10 +26,10 @@ You may see more information output than your Mac peers, but all commands should
 {{< /aside >}}
 
 
-{{< code-action "First clone the Terminal Adventure Sequel repository" >}}  in your `cs10\unit04_networking` folder. 
+{{< code-action "First clone the Terminal Adventure Sequel repository" >}}  in your `cs10\unit03_networking` folder. 
 
 ```shell
-cd ~/desktop/making_with_code/unit04_networking
+cd ~/desktop/making_with_code/unit03_networking
 git clone https://github.com/the-isf-academy/lab_terminal_adventure_sequel
 cd lab_terminal_adventure_sequel
 ```

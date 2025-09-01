@@ -88,7 +88,7 @@ Github uses personal access tokens to ensure security when remotely accessing a 
 
 ## [1] Your First Repo
 
-**From now on, all code for this class will be stored as individual git repositories.** We are going to start now, by setting up getting your repository for the next lab. 
+**From now on, all code for this class will be stored as individual git repositories.** We are going to start now, by setting up your repository for the next lab. 
 
 ### Cloning Your Module Repository
 
