@@ -1,7 +1,7 @@
 ---
 title: 05. While Loops
 
-draft: true
+# draft: true
 ---
 
 # While loops
@@ -202,7 +202,7 @@ It took 7 steps to complete the sequence
 
 {{< deliverables  >}}
 
-**Once you've successfully completed the sequence be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLScUoRxMYShhj2xg2fKdqbJ9FbkPwj15VNd0oqguKE-eGjEkzg/viewform?usp=sf_link)**.
+**Once you've successfully completed the sequence be sure to fill out [this Google form](https://forms.gle/VcajdBjN2S7NZ5b19)**.
 
 ✏️  **Add a piece of your code and a screenshot to the `CS Year 1 Code Log` in your Google Drive.** Add a comment. You can:
 > - ask a question about your code     
