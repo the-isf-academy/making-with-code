@@ -1,6 +1,6 @@
 ---
 title: 04. Conditionals
-draft: true
+# draft: true
 
 ---
 
@@ -275,7 +275,7 @@ python pattern.py
 
 {{< deliverables  >}}
 
-**Once you've successfully completed the pattern be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSeHZsiYCR0ZX584jz_LYOpCEdSDbh-Bi75htAs2C40i9BOeAQ/viewform?usp=sf_link)**.
+**Once you've successfully completed the pattern be sure to fill out [this Google form](https://forms.gle/CVgSNCM8jVthKRnc8)**.
 
 ✏️  **Add a piece of your code and a screenshot to the `CS Year 1 Code Log` in your Google Drive.** Add a comment. You can:
 > - ask a question about your code     
