@@ -69,7 +69,7 @@ Here are some helpful Turtle functions that may make this problem easier. You ar
 |  pendown |       None       |    `pendown()`   | Puts down the turtle/pen so that it draws when it moves                                                                          |
 |   penup  |       None       |    ` penup()`    | Picks up the turtle/pen so that it doesn’t draw when it moves                                                                    |
 | pensize  |       width      |   `pensize(4)`   | Sets the width of the pen for drawing                                                                                            |
-| setheading  |       angle      |   `setheading(90)`   | Sets the pen to the 0th degree                                |
+| setheading  |       angle      |   `setheading(90)`   | Sets the orientation of the turtle to an angle. 0 is east; 90 is north; 180 is west; 270 is south                                |
 | circle  |       size      |   `circle(10) `  | Sets the radius of the circle                                                                                            |
 | goto  |       x, y      |   `goto(90,0) `  | Moves turtle to a given coordinate                                                 |
 | begin_fill  |       None     |  `begin_fill()`  | Marks the start of the color fill       |
