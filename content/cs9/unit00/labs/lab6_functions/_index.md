@@ -1,7 +1,7 @@
 ---
 title: 06. Functions I
 
-draft: true
+# draft: true
 ---
 # Functions Lab | Part I
 
@@ -227,7 +227,7 @@ end_fill()                  #Tells the turtle to stop the color fill
 
 {{< deliverables  >}}
 
-☑️ **Once you've successfully completed the square pattern be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSchdB4wHncQNkSkXDKASZEeEd5pVGfNJW37HApTTOxF-2D3Dw/viewform?usp=sf_link)**.
+☑️ **Once you've successfully completed the square pattern be sure to fill out [this Google form](https://forms.gle/c5Fkt6FjWc9hoUvo9)**.
 
 ✏️  **Add a screenshot of a code snippet to your `CS9 Lab Code Log` in your Google Drive.** Add a comment either asking a question about your code OR describing a piece of code you are proud of. 
 
