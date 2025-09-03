@@ -2,12 +2,12 @@
 title: "4. API" 
 type: lab
 slug: lab_riddle_server
-draft: true
+# draft: true
 ---
 
 # Lab API
 
-In this lab we are going to learn how the riddle server is made using Banjo.
+In this lab we are going to learn how the riddle server is made.
 
 ## [0] Experience the ISF Riddle Server
 
@@ -27,15 +27,14 @@ We are now going to look at Riddles that are hosted on the internet!
 {{< code-action >}} **Do you know the answer? Try sending a `POST` request to make a guess.** This request to a different url `endpoint`: `/guess`
 
 0. Add a new request
-0. Change `GET` to `POST`
+0. Change `GET` to `PUT`
 0. Paste in the URL: `http://sycs.student.isf.edu.hk/riddle/guess`
-0. Select `Body`
-0. At the bottom, change `None` to `Form`
+0. Select `Params`
 0. Add the *payloads:* `id` and `guess`
 
 {{< figure src="images/courses/cs10/unit00/02_banjo_03.png" alt-text="databases" >}}
 
-> **It is common for `POST` requests to send a *payload* with the request.** In this case, the payloads are:
+> **It is common for `PUT` requests to send a *payload* with the request.** In this case, the payloads are:
 > - `id` specifying which riddle we are guessing
 > - `guess` specifying the guess
 > We are also sending this request to a different url `endpoint`: `/guess`
@@ -71,8 +70,7 @@ Here is a cheatsheet of the Riddle endpoints, what parameters they take in their
 - try to break the riddle server, what happens when you provide incorrect parameters?
 
 📖 **When using the the httpie tool,**
-- for a `GET` request, put the *payload* in the `Params`
-- for a `POST` request, put the *payload* in the `Body` > `Form`
+- for a `GET`, `POST`, and `PUT` request that require payload(s), put the *payload* in `Params`
 {{< /checkpoint >}}
 
 
@@ -88,7 +86,7 @@ Here is a cheatsheet of the Riddle endpoints, what parameters they take in their
 {{< code-action "Start by going into the unit folder and the lab." >}} Remember to replace `yourgithubusername` with your actual GitHub username.
 ```shell
 cd ~/desktop/making_with_code/unit03_networking/
-git clone https://github.com/the-isf-academy/lab_apiyourgithubusername
+git clone https://github.com/the-isf-academy/lab_api_yourgithubusername
 cd lab_api_yourgithubusername
 ```
 
@@ -116,9 +114,10 @@ Your computer can host a `local server` that accessess the `riddle API`.
 
 
 {{< code-action "Now, let's start your local server:" >}} `python api.py`. This will run a local server that is only accessible on your local computer. 
+>  If you get `ModuleNotFoundError: No module named 'flask'`, run `pip3 install flask`
 
 
-💻 **You can now visit this server in your web browser, just as you did with the riddler server hosted on the internet:**  [127.0.0.1:8000/riddle/all](http://127.0.0.1:8000/riddle/all)
+💻 **You can now visit this server in your web browser, just as you did with the riddler server hosted on the internet:**  [127.0.0.1:5000/riddle/all](http://127.0.0.1:5000/riddle/all)
 
 💻 **Open the `HTTPie` desktop app to send the same `GET` request to `/all`.**
 
@@ -193,8 +192,7 @@ In this lab, you will build out the functionality of the Riddle server. Currentl
 ```python {linenos=table}
 @app.route('/', methods=['GET'])
 def index():
-    son = {'message': 'Hello from the ISF Riddles API!'}
-    return json, 200
+    return {'message': 'Hello from the ISF Riddles API!'}, 200
 ```
 - `line 1` - defines the URL route and the HTTP request type
 - `line 2` - defines a function and any necessary parameters
@@ -224,7 +222,7 @@ The important HTTP success response codes
 💻 **Test the `riddle/one` endpoint in the `HTTPie desktop app`**
 
 ```shell
-http://127.0.0.1:8000/riddle/one id=4
+http://127.0.0.1:5000/riddle/one id=4
 ```
 
 
@@ -260,7 +258,7 @@ http://127.0.0.1:8000/riddle/one id=4
 💻 **Test the `riddle/random` endpoint in the `HTTPie desktop app`**
 
 ```shell
-http://127.0.0.1:8000/riddle/random 
+http://127.0.0.1:5000/riddle/random 
 ```
 
 ✔️ **It should return `json` like:**
@@ -293,14 +291,14 @@ http://127.0.0.1:8000/riddle/random
     - message telling the user they were incorrect
     - a single `Riddle` without the answer
 
-🤔 *Which `functions` in `helpers.py`` could be useful?*
+🤔 *Which `functions` in `helpers.py` could be useful?*
 
 {{< checkpoint >}}
 
 💻 **Test the `riddle/guess` endpoint in the `HTTPie desktop app`**
 
 ```shell
-http://127.0.0.1:8000/riddle/guess
+http://127.0.0.1:5000/riddle/guess
 ```
 
 ✔️ **It should return `json` like:**
@@ -324,8 +322,6 @@ http://127.0.0.1:8000/riddle/guess
 
 ---
 
-
----
 
 ## [4] Deliverables
 
