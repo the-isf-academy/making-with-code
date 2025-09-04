@@ -2,11 +2,7 @@
 title: "1. Database"
 type: lab
 init_action: clone
-<<<<<<< HEAD:content/cs10/unit00/labs/lab01_database/_index.md
 # draft: true
-=======
-# draft: true
->>>>>>> 0f9c12c5aff861558792f60c54d723c605ec0472:content/cs10/unit00/labs/lab02_database/_index.md
 ---
 
 # Lab: Database
