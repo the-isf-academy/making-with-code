@@ -354,7 +354,7 @@ Here is an example of an error message:
 
 ```python
 if riddle is None:
-      return {'error': 'Post not found'}, 404
+      return {'error': 'Riddle not found'}, 404
 ```  
 
 ```python
@@ -387,7 +387,7 @@ Since that we track `difficulty`, it would be nice if we could `GET` a list of r
 You can use an url parameter like:
 ```python
 @app.route(f'/{BASE_URL}/all/<str:difficulty>', methods=['GET'])
-def all_riddles_difficulty(difficulty):
+def all_riddles_difficulty(level):
 ```
 
 
