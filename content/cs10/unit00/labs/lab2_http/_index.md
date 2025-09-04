@@ -134,11 +134,9 @@ With the new tool we installed on your computer, `httpie`, we can send HTTP `GET
 
 {{< code-action >}} **Make a request to the cs.fablearn.org site:**
 ```shell
-http get https://cs.fablearn.org
+http get https://the-isf-academy.github.io/making-with-code/
 ```
-> You should be seeing something very similar to what you see in Chrome. 
->
-> If you see an error, try: `cs.fablearn.org` or `http://cs.fablearn.org`
+
 
 {{< checkpoint >}}
 

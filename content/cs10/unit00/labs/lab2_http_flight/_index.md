@@ -46,27 +46,8 @@ This time the mail delivery person is able to retrieve it from the business. You
 
 ---
 
-## [0] Set Up
 
-
-{{< code-action "Download Mac app of HTTPIE:" >}} [ httpie.io/download](https://httpie.io/download). We need to download the app to make local HTTP requests for testing purposes. In this lab, you will run a locally hosted riddle server on your laptop using Banjo.
-
-{{< figure src="https://httpie.io/Images/download-shape.svg" width="25%">}}
-
-{{< code-action >}} **Install `httpie`.** We will be using this command-line software throughout the unit to interact with websites in a new way. 
-```shell
-brew install httpie
-```
-
-{{< code-action "Check it install correctly." >}} You see a verison number appear.
-```shell
-httpie --version
-```
-
----
-
-
-## [1] HTTP GET
+## [0] HTTP GET
 
 Every time you visit a URL, your computer opens a connection with the server at that address and uses **HTTP** to send and recieve the content. 
 
@@ -111,7 +92,7 @@ Here's an example of a HTTP response to a successful `GET` request to the course
 - `<!DOCTYPE html>` (line 7) is the beginning of the content sent with the response. This is the HTML of the course website which your
   browser then renders as a webpage.
 
-{{< figure src="images/courses/cs10/unit00/00_http_response.png" width="50%" alt-text="An HTTP response" >}}
+
 
 ---
 
@@ -130,15 +111,13 @@ Status codes are used to signal how the communication between the client and the
 
 ### Using HTTPIE
 
-With the new tool we installed on your computer, `httpie`, we can send HTTP `GET` requests from our terminal. 
 
-{{< code-action >}} **Make a request to the cs.fablearn.org site:**
+{{< code-action "Go to" >}} [https://httpie.io/app](https://httpie.io/app). You will use this web app to send HTTP requests. 
+
+{{< code-action >}} **Make a `GET` request to the cs.fablearn.org site:** Be sure you have selected `GET` from the dropdown.
 ```shell
-http get https://cs.fablearn.org
+https://the-isf-academy.github.io/making-with-code/
 ```
-> You should be seeing something very similar to what you see in Chrome. 
->
-> If you see an error, try: `cs.fablearn.org` or `http://cs.fablearn.org`
 
 {{< checkpoint >}}
 
@@ -152,24 +131,18 @@ http get https://cs.fablearn.org
 
 --- 
 
-## [2] DATA.GOV.HK
-
-You may have noticed that our site is pretty simple. That's because the data being sent is primarily text. **Our site is not hooked up to a database.**
-
-**We're now going to look at a website that utilizes a database, the [DATA.GOV.HK](https://data.gov.hk/en/).**
+## [2] API: DATA.GOV.HK
 
 
-{{< figure src="https://data.gov.hk/assets/shared/img/facebook_og-image.jpg" width="100%" alt-text="An HTTP GET request" >}}
+{{< figure src="https://data.gov.hk/assets/shared/img/facebook_og-image.jpg" width="100%" alt-text="An HTTP GET request" width=25% >}}
 
----
-
-### API
-
-DATA.GOV.HK provides an open `API` that allows anyone to access their databases. We are going to use `HTTP Requests` to access this database. 
+**[DATA.GOV.HK](https://data.gov.hk/en/) hosts open data provided by the Hong Kong government.** It provides an open `APIs` that allows anyone to access their databases. We are going to use `HTTP Requests` to access this database. 
 
 `API` stands for **Application Programming Interface**. It is software that allows computers to communicate with each other. An `API` often provides `JSON`. 
 
-{{< look-action "Open the flight API documentation from DATA.GOV.HK:" >}} [API Documentation](https://www.hongkongairport.com/iwov-resources/misc/opendata/Flight_Information_DataSpec_en.pdf). We will use this throughout today's lab. 
+✈️ **In this lab, we will look at the data for the HK Inetrnational Airport**
+
+{{< figure src="https://experience.hongkongairport.com/images/grid-totem.jpg" width="100%" alt-text="An HTTP GET request" width=50% >}}
 
 ---
 
@@ -179,10 +152,10 @@ DATA.GOV.HK provides an open `API` that allows anyone to access their databases.
 
 {{< code-action >}}**Let's start by making a simple `http get` request to recieve `JSON` from DATA.GOV.HK.**
 ```shell
-http get https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?date=2025-08-01&lang=en&cargo=true&arrival=false
+http get https://www.hongkongairport.com/flightinfo-rest/rest/flights/past date==2025-08-01 lang==en cargo==true arrival==false
 ```
 
-{{< look-action >}} **Should recieve `JSON` that looks like this.** However, the information will differ depending which day and time you make the request.
+{{< look-action >}} **Should recieve `JSON` that looks like this.** 
 ```shell
 [
   {
@@ -229,9 +202,11 @@ http get https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?date=
 
 {{< checkpoint >}}
 
-{{< write-action >}}**Complete the section, `1. DATA.GOV.HK API`, of the worksheet to further explore `http requests`, `JSON`, and `APIs`.**
+💻 **Open the flight API documentation from DATA.GOV.HK: [API Documentation](https://www.hongkongairport.com/iwov-resources/misc/opendata/Flight_Information_DataSpec_en.pdf).** You will need to utilize this resource complete the worksheet. 
 
-You will need to use the [DATA.GOV.HK API Documentation](https://www.hongkongairport.com/iwov-resources/misc/opendata/Flight_Information_DataSpec_en.pdf) to make specific `http requests`. 
+
+✏️ **Complete the section, `1. DATA.GOV.HK API`, of the worksheet to further explore `http requests`, `JSON`, and `APIs`.**
+
 
 {{< /checkpoint >}}
 

@@ -213,3 +213,19 @@ Now, wouldn't it be great if users could customize their game by difficultly.
 
 💻 **Update your game to include a difficulty selection.**
 
+
+---
+
+## [5] More Extensions 
+
+Choose from these options or think of your own! 
+
+- Allow users to add new Riddles to the database
+    - write a helper function to add a new Riddle by using [insert into](https://www.w3schools.com/sql/sql_insert.asp) 
+- Add a category column to the Riddle SQL database 
+    - edit the `.sql` file and `init_db.py`
+    - incorporate the category into the game 
+- Create a `score` table in the database 
+    - allow uses to add their high score of correct guesses
+
+
