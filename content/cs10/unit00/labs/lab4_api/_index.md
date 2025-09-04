@@ -159,8 +159,7 @@ Make sure you did all these steps:
 
 ---
 
-Your version of the riddle server only has the 2 endpoints:
-- `/riddle`
+Your version of the riddle server only has 2 endpoints:
 - `/riddle/all`
 - `/riddle/new`
 
@@ -196,8 +195,7 @@ def index():
 ```
 - `line 1` - defines the URL route and the HTTP request type
 - `line 2` - defines a function and any necessary parameters
-- `line 3` - defines the JSON response
-- `line 4` - returns the JSON and the HTTP response code 
+- `line 3` - returns the JSON response and the HTTP response code 
 
 ### HTTP response codes
 
@@ -354,7 +352,7 @@ Here is an example of an error message:
 
 ```python
 if riddle is None:
-      return {'error': 'Post not found'}, 404
+      return {'error': 'Riddle not found'}, 404
 ```  
 
 ```python
@@ -387,7 +385,7 @@ Since that we track `difficulty`, it would be nice if we could `GET` a list of r
 You can use an url parameter like:
 ```python
 @app.route(f'/{BASE_URL}/all/<str:difficulty>', methods=['GET'])
-def all_riddles_difficulty(difficulty):
+def all_riddles_difficulty(level):
 ```
 
 
