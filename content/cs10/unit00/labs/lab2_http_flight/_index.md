@@ -133,7 +133,7 @@ Status codes are used to signal how the communication between the client and the
 
 `API` stands for **Application Programming Interface**. It is software that allows computers to communicate with each other. An `API` often provides `JSON`. 
 
-✈️ **In this lab, we will look at the data for the HK Inetrnational Airport**
+✈️ **In this lab, we will look at the data for the HK International Airport**
 
 {{< figure src="https://experience.hongkongairport.com/images/grid-totem.jpg" width="100%" alt-text="An HTTP GET request" width=50% >}}
 
