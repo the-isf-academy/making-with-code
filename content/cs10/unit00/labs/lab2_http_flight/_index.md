@@ -219,6 +219,9 @@ This lab will require you to make a series of `http requests` to the HKO API.
 Now that you've had succifient practice accessing APIs, it's time to explore what type of APIs exist. 
 
 {{< code-action "Explore an API of your choosing." >}} You may want to use the `httpie` Terminal commands. Here are some suggestions of APIs to explore:
+- [Youtube API](https://developers.google.com/youtube/v3/docs/videos/list)
+  - select `Try it` (you will need to allow credentials)
+  - Can you see favorite Youtube video’s total likes?
 - [Joke API](https://sv443.net/jokeapi/v2/)
 - [ZenQuotes API](https://premium.zenquotes.io/zenquotes-documentation/)
 - [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page) 
