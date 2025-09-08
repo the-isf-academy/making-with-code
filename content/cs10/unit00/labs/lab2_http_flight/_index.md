@@ -1,5 +1,5 @@
 ---
-title: "3. HTTP Flight"
+title: "2. HTTP"
 type: lab
 # draft: true
 ---
