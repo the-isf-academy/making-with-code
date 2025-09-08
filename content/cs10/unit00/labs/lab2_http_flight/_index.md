@@ -1,7 +1,7 @@
 ---
-title: "3. HTTP Flight"
+title: "2. HTTP"
 type: lab
-draft: true
+# draft: true
 ---
 
 
@@ -112,16 +112,9 @@ Status codes are used to signal how the communication between the client and the
 ### Using HTTPIE
 
 
-{{< code-action "Go to" >}} [https://httpie.io/app](https://httpie.io/app). You will use this web app to send HTTP requests. 
-
-{{< code-action >}} **Make a `GET` request to the cs.fablearn.org site:** Be sure you have selected `GET` from the dropdown.
-```shell
-https://the-isf-academy.github.io/making-with-code/
-```
-
 {{< checkpoint >}}
 
-{{< write-action >}}**Complete the section, `0. csfablearn`, of the worksheet.** You will need to:
+{{< write-action >}}**Complete the section, `the-isf-academy.github.io/making-with-code`, of the worksheet.** You will need to:
 - Right click and click "Inspect"
 - Select "Network" from the top toolbar in the developer tools
 - Hard refresh the page with "Command + Shift + R"
@@ -140,7 +133,7 @@ https://the-isf-academy.github.io/making-with-code/
 
 `API` stands for **Application Programming Interface**. It is software that allows computers to communicate with each other. An `API` often provides `JSON`. 
 
-✈️ **In this lab, we will look at the data for the HK Inetrnational Airport**
+✈️ **In this lab, we will look at the data for the HK International Airport**
 
 {{< figure src="https://experience.hongkongairport.com/images/grid-totem.jpg" width="100%" alt-text="An HTTP GET request" width=50% >}}
 
@@ -150,12 +143,7 @@ https://the-isf-academy.github.io/making-with-code/
 
 **JSON** stands for **JavaScript Object Notation**. It is the standard file format for exchanging data over the internet. The syntax mimics dictionaries by using `key` and `value` pairs. 
 
-{{< code-action >}}**Let's start by making a simple `http get` request to recieve `JSON` from DATA.GOV.HK.**
-```shell
-http get https://www.hongkongairport.com/flightinfo-rest/rest/flights/past date==2025-08-01 lang==en cargo==true arrival==false
-```
-
-{{< look-action >}} **Should recieve `JSON` that looks like this.** 
+{{< look-action >}} **For example, this is `JSON` for the HK International Airport.** What is the JSON describing? 
 ```shell
 [
   {
@@ -188,16 +176,17 @@ http get https://www.hongkongairport.com/flightinfo-rest/rest/flights/past date=
 
 ### Making HTTP Requests
 
-This lab will require you to make a series of `http requests` to the HKO API. Note the format:
-```shell
-http get https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?date=2025-08-01&lang=en&cargo=true&arrival=true
-```
-> - `http get` - tells the Terminal you are making a `get` request 
-> - `https://www.hongkongairport.com/flightinfo-rest/rest/flights/past` - tells the Terminal which address you'd like to make the request to
-> - `date=2025-08-01` - tells the date you want is August 1st, 2025
-> - `lang=en` - tells the language you want is English. You can also try zh_HK or zh_CN
-> - `cargo=true` - tells you want cargo flights. Enter false to view passenger flights
-> - `arrival=true` - tells you want arrival flights. Enter false to view departure flights 
+This lab will require you to make a series of `http requests` to the HKO API. 
+
+
+{{< code-action "Go to" >}} [httpie.io/app](https://httpie.io/app). You will use this web app to send HTTP requests. 
+
+{{< code-action >}}**Make a simple  `http get` request to recieve `JSON` from DATA.GOV.HK.**
+
+{{< figure src="images/courses/cs10/unit00/lab1_http_1.png" width="100%" alt-text="An HTTP GET request" >}}
+> - `GET` - tells the app you are making a `get` request 
+> - `https://www.hongkongairport.com/flightinfo-rest/rest/flights/past` - tells the app which address you'd like to make the request to
+> - `date: 2025-08-01` - tells the date you want is August 1st, 2025
 
 
 {{< checkpoint >}}
