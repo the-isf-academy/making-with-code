@@ -8,7 +8,23 @@ bookCollapseSection: true
 
 # Welcome to Year 1 CS :)
 
-This is a high-level overview of the curricular units that comprise this introductory course.
+## Unit 00: Drawing
+This initial unit prioritizes getting students making personally-meaningful things as fast as
+possible. This means we aren’t aiming for completeness. In particular, we’re not introducing 
+data structures in this unit; most students won’t need them, and we’ll spend a lot of time with
+them in the next unit.
+
+Working within the context of drawing, students practice building up complex programs from simple
+ones. We’ll use Python’s turtle library. Loosely inspired by Chris’s Python drawing unit from GMS.
+
+## Unit 01: Data Science
+Programming: Introduction to functional programming; abstraction. Types: int, float, bool. Introduction to data structures. Iterating over lists. Students will build on code reuse from unit 1, this time writing functions without side effects that can be composed. Curriculum: Based on introductory unit from BJC.
+
+## Unit 02: Games
+Games and other interactive media are some of the most important texts of the digital age. We will play and discuss several games, discussing how they work technically and drawing on theoretical perspectives to talk about how they create meaningful experiences for the player. Programming: prototyping, decomposition of larger problems, incremental & iterative development of larger projects.
+
+
+<!-- This is a high-level overview of the curricular units that comprise this introductory course.
 
 
 {{< expand "Unit 0: Drawing" >}}
@@ -67,11 +83,11 @@ Lab 1: Students will write code to plot histograms, scatter plots, and the line 
 Lab 2: Students will be introduced to the basics of Pandas and matplotlib, the standard Python libraries for data analysis and plotting.
 <!--- need to update --->
 
-#### Project
+<!-- #### Project -->
 
-Collect some data or use an existing dataset. Frame a research question and use the data to answer it.
+<!-- Collect some data or use an existing dataset. Frame a research question and use the data to answer it. -->
 <!--- need to update --->
-{{< /expand >}}
+<!-- {{< /expand >}}
 
 {{< expand "Unit 2: Games" >}}
 ### Unit 2: Games
@@ -92,4 +108,4 @@ There will also be ad-hoc mini-labs based on what students need for their games.
 
 Create a game that matters, perhaps as part of a group. This will be very open-ended, but students will be required to submit a substantial proposal, including a game concept with some evidence of prototyping and iteration; wireframes of the game interface; decomposition of tasks and who plans to work on what.  
 
-{{< /expand >}}
+{{< /expand >}} -->
