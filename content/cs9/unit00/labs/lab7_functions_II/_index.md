@@ -1,6 +1,6 @@
 ---
 title: 07. Functions II
-draft: true
+# draft: true
 ---
 # Functions Lab | Part II
 
@@ -190,7 +190,7 @@ For an additional challenge:
 
 {{< deliverables  >}}
 
-☑️ **At then end of class, be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLScQ0UNGAqfkqzX-REmYEKfwTCHaBjrDPB8uKybkxJk4-wp_kQ/viewform?usp=sf_link)**.
+☑️ **At then end of class, be sure to fill out [this Google form](https://forms.gle/ZYmuuEk82AvuubdD9)**.
 
 
 ✏️  **Add a screenshot of a code snippet to your `CS9 Lab Code Log` in your Google Drive.** Add a comment with a key takeaway, a question about your code, or describing a piece of code you are proud of. 
