@@ -52,6 +52,7 @@ Here is a cheatsheet of the Riddle endpoints, what parameters they take in their
 
 | Method | URL                                | Required Payload     | Action                                                                                   |
 | ------ | ---------------------------------- | -------------------- | ---------------------------------------------------------------------------------------- |
+| `GET`  | `/`   |                      | Returns a short description of the API |
 | `GET`  | `/all`   |                      | Returns a list of all the riddles, without answers.                                      |
 | `GET`  | `/random`   |                      | Returns a a random riddle.                                      |
 | `GET`  | `/one`   | `id`                 | Returns the riddle if it exists |
@@ -410,3 +411,29 @@ def all_riddles_difficulty(level):
 }
 ```
 
+---
+
+### Delete Riddles
+
+{{< code-action >}} **Write a endpoint to delete riddles within a specific range of ID numbers.** You will need to write a helper function and an API endpoint.  
+- Payload: `id_start`, `id_end`
+- [SQL Delete](https://www.w3schools.com/sql/sql_delete.asp)
+- [HTTP DELETE method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/DELETE)
+
+---
+
+### Secret Ansewr Route
+
+{{< code-action >}} **Write a endpoint to view the answer of all riddles, but it reqires a secret password.** Consider, how will you implement a password? 
+<!-- 
+---
+
+### 404 error message 
+
+
+{{< code-action >}} **Implement helpful 404 error messages**
+
+```python
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404 -->
