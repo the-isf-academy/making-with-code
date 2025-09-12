@@ -1,8 +1,8 @@
 ---
-title: "4. API" 
+title: "3. API" 
 type: lab
 slug: lab_riddle_server
-draft: true
+# draft: true
 ---
 
 # Lab API
@@ -21,10 +21,10 @@ We are now going to look at Riddles that are hosted on the internet!
 {{< code-action >}} **Now try making `GET` request to `http://sycs.student.isf.edu.hk/riddle/all` receive the same information using : [httpie.io/app](https://httpie.io/app)**
 
 
-{{< figure src="images/courses/cs10/unit00/02_banjo_05.png" alt-text="databases" >}}
+{{< figure src="images/courses/cs10/unit00/api_00.png" alt-text="databases" >}}
 
 
-{{< code-action >}} **Do you know the answer? Try sending a `POST` request to make a guess.** This request to a different url `endpoint`: `/guess`
+{{< code-action >}} **Do you know the answer? Try sending a `PUT` request to make a guess.** This request to a different url `endpoint`: `/guess`
 
 0. Add a new request
 0. Change `GET` to `PUT`
@@ -32,7 +32,7 @@ We are now going to look at Riddles that are hosted on the internet!
 0. Select `Params`
 0. Add the *payloads:* `id` and `guess`
 
-{{< figure src="images/courses/cs10/unit00/02_banjo_03.png" alt-text="databases" >}}
+{{< figure src="images/courses/cs10/unit00/api_01.png" alt-text="databases" >}}
 
 > **It is common for `PUT` requests to send a *payload* with the request.** In this case, the payloads are:
 > - `id` specifying which riddle we are guessing
@@ -52,9 +52,9 @@ Here is a cheatsheet of the Riddle endpoints, what parameters they take in their
 
 | Method | URL                                | Required Payload     | Action                                                                                   |
 | ------ | ---------------------------------- | -------------------- | ---------------------------------------------------------------------------------------- |
+| `GET`  | `/`   |                      | Returns a short description of the API |
 | `GET`  | `/all`   |                      | Returns a list of all the riddles, without answers.                                      |
 | `GET`  | `/random`   |                      | Returns a a random riddle.                                      |
-
 | `GET`  | `/one`   | `id`                 | Returns the riddle if it exists |
 | `POST` | `/new`   | `question`, `answer` | Creates a new riddle (with an automatically-assigned id). Returns the riddle.            |
 | `PUT` | `/guess` | `id`, `guess`        | Checks whether the guess is correct. In the response, `correct` is `True` or `False`.    |
@@ -102,7 +102,7 @@ poetry install
 poetry shell
 ```
 
-**This server is written using the [Flask Library](https://flask.palletsprojects.com/en/stable/)**. It allows easily write an API to interact with a SQL databse. 
+📖. **This server is written using the [Flask Library](https://flask.palletsprojects.com/en/stable/)**. It allows easily write an API to interact with a SQL databse. 
 
 📁 **Our API has a few main files `api.py` `helpers.py`.** 
 - `api.py` - API strucutre where endpoints are defined 
@@ -248,8 +248,6 @@ http://127.0.0.1:5000/riddle/one id=4
 - **Payload/args:** none
 - **Return:**  a single `Riddle` with the `id`, `question`,  `correct`, and `guess` properties 
 
-🤔 *Which query method may be useful? Be sure to reference the [Banjo documentation](https://cs.fablearn.org/docs/banjo/index.html).*
-
 
 {{< checkpoint >}}
 
@@ -384,7 +382,7 @@ Since that we track `difficulty`, it would be nice if we could `GET` a list of r
 
 You can use an url parameter like:
 ```python
-@app.route(f'/{BASE_URL}/all/<str:difficulty>', methods=['GET'])
+@app.route(f'/{BASE_URL}/all/<string:difficulty>', methods=['GET'])
 def all_riddles_difficulty(level):
 ```
 
@@ -413,3 +411,29 @@ def all_riddles_difficulty(level):
 }
 ```
 
+---
+
+### Delete Riddles
+
+{{< code-action >}} **Write a endpoint to delete riddles within a specific range of ID numbers.** You will need to write a helper function and an API endpoint.  
+- Payload: `id_start`, `id_end`
+- [SQL Delete](https://www.w3schools.com/sql/sql_delete.asp)
+- [HTTP DELETE method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/DELETE)
+
+---
+
+### Secret Ansewr Route
+
+{{< code-action >}} **Write a endpoint to view the answer of all riddles, but it reqires a secret password.** Consider, how will you implement a password? 
+<!-- 
+---
+
+### 404 error message 
+
+
+{{< code-action >}} **Implement helpful 404 error messages**
+
+```python
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404 -->

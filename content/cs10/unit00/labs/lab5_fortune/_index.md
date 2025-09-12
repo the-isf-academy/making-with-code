@@ -57,7 +57,6 @@ poetry shell
 ```
 
 
-
 ---
 ## [1] Running the Fortune Server
 
