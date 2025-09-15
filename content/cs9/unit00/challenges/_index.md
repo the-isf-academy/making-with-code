@@ -92,7 +92,7 @@ from turtle import *
 
 {{< code-action "Now, it's up to you to recreate the image to the best of your ability!" >}} If you have not yet figured out the solution to this problem, now is the tim
 
-{{< code-action "Once you have this complete, add color!" >}} You may want to consider using the `modulo` to create a color pattern. You may also want to explore the [Random Library](https://docs.python.org/3/library/random.html) to ranodm the colors.
+{{< code-action "Once you have this complete, add color!" >}} You may want to consider using the `modulo` to create a color pattern. You may also want to explore the [Random Library](https://docs.python.org/3/library/random.html) to random the colors.
 
 ---
 
@@ -122,4 +122,40 @@ from turtle import *
 
 
 {{< code-action "Now, it's up to you to recreate the image to the best of your ability!" >}}
+
+---
+
+## Pinwheel
+
+Try to draw the a pinwheel with random colors, like the one below:
+
+{{< figure src="images/courses/cs9/unit00/99_challenge_pinwheel_total.png" width="50%" alt-text="Stars" >}}
+
+In order to build up to the entire pinwheel, you'll need a few helper functions. Start by creating a function that can draw kite shapes with any angle:
+
+{{< figure src="images/courses/cs9/unit00/99_challenge_pinwheel_kites.png" width="50%" alt-text="Stars" >}}
+
+Then, make a function that can add those kites together to make one of the spokes of the wheel:
+
+{{< figure src="images/courses/cs9/unit00/99_challenge_pinwheel_spike.png" width="10%" alt-text="Stars" >}}
+
+Create a function that draws a whole circle:
+
+{{< figure src="images/courses/cs9/unit00/99_challenge_pinwheel_circle.png" width="50%" alt-text="Stars" >}}
+
+If you want to include random colors, here's how:
+
+{{< expand "Random Colors" >}}
+
+```python
+from random import randint # import random library
+colormode(255) # change turtle color mode to rgb
+
+color(100,200,200) # now you can set colors with numbers
+red_val = randint(0,255) # create a random value between 0 and 255
+color(red_val, 200, 200) # using the random red value in the color
+
+```
+
+{{< /expand >}}
 
