@@ -425,6 +425,23 @@ def all_riddles_difficulty(level):
 ### Secret Ansewr Route
 
 {{< code-action >}} **Write a endpoint to view the answer of all riddles, but it reqires a secret password.** Consider, how will you implement a password? 
+
+
+---
+
+### Top 5 
+
+{{< code-action >}} **Write a endpoint to view the `/top/num`  most guessed riddles.** You will need to write a helper function.
+- you should be able to change the `num` and it will show you the designated amount of riddles
+
+---
+
+### Search 
+
+{{< code-action >}} **Write 2 endpoints to query based on a keyword `/search/question` and `/search/prompt`.** You will need to write a helper function.
+- Payload: `keyword: string`
+
+
 <!-- 
 ---
 
