@@ -80,7 +80,19 @@ python api.py
 👀 **Look at the JSON response in the `help` key and make requests to all of the endpoints.**
 
 ```shell
-ADD EXAMPLE RESPONSE
+{
+  "help": {
+    "GET /all": {
+      "description": "returns all fortunes",
+      "payload": ""
+    },
+    "GET /new": {
+      "description": "adds new fortune to database",
+      "payload": "statement: string, is_happy: boolean"
+    }
+  },
+  "overview": "This is the fortune server."
+}
 ```
 
 
@@ -96,7 +108,7 @@ We want users to be able to:
 - add on to each other's fortunes 
 - delete fortunes if user has the admin key
 
-{{< code-action >}} **Open the `views.py` file.** This server has 2 endpoints:
+{{< code-action >}} **Open the `api.py` file.** This server has 2 endpoints:
 - `/new`
 - `/all`
 
@@ -117,6 +129,16 @@ For each each feature, you will write a helper function to run the SQL commands 
 
 {{< code-action >}} **In `helpers.py` write the `get_all_ishappy()` function.** It should use SQL to fetch all riddles filtered on the `is_happy` parameter.
 - **parameter:** `is_happy: boolean`
+
+{{< expand "hints" >}}
+
+You may have to cast your argument to boolean like this:
+
+```python
+id_happy = bool(request.args['is_happy'])
+
+```
+{{< /expand >}}
 
 {{< checkpoint >}}
 
@@ -158,7 +180,7 @@ http://127.0.0.1:5000/fortune/is_happy is_happy=True
       "id": 1,
       "is_happy": true,
       "last_updated": "2025-09-15 04:06:14",
-      "num_updated": 1
+      "num_updates": 1
     },
 ```
 {{< /checkpoint >}}
@@ -171,7 +193,7 @@ http://127.0.0.1:5000/fortune/is_happy is_happy=True
 - **parameter:** `id: int, update_string: string`
 - It should 
   - add `update_string` to the end of the existing `staetment`
-  - increase `num_updated` by 1
+  - increase `num_updates` by 1
   - updated `last_updated` to the current datetime
   - return the updated fortune 
 
@@ -201,7 +223,7 @@ Refresh the `database.db` file to confirm the fortune is properly updated.
 
 ```python
 updated_fortune = update_fortune(1, 'money')
-print(updated_fortune['statement'], updated_fortune['num_updated'], updated_fortune['last_updated'] )
+print(updated_fortune['statement'], updated_fortune['num_updates'], updated_fortune['last_updated'] )
 ```
 {{< /checkpoint >}}
 
@@ -233,7 +255,7 @@ http://127.0.0.1:5000/fortune/update id=6 update_text=non-stop
     "id": 5,
     "is_happy": false,
     "last_updated": "2025-09-16 14:47:33",
-    "num_updated": 2
+    "num_updates": 2
   }
 }
 ```
@@ -297,14 +319,14 @@ http://127.0.0.1:5000/fortune/search keyword="surprise"
     {
       "id": 1,
       "statement": "A surprise pizza is coming",
-      "num_updated": 1,
+      "num_updates": 1,
       "is_happy": true,
       "last_updated": "2025-09-15 14:06:14",
     },
     {
       "id": 6,
       "statement": "A surprise typhoon day is in your future",
-      "num_updated": 1,
+      "num_updates": 1,
       "is_happy": true, 
       "last_updated": "2025-09-13 15:20:13",
     }
@@ -410,7 +432,7 @@ When designing an API, it is important to write helpful documentation so others 
 
 💻 **Try to break your server.**
 
-💻 **Now, add in proper error handling so the server never crashes, but isntead provides helpful error messages.**
+💻 **Now, add in proper error handling so the server never crashes, but instead provides helpful error messages.**
 
 
 ---
