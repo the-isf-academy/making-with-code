@@ -446,7 +446,7 @@ When designing an API, it is important to write helpful documentation so others 
 
 ### Archive 
 
-Currently there is no feature to delete a fortune. It can be risky to permanently delete an item from the database, so instead let's utilize the archive feature.
+Currently there is no feature to delete a fortune. It can be risky to permanently delete an item from the database, so instead let's utilize the archive column.
 
 💻 **Write a method `toggle_archive()`** that toggles the `archive` field to `True` or `False`, depending on its current state.
 
