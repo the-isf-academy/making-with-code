@@ -3,7 +3,7 @@ title: "4. Fortune"
 type: lab
 slug: lab_fortune_server
 
-# draft: true
+draft: true
 ---
 
 # Fortune
