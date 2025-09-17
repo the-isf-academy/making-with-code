@@ -198,19 +198,26 @@ http://127.0.0.1:5000/fortune/is_happy is_happy=True
   - return the updated fortune 
 
 {{< expand "hints" >}}
-
+Remove extra spaces after string
 ```python
 statement = "hello, it is monday "
 statement.strip() # returns -> "hello it is monday"
 
 ```
 
+Update more than one column
 ```SQL 
 UPDATE fortunes
 SET 
   num_updates = num_updates + 1, 
   statement = "updated statement"
 WHERE id = 4
+```
+
+Get the current datetime in HKT
+```SQL
+(STRFTIME('%Y-%m-%d %H:%M:%S', 'now', '+8 hours')). 
+);
 ```
 {{< /expand >}}
 
