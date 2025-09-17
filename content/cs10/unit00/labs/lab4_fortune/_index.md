@@ -283,7 +283,7 @@ for fortune in all_fortunes:
 
 {{< checkpoint >}}
 
-💻 **Test the `fortune/search` endpoint in the `HTTPie desktop app`**
+💻 **Test the endpoint in the `HTTPie desktop app`**
 
 ```shell
 http://127.0.0.1:5000/fortune/search keyword="surprise"
@@ -309,6 +309,70 @@ http://127.0.0.1:5000/fortune/search keyword="surprise"
       "last_updated": "2025-09-13 15:20:13",
     }
     ]
+}
+```
+
+{{< /checkpoint >}}
+
+---
+
+### `API documentation`
+
+When designing an API, it is important to write helpful documentation so others can use it properly. 
+
+💻 **Look at the current `help` section by making a `GET` request to `/` endpoint in the `HTTPie desktop app`**
+
+```json
+{
+  "help": {
+    "GET /all": {
+      "description": "returns all fortunes",
+      "payload": ""
+    },
+    "GET /new": {
+      "description": "adds new fortune to database",
+      "payload": "statement: string, is_happy: boolean"
+    }
+  },
+  "overview": "This is the fortune server."
+}
+```
+
+💻 **Add `/is_happy`, `/update`, and `/search` to the `"help"` section of the JSON.**
+
+
+
+{{< checkpoint >}}
+
+💻 **Test the endpoint in the `HTTPie desktop app`**
+
+✔️ **It should return `json` like:**
+
+```json
+{
+  "help": {
+    "GET /all": {
+      "description": "returns all fortunes",
+      "payload": ""
+    },
+    "GET /new": {
+      "description": "adds new fortune to database",
+      "payload": "statement: string, is_happy: boolean"
+    },
+     "GET /is_happy": {
+      "description": "returns all fortunes filtered by is_happy",
+      "payload": "is_happy: boolean"
+    },
+     "PUT /update": {
+      "description": "adds on to an existing fortune statement",
+      "payload": "id: integer, update_text: string"
+    },
+     "GET /search": {
+      "description": "returns all fortunes filtered by a keyword in the statement",
+      "payload": "keyword: string"
+    }
+  },
+  "overview": "This is the fortune server."
 }
 ```
 
