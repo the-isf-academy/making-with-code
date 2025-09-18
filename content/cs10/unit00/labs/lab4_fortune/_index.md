@@ -3,7 +3,7 @@ title: "4. Fortune"
 type: lab
 slug: lab_fortune_server
 
-draft: true
+# draft: true
 ---
 
 # Fortune
@@ -46,10 +46,11 @@ poetry shell
 ```sql
 CREATE TABLE IF NOT EXISTS fortunes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    last_updated DATETIME DEFAULT CURRENT_TIMESTAMP,
-    fortune TEXT NOT NULL,
+    last_updated DATETIME DEFAULT  (STRFTIME('%Y-%m-%d %H:%M:%S', 'now', '+8 hours')),
+    statement TEXT NOT NULL,
     is_happy BOOLEAN NOT NULL,
-    num_updates INTEGER DEFAULT 0
+    num_updates INTEGER DEFAULT 0,
+    archive BOOLEAN DEFAULT 0
 );
 ```
 
@@ -86,7 +87,7 @@ python api.py
       "description": "returns all fortunes",
       "payload": ""
     },
-    "GET /new": {
+    "POST /new": {
       "description": "adds new fortune to database",
       "payload": "statement: string, is_happy: boolean"
     }
