@@ -118,7 +118,7 @@ For each each feature, you will write a helper function to run the SQL commands 
 
 
 {{< code-action >}} **It is up to you to write the add the following features:**
-- `/all` - optional parameter to filter by `is_happy`
+- `/is_happy` - filters riddles by `is_happy` payload
 - `/update_statement` - add to the end of an exisitng fortune
 - `/delete` - delete a fortune with a specific `id` if the `key` is valid 
 
@@ -130,16 +130,6 @@ For each each feature, you will write a helper function to run the SQL commands 
 
 {{< code-action >}} **In `helpers.py` write the `get_all_ishappy()` function.** It should use SQL to fetch all riddles filtered on the `is_happy` parameter.
 - **parameter:** `is_happy: boolean`
-
-{{< expand "hints" >}}
-
-You may have to cast your argument to boolean like this:
-
-```python
-id_happy = bool(request.args['is_happy'])
-
-```
-{{< /expand >}}
 
 {{< checkpoint >}}
 
@@ -385,7 +375,7 @@ When designing an API, it is important to write helpful documentation so others 
       "description": "returns all fortunes",
       "payload": ""
     },
-    "GET /new": {
+    "POST /new": {
       "description": "adds new fortune to database",
       "payload": "statement: string, is_happy: boolean"
     },
