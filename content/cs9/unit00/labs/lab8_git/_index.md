@@ -33,6 +33,14 @@ git config --global user.name your_name
 ```shell
 git config --global user.email your_school_email
 ```
+
+{{< code-action "Add a shortcut command to easily open Github" >}} 
+```shell
+echo 'alias remote="open \"\$(git remote get-url origin | sed \"s/\.git\$//\")\""' >> ~/.zshrc
+```
+
+{{< code-action "Close your Terminal and re-open it to activate the changes." >}} 
+
 <!-- 
 {{< code-action "Install a credential manager to store your Github credentials securely." >}} *Copy and paste the lines below one at a time. It may ask you for your computer password.*
 ```shell
