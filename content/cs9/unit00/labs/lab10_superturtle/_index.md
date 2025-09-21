@@ -151,7 +151,7 @@ code .
 
 {{< code-action "Push your code to Github" >}} 
 0. `git status`
-0. `git add file.py`
+0. `git add -A` *(`-A` adds all changed files)*
 0. `git status`
 0. `git commit -m "describe changes here"` 
 0. `git push`
