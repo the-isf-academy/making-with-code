@@ -1,11 +1,11 @@
 ---
-Title: "Project: Backend"
+Title: "Project"
 draft: true
 ---
 
 # Networking: Social Computing Project
 
-In this unit there will be 2 mini-projects for you to create a social computing app. In this part of the project, you will create the SQL and Flask backend. 
+In this unit you will create the backend of a social computing app using SQL and Flask. 
 
 {{< aside "Reference Documentation" >}}
 
@@ -39,18 +39,12 @@ Before you start working on your project, you are required to complete the Proje
 
 ## [1] Starter Code
 
-{{< code-action "Add a shortcut command to easily open Github" >}} 
-```shell
-echo 'alias remote="open \"\$(git remote get-url origin | sed \"s/\.git\$//\")\""' >> ~/.zshrc
-```
-
-
 {{< code-action "Download your repository with starter code for your project." >}} Be sure to change `yourgithubusername` to your actual Github username.
 
 ```shell
 cd ~/desktop/making_with_code/unit03_networking/
-git clone https://github.com/the-isf-academy/project_networking_backend_yourgithubusername.git
-cd project_networking_project_networking_backend_yourgithubusername
+git clone https://github.com/the-isf-academy/project_networking_yourgithubusername.git
+cd project_networking_project_networking_yourgithubusername
 ```
 
 {{< code-action "Enter the poetry shell." >}}
@@ -60,22 +54,16 @@ poetry shell
 
 {{< code-action "Install requirements" >}}
 ```shell
-poetry update
+poetry install
 ```
 
-<!-- {{< code-action "Install Banjo" >}}
-```shell
-pip3 install django-banjo
-``` -->
-
 The `project_networking` repository containing the following:
-  - `\app`
-    - `models.py` - This is where you will define your model.
-    - `views.py` - This is where you will define your routes and endpoints.
-  - `settings.py` - This is where you define your `BASE_URL`
-  - `database.sqlite` - This is your database file.
-  - `README.md` - This is documentation for the backend of your project.
-
+  - `db_definition.sql` - This is where you will define your database tables
+  - `init_db.py` - This is what you will run to initalize your database.db file
+  - `database.db` - This is your database file.
+  - `helpers.py` - This is where you will define helper functions to interact with the database and convert a row to JSON
+  - `api.py` - This is where you will define your API endpoints 
+  
 {{< code-action "Start coding your first milestone!" >}} With you project management sheet approved by a teacher and your starter code downloaded, you're ready to start creating.
 
 ---
@@ -86,8 +74,8 @@ The `project_networking` repository containing the following:
 **This project will be assessed on the following criteria:**
 - project planning [3]
 - iterative development [3]
-- model architecture [3]
-- endpoint architecture [3]
+- Database SQL functions [3]
+- API architecture [3]
 - documentation [3]
 
 **For each criteria you will be assessed on a score from 0-3. With 8 criteria, there is a total of 24 potential points.** 
@@ -101,29 +89,28 @@ The `project_networking` repository containing the following:
 ### [Success Claims]
 
 Successful computer scientists should be able to make the following claims:
-- I can thoughtfully plan a large computer science project.  
-    - I can consider the components of my project before coding
-    - I can design the API architecture 
+- I can thoughtfully plan a large computer science project prior to coding.  
+    - I can consider social interactions in the design of my database and API
+    - I can consider the structure of my database table
+    - I can design the API architecture with appropirate HTTP methods and payload
+    - I can identify an appropriate Minimum Viable Product (MVP)
 - I can develop my project iteratively over time
-    - I can track the development of my project by successfully committing to Github at least once per class work day
-    - I can track my current progress and next steps using specific commit messages 
-    - I can test my code in small chunks
-    - I can identify a Minimum Viable Product (MVP) and complete it before adding additional features
-- I can independently write model architecture
-  - I can independently build a model with necessary features
-  - I can write fields with appropriate data types
-  - I can write methods to simplify code
-  - I can write code with readability in mind
-- I can independently write endpoint architecture
-  - I can independently write GET and POST requests
-  - I can design endpoints with user experience in mind
-  - I can return descriptive and accurate JSON
-  - I can return helpful error messages
-  - I can write code with readability in mind 
-- I can write documentation with public use in-mind
-  - I can write a README.md that is clear enough for someone with no prior knowledge of my project to understand
-  - I can write a README.md that is complete and accurate to my final project
-
+    - I can track the development of my project by successfully committing to Github at least once per work session
+    - I can track my current progress and next steps by writing specific commit messages 
+    - I can work on my project in small chunks
+- I can independently write database architecture
+  - I can define the SQL table with appropriate data types and default values
+  - I can write abstract helper functions that execute SQL to interact with the database
+  - I can write abstract functions to interact with the database 
+  - I can write helper functions to format a row as JSON 
+- I can independently write API architecture
+  - I can write HTTP requests endpoints with appropriate payload(s)
+  - I can return descriptive and accurate JSON with appropriate HTTP status codes
+  - I can return helpful error messages with appropriate HTTP status codes 
+- I can write code with readability in mind 
+  - I can use descriptive names for modules, functions, and variables
+  - I can write comments to describe functions and complex pieces of the code
+  - I can write a `/help` endpoint that is clear enough for someone with no prior knowledge of my project to understand by providing the HTTP method, route name, and description
 
 *Keep these success claims in mind when coding your project and assessing yourself.*
 
@@ -135,19 +122,18 @@ Successful computer scientists should be able to make the following claims:
 {{< deliverables  >}}
 
 - A `Networking Project: Backend Worksheet` - Paper planning document
-- A `project_networking_backend` repository containing the following:
-  - `\app`
-    - `models.py` - This is where you will define your model.
-    - `views.py` - This is where you will define your routes and endpoints.
-  - `settings.py` - This is where you define your `BASE_URL`
-  - `database.sqlite` - This is your database file.
-  - `README.md` - This is documentation for the backend of your project.
+- A `project_networking` repository containing the following:
+  - `db_definition.sql` - This is where you will define your database tables
+  - `init_db.py` - This is what you will run to initalize your database.db file
+  - `database.db` - This is your database file.
+  - `helpers.py` - This is where you will define helper functions to interact with the database and convert a row to JSON
+  - `api.py` - This is where you will define your API endpoints 
 
 ---
 
 **🗓️ Timeline**
 
-You have 5 in-class work days. You may find it necessary to work outside of school, however if you are focused in class you can complete the project within the allotted blocks. Our office hours are Wednesdays during CCA in B405. 
+You have 5 in-class work days. You may find it necessary to work outside of school, however if you are focused in class you can complete the project within the allotted blocks. Our office hours are Wednesdays during CCA in B403. 
 
 | CS10.1 Dates | CS10.2 Dates | Agenda                         |
 |--------------|--------------|--------------------------------|
