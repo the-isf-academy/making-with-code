@@ -78,11 +78,11 @@ The `project_networking` repository containing the following:
 - API architecture [3]
 - documentation [3]
 
-**For each criteria you will be assessed on a score from 0-3. With 8 criteria, there is a total of 24 potential points.** 
-- 0 - no evidence of the practice
-- 1 - limited evidence of the practice
-- 2 - adequate evidence of the practice
-- 3 - substantial evidence of the practice
+**For each criteria you will be assessed on a score from 0-3. With 5 criteria, there is a total of 15 potential points.** 
+- 0 - no evidence of the criteria
+- 1 - approaches expectations of the criteria
+- 2 - meets expectations of the criteria
+- 3 - exceed expectations  of the criteria
 
 ---
 
