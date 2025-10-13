@@ -149,7 +149,7 @@ Successful computer scientists should be able to make the following claims:
 - I can develop my project iteratively over time
     - I can track the development of my project by successfully committing to Github at least once per class work session
     - I can track my current progress and next steps by writing specific commit messages 
-    - I can test my code in small chunks 
+    - I can work on my project in small chunks
 - I can write code with readability in mind
     - I can write readable code that another CS student could understand
     - I can use descriptive names for modules, functions, and variables
