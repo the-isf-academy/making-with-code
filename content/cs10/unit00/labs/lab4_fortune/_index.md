@@ -445,6 +445,61 @@ Currently there is no feature to delete a fortune. It can be risky to permanentl
 
 💻 **Change your exisitng routes (`/all`, `/search`, and `/all/is_happy`) to only return fortunes with `archive` set to `True`.**
 
+---
+
+### Relational Database
+
+A relational database connects two databaes together with specific relationships. Learn more [HERE](https://www.w3schools.com/mysql/mysql_rdbms.asp). 
+
+Here are two example files for creating a many-to-one relationship between tutors and students. Each tutor, can have multiple students. 
+
+📖 **Example `database.sql` file.** Notice how the student is linked to the tutor by the `FOREIGN KEY`. 
+```SQL
+CREATE TABLE tutor (
+    tutor_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL
+);
+
+CREATE TABLE student (
+    student_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    tutor_id INTEGER,
+    FOREIGN KEY (tutor_id) REFERENCES tutor(tutor_id)
+);
+```
+
+📖 **Example `init_db.py` file.** Notice how when a student is created it is explictly linked to a tutor via the `tutor_id`.
+
+```python
+import sqlite3
+
+# connect to database
+connection = sqlite3.connect('database.db')
+
+# open database.sql
+with open('database.sql') as file:
+    connection.executescript(file.read())
+
+# create connection to database
+conn = connection.cursor()
+
+# inserts new tutor
+conn.execute("INSERT INTO tutor (name) VALUES (?)", ("Emma",))
+
+# inserts 2 students
+conn.execute("INSERT INTO student (name, tutor_id) VALUES (?, ?)", ("Kris", 1))
+conn.execute("INSERT INTO student (name, tutor_id) VALUES (?, ?)", ("Heidi", 1))
+
+# save changes to db
+connection.commit()
+
+# close database
+connection.close()
+
+print("-- database initalized --")
+```
+
+💻 **Incorporate a many-to-one relational database in the `fortune` lab.** Consider what relationship would make sense in the context of the feature of this API. 
 
 
 
