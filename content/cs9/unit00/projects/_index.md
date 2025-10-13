@@ -130,10 +130,10 @@ Feel free to use **any** of the superturtle modules in your project!
 - decomposition
 
 **For each criteria you will be assessed on a score from 0-3:**
-- 0 - no evidence of the practice
-- 1 - limited evidence of the practice
-- 2 - adequate evidence of the practice
-- 3 - substantial evidence of the practice
+- 0 - no evidence of the criteria
+- 1 - approaches expectations of the criteria
+- 2 - meets expectations of the criteria
+- 3 - exceed expectations  of the criteria
 
 *To do well in this project, you should be able to concretely demonstrate that you can successfully do each practice*
 
@@ -147,8 +147,8 @@ Successful computer scientists should be able to make the following claims:
     - I can design my animation 
     - I can consider the components of my project before coding
 - I can develop my project iteratively over time
-    - I can track the development of my project by successfully committing to Github at least once per class work day
-    - I can track my current progress and next steps using specific commit messages 
+    - I can track the development of my project by successfully committing to Github at least once per class work session
+    - I can track my current progress and next steps by writing specific commit messages 
     - I can test my code in small chunks 
 - I can write code with readability in mind
     - I can write readable code that another CS student could understand
