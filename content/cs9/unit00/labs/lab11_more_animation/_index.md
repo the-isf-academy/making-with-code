@@ -1,6 +1,6 @@
 ---
 title: 11. More SuperTurtle
-draft: true
+# draft: true
 ---
 
 # More Animation Lab
@@ -91,7 +91,7 @@ python animation_tree.py
 {{< figure src="images/courses/cs9/unit00/lab_11_tree1.gif" width="50%">}}
 
 {{< code-action >}} **Take a look at the code with:** `code .`
-- The main animation loop is in `animation.py`. 
+- The main animation loop is in `animation_tree.py`. 
 - It uses the `shapes.py` file and `tree_parts.py` from the `modules` lab.
 
 
@@ -160,7 +160,7 @@ How would you offset the trees?
 ## [2] Deliverables
 
 {{< deliverables "For this lab, you should:" >}}
-☑️ **At then end of class, be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSdLsonbvKv_BNic0gAlq_EsCnaeKj-v2m343KQDeypw65j0YQ/viewform?usp=sf_link)**.
+☑️ **At then end of class, be sure to fill out [this Google form](https://forms.gle/dfoHkn6P9JPP5bRT8)**.
 
 
 {{< code-action "Push your code to Github" >}} 
