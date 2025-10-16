@@ -156,12 +156,13 @@ Successful computer scientists should be able to make the following claims:
     - I can write descriptive comments to describe complex pieces of the code
 - I can effectively use the principle of abstraction to make my code more efficient and elegant
     - I can write a function with parameters that can be used in multiple situations 
-    - I can manipulate control flow with conditional statements
-    - I can use loops to repeat commands
-     I can use settings.py to easily configure my animation
+    - I can manipulate control flow with conditional statements, when appropriate 
+    - I can use loops to repeat commands, when appropriate
+    - I can include customize settings in `setting.py` that customize elements of the animation
 - I can effectively use the principle of decomposition to make my code more efficient and elegant
-    - I can write modules and functions to break down my animation into smaller pieces 
-    - I can structure my modules and functions so that another CS student could easily extend my work
+    - I can breakdown my animation to appropriate modules
+    - I can breakdown my animation into appropriate functions  
+    - I can and functions to break down my animation into smaller pieces 
 
 *Keep the success claims in mind when coding your project.*
 
