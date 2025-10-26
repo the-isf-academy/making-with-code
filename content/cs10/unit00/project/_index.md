@@ -1,18 +1,14 @@
 ---
 Title: "Project"
-draft: true
+# draft: true
 ---
 
 # Networking: Social Computing Project
 
 In this unit you will create the backend of a social computing app using SQL and Flask. 
 
-{{< aside "Reference Documentation" >}}
+🎨 **The design prompt for this project is:** `A social computing API that invites fun, joyful social interaction.`
 
-- [Flask](https://flask.palletsprojects.com/)
-- [SQL](https://docs.python.org/3/library/sqlite3.html)
-
-{{< /aside >}}
 
 
 ---
@@ -59,12 +55,21 @@ poetry install
 
 The `project_networking` repository containing the following:
   - `db_definition.sql` - This is where you will define your database tables
-  - `init_db.py` - This is what you will run to initalize your database.db file
+  - `init_db.py` - This is what you will run to initialize your database.db file
   - `database.db` - This is your database file.
   - `helpers.py` - This is where you will define helper functions to interact with the database and convert a row to JSON
   - `api.py` - This is where you will define your API endpoints 
   
-{{< code-action "Start coding your first milestone!" >}} With you project management sheet approved by a teacher and your starter code downloaded, you're ready to start creating.
+{{< code-action >}} **With you project planning document approved by a teacher and your starter code downloaded, you're ready to start developing.**
+
+
+{{< aside "Reference Documentation" >}}
+
+- [Flask](https://flask.palletsprojects.com/)
+- [SQL](https://docs.python.org/3/library/sqlite3.html)
+
+{{< /aside >}}
+
 
 ---
 
@@ -74,15 +79,15 @@ The `project_networking` repository containing the following:
 **This project will be assessed on the following criteria:**
 - project planning [3]
 - iterative development [3]
-- Database SQL functions [3]
+- database architecture [3]
 - API architecture [3]
-- documentation [3]
+- readability [3]
 
 **For each criteria you will be assessed on a score from 0-3. With 5 criteria, there is a total of 15 potential points.** 
 - 0 - no evidence of the criteria
-- 1 - approaches expectations of the criteria
-- 2 - meets expectations of the criteria
-- 3 - exceed expectations  of the criteria
+- 1 - limited evidence of the criteria
+- 2 - satisfactory evidence of the criteria
+- 3 - substantial evidence  of the criteria
 
 ---
 
@@ -90,10 +95,9 @@ The `project_networking` repository containing the following:
 
 Successful computer scientists should be able to make the following claims:
 - I can thoughtfully plan a large computer science project prior to coding.  
-    - I can consider social interactions in the design of my database and API
-    - I can consider the structure of my database table
-    - I can design the API architecture with appropirate HTTP methods and payload
-    - I can identify an appropriate Minimum Viable Product (MVP)
+    - I can consider fun, joyful social interactions in the design of my database and API
+    - I can consider the structure of my database and appropriate helper functions
+    - I can design the API architecture with appropriate HTTP methods and payload
 - I can develop my project iteratively over time
     - I can track the development of my project by successfully committing to Github at least once per work session
     - I can track my current progress and next steps by writing specific commit messages 
@@ -124,7 +128,7 @@ Successful computer scientists should be able to make the following claims:
 - A `Networking Project: Backend Worksheet` - Paper planning document
 - A `project_networking` repository containing the following:
   - `db_definition.sql` - This is where you will define your database tables
-  - `init_db.py` - This is what you will run to initalize your database.db file
+  - `init_db.py` - This is what you will run to initialize your database.db file
   - `database.db` - This is your database file.
   - `helpers.py` - This is where you will define helper functions to interact with the database and convert a row to JSON
   - `api.py` - This is where you will define your API endpoints 
@@ -133,15 +137,16 @@ Successful computer scientists should be able to make the following claims:
 
 **🗓️ Timeline**
 
-You have 5 in-class work days. You may find it necessary to work outside of school, however if you are focused in class you can complete the project within the allotted blocks. Our office hours are Wednesdays during CCA in B403. 
+You have 6 in-class work days. You may find it necessary to work outside of school, however if you are focused in class you can complete the project within the allotted blocks. Our office hours are Wednesdays during CCA in B403. 
 
 | CS10.1 Dates | CS10.2 Dates | Agenda                         |
 |--------------|--------------|--------------------------------|
-| 14 Oct       | 11 Oct       | Project Intro & MVP |
-| 15 Oct       | 17 Oct       | Work Day - MVP                 |
-| 18 Oct       | 18 Oct       | Work Day - Peer Review         |
-| 23 Oct       | 20 Oct       | Work Day - Documentation       |
-| 24 Oct       | 25 Oct       | Due at End of Class            |
+| 27 Oct       | 28 Oct       | Project Planning |
+| 28 Oct       | 30 Oct       | Work Day                  |
+| 31 Oct       | 04 Nov       | Work Day  - Teacher Feedback        |
+| 06 Nov       | 06 Nov       | Work Day       |
+| 07 Nov       | 07 Nov       | Work Day - Peer Feedback           |
+| 10 Nov       | 11 Nov       | Due at End of Class            |
 
 ---
 
