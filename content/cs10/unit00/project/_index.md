@@ -112,7 +112,7 @@ Successful computer scientists should be able to make the following claims:
   - I can return descriptive and accurate JSON with appropriate HTTP status codes
   - I can return helpful error messages with appropriate HTTP status codes 
 - I can write code with readability in mind 
-  - I can use descriptive names for modules, functions, and variables
+  - I can use descriptive names for functions, variables, and endpoints 
   - I can write comments to describe functions and complex pieces of the code
   - I can write a `/help` endpoint that is clear enough for someone with no prior knowledge of my project to understand by providing the HTTP method, route name, and description
 
