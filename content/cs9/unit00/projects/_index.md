@@ -153,7 +153,7 @@ Successful computer scientists should be able to make the following claims:
 - I can write code with readability in mind
     - I can write readable code that another CS student could understand
     - I can use descriptive names for modules, functions, and variables
-    - I can write descriptive comments to describe complex pieces of the code
+    - I can write descriptive comments to describe functions and complex pieces of the code
 - I can effectively use the principle of abstraction to make my code more efficient and elegant
     - I can write a function with parameters that can be used in multiple situations 
     - I can manipulate control flow with conditional statements
