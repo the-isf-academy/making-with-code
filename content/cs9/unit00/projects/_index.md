@@ -1,6 +1,6 @@
 ---
 Title: Project
-draft: true
+# draft: true
 ---
 
 # Animation Project
@@ -190,9 +190,8 @@ You have 5 in-class work days. You may find it necessary to work outside of scho
 
 {{< code-action "Push your work to Github:" >}}
 - `git status`
-- `git add project.py`
-    - you can add multiple files by putting a space inbetween each file
-    - *e.g. `git add project.py settings.py`*
+- `git add -A`
+    - you can add multiple files by adding all edited files with `-A`
 - `git status`
 - `git commit -m "#today what I worked on today #next what I will work on next class"`
   > be sure to customize this message, do not copy and paste this line
