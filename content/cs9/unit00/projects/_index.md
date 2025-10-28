@@ -132,8 +132,8 @@ Feel free to use **any** of the superturtle modules in your project!
 **For each criteria you will be assessed on a score from 0-3:**
 - 0 - no evidence of the criteria
 - 1 - limited evidence of the criteria
-- 2 - satisfactory expectations of the criteria
-- 3 - exceed expectations  of the criteria
+- 2 - satisfactory evidence of the criteria
+- 3 - substantial evidence of the criteria
 
 *To do well in this project, you should be able to concretely demonstrate that you can successfully do each practice*
 
