@@ -225,6 +225,49 @@ print(updated_fortune['statement'], updated_fortune['num_updates'], updated_fort
 ```
 {{< /checkpoint >}}
 
+{{< expand "solution" >}}
+
+```python
+def update_fortune(id, update_string):
+    '''Returns all riddles from the database'''
+
+    conn = get_db_connection()
+
+    fortune = conn.execute(
+        """
+        SELECT *
+        FROM fortunes
+        WHERE id=?
+        """,(id,)).fetchone()  
+    
+
+    new_fortune = fortune['statement'].strip() + " " + update_string
+
+    conn.execute(
+        f"""
+        UPDATE fortunes
+        SET 
+            statement = "{new_fortune}",
+            num_updates = num_updates + 1,
+            last_updated = (STRFTIME('%Y-%m-%d %H:%M:%S', 'now', '+8 hours'))
+        WHERE id = {id}
+        """,
+       
+    )
+    conn.commit()
+
+    updated_fortune = conn.execute(
+        """
+        SELECT *
+        FROM fortunes
+        WHERE id=?
+        """,(id,)).fetchone()  
+
+    return updated_fortune
+```
+
+{{< /expand >}}
+
 ---
 
 {{< code-action >}} **In `api.py` write the `/update` endpoint.** 
@@ -260,6 +303,8 @@ http://127.0.0.1:5000/fortune/update id=6 update_text=non-stop
 {{< /checkpoint >}}
 
 
+
+
 ---
 
 
@@ -287,6 +332,28 @@ for fortune in all_fortunes:
   print(fortune['statement'])
 ```
 {{< /checkpoint >}}
+
+{{< expand "solution" >}}
+
+```python
+def search(keyword):
+    '''Returns all riddles from the database'''
+
+    conn = get_db_connection()
+
+    keyword_fortunes = conn.execute(
+        f"""
+        SELECT *
+        FROM fortunes
+        WHERE statement LIKE '%{keyword}%'
+        """).fetchall()  
+    
+    conn.close()
+
+    return keyword_fortunes
+```
+
+{{< /expand >}}
 
 ---
 
@@ -397,6 +464,7 @@ When designing an API, it is important to write helpful documentation so others 
 ```
 
 {{< /checkpoint >}}
+
 
 
 ---
