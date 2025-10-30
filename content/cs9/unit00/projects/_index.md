@@ -176,9 +176,9 @@ Successful computer scientists should be able to make the following claims:
     - At least one additional module (written by you)
 
 
-**🗓️ Timeline**
+**🗓️ Timeline [Due: 12 November]**
 
-You have 5 in-class work days. You may find it necessary to work outside of school, however if you are focused in class you can complete the project within the allotted blocks. Our office hours are Wednesday during CCA in B405. 
+You have 5 in-class work days. You may find it necessary to work outside of school, however if you are focused in class you can complete the project within the allotted blocks. Our office hours are Wednesday during CCA in B403. 
 
 
  ---
