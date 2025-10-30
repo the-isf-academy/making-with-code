@@ -1,6 +1,6 @@
 ---
 Title: Project
-draft: true
+# draft: true
 ---
 
 # Animation Project
@@ -36,11 +36,6 @@ This is a big project, and you will get lost or frustrated if you don't do some 
 ---
 
 ##  [1] Setup
-
-{{< code-action "Add a shortcut command to easily open Github" >}} 
-```shell
-echo 'alias remote="open \"\$(git remote get-url origin | sed \"s/\.git\$//\")\""' >> ~/.zshrc
-```
 
 For this project, your code will live in a git repository. It is your responsibility to regularly commit to your repository.
 
@@ -131,9 +126,9 @@ Feel free to use **any** of the superturtle modules in your project!
 
 **For each criteria you will be assessed on a score from 0-3:**
 - 0 - no evidence of the criteria
-- 1 - approaches expectations of the criteria
-- 2 - meets expectations of the criteria
-- 3 - exceed expectations  of the criteria
+- 1 - limited evidence of the criteria
+- 2 - satisfactory evidence of the criteria
+- 3 - substantial evidence of the criteria
 
 *To do well in this project, you should be able to concretely demonstrate that you can successfully do each practice*
 
@@ -156,12 +151,13 @@ Successful computer scientists should be able to make the following claims:
     - I can write descriptive comments to describe functions and complex pieces of the code
 - I can effectively use the principle of abstraction to make my code more efficient and elegant
     - I can write a function with parameters that can be used in multiple situations 
-    - I can manipulate control flow with conditional statements
-    - I can use loops to repeat commands
-     I can use settings.py to easily configure my animation
+    - I can manipulate control flow with conditional statements, when appropriate 
+    - I can use loops to repeat commands, when appropriate
+    - I can include customize settings in `setting.py` that customize elements of the animation
 - I can effectively use the principle of decomposition to make my code more efficient and elegant
-    - I can write modules and functions to break down my animation into smaller pieces 
-    - I can structure my modules and functions so that another CS student could easily extend my work
+    - I can breakdown my animation to appropriate modules
+    - I can breakdown my animation into appropriate functions  
+    - I can and functions to break down my animation into smaller pieces 
 
 *Keep the success claims in mind when coding your project.*
 
@@ -189,9 +185,8 @@ You have 5 in-class work days. You may find it necessary to work outside of scho
 
 {{< code-action "Push your work to Github:" >}}
 - `git status`
-- `git add project.py`
-    - you can add multiple files by putting a space inbetween each file
-    - *e.g. `git add project.py settings.py`*
+- `git add -A`
+    - you can add multiple files by adding all edited files with `-A`
 - `git status`
 - `git commit -m "#today what I worked on today #next what I will work on next class"`
   > be sure to customize this message, do not copy and paste this line
