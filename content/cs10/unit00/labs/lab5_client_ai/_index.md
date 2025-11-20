@@ -17,8 +17,8 @@ In this lab you will create a frontend client for your Networking backend projec
 
 ```shell
 cd ~/desktop/making_with_code/unit03_networking/
-git clone https://github.com/the-isf-academy/client_ai_yourgithubusername
-cd client_ai_yourgithubusername
+git clone https://github.com/the-isf-academy/lab_client_ai_yourgithubusername
+cd lab_client_ai_yourgithubusername
 ```
 
 {{< code-action "Get the necessary packages" >}}
