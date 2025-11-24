@@ -1,7 +1,7 @@
 ---
 title: "Unit 04: Web Design" 
 bookFlatSection: false
-bookCollapseSection: True
-draft: true
+bookCollapseSection: false
+# draft: true
 ---
 
