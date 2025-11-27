@@ -4,7 +4,7 @@ title: 1. Request/Response Lifecycle
 
 # The Request/Response Lifecycle
 
-In this lab, you'll explore a Flask app and make some changes to how it handles
+In this lab, you'll explore a Django app and make some changes to how it handles
 the request/response lifecycle. 
 
 
@@ -19,9 +19,9 @@ the request/response lifecycle.
 
 - You will be opening a lot of small files. It takes some practice learning your way around, but you'll get the hang of it.
 - Most of the code you're looking at interacts with other code you're not
-  seeing. For example, where's the code that actually calls `url_for()` with a
+  seeing. For example, where's the code that actually calls `home_view` with a
   request? Where's the code that sends the response back to the client? It's all 
-  there in the Flask source--there's no magic--but you shouldn't bother reading it. 
+  there in the Django source--there's no magic--but you shouldn't bother reading it. 
 - **As you start working
   with larger software packages, you'll need to get used to not
   understanding the whole system.** One of the main goals of computer science is
@@ -66,7 +66,8 @@ anything.
 prepares the database (more on this later); the second command starts the server
 running on port 8000 on your computer. 
 ```shell
-python app.py
+python manage.py migrate
+python manage.py runserver 
 ```
 
 Now the server is waiting for requests. 
@@ -86,22 +87,48 @@ Let's see how the parts of the app worked together to show this page. When a
 request first arrives, its URL is separated into a host name and a path. In
 this case, the host name is `localhost:8000` and the path is `/`. 
 
-{{< code-action >}} **Open `app.py`.** This where we define the `url paths` and how to handle a request made to that path.
+{{< code-action >}} **Open `mysite/urls.py`.** The file `mysite/urls.py` declares the app's routing, matching paths
+to views which should handle them. 
 
-```python{linenos=table}
-@app.route("/")
-def index():
-    color = get_one_color(1)
-
-    name = "Student"
-
-    return render_template(
-            'index.html', 
-            color=color, 
-            name = name)
-
+```python
+urlpatterns = [
+    path('/', include('color_app.urls')),
+    path('admin/', admin.site.urls),
+]
 ```
-> `line 1` - defines the url 
+>This code is actually just importing URLs from other modules--`color_app.urls` and `admin.site.urls`.
+
+{{< code-action >}} **We're going to be working with `color_app` today, so let's open `color_app/urls.py`:**
+
+```python {linenos=table, linenostart=4}
+from django.urls import path
+from color_app import views
+
+app_name = "color_app"
+urlpatterns = [
+    path('', views.home, name="index"),
+    path('random/', views.random_color, name="random_color"),
+]
+```
+> Two views are defined. If you go to [`localhost:8000/`](http://localhost:8000) (homepage), 
+the request will be handled by `views.home`. And if you go to 
+[`localhost:8000/random/`](http://localhost:8000/random), the request will be handled by
+`views.random`.
+
+{{< code-action >}} **Let's look at these views. You can see that they are imported from `color_app.views`, so we'll open `color_app/views.py`.**
+
+```python {linenos=table, linenostart=8}
+def home_view(request):
+    "A view function which renders the homepage"
+    log.info("In color_app.views.home. Rendering the homepage.")
+    skyblue = Color(name="skyblue", red=135, green=206, blue=250)
+    params = {
+        "name": "stranger",
+        "color": skyblue,
+    }
+    response = render(request, 'color_app/index.html', params)
+    return response
+```
 > The homepage view is just a simple function! It receives a `request`, builds a
 `response`, and returns it. However, the view relies on a few helpers to get the job done. 
 
