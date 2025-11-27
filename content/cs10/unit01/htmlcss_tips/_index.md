@@ -1,6 +1,6 @@
 ---
 title: "HTML/CSS Tips" 
-draft: true
+draft: false
 ---
 <style>
 
@@ -75,7 +75,7 @@ This page is dedicated to HTML and CSS tips. Let the teachers know if you would 
 - [Mozzila CSS Tutorials](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [w3 CSS wiki](https://www.w3schools.com/css/css_intro.asp)
 
----
+<!-- ---
 
 ## CSS Challenges
 
@@ -243,7 +243,7 @@ This page is dedicated to HTML and CSS tips. Let the teachers know if you would 
 }
 ```
 > - `#` - is used to apply rules to a `CSS ID`
-> - **`flex-grow`** - this makes `col-2` 3x as big
+> - **`flex-grow`** - this makes `col-2` 3x as big -->
 
 <!-- 
 ---
