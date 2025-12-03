@@ -1,7 +1,7 @@
 ---
 title: "1: CSS"
 weight: 10
-draft: true
+# draft: true
 ---
 
 <style>
@@ -37,7 +37,7 @@ git clone https://github.com/the-isf-academy/lab_css_yourgithubusername
 
 {{< code-action >}} `cd` **into the lab**
 ```shell
-cd lab_html_yourgithubusername
+cd lab_css_yourgithubusername
 ```
 
 📄 **This repo contains the following:**
