@@ -1,10 +1,8 @@
 ---
 title: "2: Responsive Design"
 weight: 10
-draft: true
+# draft: true
 ---
-
-
 
 # Responsive Design 
 
@@ -75,7 +73,7 @@ open index.html
 {{< figure src="images/courses/cs10/unit01/02_responsive_11.png" width="25%" >}}
 
 
-💻 **Now, it's up to you to edit the exisitng CSS rules and add more specific CSS rules in the media query!** Try to match the screenshots below. 
+💻 **Now, it's up to you to edit the existing CSS rules and add more specific CSS rules in the media query!** Try to match the screenshots below. 
 > *Don't forget to scroll to the bottom and check the 'back to the top' text*
 - You must:
     - add additional properties to the `.flexbox` rule
@@ -192,11 +190,4 @@ h1{
 
 {{< /deliverables >}}
 
-
-
-
-
-## [3] Extension: CSS  
-
-💻 **Experiment with UX/UI design by customizing this site!** This is one of the last practice labs before your make your own site, so us this as opportunity to test ideas. 
 
