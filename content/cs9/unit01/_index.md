@@ -1,7 +1,7 @@
 ---
 title: "Unit 01: Data Science"
 bookFlatSection: False
-bookCollapseSection: True
+bookCollapseSection: False
 # weight: 20
 # draft: true
 ---
