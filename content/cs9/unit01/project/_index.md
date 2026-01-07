@@ -9,13 +9,6 @@ The final project for this unit will be a research project. Working with the dat
 
 To be successful in this project, you should **find a topic that is both interesting to you and answerable** (at least in part) with data from your chosen dataset. Your teachers will help you make sure your project hypothesis achieves that. 
 
-{{< aside "Extra Examples" >}}
-
-📖 **Extra Examples [HERE](https://colab.research.google.com/drive/1K12_0EC4NpNWzzhl6hGw3ImAmtxzMJuJ?usp=sharing)**
-
-{{< /aside >}}
-
-
 
 ---
 
@@ -116,96 +109,22 @@ else:
 ```
 ---
 
-### Creating a New Column Based on Another Column
 
-
-📖 **Here is a `dataframe` stored in the variable `age_df`.** It stores names and ages.
-
-
-|   | name    | age |
-|---|---------|-----|
-| 0 | Alice   | 10  |
-| 1 | Bob     | 15  |
-| 2 | Charlie | 25  |
-| 3 | David   | 40  |
-| 4 | Sally   | 80  |
-
-
-📖 **In one code block, you will write a function with your conditional statements.** This function returns `True` or `False`, based on their age. 
+### Detecting Chinese Characters
 
 ```python
-def get_if_adult(age):
-    if age < 18:
-        return False
-    else:
-        return True
+import re
+
+text = "hello world 💀 🌈"
+
+# loop through each character
+for char in text:
+  # if you find a character, immediately say you have an emoji
+  if char in re.findall(u'[\U0001f300-\U0001f650]', char):
+    print("found an emoji!")
+
+print("end of string")
 ```
-
-📖 **In another code block, you can apply the function to each value in a given row.** Here it applies the function `get_if_adult()` to each row of the `age` columns, and stores the return value in a new column called `is_adult`.
-```python
-# Apply the get_age_group function to the age column
-age_df['is_adult']  = age_df.apply(lambda row: get_if_adult(row['age']), axis=1)
-```
-📖 **Here is the updated dataframe.**
-
-|   | name    | age | is_adult |
-|---|---------|-----|----------|
-| 0 | Alice   | 10  | False    |
-| 1 | Bob     | 15  | False    |
-| 2 | Charlie | 25  | True     |
-| 3 | David   | 40  | True     |
-| 4 | Sally   | 80  | True     |
-
-*This tutorial is based of [this](https://saturncloud.io/blog/how-to-create-a-new-column-based-on-the-value-of-another-column-in-pandas/#:~:text=Once%20we%20have%20had%20our,and%20return%20a%20new%20DataFrame.) guide.*
-
-
----
-
-### Find the top 1+ based on two columns
-
-For example, I want to find the top 1 show I watched each month.
-
-📖 **Here is a `dataframe` stored in the variable `watch_history_df`.** 
-
-
-|   | month    | show       | episode | genre     |
-|---|----------|------------|---------|-----------|
-| 0 | January  | One Piece  | 08      | Fantasy   |
-| 1 | January  | One Piece  | 09      | Fantasy   |
-| 2 | January  | The Office | 15      | Comedy    |
-| 3 | February | Avatar     | 01      | Animation |
-| 4 | February | Avatar     | 02      | Animation |
-| 5 | February | Avatar     | 03      | Animation |
-
-
-1️⃣ **Count how many times we watched each `show` during each `month`.** For this we must use `groupby`.
-
-```python
-#this counts up how many times I watched each show in each month
-top_show_df = watch_history_df.groupby(by=["month", "show"]).size().to_frame("count")
-```
-
-2️⃣ **Next, sort the values.** Sort by month, then the count. We use ascending for the month, since we want to start with the lowest number (1 for january). We use descending for count, since we want the most watched at the top.
-
-```python
-#this sorts the new df first by month, then by the count
-top_show_df = top_show_df.sort_values(['month', 'count'], ascending=[True, False])
-```
-
-3️⃣ **Last, get the top 1 show for each month.** To do this, we use `groupby` combined with `head`. If you want the top 3, you could use `.head(3)`, etc.
-
-```python
-#this gets the top 1 for every month
-top_show_df = top_show_df.groupby('month').head(1)
-```
-
-📖 **Here is the new dataframe `top_show_df`.**
-
-| month | show      | count |
-|-------|-----------|-------|
-| 1     | One Piece | 2     |
-| 2     | Avatar    | 3     |
-
 
 ---
 ### Find the mode of a column for each unique value in another column 
@@ -491,4 +410,5 @@ combo_df = top5_df.append(new_row, ignore_index = True)
 |     3 | Muse                   |    18 |
 |     4 | Chance the Rapper      |    13 |
 |     5 | Other      |    11 |
+
 
