@@ -3,7 +3,7 @@ title: "Unit: Web Apps"
 # bookCollapseSection: true
 type: unit
 slug: unit02
-# draft: true
+draft: true
 ---
 
 This unit will focus on web applications and human-center design. Students will form teams focused on creating something for the ISF community. This could be a solution to a problem or a virtual experience for members of the community. 
