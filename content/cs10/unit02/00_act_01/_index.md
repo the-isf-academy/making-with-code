@@ -44,4 +44,3 @@ set up a basic app and follow along as we go through three different
    more complicated. You wouldn't want all your users to get their passwords and
    cat videos deleted every time you update your app!
 
-OK, fun! Ready? [Let's get started >>>>]({{< ref "00_request_response/_index.md" >}})

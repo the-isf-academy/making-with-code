@@ -1,5 +1,6 @@
 ---
 title: 1. Request/Response Lifecycle
+draft: true
 ---
 
 # The Request/Response Lifecycle

@@ -191,3 +191,63 @@ h1{
 {{< /deliverables >}}
 
 
+--- 
+
+## [3] Extension: p5.js
+
+`p5.js` is a javascript library for creating digital artwork! You can take a look at the documentation [here](https://p5js.org/).
+
+👀 **Take a look at the [examples](https://p5js.org/examples/) and experiment with the [web editor](https://editor.p5js.org/).**
+
+💻 **Then, try to bring it into your own site by referencing this example p5.js setup in a local HTML file.** Feel free to copy & paste this into a new file OR bring parts of this into your existing `index.html` file.
+
+```html
+<!doctype HTML>
+
+<html>
+  
+    <head>
+        <link rel="stylesheet" href="styles.css" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>p5.JS Examples</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+    </head>
+
+    <body>
+
+        <div id="p5jsCanvas">
+        </div>
+    </body>
+
+    <script>
+      function setup() {
+        // Create the canvas
+        var canvas = createCanvas(710, 400);
+        canvas.parent('p5jsCanvas')
+
+        // Set background to black
+        background(1);
+
+        // Set width of the lines
+        strokeWeight(10);
+
+        // Set color mode to hue-saturation-brightness (HSB)
+        colorMode(HSB);
+
+        // Set screen reader accessible description
+        describe('A blank canvas where the user draws by dragging the mouse');
+      }
+
+      function mouseDragged() {
+        // Set the color based on the mouse position, and draw a line
+        // from the previous position to the current position
+        let lineHue = mouseX - mouseY;
+        stroke(lineHue, 90, 90);
+        line(pmouseX, pmouseY, mouseX, mouseY);
+    }
+
+    
+  </script>
+</html>
+```
