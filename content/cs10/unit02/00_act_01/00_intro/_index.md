@@ -1,8 +1,11 @@
 ---
-title: 1. Request/Response Lifecycle
+title: 0. Introduction
 ---
 
-# The Request/Response Lifecycle
+TODO
+- move form to the next lab, go in depth about forms 
+
+# Introudction to Web Apps
 
 In this lab, you'll explore a Flask app and make some changes to how it handles
 the request/response lifecycle. 
@@ -101,35 +104,31 @@ def index():
             name = name)
 
 ```
-> `line 1` - defines the url 
-> The homepage view is just a simple function! It receives a `request`, builds a
-`response`, and returns it. However, the view relies on a few helpers to get the job done. 
+> - `line 1` - defines the url 
+> - `line 2` - defines a simple function to receive a `request`, builds a `response`, and returns it
+> - `line 3` - calls a helper function to retrieve information from the database
+> - `line 7` - returns an HTML file and sends data to the file
+
+---
 
 ### [Templates]
 
-**Many views use
-*templates*, or pieces of HTML code that can be used to build a webpage.** The
-call to `render` on line 16 requests the template `color_app/index.html`.
+***Templates* are pieces of HTML code that can be used to build a webpage.** The
+call to `render_template()` on line 21 requests the template `templates/index.html`.
 (Every app in the project has a folder called `templates`; when you ask for a
-template, Django searches these folders for a match). 
+template, Flask searches the folder for a match). 
 
-{{< code-action "Find this template and open it." >}} 
+{{< code-action >}} **Find this template `templates/index.html` and open it.**
 
 ```html {linenos=table}
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
-  <div class="row">
-    <div class="col text-center">
-      <h1> Hello {{name}}</h1>
-      {% include "color_app/swatch.html" %}
-      <p>
-        <a href="{% url 'color_app:random_color' %}">
-          How about a random color?
-        </a>
-      </p>
-    </div>
-  </div>
+
+  <h1> Hello {{name}}</h1>
+  {% include "swatch.html" %}
+  <a href="{{ url_for('color_random') }}">How about a random color?</a>.
+  
 {% endblock %}
 ```
 There's a lot here, so we'll just take a quick tour. This template is made up of
@@ -137,59 +136,42 @@ HTML tags like `<h1>...</h1>` and template commands like `{% ... %}` and `{{ ...
 }}`. The HTML tags will be read by the client's browser as it presents the webpage; the template
 commands tell Django what to do. 
 - `extends` (line 1) means this template extends another template (in this
-  case, `base.html`, which you can find in `color_app/templates/base.html`.
+  case, `base.html`, which you can find in `templates/base.html`.
   Extending another template works by overriding particular *blocks*. Here, we
   are overriding the block called `content` (lines 3-15).
-- `{{name}}` (line 6) is a placeholder which will be replaced with the parameter called `name` given to the
-  template by the view (`color_app/views.py`, lines 12-16). 
-- `include` (line 7) means include another template. Colorama needs to show
+- `{{name}}` (line 5) is a placeholder which will be replaced with the variable called `name` given to the
+  template by the function `index()` (`app.py`, lines 24). 
+- `include` (line 6) means include another template. Colorama needs to show
   color swatches all over the place, so we have a special template just for the
   color swatch circle. 
-- `url` (line 9) means look up a url by name (`color_app/urls.py`, line 10). Why not
+- `url_for` (line 9) means look up a url by name (`app`, line 26). Why not
   just type in the url? If you change it later, you might forget to fix it here,
   especially after you have a few dozen templates. And you might want to deploy
   this site to multiple hosts, like `localhost:8000` while you're developing it
   and `colorama.com` when you're ready to go public. 
 
-### [Models]
-In addition to a template, `home` also uses a *model* called `Color` (`color_app/views.py`, line 11). 
+---
+
+### [Database]
+In addition to a template, `home` also uses a the an SQL database table called `colors` (`colors.sql`). 
 **Think of views as connecters, and think of models as objects that do most of the work.**
 
-{{< code-action >}} **The `Color` model has some neat abilities; let's check them out by opening
-`color_app/models.py`.**
+{{< code-action >}} **The `colors` table is set up like so, check it out by looking opening `colors.sql`**
 
-```python {linenos=table}
-from django.db import models
-from color_app.validators import color_channel_validator
-
-class Color(models.Model):
-    name = models.CharField(max_length=50)
-    red = models.IntegerField(validators=[color_channel_validator])
-    green = models.IntegerField(validators=[color_channel_validator])
-    blue = models.IntegerField(validators=[color_channel_validator])
-    ...
+```sql
+CREATE TABLE IF NOT EXISTS colors  (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    red INTEGER NOT NULL,
+    green INTEGER NOT NULL,
+    blue INTEGER NOT NULL
+);
 ```
 > A `Color` has four attributes: `name`, `red`, `green`, and `blue`. (Every pixel
 on a computer display has a tiny red, green, and blue light. So every color can
-be made by describing how bright each should be.) The `color_channel_validator`
-attached to each color field checks to make sure the color value is between 0
-and 255. 
->
-> If you look a little further
-down, the `Color` class also has some helpful methods, such as the ability to
-represent its value in hexidecimal, the way CSS styles expect it. This lets us
-define a `Color` and then use it to style our web pages. 
+be made by describing how bright each should be.) 
 
-**Models are just regular Python classes, but they have a special relationship
-with a database which can store objects across requests to the server.** (This is
-why the `Color` attributes are defined as `models.IntegerField`: they define how
-the data should get stored in the database.  Storing
-objects in a database and then later retrieving them makes it possible for web
-apps to have state: if you create an object, other users will also see it and it
-will still be there if you come back later. We'll come back to this idea
-shortly. 
-
-{{< figure src="images/courses/cs10/unit02/02_request_response.jpg" width="100%" title="Request/response lifecycle diagram" >}}
+👀 **There are a bunch of helpful functions to access and manipulate the colors table in `helpers.py`**
 
 
 
@@ -207,86 +189,58 @@ shortly.
 ✏️  **B.2:** If you didn't already check it out, go to the [random color page](http://localhost:8000/random).
   You'll notice that the color swatch changes every time you load the page, and 
   the background changes to an opposite color. **Explain how this works.** *(Hint:
-  We previously noticed that `/color/random` is served by `color_app.views.random_color`,
+  We previously noticed that `/color/random` is served by `color_random()`,
   so start there. Figure out which template is being used. Look in the
   template to figure out how the background color gets set. Make sure you
-  explain how the `Color` model is involved too.)*
+  explain how the `colors` table is involved too.)*
 
 {{</ checkpoint >}}
 
 --- 
 ## C. Saving stuff
 
-**Now we're going to extend the app to let users create their own colors.** And
-whereas our views were previously functions, now our views are going to be classes. 
-Some class-based views are provided for you at the bottom of
-`color_app/views.py`. We need to do a little work to wire these in
-to the app. 
+**Now we're going to extend the app to let users create their own colors.** 
 
-{{< code-action >}} **Open `color_app/urls.py` and uncomment the highlighted lines:**
 
-```python {linenos=table, hl_lines=[8, 9]}
-from django.urls import path
-from color_app import views
+{{< code-action >}} **Open `app.py` and add the following function**
 
-app_name = "color_app"
-urlpatterns = [
-    path('', views.home, name="index"),
-    path('random/', views.random_color, name="random_color"),
-    path('colors/', views.color_list, name="color_list"),
-    path('colors/new', views.new_color, name="new_color")
-]
+```python {linenos=table}
+@app.route("/all")
+def color_all():
+    all_colors = get_all_colors()
+
+    return render_template(
+            'color_all.html', 
+            all_colors=all_colors)
+
+@app.route("/new", methods=['GET', 'POST'])
+def color_new():
+    form = NewColorForm()
+
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            data = form.data 
+            new_color(data)
+
+            return redirect(url_for('color_all'))
+
+    return render_template('color_form.html', form=form)
 ```
-
-> When you save the file, the server will notice the change and automatically
-restart itself. If you accidentally make a mistake, the server might crash and
-you'll need to restart it (just run `python manage.py runserver` again).
-
-{{< code-action >}} **Now go to [`/colors`](http://localhost:8000/colors), and play around.** You can now add new colors and see a list of all the colors. If your app were live online, many users could all contribute colors. 
-
-Once again, let's have a look at the code that made this possible. We added two
-new URL routes, `colors` and `color/new`, and routed them to `color_list`
-and `def new_color(request):`, respectively. 
-
-{{< code-action >}} **Let's look at `color_app/views.py` functions:**
-```python                                                                              
-def color_list(request): 
-    # renders all colors in database
-
-    color_list = Color.objects.all().order_by("name")
-    params = {"color_list": color_list}
-
-    return render(request, 'color_app/color_list.html', params)
-
-def new_color(request):
-    # processes new color form 
-    
-    if request.method == "POST":
-        form = ColorForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect(reverse("color_app:color_list"))
-    else:
-        form = ColorForm()
-    
-    return render(request, "color_app/color_form.html", {"form": form})  
-```
-*That's it???* 
-
-- For `color_list()`,It set all the colors from the database, sort them somehow,
-and then gives them to the template for rendering. 
-
-- `new_color()`, creates an empty `ColorForm` (e.g.
+> - `color_list()` accesses all of the colors from the database and then gives them to the template for rendering. 
+> - `new_color()`, creates an empty `NewColorForm` (e.g.
 the name isn't filled in and the colors aren't set) and gives it to the
 template, which renders a response. The user sees a page with sliders and a
 text field to name the color. 
-  > When the user submits the form (this is a `POST`
+>   - When the user submits the form (this is a `POST`
 request because it's making a change; all the previous requests have been `GET`
 requests), `new_color()` again receives the request. This time, since it's a
 `POST` with form data (name, color values), it creates a `ColorForm`, checks to
 make sure the data is valid, and if so, creates a `Color`, saves it to the
 database, and then sends a redirect response telling the user to go to
 `/colors`. 
+
+{{< code-action >}} **Now go to [`/all`](http://localhost:8000/all), and play around.** You can now add new colors and see a list of all the colors. If your app were live online, many users could all contribute colors. 
+
 
 
 {{< figure src="images/courses/cs10/unit02/02_post_request_response.jpg" width="100%" title="POST Request/response lifecycle diagram" >}}
@@ -316,17 +270,11 @@ database, and then sends a redirect response telling the user to go to
   - ✏️ **Explain what you had to do.**
 {{</ checkpoint >}}
 
+---
+
 ## D. Wrapping up
 
 {{< code-action >}} **Press `Control + C` to kill your server.** 
 
-**In this lesson, you learned the basic structure of a Django app**, by looking at the files and tracing their execution as they handled a basic request and response lifecycle. 
-
-This lesson guided you through the first steps of the official 
-[Django tutorial](https://docs.djangoproject.com/en/3.1/intro/tutorial01/#creating-a-project); 
-have a look. We didn't do everything, but you should recognize some of the steps
-over there. The sooner you get familiar with the style of Django's
-documentation the better. When you get stuck and Google for answers, you'll find
-that Stack Overflow often has a quick fix, but you'll want the Django
-documentation if you want to really understand what's going on. 
+**In this lesson, you learned the basic structure of a Flask Web app**, by looking at the files and tracing their execution as they handled a basic request and response lifecycle. 
 
