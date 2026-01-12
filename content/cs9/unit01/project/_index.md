@@ -412,3 +412,31 @@ combo_df = top5_df.append(new_row, ignore_index = True)
 |     5 | Other      |    11 |
 
 
+---
+
+### Drop Duplicate Values 
+
+This may be helpful with the Youtube dataset if you are interested in analyzing what type of channels you watch. 
+
+```python
+df.head()
+```
+
+|  |         name         | age |
+|:-----:|:----------------------:|:-----:|
+|     0 | John |   20 |
+|     1 | Paul       |    23 |
+|     2 | Ringo               |    18 |
+|     3 | Ringo                   |    18 |
+
+
+```python
+no_duplicates_df = df.drop_duplicates()
+no_duplicates_df.head()
+```
+
+|  |         name         | age |
+|:-----:|:----------------------:|:-----:|
+|     0 | John |   20 |
+|     1 | Paul       |    23 |
+|     2 | Ringo               |    28 |
