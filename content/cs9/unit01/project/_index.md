@@ -67,22 +67,22 @@ To be successful in this project, you should **find a topic that is both interes
 💯 **Successful computer scientists should be able to make the following claims:**
 - Project Planning 
     - I can choose a relevant research question and determine appropriate forms of evidence
-    - I can consistently track my progress with specific comments
+    - I can write out the necessary steps for each form of evidence 
+    - I can sketch an appropriate visualization for each form of evidence
 - Data Analysis  
     - I can prepare my dataset by adding and removing necessary columns or rows
     - I can combine and reorganize pieces of data to explore new relationships and support my research question
-    - I can generate summary statistics (mean, median, mode, frequency count) for describing the data
+    - I can generate summary statistics (mean, median, mode, or frequency count) for describing the data
     - I can write readable code by using descriptive names for modules, functions, and variables
     - I can write descriptive comments to describe complex pieces of the code
 - Data Visualization 
     - I can choose appropriate data visualizations to communicate my findings 
+    - I can write accurate title, axis, and labels for my visualizations
     - I can display data visualizations that are thoughtfully sorted and easy to read
-    - I can include appropriate title, axis, and labels for my visualizations
 - Data Communication: Poster 
-    - I can explain the purpose and focus of the research 
-    - I can explain my methodology, including action steps and reasoning for restructuring the data
-    - I can reflect on the meaning of the data and provide context of the results
-    - I can discuss the limitations and potential biases of my data and analysis 
+    - I can explain the purpose and focus of the research question
+    - I can reflect on the meaning of the data and provide context for each form of evidence
+    - I can consider limitations and potential biases of my data and analysis 
     - I can consider potential future areas of investigation if I were to continue this project
 
 **Keep the success claims in mind when coding your project.**
@@ -207,23 +207,24 @@ mode_isAdult_by_house_df
 
 ### Compare a value to the value right above it
 
+This is particularly useful to learn if you listened/watched the same piece of media multiple times in a row. 
 
 📖 **Here is a `dataframe` stored in the variable `watch_history_df`.** It stores shows, episodes, and genre.
 
 ```python
-watch_history_df.head()
+df.head()
 ```
 
-|   | show       | episode | genre     |
-|---|------------|---------|-----------|
-| 0 | One Piece  | 08      | Fantasy   |
-| 1 | One Piece  | 09      | Fantasy   |
-| 2 | The Office | 15      | Comedy    |
-| 3 | Avatar     | 01      | Animation |
-| 4 | Avatar     | 02      | Animation |
-| 5 | Avatar     | 03      | Animation |
+|   | food       |  
+|---|------------|
+| 0 | Siu Mai  | 
+| 1 | Siu Mai  | 
+| 2 | Ice Cream | 
+| 3 | Kinder Bueno     | 
+| 4 | Kinder Bueno      | 
+| 5 | Kinder Bueno      | 
 
-📖 **We want to add a column to see what the previous show was called.** For this we must use `shift`.
+📖 **We want to add a column to see what the previous item was called.** For this we must use `shift`.
 
 > You could also put a number in the brackets to shift more than just 1 row down
 >
@@ -231,34 +232,35 @@ watch_history_df.head()
 
 
 ```python
-watch_history_df['previous'] = watch_history_df['show'].shift()
-watch_history_df.head()
+df['previous'] = watch_history_df['show'].shift()
+df.head()
 ```
 
-|   | show       | episode | genre     | previous   |
-|---|------------|---------|-----------|------------|
-| 0 | One Piece  | 08      | Fantasy   | None       |
-| 1 | One Piece  | 09      | Fantasy   | One Piece  |
-| 2 | The Office | 15      | Comedy    | One Piece  |
-| 3 | Avatar     | 01      | Animation | The Office |
-| 4 | Avatar     | 02      | Animation | Avatar     |
-| 5 | Avatar     | 03      | Animation | Avatar     |
+|   | food       | previous   |
+|---|------------| ------------|
+| 0 | Siu Mai  | None       |
+| 1 | Siu Mai  | Siu Mai  |
+| 2 | Ice Cream | Siu Mai  |
+| 3 | Kinder Bueno     | Ice Cream|
+| 4 | Kinder Bueno     |  Kinder Bueno     |
+| 5 | Kinder Bueno     |  Kinder Bueno     |
 
 📖 **Now we will add a new column to track if the show is the same as the previous one.**
 
 ```python
-watch_history_df["repeat"] = watch_history_df["show"] == watch_history_df["previous"]
-watch_history_df.head()
+df["repeat"] = df["show"] == df["previous"]
+df.head()
 ```
+|   | food       | previous   | repeat |
+|---|------------| ------------|--------|
+| 0 | Siu Mai  | None       | False  |
+| 1 | Siu Mai  | Siu Mai  | True  |
+| 2 | Ice Cream | Siu Mai  |  False  |
+| 3 | Kinder Bueno     | Ice Cream|  False  |
+| 4 | Kinder Bueno     |  Kinder Bueno     |  True  |
+| 5 | Kinder Bueno     |  Kinder Bueno     |  True  |
 
-|   | show       | episode | genre     | previous   | repeat |
-|---|------------|---------|-----------|------------|--------|
-| 0 | One Piece  | 08      | Fantasy   | None       | False  |
-| 1 | One Piece  | 09      | Fantasy   | One Piece  | True   |
-| 2 | The Office | 15      | Comedy    | One Piece  | False  |
-| 3 | Avatar     | 01      | Animation | The Office | False  |
-| 4 | Avatar     | 02      | Animation | Avatar     | True   |
-| 5 | Avatar     | 03      | Animation | Avatar     | True   |
+
 ---
 
 ### Grouped Bar Chart
@@ -363,53 +365,51 @@ fig.show()
 
 ### Adding Other
 
+This can be helpful if you'd like to show your top 5 in relationship to the other items in a dataset.
+
 1️⃣ **Make a new dataframe with just the top 5 artists** For this we must use `head`.
 
 ```python
-# make a new df with just the top 5
-top5_df = artist_totals.head(5)
+top3_df = df.head(3)
 ```
-|  |         artist         | total |
-|:-----:|:----------------------:|:-----:|
-|     0 | Florence + The Machine |   110 |
-|     1 | Childish Gambino       |    62 |
-|     2 | J. Cole                |    28 |
-|     3 | Muse                   |    18 |
-|     4 | Chance the Rapper      |    13 |
+|   | food       |  num_purchased |
+|---|------------| ------------|
+| 0 | Siu Mai  | 20 |
+| 2 | Kinder Bueno |  15|
+| 3 | Ice Cream    |  10 |
 
-2️⃣ **Make a new dataframe with everyone `except` the top 5 artist.** We use `head` again, but with a negative number.
+
+2️⃣ **Make a new dataframe with all data `except` the top 3 items.** We use `iloc` to select specific rows.
 
 ```python
-# get everything except the top 5
-other_df = artist_totals.tail(-5)
+other_df = df.iloc[3:]
 ```
 
-3️⃣ **We add up the totals for all the other artists.** To do this, we use `sum`. 
+3️⃣ **We add up the totals for all the other items.** To do this, we use `sum`. 
 
 ```python
-#this gets the top 1 for every month
-sum = other_df["total"].sum()
+other_sum = other_df["num_purchased"].sum()
 ```
 
-4️⃣ **We add a new row for the `other` sum.** 
+4️⃣ **We add a new row for the `other` sum and add it to the `top3_df`.** 
 
 ```python
 # create the new row
-new_row = {'artist': 'Other', 'total': sum}
+new_row = {'food': 'Other', 'num_purchased': other_sum}
+
 # make a new df that combines the top5_df with the new row
-combo_df = top5_df.append(new_row, ignore_index = True)
+combo_df = top3_df.append(new_row, ignore_index = True)
 ```
 
 📖 **Here is the new dataframe `combo_df`.**
 
-|  |         artist         | total |
-|:-----:|:----------------------:|:-----:|
-|     0 | Florence + The Machine |   110 |
-|     1 | Childish Gambino       |    62 |
-|     2 | J. Cole                |    28 |
-|     3 | Muse                   |    18 |
-|     4 | Chance the Rapper      |    13 |
-|     5 | Other      |    11 |
+|   | food       |  num_purchased |
+|---|------------| ------------|
+| 0 | Siu Mai  | 20 |
+| 2 | Kinder Bueno |  15|
+| 3 | Ice Cream    |  10 |
+| 4 | Other   |  8 |
+
 
 
 ---
