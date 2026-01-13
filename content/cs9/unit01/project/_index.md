@@ -80,9 +80,9 @@ To be successful in this project, you should **find a topic that is both interes
     - I can write accurate title, axis, and labels for my visualizations
     - I can display data visualizations that are thoughtfully sorted and easy to read
 - Data Communication: Poster 
+    - I can describe the dataset 
     - I can explain the purpose and focus of the research question
     - I can reflect on the meaning of the data and provide context for each form of evidence
-    - I can consider limitations and potential biases of my data and analysis 
     - I can consider potential future areas of investigation if I were to continue this project
 
 **Keep the success claims in mind when coding your project.**
