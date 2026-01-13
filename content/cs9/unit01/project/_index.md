@@ -22,17 +22,8 @@ To be successful in this project, you should **find a topic that is both interes
 
 4️⃣ **Present your findings to the class.**
 
-5️⃣ **If interested, you may present your findings at Shuyuan Research Week in May.**  This is not required. 
+5️⃣ **If interested, you may present your findings at Shuyuan Research Week in June.**  This is not required. 
 
----
-
-📅 **You will have 6 in-class blocks to plan and complete the coding portion of this project.** 
-
-| section | code due date |
-|---------|----------|
-| cs9.1  | 4 March   |
-| cs9.2  | 3 March   |
-| cs9.3  | 27 Feb   |
 
 ---
 
@@ -137,11 +128,11 @@ age_df.head()
 
 |   | name    | age | is_adult | house   |
 |---|---------|-----|----------|---------|
-| 0 | Alice   | 10  | False    | 'fire'  |
-| 1 | Bob     | 15  | False    | 'metal' |
-| 2 | Charlie | 25  | True     | 'metal' |
-| 3 | David   | 40  | True     | 'fire'  |
-| 4 | Sally   | 80  | True     | 'fire   |
+| 0 | Alice   | 10  | False    | fire  |
+| 1 | Bob     | 15  | False    | metal |
+| 2 | Charlie | 25  | True     | metal |
+| 3 | David   | 40  | True     | fire  |
+| 4 | Sally   | 80  | True     | fire   |
 
 📖 **We want to see what is the `mode` of `is_adult` for each `house`.** For this we must use `groupby`. 
 
@@ -176,11 +167,11 @@ age_df.head()
 
 |   | name    | age | is_adult | house   |
 |---|---------|-----|----------|---------|
-| 0 | Alice   | 10  | False    | 'fire'  |
-| 1 | Bob     | 15  | False    | 'metal' |
-| 2 | Charlie | 25  | True     | 'metal' |
-| 3 | David   | 40  | True     | 'fire'  |
-| 4 | Sally   | 80  | True     | 'fire   |
+| 0 | Alice   | 10  | False    | fire  |
+| 1 | Bob     | 15  | False    | metal |
+| 2 | Charlie | 25  | True     | metal |
+| 3 | David   | 40  | True     | fire  |
+| 4 | Sally   | 80  | True     | fire   |
 
 📖 **We want to see what is the `mean` `age` for each value in `is_adult`.** For this we must use `groupby`. 
 > You could also replace `.mean()` with `.max()` or `.min()`
@@ -195,7 +186,7 @@ mean_isAdult_by_age_df =  df.groupby(['is_adult'])['age'].mean().to_frame().rese
 
 
 ```python
-mode_isAdult_by_house_df
+mean_isAdult_by_age_df
 ```
 
 |   | is_adult | age       |
@@ -323,9 +314,9 @@ person1df
 |---|------|--------|
 | 0 | 2020 | 150    |
 | 1 | 2021 | 155    |
-| 1 | 2022 | 160    |
-| 1 | 2023 | 164    |
-| 1 | 2024 | 165    |
+| 2 | 2022 | 160    |
+| 3 | 2023 | 164    |
+| 4 | 2024 | 165    |
 
 ```python
 person2df          
@@ -334,9 +325,9 @@ person2df
 |---|------|--------|
 | 0 | 2020 | 165    |
 | 1 | 2021 | 168    |
-| 1 | 2022 | 170    |
-| 1 | 2023 | 173    |
-| 1 | 2024 | 175    |
+| 2 | 2022 | 170    |
+| 3 | 2023 | 173    |
+| 4 | 2024 | 175    |
 
 📖  **This is how you create a group bar chart with two dataframes.**
 
