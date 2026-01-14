@@ -77,14 +77,20 @@ This page is dedicated to HTML and CSS tips. Let the teachers know if you would 
 
 
 
-## CSS Challenges
+## CSS Challenge Solutions
 
 {{< figure src="https://upload.wikimedia.org/wikipedia/commons/9/9a/CodePen_logo.png" width="40%" >}}
 
 
 🔗 **Here are solutions to the CSS Challenges on Codepen:**
-- [challenge 1](https://codepen.io/eqbrown/pen/bGZEZap)
-- [challenge 2](https://codepen.io/eqbrown/details/KKEzrYW)
+- [introduction](https://codepen.io/eqbrown/pen/bGZEZap)
+- [google search bar](https://codepen.io/eqbrown/pen/KKEzrYW)
+- [flexbox columns and rows](https://codepen.io/eqbrown/pen/yyBjbvg)
+- [button with hover animation](https://codepen.io/eqbrown/pen/rNRwvqa)
+- [card with highlights](https://codepen.io/eqbrown/pen/zYbzjXq)
+- [card with buttons](https://codepen.io/eqbrown/pen/jOpjeOe)
+- [menu cards](https://codepen.io/eqbrown/pen/MYeKXWo)
+
 
 ---
 
