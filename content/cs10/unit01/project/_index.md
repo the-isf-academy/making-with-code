@@ -116,21 +116,23 @@ You have the option of hosting your site online using Github pages. Because of t
 
 **[Success Claims]**
 - **Project Planning [3]**
-    - I can brainstorm ideas by gathering inspiration from existing personal websites
-    - I can consider the user and context of my site
-    - I can plan a wireframe with appropriate color palette and fonts
+    - I can brainstorm ideas by gathering inspiration from existing personal websites for the mood board
+    - I can plan the context, colors, fonts, and content prior to development
+    - I can design a detailed wireframe with appropriate elements and include descriptions to explain additional interactions
     - I can update the design specifications over time with a justification as to why changes were made
 - **Iterative Development [3]**
-    - I can consistently push my work to Github with descriptive commit messages
-    - I can successfully implement my design by the deadline
-    - I can consistently update my `README.md` file with works cited and explaining key design decsions
+    - I can track the development of my project by successfully committing to Github at least once per work session
+    - I can track my current progress and next steps by writing specific commit messages 
+    - I can work on my project in small chunks
+    - I can successfully implement my wireframe design by the deadline
+    - I can consistently update my `README.md` file with works cited and explaining key design decisions
 - **HTML [3]**
-    - I can use appropriate HTML elements to strucutre my site
-    - I can write readable code, by indentation on indendetation and code organization
+    - I can use correct HTML elements to structure my site
+    - I can write readable code by utilizing indentation and dividers to organize
     - I can use effectively use classes and IDs to target specific elements for styling
 - **CSS [3]**
-    - I can use appropriate CSS selectors, properties, and values to style  my site 
-    - I can write readable, well abstracted and resuable CSS rules, minimizing code duplication
+    - I can use correct CSS selectors, properties, and values to style elements of my site 
+    - I can write readable, well abstracted and reusable CSS rules to minimize code duplication
     - I can write CSS that is responsive by using media queries and flexible layouts 
 
 
