@@ -2,7 +2,7 @@
 title: "Project"
 # type: unit
 slug: unit02_web_design
-draft: true
+draft: false
 ---
 
 
@@ -22,7 +22,7 @@ It should include at least one of the following:
 - `.html` files
     - `index.html` homepage
 - `styles.css` file
-- `media`
+- `assets`
     - this may include images or videos to showcase yourself or your work
     - you should include media in `/assets` or link them via the web
 - `README.md` - here you will keep a works cited list with a short description of how you used the resource
@@ -35,15 +35,30 @@ You may use and adapt code you find online. However, you must keep track of the 
 ## [1] Planning Document
 
 
-✏️ **You will use a miro board to plan your website before you build it. The purpose of this board is to outline your design specifications and keep track of changes to the design over time**
-
+**You will use a `whimsical board` to plan your website before you build it. The purpose of this board is to outline your design specifications and keep track of changes to the design over time**
 
 If your design specs change over time, that's okay! Just be sure to document what you changed and why you changed it on your Miro board
 
-💻 **Duplicate the [Miro Board Template](https://miro.com/app/board/uXjVNyV3moc=/?share_link_id=540296233857) and share it with the teachers.**
-> 1) Click `Web Design Design Specification Document [template]` on the top left 
-> 2) Click `Duplicate`
-> 3) Share with `eqbrown@isf.edu.hk` and `bgenzlinger@isf.edu.hk`
+💻 **Open the Whimsical Board Template [here](https://whimsical.com/web-design-project-template-LhGMixhueVfnvoWZJBcjok)** Be sure to open this in a new tab.
+
+💻 **In a another new tab, create a new Whimsical Board [here](https://whimsical.com/a) by clicking `Create new`.**
+
+💻 **Select all 3 sections of the template and copy & paste it to your new board.**
+
+💻 **Click `Share` and invite `eqbrown@isf.edu.hk` to be a viewer of your board.**
+
+{{< checkpoint >}}
+
+✏️ **Plan your project in your board:**
+
+0.  Create a Mood Board
+0.  Write your Site Overview
+0.  Design the Wireframe of the desktop & mobile versions
+ 
+
+
+{{< /checkpoint >}}
+
 
 ---
 
@@ -123,25 +138,17 @@ You have the option of hosting your site online using Github pages. Because of t
 
 ## [4] Deliverables
 
-{{< deliverables  "Projects are due on 07 March" >}}
+{{< deliverables  "Projects are due on 29 January" >}}
 
-- A `Web Design Project Planning Document` - Miro boards
+- A `Web Design Project Planning Document` - Whimsical Board
 - A `yourgithubusername.github.io` repository 
 
 ---
 
-**🗓️ Timeline:** You have 6 in-class work days. 
+**🗓️ Timeline:** You have 5 in-class work days. 
 
-You may find it necessary to work outside of school, however if you are focused in class you can complete the project within the allotted blocks. Our office hours are Tuesday during CCA in B405. 
+You may find it necessary to work outside of school, however if you are focused in class you can complete the project within the allotted blocks. Our office hours are Wednesdays during CCA in B403. 
 
-| CS10.1 Dates  | Agenda                         |
-|--------------|--------------------------------|
-| 21 Feb      | Project Intro & Project Planning |
-| 26 Feb       | Work Day - Finish Project Planning & Start Coding |
-| 27 Feb      | Work Day - Coding        |
-| 03 March      | Work Day - Coding        |
-| 04 March       | Work Day - Coding |
-| 07 March       | Project Due at End of Class |
 ---
 
 {{< code-action "Push your work to Github:" >}}
@@ -160,33 +167,33 @@ You may find it necessary to work outside of school, however if you are focused 
 
 🔍 **Google is your best friend!** Especially when it comes to Web Design, it's not about remembering exact HTML syntax or hundreds of specific CSS properties. It's about coming up with a design and figuring out how to implement it by looking at examples and modifying existing code.
 
-🤖 **For AI, you must use [Github CoPilot](https://github.com/copilot)**
-
 - CSS Code Pen Examples
     - [Simple Hover Button Wiggle Animation](https://codepen.io/eqbrown/pen/BabWGqY?editors=1100)
     - [Simple Hover Highlight Animation](https://codepen.io/eqbrown/pen/QWopJJV?editors=1100)
     - [Dot Animation](https://codepen.io/petersonby/pen/gzxpdj?editors=1100)
     - [Button Transformation](https://codepen.io/dead_pixel/pen/KKevEE?editors=1100)
     - [100 days](https://codepen.io/eqbrown/pen/xxBrWov)
-- [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- [Google Fonts](https://fonts.google.com/)
-- [Fontjoy](https://fontjoy.com/) - generates font combinations
-- [coolors generator](https://coolors.co/generate)
-- [google color picker](https://g.co/kgs/aHdDB9)
+- [Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Escape Room](https://escape.wolfie.dev/)
 - [dribbble](https://dribbble.com/shots/popular/web-design)
 - [css examples](https://css-examples.wizardzines.com/)
 - [awwwards - web design awards](https://www.awwwards.com/)
-- Personal website examples
+- Personal website examples (friends and one's found online)
     - [jennylihan.com](https://jennylihan.com/)
     - [wolfei.dev](https://wolfie.dev/)
     - [david.lyon.is](https://david.lyon.is/)
     - [elizabethylin.com](https://www.elizabethylin.com/)
     - [glorialo.design](https://www.glorialo.design/)
     - [swkang73.github.io](https://swkang73.github.io/#home)
-    - [isfedwin.github.io](https://isfedwin.github.io/)
-    - [0113017.github.io/](https://0113017.github.io/)
-    - [0012112.github.io/](https://0012112.github.io/)
+    - [myfirstandlastname.com/](https://myfirstandlastname.com/)
+    - [bryantcodes.art/](https://bryantcodes.art/)
+    - [ddaniel.dev/](https://ddaniel.dev/)
+    - [zephyo.github.io/](https://zephyo.github.io/)
+- Previous student work
+    - [isfedwin.github.io](https://isfedwin.github.io/) 
+    - [0113017.github.io/](https://0113017.github.io/) 
+    - [alexliu0909.github.io/](https://alexliu0909.github.io/) 
+    - [clairepotato.github.io/](https://clairepotato.github.io/)
 
 
 
