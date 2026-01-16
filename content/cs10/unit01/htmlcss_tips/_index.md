@@ -90,7 +90,8 @@ This page is dedicated to HTML and CSS tips. Let the teachers know if you would 
 - [card with highlights](https://codepen.io/eqbrown/pen/zYbzjXq)
 - [card with buttons](https://codepen.io/eqbrown/pen/jOpjeOe)
 - [menu cards](https://codepen.io/eqbrown/pen/MYeKXWo)
-
+- [more specific hover animations](https://codepen.io/eqbrown/pen/myERzGL?editors=1100)
+- [parallax scroll](https://codepen.io/eqbrown/pen/EayZOYW?editors=1100)
 
 ---
 
