@@ -83,7 +83,7 @@ This page is dedicated to HTML and CSS tips. Let the teachers know if you would 
 
 
 🔗 **Here are solutions to the CSS Challenges on Codepen:**
-- [introduction](https://codepen.io/eqbrown/pen/bGZEZap)
+- [introduction challenge](https://codepen.io/eqbrown/pen/bGZEZap)
 - [google search bar](https://codepen.io/eqbrown/pen/KKEzrYW)
 - [flexbox columns and rows](https://codepen.io/eqbrown/pen/yyBjbvg)
 - [button with hover animation](https://codepen.io/eqbrown/pen/rNRwvqa)
@@ -92,6 +92,8 @@ This page is dedicated to HTML and CSS tips. Let the teachers know if you would 
 - [menu cards](https://codepen.io/eqbrown/pen/MYeKXWo)
 - [more specific hover animations](https://codepen.io/eqbrown/pen/myERzGL?editors=1100)
 - [parallax scroll](https://codepen.io/eqbrown/pen/EayZOYW?editors=1100)
+- [elongating shapes](https://codepen.io/eqbrown/pen/bNegQVP?editors=1100)
+- [basic javascript number clicker](https://codepen.io/eqbrown/pen/vEBBPNG)
 
 ---
 
