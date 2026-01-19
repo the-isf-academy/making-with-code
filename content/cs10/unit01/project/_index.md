@@ -140,10 +140,14 @@ You have the option of hosting your site online using Github pages. Because of t
 
 ## [4] Deliverables
 
-{{< deliverables  "Projects are due on 29 January" >}}
+{{< deliverables   >}}
 
 - A `Web Design Project Planning Document` - Whimsical Board
 - A `yourgithubusername.github.io` repository 
+
+Project is due:
+- 10.2.1 - 03 February at the start of class
+- 10.2.2 - 05 Feburary at the start of class
 
 ---
 
