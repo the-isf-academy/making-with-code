@@ -252,7 +252,7 @@ Peanut pet is ready!
 
 {{< deliverables  >}}
 
-**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLScNmW50atI6K0loMjLd3K03X7esmJqCZZBE1e2qkguzIPP06g/viewform?usp=sf_link)**.
+**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSdURS1nL3YyF1NKgpdWi4-hGX7jrN69XmJ95IwVV--qPyKZAg/viewform?usp=publish-editor)**.
 
 
 {{< code-action "Push your work to Github:" >}}
@@ -272,7 +272,7 @@ Peanut pet is ready!
 {{< aside >}}
 If you have your own ideas, build on the `Pet` however you would like! 
 
-But if you're unsure where to start, there are 3 ideas below. 
+But if you're unsure where to start, there are some ideas below. 
 {{< /aside >}}
 
 ### Add a hunger level
@@ -332,11 +332,11 @@ For example:
 {{< code-action >}} **Allow the user to have multiple pets!** The user should be able to customize and interact with all of their pets. 
 
 
----
+<!-- ---
 
 ### Inheritance
 
 {{< code-action >}} **Create subclasses of your `Pet` using `inheritance`.** For example, 
 what features do dogs have that cats do not have? 
 
-📖 You'll need to learn how to incorporate inheritance: [12.6 Inheritance](http://programarcadegames.com/index.php?chapter=introduction_to_classes&lang=en#section_12_6)
+📖 You'll need to learn how to incorporate inheritance: [12.6 Inheritance](http://programarcadegames.com/index.php?chapter=introduction_to_classes&lang=en#section_12_6) -->
