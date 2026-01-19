@@ -4,7 +4,7 @@ type: lab
 slug: lab_typing_game
 repo_url: https://github.com/the-isf-academy/lab_typing_game
 init_action: create_from_template 
-# numberHeaders: true
+numberHeaders: true
 # draft: true
 ---
 
@@ -38,7 +38,7 @@ mkdir unit02_games
 {{< code-action "Clone your repository with starter code for the lab:" >}}
 > replace the `yourGithubUsername` with your Github username.
 >
-> *example: `git clone https://github.com/the-isf-academy/project_animation_emmaqbrown.git`*
+> *example: `git clone https://github.com/the-isf-academy/project_animation_emmaqbrown`*
 
 
 ```shell
@@ -70,8 +70,8 @@ When you want to exit the shell, you can type `exit` or `^D`
 - `prompts.py` - stores the typing prompts
 - `helpers.py.` - helper functions for the games
 
-{{< code-action "Open the folder in Visual Studio Code: " >}} `code .`
-> In the Terminal, We will use `code` now instead of `atom`
+<!-- {{< code-action "Open the folder in Visual Studio Code: " >}} `code .` -->
+<!-- > In the Terminal, We will use `code` now instead of `atom` -->
 --- 
 
 ## [1] Typing Game
@@ -107,6 +107,7 @@ Testing is the key to successful debugging!
 
 `input()`
 - parameters: string 
+- return value: what user types in the terminal
 ```python
 user_answer = input("Do you like pizza? (yes/no): ")
 ```
@@ -169,7 +170,7 @@ Accuracy: 92.2%
 
 {{< deliverables  >}}
 
-**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLScE7I19nWJtvK6z9bXo5AlQkrt7ikLA9o1c9okFmC3NsGbb_Q/viewform?usp=header)**.
+**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSd9wdOTzOoMhDCXzpjZCJcpDAfB53SeHs_fNQ5ddpuIGDPoog/viewform?usp=publish-editor)**.
 
 
 {{< code-action "Push your work to Github:" >}}
