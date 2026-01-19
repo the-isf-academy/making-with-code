@@ -38,7 +38,7 @@ mkdir unit02_games
 {{< code-action "Clone your repository with starter code for the lab:" >}}
 > replace the `yourGithubUsername` with your Github username.
 >
-> *example: `git clone https://github.com/the-isf-academy/project_animation_emmaqbrown`*
+> *example: `git clone https://github.com/the-isf-academy/lab_typing_game_emmaqbrown`*
 
 
 ```shell

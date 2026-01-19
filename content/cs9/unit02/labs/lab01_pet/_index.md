@@ -140,7 +140,7 @@ class Pet:
 
 {{< look-action >}} The information associated with a `Pet` is defined on `lines 5-7`. **Information associated with a class is called `attribute` and is stored in a variable.** Our pet has three attributes. attributes are variables that only belong to a specific class.
 
-```python {linenos=table, hl_lines=["5-6"],linenostart=3}
+```python {linenos=table, hl_lines=["5-6"],linenostart=1}
 class Pet:
     def __init__(self):
         '''This initializes the pet with its attributes.'''

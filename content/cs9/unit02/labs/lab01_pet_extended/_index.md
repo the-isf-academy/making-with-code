@@ -17,10 +17,14 @@ title: 1. Pet Lab [extended]
 cd ~/desktop/making_with_code/unit02_games
 ```
 
-{{< code-action "Then, clone your starter code." >}} Be sure to change `YOUR-GITHUB-USERNAME` to your actual Github username.
+{{< code-action "Then, clone your starter code." >}} Be sure to change `yourGithubUsername` to your actual Github username.
 ```shell
-git clone https://github.com/the-isf-academy/lab_pet_extended_YOUR-GITHUB-USERNAME
-cd lab_pet_extended_YOUR-GITHUB-USERNAME
+git clone https://github.com/the-isf-academy/lab_pet_extended_yourGithubUsername
+```
+
+{{< code-action >}} `cd` **into the lab**
+```shell
+cd lab_pet_extended_yourGithubUsername
 ```
 
 {{< code-action "Enter the Poetry shell and install the requirements:" >}}
