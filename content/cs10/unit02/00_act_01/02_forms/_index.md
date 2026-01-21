@@ -17,16 +17,22 @@ In this lab, you'll explore how to receive and save data on a web app through a 
 cd ~/desktop/making-with-code/unit05_webapps/lab_flask_colorama_yourgithubusername
 ```
 
-{{< code-action "Enter the poetry shell." >}}
+{{< code-action "Open the directory in VSCode before starting the app." >}}
+
 ```shell
-poetry shell
+code .
 ```
 
-{{< code-action >}} **Open the repository in VSCode:** `code .` 
+{{< code-action "Enter the Poetry Shell and start the app" >}}
+
+```shell
+poetry shell
+python app.py
+```
 
 
 ---
-## A. Creating a new color with a form
+## [1] Creating a new color with a form
 
 **Now we're going to extend the app to let users create their own colors.** For this we use [wtfforms](https://wtforms.readthedocs.io/en/3.2.x/) and [flask-wtf](https://flask-wtf.readthedocs.io/en/1.2.x/) libraries. 
 
@@ -76,18 +82,19 @@ database, and then sends a redirect response telling the user to go to
 {{< code-action >}} **Now go to [`/new`](http://127.0.0.1:5000/new) and add a few color.** Then, go to the [`/all`](http://127.0.0.1:5000/all) page to view your newly added color with all the other colors in the database.
 
 
+💻 **Currently, you are restricted to a specific range of RGB values -Change the form so you can add an integer from 0-255 for each RGB value.** 
+
+
 {{< checkpoint >}}
 
-✏️ **When adding a new color, you are restricted to a specific range for each RGB value. Why is this?**
-  
-💻 **Change the form so you can add an integer from 0-255 for each RGB value.** 
+**Before moving on, be sure you understand the following. If you do not, please ask a teacher.**
 
-✏️ **Which HTML template file is linked to this page? What is the purpose of the for loop in the HTML template file?**
-
+- What is the purpose of the for loop in the `templates/color_form.html` template file?
 
 {{</ checkpoint >}}
 
-## B. Modifying a color with a Form
+
+## [2] Modifying a color with a Form
 
 We are going to allow users to update the color if they want to tweak it. For this, we can use the exactly same form!
 
@@ -104,22 +111,61 @@ def color_edit(color_id):
     if request.method == 'POST':
         if form.validate_on_submit():
             data = form.data 
-            update_color(color_id, data)
+            
+            # finish the function
 
-            return redirect(url_for('color_detail', color_id=color_id))
 
     return render_template('color_form.html', form=form)
 ```
 
 {{< code-action >}} **Now go to [`/edit/1`](http://127.0.0.1:5000/edit/1), and make edits.** Try changing the `1` to other numbers. Which numbers work and which numbers do not? 
 
-{{< checkpoint >}}
+The form loads and the slides work, however when submitting the form nothing happens.
 
-✏️ **How is the form pre-populated with the color's data?**
+{{< code-action >}} **Finish the function `color_edit()` to:**
+- update the color with the form data
+- redirect the user to the detail page
 
-✏️ **When this form submitted via a  `POST` request, it updates an existing color. How is this different than creating a new color?**
-  
+
 💻 **Add a link on the color detail template that directs you to its edit page.** 
 
+{{< figure src="images/courses/cs10/unit02/02_color_form0.png" width="25%" >}}
+
+
+
+{{< checkpoint >}}
+
+**Before moving on, be sure you understand the following. If you do not, please ask a teacher.**
+
+- How is the form pre-populated with the color's data?
+- When this form submitted via a  `POST` request, it updates an existing color. How is this different than creating a new color?
 
 {{</ checkpoint >}}
+
+---
+
+## [3] Deliverables
+
+{{< deliverables "Once you've successfully completed the lab:" >}}  
+
+
+<!-- ☑️  **Fill out [this Google form](https://forms.gle/Xhyi9nk9E3GxJqmx6)** -->
+
+{{< code-action "Push your code to Github." >}}
+- git status
+- git add -A
+- git status
+- git commit -m "describe your code and your process here"
+  > be sure to customize this message, do not copy and paste this line
+- git push
+
+{{< /deliverables >}}
+
+--- 
+
+## [4] Extension 
+
+A few ideas of features to extend your learning:
+- restrict users editing a color to only move the slides within +/- 10 of its current RGB values
+- restrict users to only edit the name of a color instead of the RGB values
+- style the form using the `styles.css` file [w3schools css form guide](https://www.w3schools.com/css/css_form.asp)

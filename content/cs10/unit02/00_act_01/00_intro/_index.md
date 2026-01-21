@@ -33,6 +33,9 @@ the request/response lifecycle.
 
 --- 
 
+## [0] Set up
+
+
 {{< code-action >}} **Let's get started by making a `unit_02` folder.**
  
 ```shell
@@ -63,7 +66,7 @@ anything.
 
 
 ---
-## A. Hello
+## [1] Hello
 
 {{< code-action "Let's start up the app and test it out." >}}  The first command 
 prepares the database (more on this later); the second command starts the server
@@ -83,7 +86,7 @@ Complete the checkpoints questions on the worksheet as you move through the lab.
 
 {{</ checkpoint >}}
 
-## B. How the parts fit together
+## [2] How the parts fit together
 
 Let's see how the parts of the app worked together to show this page. When a
 request first arrives, its URL is separated into a host name and a path. In
@@ -191,7 +194,7 @@ be made by describing how bright each should be.)
 {{</ checkpoint >}}
 
 --- 
-## C. Viewing all of the Data
+## [3] Viewing all of the Data
 
 {{< code-action >}} **Open `app.py` and add the following function before `if __name__ == '__main__':`**
 
@@ -237,9 +240,27 @@ def color_all():
 
 ---
 
-## D. Wrapping up
+## [4] Wrapping up
 
 {{< code-action >}} **Press `Control + C` to kill your server.** 
 
 **In this lesson, you learned the basic structure of a Flask Web app**, by looking at the files and tracing their execution as they handled a basic request and response lifecycle. 
 
+---
+
+## [5] Deliverables
+
+{{< deliverables "Once you've successfully completed the lab:" >}}  
+
+
+<!-- ☑️  **Fill out [this Google form](https://forms.gle/Xhyi9nk9E3GxJqmx6)** -->
+
+{{< code-action "Push your code to Github." >}}
+- git status
+- git add -A
+- git status
+- git commit -m "describe your code and your process here"
+  > be sure to customize this message, do not copy and paste this line
+- git push
+
+{{< /deliverables >}}

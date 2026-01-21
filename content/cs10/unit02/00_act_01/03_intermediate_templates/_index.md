@@ -17,16 +17,24 @@ In this lab, you'll understand how templates can be super helpful puzzle pieces 
 cd ~/desktop/making-with-code/unit05_webapps/lab_flask_colorama_yourgithubusername
 ```
 
-{{< code-action "Enter the poetry shell." >}}
+{{< code-action "Open the directory in VSCode before starting the app." >}}
+
 ```shell
-poetry shell
+code .
 ```
 
-{{< code-action >}} **Open the repository in VSCode:** `code .` 
+{{< code-action "Enter the Poetry Shell and start the app" >}}
+
+```shell
+poetry shell
+python app.py
+```
+
 
 
 ---
-## A. Templates
+
+## [1] Navigation Bar
 
 This is the current structure of our `templates` directory.
 
@@ -46,15 +54,51 @@ Templates are super useful for reducing repetitive code and simplifying editing 
 
 Let's add a navigation to our page to understand how easily the templates work together. 
 
-{{< code-action >}} **Create a new file `templates/navbar.html` with the following content**
+{{< code-action >}} **Create a new file `templates/navbar.html`. Reference the below structure for creating your navigation bar.**
 
 
 ```html {linenos=table}
 <div class="nav">
-    <a href="{{ url_for('index') }}" style="flex-grow: 4">COLORAMA</a>
-    <a href="{{ url_for('color_random') }}">Random</a>
+    <a href="{{ url_for('index') }}" id="nav-title">SITE TITLE</a>
+    <a href="{{ url_for('function_name') }}">Page 1</a>
 </div>
 ```
 
-{{< code-action >}} **Now go to [`/new`](http://127.0.0.1:5000/new) and add a few color.** Then, go to the [`/all`](http://127.0.0.1:5000/all) page to view your newly added color with all the other colors in the database.
+{{< code-action >}}  **Let's add the navigation bar to every page, by including our new template in the `template/base.html`.** Copy & Paste this line into the `<body>`.
 
+```html {linenos=table}
+{% include "navbar.html" %}
+```
+
+{{< code-action >}}  **Now explore all of the pages on your site. You should now have a nicely formatted navigation bar!** 
+
+However, it may not be styled as you expect. 
+
+{{< code-action >}}  **Delve into the `static/css/style.css` file to customize your navigation bar**
+
+{{< figure src="images/courses/cs10/unit02/03_templates0.png" width="75%" >}}
+
+---
+
+## [1] Customize the Swatch
+
+
+
+---
+
+## [2] Deliverables
+
+{{< deliverables "Once you've successfully completed the lab:" >}}  
+
+
+<!-- ☑️  **Fill out [this Google form](https://forms.gle/Xhyi9nk9E3GxJqmx6)** -->
+
+{{< code-action "Push your code to Github." >}}
+- git status
+- git add -A
+- git status
+- git commit -m "describe your code and your process here"
+  > be sure to customize this message, do not copy and paste this line
+- git push
+
+{{< /deliverables >}}

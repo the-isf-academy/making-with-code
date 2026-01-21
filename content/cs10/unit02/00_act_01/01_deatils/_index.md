@@ -1,28 +1,38 @@
 ---
-title: 1. Detail View
+title: 1. Detail Page
 # draft: true
 ---
 
-# Detail View
+# Detail Page
 
 In this second lab, we will go more in-depth into accessing and manipulating colors from the database.
 
 ---
 
-{{< code-action "Let's begin by starting the Colorama app in a Terminal window." >}} This lab picks up where [Part I](courses/cs10/unit_02/00_request_response/_index.md) left off.
+## [0] Set up
+
+{{< code-action "Let's begin by starting the Colorama app in a Terminal window." >}} This lab picks up where `0. Intro` left off.
 
 ```shell
 cd ~/desktop/making-with-code/unit05_webapps/lab_colorama_yourgithubusername
 ```
 
+{{< code-action "Open the directory in VSCode before starting the app." >}}
+
+```shell
+code .
+```
+
+{{< code-action "Enter the Poetry Shell and start the app" >}}
+
 ```shell
 poetry shell
-python manage.py runserver
+python app.py
 ```
 
 ---
 
-## A. Detail Page
+## [1] Detail Page
 
 
 **Now let's add a new feature to the app: a detailed page for each color** This is going to require
@@ -62,22 +72,40 @@ def color_detail(color_id):
 
 ```
 
+💻 **Edit the code to include the color's RGB values on the detail page.** 
+
+
+{{< figure src="images/courses/cs10/unit02/01_color_detail2.png" width="20%" >}}
+
 {{< checkpoint >}}
 
-✏️ **What is the purpose of `{% extends "base.html" %}`, `{% block content %}` and `{% endblock %}`?** 
+**Before moving on, be sure you understand the following. If you do not, please ask a teacher.**
+
+- how to send data from a function in `app.py` to an HTML template in `/templates`
+- how to access data in a template use `{{ }}`
+
+{{</ checkpoint >}}
 
 
-💻✏️ **Add information about the color's RGB value on the detail. How did you do it?** 
+💻 **Currently, the only way to see color detail pages is to manually edit the URL. Modify the color all template  [`/all`](http://127.0.0.1:5000/all) so you can click on a color swatch and it takes you to its detail page.** 
 
-
-💻 **Currently, the only way to see color detail pages is to manually edit the URL. Modify the color all template so you can click on a color swatch and it takes you to its detail page.**
 
 Here is an example of the link pattern. 
 ```html 
 <a href="{{ url_for('color_detail', color_id=1) }}">Click here for Color 1 Detail</a>
 ```
 
-✏️ **How did you link each swatch?**
+You should be able to click on each color and it takes you to its detail page.
+{{< figure src="images/courses/cs10/unit02/01_color_detail3.png" width="50%" >}}
+
+
+
+{{< checkpoint >}}
+
+**Before moving on, be sure you understand the following. If you do not, please ask a teacher.**
+
+- `{% extends "base.html" %}`
+- `{% block content %}` and `{% endblock %}`
 
 {{</ checkpoint >}}
 
@@ -87,13 +115,9 @@ Here is an example of the link pattern.
 
 ---
 
-## C. Palette Generator 
+## [2] Palette Generator 
 
 Now, let's use the functions in `filters.py` to manipulate the `Color` create a palette generator. Each color detail page will shows a color palette of colors that go nicely together.
-
-{{< figure src="images/courses/cs10/unit02/color_detail0.png" width="50%" >}}
-
-
 
 💻 **Let's expand on the `color_detail()` function in `app.py`.** Replace your function with this updated function.
 
@@ -116,15 +140,32 @@ def color_detail(color_id):
 > - `line 13` - sends the hues list to the template 
 
 
-{{< checkpoint >}}
+💻 **Update your `templates/color_detail.html` to include the hues.** 
 
-💻 ✏️ **Update your `templates/color_detail.html` to include the hues. How did you do it?** 
-
-
-{{</ checkpoint >}}
+{{< figure src="images/courses/cs10/unit02/01_color_detail0.png" width="50%" >}}
 
 
 
 💻  **Utilize the filter `adjust_saturation()` to include an additional color palette on the detail page with saturation adjustments.** Your finished [detail/1](http://127.0.0.1:5000/detail/1) page should look similar to this:
 
-{{< figure src="images/courses/cs10/unit02/color_detail1.png" width="50%" >}}
+{{< figure src="images/courses/cs10/unit02/01_color_detail1.png" width="50%" >}}
+
+
+---
+
+## [3] Deliverables
+
+{{< deliverables "Once you've successfully completed the lab:" >}}  
+
+
+<!-- ☑️  **Fill out [this Google form](https://forms.gle/Xhyi9nk9E3GxJqmx6)** -->
+
+{{< code-action "Push your code to Github." >}}
+- git status
+- git add -A
+- git status
+- git commit -m "describe your code and your process here"
+  > be sure to customize this message, do not copy and paste this line
+- git push
+
+{{< /deliverables >}}
