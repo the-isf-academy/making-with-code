@@ -47,7 +47,7 @@ class ColorForm(FlaskForm):
 
     submit = SubmitField('Submit')
 ```
-> - `ColorForm` sets up a form a defines which fields are necessary and what data type the field should accept. We use `wtfforms` and `flask-wtf` to easily manage things like validators and default values. 
+> - `ColorForm` sets up a form that defines which fields are necessary and what data type the field should accept. We use `wtfforms` and `flask-wtf` to easily manage things like validators and default values. 
 
 {{< code-action >}} **Open `app.py` and add the following function**
 

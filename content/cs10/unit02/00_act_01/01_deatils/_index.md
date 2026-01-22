@@ -37,7 +37,7 @@ python app.py
 
 **Now let's add a new feature to the app: a detailed page for each color** This is going to require
 extending the app at every level we've studied so far. We'll start at the "outside" with URL routing, and work our way "in" to the models. 
-- **We need to add function with a URL** for showing a color. Wo avoid ambiguity, we'll 
+- **We need to add function with a URL** for showing a color. To avoid ambiguity, we'll 
   refer to colors by the unique ID each is assigned by the database. These URLs
   will have the form `detail/23`, `detail/155`, etc. Each URL will link to a color swatch.
 
@@ -82,7 +82,7 @@ def color_detail(color_id):
 **Before moving on, be sure you understand the following. If you do not, please ask a teacher.**
 
 - how to send data from a function in `app.py` to an HTML template in `/templates`
-- how to access data in a template use `{{ }}`
+- how to access data in a template using `{{ }}`
 
 {{</ checkpoint >}}
 
@@ -117,7 +117,7 @@ You should be able to click on each color and it takes you to its detail page.
 
 ## [2] Palette Generator 
 
-Now, let's use the functions in `filters.py` to manipulate the `Color` create a palette generator. Each color detail page will shows a color palette of colors that go nicely together.
+Now, let's use the functions in `filters.py` to manipulate the `Color` create a palette generator. Each color detail page will show a color palette of colors that go nicely together.
 
 💻 **Let's expand on the `color_detail()` function in `app.py`.** Replace your function with this updated function.
 

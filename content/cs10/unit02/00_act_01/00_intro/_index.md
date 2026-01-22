@@ -36,10 +36,10 @@ the request/response lifecycle.
 ## [0] Set up
 
 
-{{< code-action >}} **Let's get started by making a `unit_02` folder.**
+{{< code-action >}} **Let's get started by making a `unit05_webapps` folder.**
  
 ```shell
-cd ~/desktop/making-with-code/cs10
+cd ~/desktop/making-with-code
 mkdir unit05_webapps
 cd unit05_webapps
 ```
@@ -97,9 +97,9 @@ this case, the host name is `127.0.0.1:5000` and the path is `/`.
 ```python{linenos=table}
 @app.route("/")
 def index():
-    color = get_one_color(1)
+    color = get_one_color(5)
 
-    name = "Student"
+    name = "stranger"
 
     return render_template(
             'index.html', 
@@ -201,7 +201,7 @@ be made by describing how bright each should be.)
 ```python {linenos=table}
 @app.route("/all")
 def color_all():
-    all_colors = get_all_colors()
+    all_colors = get_all_colors('name')
 
     return render_template(
             'color_all.html', 
@@ -223,7 +223,7 @@ def color_all():
 
 **C.0:** There is currently no link from the homepage to the color list, or the
   form to add new colors. You have to enter the URL directly to get to these
-  pages, and 99% of users (you no longer included) even know how to enter URLs
+  pages, and 99% of users (you no longer included) don't even know how to enter URLs
   directly. 
 
 - 💻 **Add a link to the home page taking the user to the color list page.**
