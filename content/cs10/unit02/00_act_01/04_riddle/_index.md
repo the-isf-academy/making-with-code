@@ -8,6 +8,8 @@ draft: true
 
 During the track lessons you will be creating a web app for the ISF Riddler. You should remember the Riddle database from the Networking Unit! 
 
+ADD SESSIONS INTO THE GAME
+
 ---
 
 ## [0] Starter Code

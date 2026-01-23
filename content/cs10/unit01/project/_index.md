@@ -148,7 +148,7 @@ You have the option of hosting your site online using Github pages. Because of t
 Project is due:
 - 10.2.1 - 03 February at the start of class
 - 10.2.2 - 05 Feburary at the start of class
-
+    
 ---
 
 **🗓️ Timeline:** You have 5 in-class work days. 
