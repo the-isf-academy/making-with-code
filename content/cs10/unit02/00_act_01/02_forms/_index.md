@@ -55,7 +55,7 @@ class ColorForm(FlaskForm):
 
 @app.route("/new", methods=['GET', 'POST'])
 def color_new():
-    form = NewColorForm()
+    form = ColorForm()
 
     if request.method == 'POST':
         if form.validate_on_submit():

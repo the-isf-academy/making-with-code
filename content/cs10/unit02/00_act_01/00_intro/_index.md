@@ -68,8 +68,7 @@ anything.
 ---
 ## [1] Hello
 
-{{< code-action "Let's start up the app and test it out." >}}  The first command 
-prepares the database (more on this later); the second command starts the server
+{{< code-action "Let's start up the app and test it out." >}}  This command starts the server
 running on port 5000 on your computer. 
 ```shell
 python app.py
@@ -221,10 +220,7 @@ def color_all():
 
 {{< checkpoint >}}
 
-**C.0:** There is currently no link from the homepage to the color list, or the
-  form to add new colors. You have to enter the URL directly to get to these
-  pages, and 99% of users (you no longer included) don't even know how to enter URLs
-  directly. 
+**C.0:** There is currently no link from the homepage to the all color page. You have to enter the URL directly to get to this pages, and 99% of users (you no longer included) don't even know how to enter URLs directly. 
 
 - 💻 **Add a link to the home page taking the user to the color list page.**
   *(Hint: There's already a link from the home page to the random color page. Use the same pattern.)*

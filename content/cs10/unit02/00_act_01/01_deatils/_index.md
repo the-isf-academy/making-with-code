@@ -41,7 +41,7 @@ extending the app at every level we've studied so far. We'll start at the "outsi
   refer to colors by the unique ID each is assigned by the database. These URLs
   will have the form `detail/23`, `detail/155`, etc. Each URL will link to a color swatch.
 
-{{< code-action "Add a view to handle the color detail route:" >}}  `color_app/views.py`:
+{{< code-action "Add a function to handle the color detail route:" >}}  `app.py`:
 ```python {linenos=table}
 @app.route("/detail/<int:color_id>")
 def color_detail(color_id):
@@ -92,7 +92,9 @@ def color_detail(color_id):
 
 Here is an example of the link pattern. 
 ```html 
-<a href="{{ url_for('color_detail', color_id=1) }}">Click here for Color 1 Detail</a>
+<a href="{{ url_for('color_detail', color_id=1) }}">
+  Click here for Color 1 Detail
+</a>
 ```
 
 You should be able to click on each color and it takes you to its detail page.

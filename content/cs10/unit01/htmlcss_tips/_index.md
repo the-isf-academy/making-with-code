@@ -94,6 +94,8 @@ This page is dedicated to HTML and CSS tips. Let the teachers know if you would 
 - [parallax scroll](https://codepen.io/eqbrown/pen/EayZOYW?editors=1100)
 - [elongating shapes](https://codepen.io/eqbrown/pen/bNegQVP?editors=1100)
 - [basic javascript number clicker](https://codepen.io/eqbrown/pen/vEBBPNG)
+- [open div on hover with HTML/CSS](https://codepen.io/eqbrown/pen/xbOdLNB?editors=1100)
+- [on click trigger a div pop up with javascript](https://codepen.io/eqbrown/pen/KwMvzyZ)
 
 ---
 
