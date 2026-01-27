@@ -80,13 +80,19 @@ However, it may not be styled as you expect.
 
 ---
 
-## [1] Customize the Swatch
+## [2] Customize the Design 
+
+
+{{< code-action >}}  **Continue to delve into the `static/css/style.css` file to design of the site!** A few ideas:
+- change look of the swatch to look like [Pantone Color Swatches](https://www.pantone.com/media/wysiwyg/blog/jane-boddy/pantone-jane-boddy-neutrals-now-fashion-home-interiors.jpg?auto=webp&format=pjpg&quality=85)
+- customize the layout of the all page 
+- style the form - [w3schools css form guide](https://www.w3schools.com/css/css_form.asp)
 
 
 
 ---
 
-## [2] Deliverables
+## [3] Deliverables
 
 {{< deliverables "Once you've successfully completed the lab:" >}}  
 

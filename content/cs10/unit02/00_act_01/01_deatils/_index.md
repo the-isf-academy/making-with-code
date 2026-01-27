@@ -148,7 +148,11 @@ def color_detail(color_id):
 
 
 
-💻  **Utilize the filter `adjust_saturation()` to include an additional color palette on the detail page with saturation adjustments.** Your finished [detail/1](http://127.0.0.1:5000/detail/1) page should look similar to this:
+💻  **Utilize the filter `adjust_saturation()` to include an additional color palette on the detail page with saturation adjustments.** 
+- Suggested saturation values = `[-.5, -.3, -.1]`
+
+
+Your finished [detail/1](http://127.0.0.1:5000/detail/1) page should look similar to this:
 
 {{< figure src="images/courses/cs10/unit02/01_color_detail1.png" width="50%" >}}
 

@@ -99,7 +99,7 @@ database, and then sends a redirect response telling the user to go to
 We are going to allow users to update the color if they want to tweak it. For this, we can use the exactly same form!
 
 
-{{< code-action >}} **In `app.py` and add the following function**
+{{< code-action >}} **In `app.py` and add the following incomplete function**
 
 ```python {linenos=table}
 @app.route("/edit/<int:color_id>", methods=['GET', 'POST'])
@@ -112,7 +112,7 @@ def color_edit(color_id):
         if form.validate_on_submit():
             data = form.data 
             
-            # finish the function
+            # 💻 finish the function
 
 
     return render_template('color_form.html', form=form)
@@ -120,11 +120,22 @@ def color_edit(color_id):
 
 {{< code-action >}} **Now go to [`/edit/1`](http://127.0.0.1:5000/edit/1), and make edits.** Try changing the `1` to other numbers. Which numbers work and which numbers do not? 
 
-The form loads and the slides work, however when submitting the form nothing happens.
+The form loads and the sliders work, however when submitting the form nothing happens.
 
 {{< code-action >}} **Finish the function `color_edit()` to:**
 - update the color with the form data
-- redirect the user to the detail page
+- `redirect` the user to the detail page
+
+{{< expand "Redirect Hint" >}}
+
+For the redirect, you will need to call it with a parameter
+
+```python
+return redirect(url_for('function_name', parameter_name = value))
+```
+
+
+{{< /expand >}}
 
 
 💻 **Add a link on the color detail template that directs you to its edit page.** 
@@ -139,6 +150,65 @@ The form loads and the slides work, however when submitting the form nothing hap
 
 - How is the form pre-populated with the color's data?
 - When this form submitted via a  `POST` request, it updates an existing color. How is this different than creating a new color?
+
+{{</ checkpoint >}}
+
+---
+
+## [3] Filtering Form 
+
+Forms can be useful to modify the database information, but they can also be useful to access or filter the database.
+
+💻 **In `forms.py`, add this `FilterForm`.** It is quite a simple form that uses a `SearchField`.
+
+```python
+class FilterForm(FlaskForm):
+    name = SearchField('Color Name',validators=[DataRequired()])
+    submit = SubmitField('Submit')
+```
+
+{{< code-action >}} **In `app.py` let's edit our `color_all()` function.** Notice how we added the `methods` to the `@app.route` decorator. This is because routes that include a form must `GET` and `POST` data.
+
+```python
+@app.route("/all", methods=['GET', 'POST'])
+def color_all():
+
+    form = FilterForm()
+
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            search_name = form.data['name']
+            
+            # 💻 finish the function
+
+
+    all_colors = get_all_colors('name')
+  
+    return render_template(
+            'color_all.html', 
+            all_colors=all_colors, 
+            form = form)
+```
+
+{{< code-action >}} **Finish the function `color_all()` to:**
+- query the database by the `name` field using a function in `helpers.py` 
+- render the template with the queried colors
+
+
+{{< code-action >}} **Then, update the template in `templates/color_all.html` to include the form.** *Is there an existing code block you can copy, paste, and edit?*
+
+{{< figure src="images/courses/cs10/unit02/02_color_form1.png" width="75%" >}}
+
+{{< code-action >}} **Add a link in the template to reset the search to see all of the colors** *What should you link to?*
+
+
+{{< checkpoint >}}
+
+**Before moving on, be sure you understand the following. If you do not, please ask a teacher.**
+
+- How to create new forms for querying
+- How to access data from a submitted form
+- How to 'reset' a query using HTML links
 
 {{</ checkpoint >}}
 
@@ -161,11 +231,3 @@ The form loads and the slides work, however when submitting the form nothing hap
 
 {{< /deliverables >}}
 
---- 
-
-## [4] Extension 
-
-A few ideas of features to extend your learning:
-- restrict users editing a color to only move the slides within +/- 10 of its current RGB values
-- restrict users to only edit the name of a color instead of the RGB values
-- style the form using the `styles.css` file [w3schools css form guide](https://www.w3schools.com/css/css_form.asp)
