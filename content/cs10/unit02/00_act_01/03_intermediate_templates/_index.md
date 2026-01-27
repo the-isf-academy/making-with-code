@@ -31,7 +31,6 @@ python app.py
 ```
 
 
-
 ---
 
 ## [1] Navigation Bar

@@ -1,6 +1,6 @@
 ---
-Title: "3. Riddle Game"
-draft: true
+Title: "4. Riddle Game"
+draft: false
 
 ---
 
@@ -8,9 +8,7 @@ draft: true
 
 In this lab you will use the Riddle Database to create an interactive game.
 
-tasks
-- add difficulty to the navbar
-- add try again 
+{{< figure src="images/courses/cs10/unit02/04_riddle0.png" width="50%" >}}
 
 ---
 
@@ -20,8 +18,8 @@ tasks
 
 ```shell
 cd ~/desktop/making-with-code/unit05_webapps
-git clone https://github.com/the-isf-academy/lab_riddler_django_yourgithubusername
-cd lab_riddler_django_yourgithubusername
+git clone https://github.com/the-isf-academy/lab_flask_riddle_yourgithubusername
+cd lab_flask_riddle_yourgithubusername
 ```
 
 {{< code-action "Install requirements" >}}
@@ -36,7 +34,7 @@ poetry shell
 
 ---
 
-## [1] The Model
+## [1] SQL Table
 
 {{< look-action >}} You can find the `Riddle` table definition in `riddles.sql`
 
@@ -52,36 +50,59 @@ CREATE TABLE IF NOT EXISTS riddles (
 ```
 
 
+{{< code-action >}} **Let's start by making the database file by running `python init_db.py`** This file reads in the data from `riddles_data.py`. Feel free to add your own before making the database file.
+
+{{< code-action >}} **Now use the command `ls` and view your `database.db` file** 
+
+{{< aside "Reset Database" >}}
+
+If you want to reset your database, simply delete the database file:
+
+```shell
+rm database.db
+```
+
+Then, re-run:
+
+```shell
+python init_db.py
+```
+
+{{< /aside >}}
+
+
 ---
 
 
-## [2] Session Variables
+## [2] Complete the Worksheet
 
+{{< code-action "Open the code" >}}
+```shell
+code .
+```
 
-do we make a worksheet??
+{{< code-action "Start the app and go to:" >}} [127.0.0.1:5000](http://127.0.0.1:5000)
+```shell
+python app.py
+```
+
 
 
 {{< checkpoint >}}
 
-✏️💻 **Follow along with the worksheet to understand how this web app is made.** You will be exploring many different files.:
+✏️💻 **Follow along with the worksheet to understand how this web app is made.** You will learn about:
+- [flask wtf fields](https://wtforms.readthedocs.io/en/2.3.x/fields/#basic-fields)
+- [session variables](https://flask.palletsprojects.com/en/stable/api/#sessions)
+- [flash messages ](https://flask.palletsprojects.com/en/stable/patterns/flashing/)
 
 {{</ checkpoint >}}
 
----
-
-## [3] Flash Messages
-
-{{< code-action >}} **Visit [127.0.0.1:8000/](http://127.0.0.1:8000/) to view the app!** 
-
-<br>
-
-
 
 
 ---
 
 
-## [4] Deliverables 
+## [3] Deliverables 
 
 {{< deliverables >}}
 {{< code-action "Push your work to Github:" >}}
@@ -93,27 +114,3 @@ do we make a worksheet??
 - `git push`
 {{< /deliverables >}}
 
-
----
-
-## [5] Extension
-
-### Advanced Index Page
-
-Change the index page to links for difficulty to a dropdown menu. 
-
-For this, you will need to create a form and use the `SelectField` from `flask_wtf`.
-
-allow user to choose number of riddles to guess 
-
----
-<!-- 
-### CSS frameworks 
-
-CSS frameworks allow you to easily apply stylels to your web pages. There are many free frameworks. Two of the most common frameworks are Bootstrap and Tailwind. Feel free to test these or explore [other options](https://github.com/troxler/awesome-css-frameworks?tab=readme-ov-file).
-
-- [Boostrap Setup](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
-- [Tailwind Setup](https://v3.tailwindcss.com/docs/installation/play-cdn)
-
-
- -->
