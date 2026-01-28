@@ -114,3 +114,31 @@ python app.py
 - `git push`
 {{< /deliverables >}}
 
+
+---
+
+## [3] Extensions
+
+### 404 Page
+
+Currently, if you to a page that doesn't exist, there is an unclear error page with no obvious way to go back to the menu. 
+
+{{< code-action >}} **Add a custom 404 page by adding a new function to `app.py` and a new `404.html` template.** Be sure to include a link in the template to go back to the index page. 
+
+```python
+@app.errorhandler(404)
+def error_404(error):
+    return render_template('404.html'), 404
+```
+
+### Custom Favicon
+
+A `Favicon` is the icon that appear on the tab window. 
+
+{{< code-action >}} **Add a favicon**
+- add a `.png` file in the `/static` directory 
+- link it in the `<head>` of the `base.html` 
+
+```python
+<link rel="favicon icon" href="{{ url_for('static', filename='favicon.png') }}">
+```
