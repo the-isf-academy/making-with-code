@@ -142,3 +142,11 @@ A `Favicon` is the icon that appear on the tab window.
 ```python
 <link rel="favicon icon" href="{{ url_for('static', filename='favicon.png') }}">
 ```
+
+### Other Extension Ideas
+
+- hint system: you can click or hover to reveal the first letter of the answer
+- difficulty based scoring: get more points based on difficulty selected
+- leaderboard: create a new database that stores users scores and displays them on a new page
+- new riddles: allow users to add new riddles to the game
+- progress tracking: allow users to see how many questions they have left
