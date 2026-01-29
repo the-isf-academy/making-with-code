@@ -42,7 +42,7 @@ poetry install
 ✅  **This project will be assessed based on your ability to achieve your success claims :**
 
 - **Achievement of MVP Success Claims [3]**
-    - We are able to develop our web application to achieve our success claims
+    - We are able to develop the MVP of our web 
     - We can provide appropriate examples to demonstrate success 
 - **Iterative Development [3]**
     - I can consistently push my work to Github with descriptive commit messages
