@@ -1,5 +1,5 @@
 ---
-title: "Unit: Web Apps"
+title: "Unit 05: Web Apps"
 # bookCollapseSection: true
 type: unit
 slug: unit02
