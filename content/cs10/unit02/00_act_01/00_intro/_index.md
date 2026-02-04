@@ -234,7 +234,7 @@ def color_all():
 
 **C.2:** Make five or six new colors, if you haven’t already. Then look at the color list page. The colors are currently sorted alphabetically (with all the upper-case names first and then the lower-case names). 
 - 💻  **Figure out how to change the color list page so that colors are instead sorted by how much red they contain.** 
-- ✏️ **Explain what you had to do. **
+- ✏️ **Explain what you had to do.**
 
 {{</ checkpoint >}}
 

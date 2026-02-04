@@ -144,6 +144,14 @@ def color_detail(color_id):
 
 💻 **Update your `templates/color_detail.html` to include the hues.** 
 
+{{< expand "Hues Hint" >}}
+
+1. What is a new variable that `color_detail.html` has access to?
+2. `hues` is a list. How can we loop through each item in the list? Have we seen an example of this before? 
+3. Check the `static/style.css` file to see how we can change how hue swatches are displayed. 
+
+{{< /expand >}}
+
 {{< figure src="images/courses/cs10/unit02/01_color_detail0.png" width="50%" >}}
 
 

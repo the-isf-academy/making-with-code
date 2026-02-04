@@ -197,6 +197,13 @@ def color_all():
 
 {{< code-action >}} **Then, update the template in `templates/color_all.html` to include the form.** *Is there an existing code block you can copy, paste, and edit?*
 
+{{< expand "Search Bar Format Hint" >}}
+
+1. Take a look at the `static/style.css` file. Is there any class we can use? 
+2. Once you find the name of the class, make sure to add it in the same bracket as `<form method="POST”>`
+
+{{< /expand >}}
+
 {{< figure src="images/courses/cs10/unit02/02_color_form1.png" width="75%" >}}
 
 {{< code-action >}} **Add a link in the template to reset the search to see all of the colors** *What should you link to?*
