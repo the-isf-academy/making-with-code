@@ -1,6 +1,6 @@
 ---
 title: 6. Pyxel Intro
-draft: False
+draft: True
 ---
 
 # Pyxel Intro Lab

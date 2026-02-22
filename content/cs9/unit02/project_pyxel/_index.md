@@ -1,9 +1,11 @@
 ---
-Title: Project Story
+Title: Project Pyxel
 draft: True
 ---
 
-# Unit 02 Games: Story Project
+# Unit 02 Games: Pyxel Project
+
+UPDATE PAGE FOR PYXEL
 
 🎨 **Design Prompt:** You will create a text-based game inspired by a real piece of media or your own life. 
 
@@ -95,23 +97,20 @@ This repo includes the following files:
 
 ✅  **This project will be assessed on the following criteria:**
 - **Planning [3]** 
-    - I can consider the components of my game before coding
-    - I can create a UML diagram my feature with appropriate data types
-    - I can consider how to implement the feature into the game logic
-    - I can create a graph diagram to outline the branches of my story
+    - I can choose a social problem to address
+    - I can consider the mechanics, dynamics, and aesthetics of my game
+    - I can create a UML diagrams and consider how the methods will work 
 - **Iterative Development [3]**
     - I can track the development of my project by successfully committing to Github a minimum of each class work day, preferably after each work session
     - I can write descriptive commit messages that accurately describe the changes made
     - I can systematically break down my project into smaller chunks  
-- **Feature Implementation [3]**
-    - I can design and implement the necessary class(es) with appropriate properties and methods to fully realize my feature(s).
-    - I can write a feature that is well abstracted
-        - can be used in multiple scenarios within the game  
-        - can be extended or adapted by another developer or student
-    - I can use descriptive names for modules, variables, classes, and methods to enhance code readability
+- **Class Implementations [3]**
+    - I can implement the necessary class(es) with appropriate attributes and methods to fully realize my feature(s).
+    - I can write methods that are well abstracted with appropriate parameters to be used in multiple scenarios 
+    - I can use descriptive names for modules, classes, attributes, methods and variable to enhance code readability
     - I can write descriptive comments to describe complex pieces of the code
 - **Game Implementation [3]**
-    - I can test the game thoroughly to ensure the user interface behaves as expected and matches the Game Logic Flowchart
+    - I can test the game thoroughly to ensure the game works as expected and matches the mechanics, dynamics, and aesthetics in the planning document
     - I can implement a full functioning version of my graph diagram, ensuring all planned Nodes and connections are accurately represented
     - I can design a `View` that is easily to read and understand
     - I can use descriptive names for modules, variables, classes, and methods
