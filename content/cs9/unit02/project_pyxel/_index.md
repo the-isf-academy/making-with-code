@@ -1,6 +1,6 @@
 ---
 Title: Project Pyxel
-draft: false
+draft: True
 ---
 
 # Unit 02 Games: Pyxel Project
