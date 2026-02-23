@@ -1,14 +1,14 @@
 ---
-Title: "3. Riddle App"
+Title: "4. Riddle Game"
 draft: true
 
 ---
 
-# Model, Databases, & Admin Portal
+# Riddle Game
 
-During the track lessons you will be creating a web app for the ISF Riddler. You should remember the Riddle database from the Networking Unit! 
+In this lab you will use the Riddle Database to create an interactive game.
 
-ADD SESSIONS INTO THE GAME
+{{< figure src="images/courses/cs10/unit02/04_riddle0.png" width="50%" >}}
 
 ---
 
@@ -18,8 +18,8 @@ ADD SESSIONS INTO THE GAME
 
 ```shell
 cd ~/desktop/making-with-code/unit05_webapps
-git clone https://github.com/the-isf-academy/lab_riddler_django_yourgithubusername
-cd lab_riddler_django_yourgithubusername
+git clone https://github.com/the-isf-academy/lab_flask_riddle_yourgithubusername
+cd lab_flask_riddle_yourgithubusername
 ```
 
 {{< code-action "Install requirements" >}}
@@ -34,151 +34,75 @@ poetry shell
 
 ---
 
-## [1] The Model
+## [1] SQL Table
 
-{{< look-action >}}You can find the `Riddle` model in `riddle_app/models.py`.
+{{< look-action >}} You can find the `Riddle` table definition in `riddles.sql`
 
-{{<mermaid align="left">}}
-classDiagram
-    class Riddle {
-        +question: CharField 
-        +answer: CharField 
-        +date_added: DateTimeField 
-        +difficulty: CharField 
-        +check_guess(guess)
-    }
-{{< /mermaid >}}
-
-
-
-
-This a **UML Diagram** (Unnified Modeling Language) of the `Riddle` class. 
-- `row 1` - the class name
-- `row 2` - the attributes with the data type 
-- `row 3` - the methods with the parameter and return data type
-
-> Remember, an `attribute` is a variable associated with a class and a `method` is a function associated with a class
-
----
-
-
-## [2] Admin Portal
-
-Just like other parts of our app, the Administration page is a route that is configured in Django. With Django's default project setup, the panel is automatically enabled.
-
-As you can see in `riddle_app/admin.py` the `Riddle` model is registered. 
-
-```python
-from django.contrib import admin
-from .models import Riddle
-
-admin.site.register(Riddle)
+```sql
+CREATE TABLE IF NOT EXISTS riddles (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    question TEXT NOT NULL,
+    answer TEXT NOT NULL,
+    total_guesses INTEGER DEFAULT 0,
+    correct_guesses INTEGER DEFAULT 0,
+    difficulty TEXT DEFAULT 'easy'
+);
 ```
 
-{{< code-action >}} **We can now access the admin portal by going to: [`127.0.0.1:8000/admin/`](http://127.0.0.1:8000/admin/).**
 
-If you go to this URL, there will be a webpage where we can log in to the admin site. **We need Superuser access to log in.**
+{{< code-action >}} **Let's start by making the database file by running `python init_db.py`** This file reads in the data from `riddles_data.py`. Feel free to add your own before making the database file.
 
----
+{{< code-action >}} **Now use the command `ls` and view your `database.db` file** 
 
-### [Creating a Superuser Account]
+{{< aside "Reset Database" >}}
 
-We've successfully checked that the admin site is ready to go but we can't log in! We need to create a Superuser account to log into the admin site.
-
-
-{{< code-action >}} **Create a SuperUser to access the admin portal.** You'll need to quit the server, then create the user.    
-Remember, `control + C` quits the server.
+If you want to reset your database, simply delete the database file:
 
 ```shell
-python manage.py createsuperuser
+rm database.db
 ```
 
-Django will then prompt you to **enter a username and password and that user will have superuser access to the admin site**. For ease of use, keep your username and password short. You can also skip the email field with `return`. It will just ask you to type `y` to `Bypass password validation and create user`.
-> It can be as simple as
-> - username: `a`
-> - password: `123`
+Then, re-run:
 
-
-{{< code-action >}} **Now, restart the server and login to the admin portal:** [`127.0.0.1:8000/admin/`](http://127.0.0.1:8000/admin/)
-
-
-{{< code-action >}} **Explore the portal and add 3 riddles**
-
-
-{{< aside "God View" >}}
-
-As the owners and administrators of your website, you have access to your users' accounts and all of your users' data. We literally have a **god view of everything that is entered into our database**.
-
-There are lots of ethical questions that need to be considered when building an app, and because of this, always remember the quote from Aunt May to Peter Parker...   
-
-**With great power comes great responsibility!**
+```shell
+python init_db.py
+```
 
 {{< /aside >}}
 
+
 ---
 
-## [3] Worksheet
 
-{{< code-action >}} **Visit [127.0.0.1:8000/](http://127.0.0.1:8000/) to view the app!** 
+## [2] Complete the Worksheet
 
-<br>
+{{< code-action "Open the code" >}}
+```shell
+code .
+```
+
+{{< code-action "Start the app and go to:" >}} [127.0.0.1:5000](http://127.0.0.1:5000)
+```shell
+python app.py
+```
+
+
 
 {{< checkpoint >}}
 
-✏️💻 **Follow along with the worksheet to understand how this web app is made.** You will be exploring many different files.:
+✏️💻 **Follow along with the worksheet to understand how this web app is made.** You will learn about:
+- [flask wtf fields](https://wtforms.readthedocs.io/en/2.3.x/fields/#basic-fields)
+- [session variables](https://flask.palletsprojects.com/en/stable/api/#sessions)
+- [flash messages ](https://flask.palletsprojects.com/en/stable/patterns/flashing/)
 
-{{</checkpoint>}}
+{{</ checkpoint >}}
 
 
-
-{{< code-action >}}**When you change the model, you must update the database with `makemigrations`, apply the changes with `migrate`, and re-run the server.**
-
-```shell
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver     
-```
 
 ---
 
-### `new_riddle()` success message 
 
-The goal is for the user to be notifed they successfully added a new Riddle. There are multiple ways to solve this issue, it all depends on how you want to design the user experience. Two potential methods are:
-- create a new view, url, and template with the success message
-- re-render the new_riddle page with the filled out form and the success message
-
-
-To redirect, reference the code snippet OR try to solve it yourself. You may use AI. 
-
-{{< expand "code snippet" >}}
-
-```python
-def new_riddle(request):
-    if request.method == "POST":
-        form = NewRiddleForm(request.POST)
-        if form.is_valid():
-            new_riddle = form.save()
-
-            params = {
-                "form": NewRiddleForm(instance=new_riddle),  
-                "message": "Success! Your riddle has been saved.",  
-            }
-
-            return render(request, "riddle_app/new_riddle_form.html", params)
-    else:
-        form = NewRiddleForm()
-
-    params = {
-        "form": form
-    }
-    
-    return render(request, "riddle_app/new_riddle_form.html", params)
-```
-{{< /expand >}}
-
----
-
-## [4] Deliverables 
+## [3] Deliverables 
 
 {{< deliverables >}}
 {{< code-action "Push your work to Github:" >}}
@@ -193,116 +117,36 @@ def new_riddle(request):
 
 ---
 
-## [5] Extensions
+## [3] Extensions
 
-### List of Riddles
+### 404 Page
 
-- Add the a page to view a list of riddles 
-- Add the feature to filter the page based on the difficuluty 
-    - consider how to use the URL paths `all/easy`, `all/medium`, `all/hard`
+Currently, if you to a page that doesn't exist, there is an unclear error page with no obvious way to go back to the menu. 
 
---- 
-
-### Update a Riddle
-
-- Add the ability to update a Riddle after its been added to the database
-- Try using AI and referring to [this guide](https://www.geeksforgeeks.org/update-view-function-based-views-django/)
-
-
-
----
-
-### CSS frameworks 
-
-CSS frameworks allow you to easily apply stylels to your web pages. There are many free frameworks. Two of the most common frameworks are Bootstrap and Tailwind. Feel free to test these or explore [other options](https://github.com/troxler/awesome-css-frameworks?tab=readme-ov-file).
-
-- [Boostrap Setup](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
-- [Tailwind Setup](https://v3.tailwindcss.com/docs/installation/play-cdn)
-
-
-
-
-<!-- 
-## [3] Django Shell
-
-**Now that we have some data in our database, let's see what we can do with it!** We can try out different methods using the python shell. 
-
-
-{{< code-action "Enter the shell." >}} You will need to quit the server to enter the shell.
-```shell
-python manage.py shell
-```
-
-{{< code-action " First, we can use the built-in capabilities of any Django model object." >}} You can read the official [Django Model Documentation](https://docs.djangoproject.com/en/4.1/topics/db/queries/) to learn more. 
-
-> 💭 You should remember this from the Networking unit!
-
+{{< code-action >}} **Add a custom 404 page by adding a new function to `app.py` and a new `404.html` template.** Be sure to include a link in the template to go back to the index page. 
 
 ```python
->>> from riddle_app.models import Riddle
->>> Riddle.objects.all()
->>> Riddle.objects.count()
-3
->>> Riddle.objects.first()
-<Riddle: I’m the rare case when today comes before yesterday. What am I?>
->>> Riddle.objects.last()
-<Riddle: I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?>
->>> Riddle.objects.get(id=1)
-<Riddle: I’m the rare case when today comes before yesterday. What am I?>
+@app.errorhandler(404)
+def error_404(error):
+    return render_template('404.html'), 404
 ```
 
-{{< code-action " We can try printing out some of the `Riddle` properties" >}}
+### Custom Favicon
+
+A `Favicon` is the icon that appear on the tab window. 
+
+{{< code-action >}} **Add a favicon**
+- add a `.png` file in the `/static` directory 
+- link it in the `<head>` of the `base.html` 
 
 ```python
->>> first_riddle = Riddle.objects.first()
->>> first_riddle.answer
-'A question of time'
->>> first_riddle.question
-'I’m the rare case when today comes before yesterday. What am I?'
->>> first_riddle.likes
-47
+<link rel="favicon icon" href="{{ url_for('static', filename='favicon.png') }}">
 ```
 
----
+### Other Extension Ideas
 
-### [Riddle Methods]
-
-{{< look-action >}} **The `Riddle` model has 2 methods:** 
-- `check_guess()`
-- `increase_likes()`
-
-{{< code-action >}} **Try and successfully use both methods in the shell.** One way to know if you were successful, is to check the admin portal and see if the `likes` property increases for a specific `Riddle`.
-
---- -->
-<!-- 
-## [4] Changing the Model
-
-What if we decide we want to add more fields and methods to our `Riddle` model. It's possible with `makemigrations`. 
-
-{{< code-action >}} **Make the following additions to the `Riddle` in `riddle_app/models.py`:**
-
-**0. Add a field for number of guesses** 
-    - which method should you incorporate this addition?
-
-**1. Add a field for correct guesses**
-    - which method should you incorporate this addition?
-
-**2. Add a field for hints** 
-    - in a future lab we will include this into your `NewRiddleForm`
-
----
-
-{{< code-action >}}**Once you've changed the code, you will need to change the database with `makemigrations`.**
-```shell
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver     
-```
-
-
-
-☑️ **Now, let's login to the admin portal to confirm your changes were made:** [`127.0.0.1:8000/admin/`](http://127.0.0.1:8000/admin/)
-
-☑️ **Also, don't forget to use the `shell` to check if your changes to the `methods` were successful** -->
-
-
+- hint system: you can click or hover to reveal the first letter of the answer
+- difficulty based scoring: get more points based on difficulty selected
+- leaderboard: create a new database that stores users scores and displays them on a new page
+- new riddles: allow users to add new riddles to the game
+- progress tracking: allow users to see how many questions they have left

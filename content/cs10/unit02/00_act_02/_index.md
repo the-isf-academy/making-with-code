@@ -2,7 +2,7 @@
 title: "Act II: Planning"
 type: unit
 slug: unit02_web_design
-draft: false
+draft: true
 ---
 
 # Act II: Web App Pitch 
@@ -14,7 +14,7 @@ Act II focuses on planning and outlining a Web Application. Your will need to co
 🎨 **Design Brief:** In this project, you must create a social computing Web App for G6 tutor groups. Students should be able to contribute, interact, view, and/or modify the Database. It is up to your team to decide what the App is its features. 
 
 🤔 **Here are a few ideas:**
-- [last year's projects](http://sycs.student.isf.edu.hk/)
+- [a few of last year's projects](http://sycs.student.isf.edu.hk/)
 - [fizz](https://techcrunch.com/2022/10/04/fizz-app-college-stanford-social/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAH3uremC98DEuII1DKx69s9ycEmzrJV-E_PMl9IiyByc4hGfRMYUdxeiecqmRsLhlwoYc6LAWsBzN6dCy_-TSemzSz_NNKRRRrYpY0vJ0Pz2LBZFc5wSwSsdh_-e3X49rtESewxxk_Z7O9PhmsiMUxjbiBjbia0r290AqDSjwoPa) or [YikYak](https://mashable.com/article/how-to-use-yik-yak)
 - [higher/lower game](https://www.stattogories.com/)
 - [list of fun APIs](https://developer.vonage.com/en/blog/the-ultimate-list-of-fun-apis-for-your-next-coding-project)
@@ -34,14 +34,11 @@ For this project, you will use a Canva white-board to design the frontend and ba
 ✏️ **You and your teammate(s) must work together to plan the backend and frontend of your web app.**
 
 0. project description
-0. UML diagram
-0. data flow diagram
-0. flow chart of user interactioin
-0. low-fidelity wireframe of MVP
-0. 3-5 success claims of MVP
+0. database diagram
+0. flow chart of user interaction
+0. wireframe 
 
 🔍 **A few resources:** 
-- [Django Model Field Types](https://docs.djangoproject.com/en/4.2/ref/models/fields/#field-types)
 - [Google Fonts](https://fonts.google.com/)
 - [Fontjoy](https://fontjoy.com/) - generates font combinations
 - [coolors generator](https://coolors.co/generate)
@@ -67,21 +64,25 @@ Your pitch should include:
 
 
 ✅  **This project will be assessed on the following criteria:**
-- **Backend Design [3]**
-    - We can plan the architecture of a Django Model by using appropriate field and methods 
-    - We can create a clear and accurate data flow diagram to describe how the user interactions with the database
-    - We can use descriptive naming conventions for code readability 
-- **Frontend Design [3]**
-    - We can outline the user flow navigation to ensure a logical user experience
-    - We can design a low-fidelity wireframe for each necessary template in the MVP 
-    - We can include placeholder text or example data from the Model to demonstrate how the design interactions with the backend 
-- **Success Claims [3]**
-    - We can write success claims that are specific, measurable and testable to evaluate the web app 
-    - We can write example test cases for each success claim to demonstrate how the claim will be evaluated 
+- **Project Planning: Backend [3]**
+    - We can describe the purpose and function of our web application
+    -  We can consider the structure of our database with appropriate field types and default values
+    - We can consider useful Python helper functions to access and manipulate our database 
+    - We can write easily understandable, logical URL path names
+    - We can consider functions to handle the HTTP request and response cycle
+- **Project Planning: Frontend [3]**
+    - We can plan the context, colors, fonts, and content prior to development
+    - We can design a detailed wireframe with descriptions to explain specific interactions for each page
+    - We can include arrows to indicate how the wireframe pages are connected
+    - We can include example data from the database to demonstrate how the information will be displayed
 - **Pitch Presentation [3]**
     - We can present the Web App idea in a clear, engaging manner
     - We can design slides that are easy to read and include relevant visual aids 
     - We can respond thoughtfully to audience feedback, demonstrating and understanding of their suggestions   
+
+<!-- - **Success Claims [3]**
+    - We can write success claims that are specific, measurable and testable to evaluate the web app 
+    - We can write example test cases for each success claim to demonstrate how the claim will be evaluated -->
 
 **For each criteria you will be assessed on a score from 0-3.** 
 - 0 - no evidence of the practice
@@ -101,7 +102,7 @@ Your pitch should include:
 - You will pitch your web app during the class
 
 **📄 Deliverables**
-- A Canva document with your Web App planning
+- A Whimsical document with your Web App planning
 - A Google Slides presentation 
 
 {{< /deliverables >}}
