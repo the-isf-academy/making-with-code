@@ -1,12 +1,12 @@
 ---
-title: "Unit: Web Apps"
+title: "Unit 05: Web Apps"
 # bookCollapseSection: true
 type: unit
 slug: unit02
-draft: true
+# draft: true
 ---
 
-This unit will focus on web applications and human-center design. Students will form teams focused on creating something for the ISF community. This could be a solution to a problem or a virtual experience for members of the community. 
+<!-- This unit will focus on web applications and human-center design. Students will form teams focused on creating something for the ISF community. This could be a solution to a problem or a virtual experience for members of the community. 
 
 
 ## Act I: HTML (Django) and CSS (Bootstrap)
@@ -17,7 +17,7 @@ the skills of a web architect.
 - *Designer Track:* this student will learn the basics of HTML, CSS, and Bootstrap to make a build the front-end
 interface of their team's project.
 - *Architect Track:* This student will learn how to design, query, and maintain a database that will be used to
-serve the content of their team's web app.
+serve the content of their team's web app. -->
 
 <!-- ### Milestone Event: Hackathon
 This section of the project will culminate in a hackathon where students apply the technical skills 
@@ -26,7 +26,7 @@ allow students to work on their projects in a supportive, collaborative environm
 hackathon, teams will have a working version 1.0 of their applications, which they can continue testing 
 and developing in the final section of the project. -->
 
-## Act II: Introduction to Human-Centered Design
+<!-- ## Act II: Introduction to Human-Centered Design
 
 With a solid foundation to what Django has to offer, students will learn about the human-centered design and the basics of Human Computer Interaction (HCI). 
 
@@ -46,4 +46,4 @@ In the final section of the project, students will prepare the submission versio
 
 To close out the project, teams will launch their web applications at a launch party. At the launch party, student teams will demo their applications in an expo format. This will be a chance for students to showcase their learning and to market their applications. =
 
-
+ -->

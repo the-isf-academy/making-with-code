@@ -2,7 +2,7 @@
 title: "Act III: Developing the App"
 type: unit
 slug: unit02_web_design
-# draft: true
+draft: true
 ---
 
 # Act III: Developing the App 
@@ -15,12 +15,12 @@ You finally get your hands on some code! During Act III you and your partner wil
 In this lab, you will be working in groups, storing your shared code in your group's repository.
 
 
-our repository with starter code for your project." >}}
+{{< code-action "Clone your repository with starter code for your project." >}}
 
 ```shell
 cd ~/desktop/making_with_code/unit05_webapps/
-git clone https://github.com/the-isf-academy/project_web_apps_group#.git
-cd project_web_apps_group#
+git clone https://github.com/the-isf-academy/project_webapp_group_name.git
+cd project_web_app_group#
 ```
 > replace `#` with your group number
 
@@ -41,8 +41,8 @@ poetry install
 
 ✅  **This project will be assessed based on your ability to achieve your success claims :**
 
-- **Achivement of MVP Success Claims [3]**
-    - We are able to develop our web application to achieve our success claims
+- **Achievement of MVP Success Claims [3]**
+    - We are able to develop the MVP of our web 
     - We can provide appropriate examples to demonstrate success 
 - **Iterative Development [3]**
     - I can consistently push my work to Github with descriptive commit messages
@@ -78,33 +78,27 @@ poetry install
 
 ---
 
-## [3] Django Reminders 
+## [3] Flask Reminders 
 
 {{< code-action "To run a local server" >}}  
 ```shell
-python manage.py runserver
+python app
 ```
 
-{{< code-action "To prepare changes the Model fields in the database" >}}  
+{{< code-action "To open the database in DB Browser" >}}  
 ```shell
-python manage.py makemigrations
+open database.db
 ```
 
-{{< code-action "To apply changes the database" >}}  
-```shell
-python manage.py migrate
-```
-
-{{< code-action "To create a superuser." >}} 
-```shell
-python manage.py createsuperuser
-```
+Helpful Resources
+- [Flask Documentation](https://flask.palletsprojects.com/en/stable/)
+- [Flask WTF Forms Documentation](https://flask-wtf.readthedocs.io/en/1.2.x/)
 
 ---
 
-### [To add images from a file]
+### To add images from a file
 
-{{< code-action "Add the image to the" >}} **`myapp/static` folder.**
+{{< code-action "Add the image to the" >}} **`/static/images` folder.**
 
 
 {{< code-action "In the HTML template, load the static folder" >}} 
@@ -117,36 +111,7 @@ python manage.py createsuperuser
 {{< code-action "In the HTML template, reference the static folder in the image tag" >}} 
 
 ```html
-<img src="{% static 'filename.png' %}">
+<img src="{{ url_for('static', filename='images/filename.png') }}">
 ```
 
 
----
-
-
-## [3] Backing up your database
-
-In order to back up your database and push it to github, follow these steps:
-
-{{< code-action "Back up your app's database." >}}  
-```shell
-python manage.py dumpdata > backup.json
-```
-{{< code-action "Push it to Github" >}}  
-```shell
-git add backup.json
-git status
-git commit -m "backing up database"
-git push
-```
-
-
-
-{{< code-action "If you ever want to restore your data from a backup, you can run the following command:" >}}  
-```shell
-python3 manage.py loaddata backup.json
-```
-
-
-
----

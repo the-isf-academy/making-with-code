@@ -1,6 +1,6 @@
 ---
 title: 1. Detail Page
-# draft: true
+draft: true
 ---
 
 # Detail Page
@@ -144,11 +144,23 @@ def color_detail(color_id):
 
 💻 **Update your `templates/color_detail.html` to include the hues.** 
 
+{{< expand "Hues Hint" >}}
+
+1. What is a new variable that `color_detail.html` has access to?
+2. `hues` is a list. How can we loop through each item in the list? Have we seen an example of this before? 
+3. Check the `static/style.css` file to see how we can change how hue swatches are displayed. 
+
+{{< /expand >}}
+
 {{< figure src="images/courses/cs10/unit02/01_color_detail0.png" width="50%" >}}
 
 
 
-💻  **Utilize the filter `adjust_saturation()` to include an additional color palette on the detail page with saturation adjustments.** Your finished [detail/1](http://127.0.0.1:5000/detail/1) page should look similar to this:
+💻  **Utilize the filter `adjust_saturation()` to include an additional color palette on the detail page with saturation adjustments.** 
+- Suggested saturation values = `[-.5, -.3, -.1]`
+
+
+Your finished [detail/1](http://127.0.0.1:5000/detail/1) page should look similar to this:
 
 {{< figure src="images/courses/cs10/unit02/01_color_detail1.png" width="50%" >}}
 
