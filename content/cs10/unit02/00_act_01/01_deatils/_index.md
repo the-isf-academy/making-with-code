@@ -1,6 +1,6 @@
 ---
 title: 1. Detail Page
-# draft: true
+draft: true
 ---
 
 # Detail Page

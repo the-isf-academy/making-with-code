@@ -3,7 +3,7 @@ title: Act I
 # bookCollapseSection: true
 ---
 
-# Act I: Web Applications with Django
+<!-- # Act I: Web Applications with Django
 
 In this final unit of CS10, you are going to take on a new scale of challenge:
 you're going to learn a professional web application framework called
@@ -43,4 +43,4 @@ set up a basic app and follow along as we go through three different
    new features. However, when you have *production data*, things get a little
    more complicated. You wouldn't want all your users to get their passwords and
    cat videos deleted every time you update your app!
-
+ -->

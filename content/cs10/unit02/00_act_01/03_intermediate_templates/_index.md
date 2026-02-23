@@ -1,6 +1,6 @@
 ---
 title: 3. Intermediate Templates
-# draft: true
+draft: true
 ---
 
 # Intermediate Templates
