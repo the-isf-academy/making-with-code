@@ -183,3 +183,41 @@ Your finished [detail/1](http://127.0.0.1:5000/detail/1) page should look simila
 - git push
 
 {{< /deliverables >}}
+
+---
+
+## [4] Extensions
+
+### Dynamic Sort Dashboard
+
+Create different routes in `app.py` (e.g., `/all/red`, `/all/blue`) that render the same color_all.html template but sorts it by different columns. 
+
+Add buttons like "Sort by Red," "Sort by Blue," and "Sort by Name" on the `/all` page that takes the user to these routes. 
+
+---
+
+### Metadata Footer
+
+You have used  `{% extends "base.html" %}` and `{% block content %}` to build pages. Can you apply the same principles to add a dynamic "Global Footer" to every page of the app without editing every HTML file? 
+
+---
+
+### Create a visual technical resource
+
+Design a high-quality `"Flask-Jinja2 Cheat Sheet"` using HTML and CSS.
+
+Some things you might include: 
+- The difference between `{{ variable }}` and `{% command %}`
+- A diagram or flowchart showing how a request travels from a URL in app.py to a specific template in `/templates`
+- A "Common Errors" section (e.g., forgetting to return the `render_template` function)
+
+---
+
+### The "Colorama" Quiz
+
+Teaching others is the best way to master the material. Create a 10-15 question review game for the class (on any quiz platform such as Kahoot or Blooket). If you finish it by the end of class, we will play it together!
+
+Example questions:
+- In `@app.route("/detail/<int:color_id>")`, what does `<int:color_id>` do?
+- What are the four attributes of a `Color` in the `SQL` table?
+- Where must `HTML` files be stored for `Flask` to find them?
