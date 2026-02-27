@@ -190,15 +190,15 @@ Your finished [detail/1](http://127.0.0.1:5000/detail/1) page should look simila
 
 ### Dynamic Sort Dashboard
 
-Create different routes in `app.py` (e.g., `/all/red`, `/all/blue`) that render the same color_all.html template but sorts it by different columns. 
+Create one route in `app.py` (e.g., `/all/red`, `/all/blue`) that render the same color_all.html template but sorts it by different columns. 
 
 Add buttons like "Sort by Red," "Sort by Blue," and "Sort by Name" on the `/all` page that takes the user to these routes. 
 
----
+<!-- ---
 
 ### Metadata Footer
 
-You have used  `{% extends "base.html" %}` and `{% block content %}` to build pages. Can you apply the same principles to add a dynamic "Global Footer" to every page of the app without editing every HTML file? 
+You have used  `{% extends "base.html" %}` and `{% block content %}` to build pages. Can you apply the same principles to add a dynamic "Global Footer" to every page of the app without editing every HTML file?  -->
 
 ---
 
