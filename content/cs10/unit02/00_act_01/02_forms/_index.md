@@ -42,9 +42,9 @@ python app.py
 ```python {linenos=table}
 class ColorForm(FlaskForm):
     name = StringField('Color Name',validators=[DataRequired()])
-    red = IntegerRangeField('Red Value', validators=[DataRequired(), NumberRange(min=0, max=100)], default=0)
-    green = IntegerRangeField('Green Value', validators=[DataRequired(), NumberRange(min=0, max=100)], default=0)
-    blue = IntegerRangeField('Blue Value', validators=[DataRequired(), NumberRange(min=0, max=100)],  default=0)
+    red = IntegerRangeField('Red Value', validators=[NumberRange(min=0, max=100)], default=0)
+    green = IntegerRangeField('Green Value', validators=[NumberRange(min=0, max=100)], default=0)
+    blue = IntegerRangeField('Blue Value', validators=[NumberRange(min=0, max=100)],  default=0)
 
     submit = SubmitField('Submit')
 ```
@@ -91,6 +91,8 @@ database, and then sends a redirect response telling the user to go to
 **Before moving on, be sure you understand the following. If you do not, please ask a teacher.**
 
 - What is the purpose of the for loop in the `templates/color_form.html` template file?
+- Why is `DataRequired()` on the `name` but not the `red`, `green`, or `blue`, in `forms.py?
+
 
 {{</ checkpoint >}}
 
