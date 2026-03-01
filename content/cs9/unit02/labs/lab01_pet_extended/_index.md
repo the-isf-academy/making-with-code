@@ -220,11 +220,11 @@ Dog
 ✏️  **Draw a flow chart of how the game will work.** The user should be able to access all of the features of the `Pet()` through a user friendly interface. 
 
 
-{{< expand "Here is an example of a flowchart">}}
+<!-- {{< expand "Here is an example of a flowchart">}}
 
 {{< figure src="images/courses/cs9/unit02/lab_pet_extended_flowchart.png" width="100%" >}}
 
-{{< /expand >}}
+{{< /expand >}} -->
 
 
 {{< code-action >}} **Implement your flow chart in  `game_interface.py` so you can interact with your `Pet`!** The finished version should look something like this:
