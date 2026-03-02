@@ -249,4 +249,14 @@ def color_all():
 
 Implement a new feature where the user can click a button on the `/new` endpoint that would generate a random color (load the `/new` page with pre-populated rgb values). 
 
+You will need to look at how to use [GET request query parameters with Flask](https://www.geeksforgeeks.org/python/get-request-query-parameters-with-flask/)
+
 Challenge: do this by only editing the `/new` route in `app.py` and `color_form.html`. 
+
+### Add more search features on `/all` route
+
+Add more ways the user can query the database in `/all`. 
+
+Ideas:
+- Search with minimum/maximum RGB values
+- Search for a range of RGB values
