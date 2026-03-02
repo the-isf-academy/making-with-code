@@ -241,3 +241,12 @@ def color_all():
 
 {{< /deliverables >}}
 
+---
+
+## [4] Extensions
+
+### Generate a new random color
+
+Implement a new feature where the user can click a button on the `/new` endpoint that would generate a random color (load the `/new` page with pre-populated rgb values). 
+
+Challenge: do this by only editing the `/new` route in `app.py` and `color_form.html`. 
