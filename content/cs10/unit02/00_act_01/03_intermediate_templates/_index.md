@@ -1,6 +1,6 @@
 ---
 title: 3. Intermediate Templates
-draft: true
+# draft: true
 ---
 
 # Intermediate Templates
@@ -107,3 +107,40 @@ However, it may not be styled as you expect.
 - git push
 
 {{< /deliverables >}}
+
+
+---
+
+
+## [4] Extensions 
+
+#### Custom 404 Page
+
+💻 **Create a custom 404 page that includes a link to go back to the home page.** This can catch errors such as going to `/edit/<int>` integers that do not exist in the database. 
+
+```python
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
+```
+
+---
+
+#### Custom Form Validators 
+
+Validators in forms ensures the data input is the correct data type and in an appropriate format. 
+
+💻 **Add a custom validator to ensure the name of a color does not include specific words (e.g. curse words).** Reference the [flask documentation on custom validators](https://wtforms.readthedocs.io/en/2.3.x/validators/#custom-validators)
+
+
+---
+
+#### Delete Colors 
+
+
+💻 **Add a feature to delete colors of a specific `id`** You can link this page to the `/edit` page OR have it as a secret page only you can use. If it's a secret page, how could you password protect it so only administrators can use it? 
+- You will need to create a new database helper function
+
+```python
+@app.route('/delete/<int:color_id>', methods=['DELETE'])
+```
