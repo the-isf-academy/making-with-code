@@ -5,9 +5,9 @@ draft: True
 
 # Platformer Game Lab
 
-In this lab you explore a platformer game and designing tileset.
+In this lab you explore a Platformer game and designing tileset.
 
-**📖 You can find the offical documentation [HERE](https://github.com/kitao/pyxel).**
+**📖 You can find the official documentation [HERE](https://github.com/kitao/pyxel).**
 
 --- 
 
@@ -37,12 +37,22 @@ poetry shell
 poetry install
 ```
 
+{{< expand "If issues with install..." >}}
+```shell
+brew install pipx
+pipx ensurepath
+pipx install pyxel
+```
+{{< /expand >}}
+
+
+
 This repo includes these key files:
 - `game.py`
-- `sprite.py` 
 - `player.py`
 - `coin.py`
 - `helpers.py`
+- `camera.py`
 - `assets.pyxres`
 
 
@@ -53,7 +63,6 @@ This repo includes these key files:
 ## [1] Tilesets
 
 💻 **First, play the game `python game.py`.** Use the arrows `<` `>` to move sideways and `space` to jump. Note the gravity and note the walls. There are multiple different tiles that are registered as walls.
-
 
 
 ---
@@ -76,7 +85,7 @@ pyxel edit assets.pyxres
 
 ### Add Your Own Tiles
 
-💻 **Open the editer and draw your own wall asset.**  Be sure to draw it near the other wall tiles.     
+💻 **Open the editor and draw your own wall asset.**  Be sure to draw it near the other wall tiles.     
 
 
 {{< figure src="images/courses/cs9/unit02/pyxel3.png" width="50%" >}}
@@ -89,7 +98,7 @@ pyxel edit assets.pyxres
 
 When new `WALL` tiles are added, you must update the code accordingly. 
 
-👀 ✏️ **Find the new x,y cordinate range of the WALL tiles.** By hovering over the tile on the bottom left, it displays the x,y cordinate on the top.    
+👀 ✏️ **Find the new x,y coordinate range of the WALL tiles.** By hovering over the tile on the bottom left, it displays the x,y coordinate on the top.    
 <br>
 In the screenshot, the new tile is located at `(0,5)`
 
@@ -115,8 +124,6 @@ for x in range(0,5):
 
 
 💻 **Experiment with gravity by customizing the attributes in the `Player` class.** 
-
-💻 **Experiment with the camera by customizing the `scroll_border_X` and `scroll_border_Y` in the `Game` class.** 
 
 
 ---
