@@ -7,25 +7,11 @@ draft: True
 
 UPDATE PAGE FOR PYXEL
 
-🎨 **Design Prompt:** You will create a text-based game inspired by a real piece of media or your own life. 
-
-{{< code-action >}} **Your game must include one unique feature.** For example:
-
-
-It is totally up to you what type of story you make. For example you could make:
-- choose your own adventure game 
-- exploration game
-- puzzle game 
-- narrative story game
+🎨 **Design Prompt:** You will create a maze game or a platforming game. You must include at least one new, unique mechanic.
 
 
 
-{{< figure src="https://steamuserimages-a.akamaihd.net/ugc/1791848543425884907/18A8A93A2B7215E654F50350F4C896FFE463B456/" width="70%" >}}
-> [*Zork*](https://en.wikipedia.org/wiki/Zork) is often noted as one of the best video games of all time. 
->
->*"What Zork seemed to contribute more than anything was the idea that the computer could simulate a rich virtual environment" - [Matt Barton](https://web.archive.org/web/20220809014122/https://www.gamedeveloper.com/pc/the-history-of-zork)*
-
-
+INCLUDE PICTURE
 
 ---
 
@@ -45,18 +31,14 @@ This is a big project with a lot of room for customization. It is important for 
 4️⃣ outline the story in a graph diagram 
 
 🧠 Some idea for features:
-- branches that come back together into the same Node
-- ability to go back to a previous node
-- some nodes send you back to the beginning
-- time limit - user must make a choice quickly, OR ELSE
-- auding audio or images to nodes
-- variable messaging in the story associated with user actions
-    - *e.g. "you have visited this store 5 times"*
-- a Player() class with unique properties
-    - *e.g. hunger, money, or health*
-- adding enemies to the game
-- certain nodes or parts of the story give you items
-    - *e.g. a locked door where you need to first collect the key in a certain room.*
+- power up items
+- enemies 
+- multiple levels
+- shooting
+- multiplayer 
+
+Some dynamics to cosnider focusing on. IT cna help to focus on a dynamic and then brainstorm mechanics to fit that dynamic. 
+
 
 ---
 
@@ -83,78 +65,50 @@ poetry install
 ```
 
 This repo includes the following files:
-- `game.py` - when this program runs, it should launch your game
-- `view.py`
-- `story_setup.py`
-- `model_story.py`
-- `model_node.py`
-- `README.md` - a brief description of your game
-
+- UPDATE
 
 ---
 ## [2] Assessment
 
 
+
+
 ✅  **This project will be assessed on the following criteria:**
-- **Planning [3]** 
-    - I can choose a social problem to address
-    - I can consider the mechanics, dynamics, and aesthetics of my game
+- **Planning** 
+    - I can consider the aesthetics of my game
+    - I can consider a new mechanic for my game 
     - I can create a UML diagrams and consider how the methods will work 
-- **Iterative Development [3]**
+- **Iterative Development**
     - I can track the development of my project by successfully committing to Github a minimum of each class work day, preferably after each work session
     - I can write descriptive commit messages that accurately describe the changes made
     - I can systematically break down my project into smaller chunks  
-- **Class Implementations [3]**
-    - I can implement the necessary class(es) with appropriate attributes and methods to fully realize my feature(s).
-    - I can write methods that are well abstracted with appropriate parameters to be used in multiple scenarios 
-    - I can use descriptive names for modules, classes, attributes, methods and variable to enhance code readability
-    - I can write descriptive comments to describe complex pieces of the code
-- **Game Implementation [3]**
-    - I can test the game thoroughly to ensure the game works as expected and matches the mechanics, dynamics, and aesthetics in the planning document
-    - I can implement a full functioning version of my graph diagram, ensuring all planned Nodes and connections are accurately represented
-    - I can design a `View` that is easily to read and understand
+- **Aesthetic Implementations**
+    - I can use the Pyxel Editor to create a custom tileset that includes an array of sprites that matches my planning document
+    - I can implement my tileset into my game so each sprite works as expected 
+- **Mechanic Implementation**
+    - I can create a new class or build upon on existing class to add a new mechanic 
+    - I can test my game thoroughly to ensure the mechanic works as planned
+- **Readability**
     - I can use descriptive names for modules, variables, classes, and methods
     - I can write descriptive comments to describe complex pieces of the code 
 
-
-<!-- **For each criteria you will be assessed on a score from 0-3. With 5 criteria, there is a total of 15 potential points.** 
+**For each criteria you will be assessed on a score from 0-3. With 5 criteria, there is a total of 15 potential points.** 
 - 0 - no evidence of the practice
 - 1 - limited evidence of the practice
-- 2 - adequate evidence of the practice
+- 2 - satisfactory evidence of the practice
 - 3 - substantial evidence of the practice
-
-{{< expand "Scoring Breakdown" >}}
-
-The project is scored out of 15. 
-
-*To calculate your score for the practices & concepts, look at the following bands:*
-
-- 1 = 0
-- 2 = 1
-- 3 = 2-3
-- 4 = 4-6
-- 5 = 7-11
-- 6 = 12-13
-- 7 = 14-15
-{{< /expand >}} -->
 
 
 ---
 
 ## [3] Deliverables
 
-<!-- Projects are due during Week 31-32. -->
 
 {{< deliverables  "" >}}
 
 - A `Unit 02 Games Project: Planning Document` 
 - A `project_game_story` repository will include some if not all the following files:
-    - `game.py` 
-    - `view.py`
-    - `story_setup.py`
-    - `model_story.py`
-    - `model_node.py`
-    - `README.md` - a brief description of your game
+    - UPDATE!!! 
 <!-- 
 ---
 **🗓️ Timeline**
@@ -185,69 +139,12 @@ The project is scored out of 15.
 
 ## [4] Resources
 
+ADD TIPS FOR PYXEL & LOOKING AT TILESETS
+
+
 ### 👾 Games for inspiration
-**If you need inspiration, explore these narrative games.** As you play, consider the different genres and what's possible with this structure. 
-- [Harry Potter - Sorting Hat](https://unfold.studio/stories/303/)
-- [Oregon Trail 1971](https://unfold.studio/stories/10782/)
-- [City Exploration](https://unfold.studio/stories/2649/)
-- [Store front Example, variables](https://unfold.studio/stories/1065/)
 
----
-<!-- 
-### ✏️ AI tools
-If you need help writing the text, feel free to use an AI service. Just be sure to cite your transcript in the Planning Doc.
-- [poe](https://poe.com/)
-- [rytr](https://rytr.me/)
-- [composeai](https://www.compose.ai/#:~:text=Compose%20AI%20is%20a%20free,some%20of%20our%20personalization%20features.) -->
-
----
-
-### 👀 Readability
-Here are a few resources that may help improve readability.
-- [Emojis](https://www.emojicopy.com/)
-- [InquirerPy](https://inquirerpy.readthedocs.io/en/latest/)
-    - This is the package that controls the menu
-- [Colorama](https://pypi.org/project/colorama/)
-    - This package adds colors to the print statements in the Terminal
-
----
-
-###  🔉 Play Sound
-If you are interested in including sounds in your game, follow along with these steps.
-
-(0) **Install the playsound library:** `pip3 install playsound`
-
-(1) **Add a sound file to your repository.** *e.g. .mp3, .m4a, .wav file.*
-> If will have multiple sounds, be sure to consider how you will organize your repostiory.
-
-(2) **Incorporate the sound into your game.** If this is your feature, I highly planning how you will incorporate this into the `Node()`, `Story()` and/or `game.py`.
-
-```python
-from playsound import playsound
-
-playsound('test_sound.m4a')
-```
-
----
-
-### 🌄 Open Images
-
-If you are interested in including images in your game, follow along with these steps. It will open the image in your computer's default image viewer *(e.g. Preview)*.
-
-(0) **Install the playsound library:** `poetry add pillow`
-
-(1) **Add a image file to your repository.** *e.g. .png, .jpg file*
-> If will have multiple images, be sure to consider how you will organize your repository.
-
-(2) **Incorporate the image into your game.** If this is your feature, I highly planning how you will incorporate this into the `Node()`, `Story()` and/or `game.py`.
-
-
-```python
-from PIL import Image
-
-image1 = Image.open(r"test_img.png") 
-image1.show()
-```
+REPLCAE WITH GAMES 
 
 ---
 
@@ -262,46 +159,10 @@ from time import time
 
 #save the current time
 current_time = time()
-```
 
-**`sleep()`** - *pause your program for a given amount of seconds.*
-```python
-from time import sleep
+end_time = time()
 
-#pause program for 3 seconds
-sleep(3)
-```
-
----
-
-### 🌄 ASCII Art
-
-ASCII Art is low-fi art that will print directly in the Terminal. For example...
+elapsed_time = end_time - current_time
 
 ```
- |\    o
-    |  \    o
-|\ /    .\ o
-| |       (
-|/ \     /
-    |  /
-     |/
-```
 
-💻 **The code for this looks like:**
-```python
-print("""\
-     |\    o
-    |  \    o
-|\ /    .\ o
-| |       (
-|/ \     /
-    |  /
-     |/
-""")
-```
-> *Note the `"""\` at the start and the `"""` and the end of the print statement*
-
-🌐 **Here are a few links to find and create your own ascii art.** Just be sure to site what you use in your `README.md`
-- [asciiart.eu/](https://www.asciiart.eu/)
-- [ascii art text](https://patorjk.com/software/taag/#p=display&f=Epic&t=Hello)
