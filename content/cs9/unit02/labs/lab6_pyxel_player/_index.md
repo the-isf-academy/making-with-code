@@ -1,5 +1,5 @@
 ---
-title: 6. Pyxel Intro
+title: 6. Pyxel Player
 draft: True
 ---
 
@@ -58,13 +58,23 @@ This repo includes these key files:
 ---
 
 
-## [1] Explore the Player
+## [1] Explore `game.py`
 
 💻 **Play the game!** Press `esc` to exit the game. It's quite simple! Today's lab is just about getting used to the Pyxel framework and manipulating the Player. 
 
 ```shell
 python game.py 
 ```
+
+{{< checkpoint >}}
+
+✏️ **Following along with the part 1 of the worksheet to explore how the game is setup and how the Player moves.**
+
+{{< /checkpoint >}}
+
+---
+
+## [2] Explore the Sprite Editor
 
 
 💻 **Open the Sprite Editor.**  Pyxel has a built in sprite, map, and music editor!
@@ -78,7 +88,7 @@ pyxel edit assets.pyxres
 
 {{< checkpoint >}}
 
-✏️ **Following along with the worksheet to explore how the game is setup and how the Player moves.**
+✏️ **Following along with the part 2 of the worksheet to explore how the game is setup and how the Player moves.**
 
 {{< /checkpoint >}}
 
@@ -86,7 +96,7 @@ pyxel edit assets.pyxres
 ---
 
 
-## [2] Deliverables
+## [3] Deliverables
 
 
 {{< deliverables  >}}

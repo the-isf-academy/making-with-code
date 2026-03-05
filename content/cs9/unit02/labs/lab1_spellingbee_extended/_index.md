@@ -175,7 +175,7 @@ python game.py
 
 {{< deliverables  >}}
 
-**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSczCgC8Y3nJeqDh30MVe7O-WXqEkoL17fc00ZBWQw-djTwcig/viewform?usp=sf_link)**.
+**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSfVw8UN4E8WaUZmHRk7XOIJGZpExzyMVP7ityfBpHnWT3Dx9A/viewform?usp=publish-editor)**.
 
 
 {{< code-action "Push your work to Github:" >}}
