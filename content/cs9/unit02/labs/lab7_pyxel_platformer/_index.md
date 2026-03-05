@@ -1,6 +1,6 @@
 ---
 title: 7. Pyxel Platformer Game
-draft: True
+# draft: True
 ---
 
 # Platformer Game Lab
@@ -120,16 +120,41 @@ for x in range(0,5):
 
 ---
 
-## [2] Camera/Gravity
+## [2] Complex Player
+
+The Player class is more complex in this platforming game due to the jumping, gravity, and camera. 
+
+💻 **Delve into the `Player` class and experiment with editing the `speed`, `gravity,` and `jump_strength` attributes.** 
 
 
-💻 **Experiment with gravity by customizing the attributes in the `Player` class.** 
+---
+
+## [3] Add Music!
+
+〜 **Enter the `sound editor` and create your own sound! There are 63 potential sound banks.**
+
+{{< figure src="images/courses/cs9/unit02/pyxel5.png" width="50%" >}}
+
+
+🎵 **Then, go to the  `music editor` and add in your sounds.**
+
+{{< figure src="images/courses/cs9/unit02/pyxel6.png" width="50%" >}}
+
+
+💻 **To add music to your game!** It can be background music or jumping music or coin music!
+```python
+pyxel.playm(msc=0, loop=False)    # Play music bank 0, corresponds to music editor 
+
+pyxel.stop()                      # Stop all music
+```
+
+
 
 
 ---
 
 
-## [3] Deliverables
+## [4] Deliverables
 
 
 {{< deliverables  >}}
@@ -144,3 +169,16 @@ for x in range(0,5):
 - remote
 
 {{< /deliverables >}}
+
+---
+
+## [5] Extensions 
+
+💻 **Choose from the below to experiment with!**
+- a Spike sprite that if the Player collides with it, the game is over
+- a Powerup sprite that increases the Player's jump
+- simple Enemies that move back and forth - if Player collides with them, the game is over
+
+
+💻 **Experiment with gravity by customizing the attributes in the `Player` class.** 
+
