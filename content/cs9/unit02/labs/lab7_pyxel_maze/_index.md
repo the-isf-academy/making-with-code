@@ -1,9 +1,9 @@
 ---
-title: 6. Pyxel Map
+title: 6. Pyxel Maze
 draft: True
 ---
 
-# Pyxel Map Lab
+# Pyxel Maze Lab
 
 In this lab you explore the Python Pyxel map editing tool. 
 
@@ -24,12 +24,12 @@ cd ~/desktop/making_with_code/unit02_games
 
 {{< code-action "Clone the repo." >}}  Be sure to change `YOUR-GITHUB-USERNAME` to your actual Github username.
 ```shell
-git clone https://github.com/the-isf-academy/lab_pyxel_map_YOUR-GITHUB-USERNAME
+git clone https://github.com/the-isf-academy/lab_pyxel_maze_YOUR-GITHUB-USERNAME
 ```
 
 {{< code-action "cd into the lab" >}} 
 ```shell
-cd lab_pyxel_map_YOUR-GITHUB-USERNAME
+cd lab_pyxel_maze_YOUR-GITHUB-USERNAME
 ```
 
 
