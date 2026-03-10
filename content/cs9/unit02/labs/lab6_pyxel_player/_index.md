@@ -1,6 +1,6 @@
 ---
-title: 6. Pyxel Player
-draft: True
+title: 3. Pyxel Player
+# draft: True
 ---
 
 # Pyxel Player Lab
@@ -68,7 +68,7 @@ python game.py
 
 {{< checkpoint >}}
 
-✏️ **Following along with the part 1 of the worksheet to explore how the game is setup and how the Player moves.**
+✏️ **Follow along with the part 1 of the worksheet to explore how the game is setup and how the Player moves.**
 
 {{< /checkpoint >}}
 
