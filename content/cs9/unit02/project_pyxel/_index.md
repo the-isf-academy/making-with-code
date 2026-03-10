@@ -9,9 +9,9 @@ UPDATE PAGE FOR PYXEL
 
 🎨 **Design Prompt:** You will create a maze game or a platforming game. You must include at least one new, unique mechanic.
 
+{{< figure src="![images/courses/cs9/unit02/pyxel6.png](https://private-user-images.githubusercontent.com/678802/421119679-9cc84780-1e72-4484-b71b-ee8669cb8904.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzMxMTQxNzEsIm5iZiI6MTc3MzExMzg3MSwicGF0aCI6Ii82Nzg4MDIvNDIxMTE5Njc5LTljYzg0NzgwLTFlNzItNDQ4NC1iNzFiLWVlODY2OWNiODkwNC5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzEwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMxMFQwMzM3NTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ZmFkYjgzM2RhZWFmZDFjZjk4ZWUzNGY5ZjljMjRmODc1NGUwZDhlNDllNGVmNThmY2VjNDZlNTJiNzhkNGJiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1St9yONqqsPW4mlLufXM8RgfoPNvj4VtvoE9iR5129U)" width="50%" >}}
 
 
-INCLUDE PICTURE
 
 ---
 
@@ -19,11 +19,8 @@ INCLUDE PICTURE
 
 This is a big project with a lot of room for customization. It is important for you to plan the game prior to coding. 
 
-**✏️ Plan your game in the Canva document:**  [`Unit 02: Games Project Planning Document `](https://www.canva.com/design/DAGizT2u_b4/vwyZ9k9cH6NviN_L7UUGxQ/edit?utm_content=DAGizT2u_b4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-- Open the Link
-- File > Make a Coopy
-- Share with teacher 
-- Change name of file to include name
+**✏️ Plan your game on the planning document:**  `Unit 02: Games Project Planning Document`
+
 
 1️⃣ outline your game overview <br>
 2️⃣ outline your feature <br>
@@ -37,7 +34,6 @@ This is a big project with a lot of room for customization. It is important for 
 - shooting
 - multiplayer 
 
-Some dynamics to cosnider focusing on. IT cna help to focus on a dynamic and then brainstorm mechanics to fit that dynamic. 
 
 
 ---
@@ -71,25 +67,25 @@ This repo includes the following files:
 ## [2] Assessment
 
 
-
-
 ✅  **This project will be assessed on the following criteria:**
 - **Planning** 
-    - I can consider the aesthetics of my game
-    - I can consider a new mechanic for my game 
-    - I can create a UML diagrams and consider how the methods will work 
+    - I can define a specific aesthetic for my game and explain how my art choices support it
+    - I can describe a new game mechanic and outline the logic needed to implement it
+    - I can design sprites and a map layout  
+    - I can create UML diagrams that accurately plan the attributes and methods 
 - **Iterative Development**
     - I can track the development of my project by successfully committing to Github a minimum of each class work day, preferably after each work session
     - I can write descriptive commit messages that accurately describe the changes made
     - I can systematically break down my project into smaller chunks  
 - **Aesthetic Implementations**
-    - I can use the Pyxel Editor to create a custom tileset that includes an array of sprites that matches my planning document
-    - I can implement my tileset into my game so each sprite works as expected 
+    - I can use the Pyxel Editor to draw custom tiles and sprites that match the designs in my planning doc
+    - I can implement a functional map where walls, floors, and sprites are placed correctly according to my sketch.
 - **Mechanic Implementation**
-    - I can create a new class or build upon on existing class to add a new mechanic 
-    - I can test my game thoroughly to ensure the mechanic works as planned
+    - I can extend the game’s functionality by adding a new class or building on an existing class
+    - I can develop a new mechanic so that it works as planned during gameplay
+    - I can test my game thoroughly to ensure the mechanic works in different scenarios
 - **Readability**
-    - I can use descriptive names for modules, variables, classes, and methods
+    - I can use descriptive names for modules, classes, attributes, and methods f
     - I can write descriptive comments to describe complex pieces of the code 
 
 **For each criteria you will be assessed on a score from 0-3. With 5 criteria, there is a total of 15 potential points.** 
