@@ -1,6 +1,6 @@
 ---
-title: 6. Pyxel Maze
-draft: True
+title: 4. Pyxel Maze
+# draft: True
 ---
 
 # Pyxel Maze Lab
