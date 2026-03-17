@@ -2,7 +2,7 @@
 title: "Act II: Planning"
 type: unit
 slug: unit02_web_design
-draft: true
+draft: false
 ---
 
 # Act II: Web App Pitch 
@@ -28,15 +28,18 @@ Act II focuses on planning and outlining a Web Application. Your will need to co
 
 For this project, you will use a Canva white-board to design the frontend and backend of your Web App.
 
-👀 **Join the Canva class with [this link](https://www.canva.com/brand/join?token=2bPaGeVjpXOYx1TSsNXJYQ&brandingVariant=edu&invitationDestinationType=group&postJoinPath=https%3A%2F%2Fwww.canva.com%2Ffolder%2FFAFlUKKfooo) and find your group's board.** 
+
+💻 **Open the Whimsical Board Template [here](https://whimsical.com/isf-edu3/web-apps-project-planning-document-template-PCBGAsXVVt3QFqQvtUaqHM)** Be sure to open this in a new tab.
+
+💻 **In a another new tab, create a new Whimsical Board [here](https://whimsical.com/a) on your Team.**
+
+💻 **Select all sections of the template and copy & paste it to your new board.**
+
+💻 **Invite your teammate and both teachers (eqbrown@isf.edu.hk & yjhan@isf.edu.hk) to your team.**
 
 
 ✏️ **You and your teammate(s) must work together to plan the backend and frontend of your web app.**
 
-0. project description
-0. database diagram
-0. flow chart of user interaction
-0. wireframe 
 
 🔍 **A few resources:** 
 - [Google Fonts](https://fonts.google.com/)
@@ -93,8 +96,10 @@ Your pitch should include:
 
 {{< deliverables  >}}
 
-**🗓️ Due Date: 30 April**
+**🗓️ Due Date**
 - The planning document is due at the start of class
+    - CS10.1 - 30 March
+    - CS10.2 - 26 March 
 - You will pitch your web app during the class
 
 **📄 Deliverables**
