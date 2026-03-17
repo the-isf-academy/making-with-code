@@ -2,7 +2,7 @@
 title: "Act II: Planning"
 type: unit
 slug: unit02_web_design
-draft: true
+draft: false
 ---
 
 # Act II: Web App Pitch 
@@ -28,15 +28,18 @@ Act II focuses on planning and outlining a Web Application. Your will need to co
 
 For this project, you will use a Canva white-board to design the frontend and backend of your Web App.
 
-👀 **Join the Canva class with [this link](https://www.canva.com/brand/join?token=2bPaGeVjpXOYx1TSsNXJYQ&brandingVariant=edu&invitationDestinationType=group&postJoinPath=https%3A%2F%2Fwww.canva.com%2Ffolder%2FFAFlUKKfooo) and find your group's board.** 
+
+💻 **Open the Whimsical Board Template [here](https://whimsical.com/isf-edu3/web-apps-project-planning-document-template-PCBGAsXVVt3QFqQvtUaqHM)** Be sure to open this in a new tab.
+
+💻 **In a another new tab, create a new Whimsical Board [here](https://whimsical.com/a) on your Team.**
+
+💻 **Select all sections of the template and copy & paste it to your new board.**
+
+💻 **Invite your teammate and both teachers (eqbrown@isf.edu.hk & yjhan@isf.edu.hk) to your team.**
 
 
 ✏️ **You and your teammate(s) must work together to plan the backend and frontend of your web app.**
 
-0. project description
-0. database diagram
-0. flow chart of user interaction
-0. wireframe 
 
 🔍 **A few resources:** 
 - [Google Fonts](https://fonts.google.com/)
@@ -64,30 +67,26 @@ Your pitch should include:
 
 
 ✅  **This project will be assessed on the following criteria:**
-- **Project Planning: Backend [3]**
+- **Project Planning: Backend**
     - We can describe the purpose and function of our web application
-    -  We can consider the structure of our database with appropriate field types and default values
+    -  We can document the structure of our database with appropriate field types and default values
     - We can consider useful Python helper functions to access and manipulate our database 
-    - We can write easily understandable, logical URL path names
-    - We can consider functions to handle the HTTP request and response cycle
-- **Project Planning: Frontend [3]**
+    - We can list and document all required Flask app function routes with their URLs, HTTP methods, and purpose
+- **Project Planning: Frontend**
     - We can plan the context, colors, fonts, and content prior to development
-    - We can design a detailed wireframe with descriptions to explain specific interactions for each page
-    - We can include arrows to indicate how the wireframe pages are connected
-    - We can include example data from the database to demonstrate how the information will be displayed
-- **Pitch Presentation [3]**
-    - We can present the Web App idea in a clear, engaging manner
-    - We can design slides that are easy to read and include relevant visual aids 
+    - We can design detailed wireframes for all key templates with descriptions to explain specific interactions for each page
+    - We can include example data from the database on the wireframe
+    - We can include arrows on the wireframes to indicate how a user will navigate through the web application
+- **Pitch Presentation**
+    - We can prepare slides that easy to read and include relevant visual aids
+    - We can explain our Web App idea by describing its function and its intended users
     - We can respond thoughtfully to audience feedback, demonstrating and understanding of their suggestions   
 
-<!-- - **Success Claims [3]**
-    - We can write success claims that are specific, measurable and testable to evaluate the web app 
-    - We can write example test cases for each success claim to demonstrate how the claim will be evaluated -->
 
 **For each criteria you will be assessed on a score from 0-3.** 
 - 0 - no evidence of the practice
 - 1 - limited evidence of the practice
-- 2 - adequate evidence of the practice
+- 2 - satisfactory evidence of the practice
 - 3 - substantial evidence of the practice
 
 
@@ -97,8 +96,10 @@ Your pitch should include:
 
 {{< deliverables  >}}
 
-**🗓️ Due Date: 30 April**
+**🗓️ Due Date**
 - The planning document is due at the start of class
+    - CS10.1 - 30 March
+    - CS10.2 - 26 March 
 - You will pitch your web app during the class
 
 **📄 Deliverables**
