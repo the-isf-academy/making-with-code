@@ -26,17 +26,15 @@ Act II focuses on planning and outlining a Web Application. Your will need to co
 
 ## [1] Design Document
 
-For this project, you will use a Canva white-board to design the frontend and backend of your Web App.
-
-
-💻 **Open the Whimsical Board Template [here](https://whimsical.com/isf-edu3/web-apps-project-planning-document-template-PCBGAsXVVt3QFqQvtUaqHM)** Be sure to open this in a new tab.
+For this project, you will use a Whimsical board to design the frontend and backend of your Web App.
 
 💻 **In a another new tab, create a new Whimsical Board [here](https://whimsical.com/a) on your Team.**
 
-💻 **Select all sections of the template and copy & paste it to your new board.**
+💻 **Create a sharable link and add it to the Google sheet**
 
-💻 **Invite your teammate and both teachers (eqbrown@isf.edu.hk & yjhan@isf.edu.hk) to your team.**
-
+💻 **Open the Whimsical Board Template [here](https://whimsical.com/isf-edu3/web-apps-project-planning-document-template-PCBGAsXVVt3QFqQvtUaqHM)** 
+- Select `Copy To` 
+- Select Your Board 
 
 ✏️ **You and your teammate(s) must work together to plan the backend and frontend of your web app.**
 
@@ -97,10 +95,10 @@ Your pitch should include:
 {{< deliverables  >}}
 
 **🗓️ Due Date**
-- The planning document is due at the start of class
-    - CS10.1 - 30 March
-    - CS10.2 - 26 March 
+- The planning document: 30 March 8 am
 - You will pitch your web app during the class
+    - CS10.1 - 30 March
+    - CS10.2 - 26 March
 
 **📄 Deliverables**
 - A Whimsical document with your Web App planning
