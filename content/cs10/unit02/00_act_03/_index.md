@@ -41,18 +41,27 @@ poetry install
 
 ✅  **This project will be assessed based on your ability to achieve your success claims :**
 
-- **Achievement of MVP Success Claims [3]**
-    - We are able to develop the MVP of our web 
-    - We can provide appropriate examples to demonstrate success 
-- **Iterative Development [3]**
-    - I can consistently push my work to Github with descriptive commit messages
-    - I can work on my MVP in small chunks
+- **Backend**
+    - We can define the SQL table with appropriate fields, data types, and default values
+    - We can write abstract SQL helper functions to access and manipulate the database
+    - We can write route functions to appropriately handle HTTP Requests and return valid responses
+    - We can implement forms for user interaction
+- **Frontend** 
+    - We can decompose our HTML into template files 
+    - We can write a readable, correctly structured site using HTML elements 
+    - We can write readable, well abstracted and reusable CSS rules to minimize code duplication
+    - We can use effectively use classes and IDs to target specific elements for styling
+- **Iterative Development**
+    - I can track the development of my project by successfully committing to Github at least once per work session
+    - I can track my current progress and next steps by writing specific commit messages 
+    - I can work on the MYP in small chunks and complete it by the deadline
     - I can consistently update my `README.md` file with works cited
+
 
 **Your group will be awarded a score from 0-3. There are 6 working day.** 
 - 0 - no evidence of the success claims
 - 1 - limited evidence of the success claims
-- 2 - adequate evidence of the success claims
+- 2 - satisfactory evidence of the success claims
 - 3 - substantial evidence of the success claims
 
 
