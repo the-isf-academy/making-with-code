@@ -95,9 +95,11 @@ Your pitch should include:
 {{< deliverables  >}}
 
 **🗓️ Due Date**
-- The planning document: 30 March 8 am
+- The planning document
+    - CS10.1 -  26 March, end of class
+    - CS10.2 - 26 March, start of class 
 - You will pitch your web app during the class
-    - CS10.1 - 30 March
+    - CS10.1 - 16 April
     - CS10.2 - 26 March
 
 **📄 Deliverables**
