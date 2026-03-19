@@ -1,5 +1,5 @@
 ---
-title: 3. Pyxel Platformer Game
+title: 5. Pyxel Platformer
 draft: True
 ---
 
@@ -59,8 +59,17 @@ This repo includes these key files:
 
 ---
 
+## [1] Explore the Game
 
-## [1] Tilesets
+👾✏️ **Explore the game, and follow along with the worksheet!** You can use the arrow keys to move around and space to jump.
+
+
+```shell
+python game.py 
+```
+
+
+<!-- ## [1] Tilesets
 
 💻 **First, play the game `python game.py`.** Use the arrows `<` `>` to move sideways and `space` to jump. Note the gravity and note the walls. There are multiple different tiles that are registered as walls.
 
@@ -148,7 +157,7 @@ pyxel.playm(msc=0, loop=False)    # Play music bank 0, corresponds to music edit
 pyxel.stop()                      # Stop all music
 ```
 
-
+ -->
 
 
 ---
@@ -170,7 +179,7 @@ pyxel.stop()                      # Stop all music
 
 {{< /deliverables >}}
 
----
+<!-- ---
 
 ## [5] Extensions 
 
@@ -180,5 +189,5 @@ pyxel.stop()                      # Stop all music
 - simple Enemies that move back and forth - if Player collides with them, the game is over
 
 
-💻 **Experiment with gravity by customizing the attributes in the `Player` class.** 
+💻 **Experiment with gravity by customizing the attributes in the `Player` class.**  -->
 
