@@ -11,7 +11,7 @@ Act II focuses on planning and outlining a Web Application. Your will need to co
 
 ## [0] Project Overview
 
-🎨 **Design Brief:** In this project, you must create a social computing Web App for G6 tutor groups. Students should be able to contribute, interact, view, and/or modify the Database. It is up to your team to decide what the App is its features. 
+🎨 **Design Brief:** In this project, you must create a Web App. Anyone should be able to contribute, interact, view, and/or modify the Database. It is up to your team to decide what the App is its features. 
 
 🤔 **Here are a few ideas:**
 - [a few of last year's projects](http://sycs.student.isf.edu.hk/)
@@ -28,9 +28,11 @@ Act II focuses on planning and outlining a Web Application. Your will need to co
 
 For this project, you will use a Whimsical board to design the frontend and backend of your Web App.
 
-💻 **In a another new tab, create a new Whimsical Board [here](https://whimsical.com/a) on your Team.**
+💻 **One team member should go to [Whimsical](https://whimsical.com/a) and select "Everyone at ISF Edu".**
 
-💻 **Create a sharable link and add it to the Google sheet**
+💻 **Click `settings`, `manage members`, then `invite new members`**
+
+💻 **On the bottom, click `invite by sharable link` and add the link to the [spreadsheet](https://docs.google.com/spreadsheets/d/18hwNj9-Lt5oG_EG97rUSmDiEerW6NCRkvIjZTAoKvZ4/edit?gid=0#gid=0). Your team member should use this spreadsheet to access the planning doc.**
 
 💻 **Open the Whimsical Board Template [here](https://whimsical.com/isf-edu3/web-apps-project-planning-document-template-PCBGAsXVVt3QFqQvtUaqHM)** 
 - Select `Copy To` 
