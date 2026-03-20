@@ -1,6 +1,6 @@
 ---
 title: 5. Pyxel Platformer
-draft: True
+# draft: True
 ---
 
 # Platformer Game Lab
