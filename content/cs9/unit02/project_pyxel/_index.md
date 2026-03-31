@@ -46,12 +46,12 @@ This is a big project with a lot of room for customization. It is important for 
 cd ~/desktop/making_with_code/unit02_games
 ```
 
-{{< code-action "Clone your starter code." >}} Be sure to change `yourgithubusername` to your actual Github username.
+{{< code-action "Clone your starter code." >}} Be sure to change `GROUPNAME` to your group name.
 ```shell
-git clone https://github.com/the-isf-academy/project_game_story_yourgithubusername
+git clone https://github.com/the-isf-academy/project_pyxel_GROUPNAME
 ```
 ```shell
-cd project_game_story_yourgithubusername
+cd project_pyxel_GROUPNAME
 ```
 
 {{< code-action "Enter the Poetry shell and install the requirements:" >}}
@@ -61,7 +61,11 @@ poetry install
 ```
 
 This repo includes the following files:
-- UPDATE
+- assets.pyxres
+- coin.py
+- game.py
+- helpers.py
+- player.py
 
 ---
 ## [2] Assessment
@@ -103,8 +107,13 @@ This repo includes the following files:
 {{< deliverables  "" >}}
 
 - A `Unit 02 Games Project: Planning Document` 
-- A `project_game_story` repository will include some if not all the following files:
-    - UPDATE!!! 
+- A `project_pyxel_GROUPNAME` repository will include some if not all the following files:
+    - assets.pyxres
+    - coin.py
+    - game.py
+    - helpers.py
+    - player.py
+    - any other files you created
 <!-- 
 ---
 **🗓️ Timeline**
