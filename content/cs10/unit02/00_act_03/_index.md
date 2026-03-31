@@ -2,7 +2,7 @@
 title: "Act III: Developing the App"
 type: unit
 slug: unit02_web_design
-draft: true
+# draft: true
 ---
 
 # Act III: Developing the App 
@@ -67,7 +67,7 @@ poetry install
 - **Iterative Development**
     - I can track the development of my project by successfully committing to Github at least once per work session
     - I can track my current progress and next steps by writing specific commit messages 
-    - I can work on the MYP in small chunks and complete it by the deadline
+    - I can work on the MVP in small chunks and complete it by the deadline
     - I can consistently update my `README.md` file with works cited
 
 
