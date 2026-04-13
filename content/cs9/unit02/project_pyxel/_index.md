@@ -1,6 +1,6 @@
 ---
 Title: Project Pyxel
-draft: True
+# draft: True
 ---
 
 # Unit 02 Games: Pyxel Project
@@ -9,7 +9,7 @@ UPDATE PAGE FOR PYXEL
 
 🎨 **Design Prompt:** You will create a maze game or a platforming game. You must include at least one new, unique mechanic.
 
-{{< figure src="![images/courses/cs9/unit02/pyxel6.png](https://private-user-images.githubusercontent.com/678802/421119679-9cc84780-1e72-4484-b71b-ee8669cb8904.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzMxMTQxNzEsIm5iZiI6MTc3MzExMzg3MSwicGF0aCI6Ii82Nzg4MDIvNDIxMTE5Njc5LTljYzg0NzgwLTFlNzItNDQ4NC1iNzFiLWVlODY2OWNiODkwNC5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzEwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMxMFQwMzM3NTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ZmFkYjgzM2RhZWFmZDFjZjk4ZWUzNGY5ZjljMjRmODc1NGUwZDhlNDllNGVmNThmY2VjNDZlNTJiNzhkNGJiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1St9yONqqsPW4mlLufXM8RgfoPNvj4VtvoE9iR5129U)" width="50%" >}}
+<!-- {{< figure src="![images/courses/cs9/unit02/pyxel6.png](https://private-user-images.githubusercontent.com/678802/421119679-9cc84780-1e72-4484-b71b-ee8669cb8904.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzMxMTQxNzEsIm5iZiI6MTc3MzExMzg3MSwicGF0aCI6Ii82Nzg4MDIvNDIxMTE5Njc5LTljYzg0NzgwLTFlNzItNDQ4NC1iNzFiLWVlODY2OWNiODkwNC5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzEwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMxMFQwMzM3NTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ZmFkYjgzM2RhZWFmZDFjZjk4ZWUzNGY5ZjljMjRmODc1NGUwZDhlNDllNGVmNThmY2VjNDZlNTJiNzhkNGJiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1St9yONqqsPW4mlLufXM8RgfoPNvj4VtvoE9iR5129U)" width="50%" >}} -->
 
 
 
@@ -46,12 +46,12 @@ This is a big project with a lot of room for customization. It is important for 
 cd ~/desktop/making_with_code/unit02_games
 ```
 
-{{< code-action "Clone your starter code." >}} Be sure to change `yourgithubusername` to your actual Github username.
+{{< code-action "Clone your starter code." >}} Be sure to change `GROUPNAME` to your group name.
 ```shell
-git clone https://github.com/the-isf-academy/project_game_story_yourgithubusername
+git clone https://github.com/the-isf-academy/project_pyxel_GROUPNAME
 ```
 ```shell
-cd project_game_story_yourgithubusername
+cd project_pyxel_GROUPNAME
 ```
 
 {{< code-action "Enter the Poetry shell and install the requirements:" >}}
@@ -61,7 +61,11 @@ poetry install
 ```
 
 This repo includes the following files:
-- UPDATE
+- assets.pyxres
+- coin.py
+- game.py
+- helpers.py
+- player.py
 
 ---
 ## [2] Assessment
@@ -103,8 +107,13 @@ This repo includes the following files:
 {{< deliverables  "" >}}
 
 - A `Unit 02 Games Project: Planning Document` 
-- A `project_game_story` repository will include some if not all the following files:
-    - UPDATE!!! 
+- A `project_pyxel_GROUPNAME` repository will include some if not all the following files:
+    - assets.pyxres
+    - coin.py
+    - game.py
+    - helpers.py
+    - player.py
+    - any other files you created
 <!-- 
 ---
 **🗓️ Timeline**
@@ -135,12 +144,19 @@ This repo includes the following files:
 
 ## [4] Resources
 
-ADD TIPS FOR PYXEL & LOOKING AT TILESETS
+<!-- ADD TIPS FOR PYXEL & LOOKING AT TILESETS -->
 
 
 ### 👾 Games for inspiration
 
-REPLCAE WITH GAMES 
+- [Student example: dinoducka](http://sycs.student.isf.edu.hk/games/dinoducka)
+- [Student example: amqndac](http://sycs.student.isf.edu.hk/games/amqndac)
+- [Hopping Hiyoko](https://kitao.github.io/pyxel/web/launcher/?play=rococomico.Pyxel_games.hopping_hiyoko.hopping_hiyoko&gamepad=enabled)
+- [Super Mario](https://supermarioplay.com/)
+- [Donkey Kong](https://freekong.org/)
+- [Frogger](https://happyhopper.org/)
+- [Space Invaders](https://freeinvaders.org/)
+- [Flappy Bird](https://flappybird.io/)
 
 ---
 
