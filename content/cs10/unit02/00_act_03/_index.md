@@ -2,7 +2,7 @@
 title: "Act III: Developing the App"
 type: unit
 slug: unit02_web_design
-draft: true
+# draft: true
 ---
 
 # Act III: Developing the App 
@@ -19,10 +19,23 @@ In this lab, you will be working in groups, storing your shared code in your gro
 
 ```shell
 cd ~/desktop/making_with_code/unit05_webapps/
-git clone https://github.com/the-isf-academy/project_webapp_group_name.git
-cd project_web_app_group#
+git clone https://github.com/the-isf-academy/project_webapp_flask_GROUPNAME
+cd project_webapp_flask_GROUPNAME
 ```
-> replace `#` with your group number
+> replace `GROUPNAME` with your group name
+| Group members | Group name |
+| --- | --- |
+| Ryan & Camilla | swipetune |
+| Xandra & Mila | 919 |
+| Harry & Ben | harry_ben |
+| Ethan & Max | sports |
+| Hin Yeung & Justin | McNiche |
+| Kabir & Trevor | specialz |
+| Hin & Donny | fishfisher |
+| Alex & Andy | nba3k |
+| Toby & Elliott | phonk |
+| Mia & Samuel | pompeii |
+| Rex & Darren | chinese_monsters |
 
 
 {{< code-action "Enter the poetry shell." >}}
@@ -54,11 +67,11 @@ poetry install
 - **Iterative Development**
     - I can track the development of my project by successfully committing to Github at least once per work session
     - I can track my current progress and next steps by writing specific commit messages 
-    - I can work on the MYP in small chunks and complete it by the deadline
+    - I can work on the MVP in small chunks and complete it by the deadline
     - I can consistently update my `README.md` file with works cited
 
 
-**Your group will be awarded a score from 0-3. There are 6 working day.** 
+**Your group will be awarded a score from 0-3. There are 6 working days.** 
 - 0 - no evidence of the success claims
 - 1 - limited evidence of the success claims
 - 2 - satisfactory evidence of the success claims
@@ -73,7 +86,7 @@ poetry install
 {{< deliverables  "At the end of each day, all of the following should be up to date." >}}
 
 - Your Github repository with the most recent app code
-- Your README.md with your works cited
+- Your `README.md` with your works cited
 
 {{< code-action "Push your work to Github:" >}}
 - `git status`
@@ -91,7 +104,7 @@ poetry install
 
 {{< code-action "To run a local server" >}}  
 ```shell
-python app
+python app.py
 ```
 
 {{< code-action "To open the database in DB Browser" >}}  
