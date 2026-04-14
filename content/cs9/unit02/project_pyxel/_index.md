@@ -5,7 +5,6 @@ Title: Project Pyxel
 
 # Unit 02 Games: Pyxel Project
 
-UPDATE PAGE FOR PYXEL
 
 🎨 **Design Prompt:** You will create a maze game or a platforming game. You must include at least one new, unique mechanic.
 
@@ -54,6 +53,16 @@ git clone https://github.com/the-isf-academy/project_pyxel_GROUPNAME
 cd project_pyxel_GROUPNAME
 ```
 
+> replace `GROUPNAME` with your group name
+| Group members | Group name |
+| --- | --- |
+| Junhong & Katie | school_game |
+| Dylan & Curtis | tank_vs_zomebies |
+| Samuel & Carson | samuel_and_carson |
+| Eunice & Tyler | maze_shooter |
+| Leda & Anthony | the_water_house_brothers |
+| Ian | kowloon_platformer |
+
 {{< code-action "Enter the Poetry shell and install the requirements:" >}}
 ```shell
 poetry shell
@@ -61,11 +70,12 @@ poetry install
 ```
 
 This repo includes the following files:
-- assets.pyxres
-- coin.py
-- game.py
-- helpers.py
-- player.py
+- `assets.pyxres`
+- `coin.py`
+- `game.py`
+- `helpers.py`
+- `player.py`
+- `camera.py` (for platformer game)
 
 ---
 ## [2] Assessment
