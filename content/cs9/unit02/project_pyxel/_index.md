@@ -141,13 +141,32 @@ This repo includes the following files:
 
 ---
 
-{{< code-action "Push your work to Github:" >}}
+{{< code-action "Merge your work to Github:" >}}
+Follow the steps exactly in order to merge (combine) your work on github. Let a teacher know if you get any error message. 
+
+Student 1:
 - `git status`
 - `git add -A`
 - `git status`
 - `git commit -m "your message goes here"`
     - be sure to customize this message, do not copy and paste this line
 - `git push`
+
+Student 2:
+- `git pull`
+- `git status`
+- `git add -A`
+- `git status`
+- `git commit -m "your message goes here"`
+    - be sure to customize this message, do not copy and paste this line
+    - If you enter a text editor on your terminal, asking for merge message:
+        - Press `esc`
+        - Type `:wq`
+        - Press `enter`
+- `git push`
+
+Student 1:
+- `git pull`
 {{< /deliverables >}}
 
 ---
