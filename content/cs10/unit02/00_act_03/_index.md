@@ -86,7 +86,7 @@ poetry install
 {{< deliverables  "At the end of each day, all of the following should be up to date." >}}
 
 - Your Github repository with the most recent app code
-- Your README.md with your works cited
+- Your `README.md` with your works cited
 
 {{< code-action "Push your work to Github:" >}}
 - `git status`
