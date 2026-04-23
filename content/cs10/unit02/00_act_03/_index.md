@@ -71,7 +71,7 @@ poetry install
     - I can consistently update my `README.md` file with works cited
 
 
-**Your group will be awarded a score from 0-3. There are 6 working days.** 
+**Your group will be awarded a score from 0-3.** 
 - 0 - no evidence of the success claims
 - 1 - limited evidence of the success claims
 - 2 - satisfactory evidence of the success claims
@@ -83,8 +83,16 @@ poetry install
 
 ## [2] Deliverables
 
-{{< deliverables  "At the end of each day, all of the following should be up to date." >}}
 
+{{< deliverables  "" >}}
+
+📅 **Project Due Dates - final push at the end of class**
+- cs10.2.1 - 14 May
+- cs10.2.2 - 12 May
+
+---
+
+**At the end of each day, all of the following should be up to date.**
 - Your Github repository with the most recent app code
 - Your `README.md` with your works cited
 
