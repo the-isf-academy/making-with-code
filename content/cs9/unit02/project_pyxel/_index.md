@@ -1,15 +1,14 @@
 ---
 Title: Project Pyxel
-draft: True
+# draft: True
 ---
 
 # Unit 02 Games: Pyxel Project
 
-UPDATE PAGE FOR PYXEL
 
 🎨 **Design Prompt:** You will create a maze game or a platforming game. You must include at least one new, unique mechanic.
 
-{{< figure src="![images/courses/cs9/unit02/pyxel6.png](https://private-user-images.githubusercontent.com/678802/421119679-9cc84780-1e72-4484-b71b-ee8669cb8904.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzMxMTQxNzEsIm5iZiI6MTc3MzExMzg3MSwicGF0aCI6Ii82Nzg4MDIvNDIxMTE5Njc5LTljYzg0NzgwLTFlNzItNDQ4NC1iNzFiLWVlODY2OWNiODkwNC5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzEwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMxMFQwMzM3NTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ZmFkYjgzM2RhZWFmZDFjZjk4ZWUzNGY5ZjljMjRmODc1NGUwZDhlNDllNGVmNThmY2VjNDZlNTJiNzhkNGJiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1St9yONqqsPW4mlLufXM8RgfoPNvj4VtvoE9iR5129U)" width="50%" >}}
+<!-- {{< figure src="![images/courses/cs9/unit02/pyxel6.png](https://private-user-images.githubusercontent.com/678802/421119679-9cc84780-1e72-4484-b71b-ee8669cb8904.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzMxMTQxNzEsIm5iZiI6MTc3MzExMzg3MSwicGF0aCI6Ii82Nzg4MDIvNDIxMTE5Njc5LTljYzg0NzgwLTFlNzItNDQ4NC1iNzFiLWVlODY2OWNiODkwNC5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzEwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMxMFQwMzM3NTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ZmFkYjgzM2RhZWFmZDFjZjk4ZWUzNGY5ZjljMjRmODc1NGUwZDhlNDllNGVmNThmY2VjNDZlNTJiNzhkNGJiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1St9yONqqsPW4mlLufXM8RgfoPNvj4VtvoE9iR5129U)" width="50%" >}} -->
 
 
 
@@ -46,13 +45,23 @@ This is a big project with a lot of room for customization. It is important for 
 cd ~/desktop/making_with_code/unit02_games
 ```
 
-{{< code-action "Clone your starter code." >}} Be sure to change `yourgithubusername` to your actual Github username.
+{{< code-action "Clone your starter code." >}} Be sure to change `GROUPNAME` to your group name.
 ```shell
-git clone https://github.com/the-isf-academy/project_game_story_yourgithubusername
+git clone https://github.com/the-isf-academy/project_pyxel_GROUPNAME
 ```
 ```shell
-cd project_game_story_yourgithubusername
+cd project_pyxel_GROUPNAME
 ```
+
+> replace `GROUPNAME` with your group name
+| Group members | Group name |
+| --- | --- |
+| Junhong & Katie | school_game |
+| Dylan & Curtis | tank_vs_zomebies |
+| Samuel & Carson | samuel_and_carson |
+| Eunice & Tyler | maze_shooter |
+| Leda & Anthony | the_water_house_brothers |
+| Ian | kowloon_platformer |
 
 {{< code-action "Enter the Poetry shell and install the requirements:" >}}
 ```shell
@@ -61,7 +70,12 @@ poetry install
 ```
 
 This repo includes the following files:
-- UPDATE
+- `assets.pyxres`
+- `coin.py`
+- `game.py`
+- `helpers.py`
+- `player.py`
+- `camera.py` (for platformer game)
 
 ---
 ## [2] Assessment
@@ -102,45 +116,57 @@ This repo includes the following files:
 
 {{< deliverables  "" >}}
 
-- A `Unit 02 Games Project: Planning Document` 
-- A `project_game_story` repository will include some if not all the following files:
-    - UPDATE!!! 
-<!-- 
----
-**🗓️ Timeline**
-
-**You have 5 in class days to complete this project.**
-
-
-| CS9.1 Dates  | CS9.2 Dates  | Agenda                           |
-|--------------|--------------|----------------------------------|
-| 19 Apr       | 17 Apr       | Project Intro & Planning Booklet |
-| 24 Apr       | 22 Apr       | Work Day                         |
-| 25 Apr       | 23 Apr       | Work Day                         |
-| 26 Apr       | 25 Apr       | Work Day                         |
-| 30 Apr       | 29 Apr       | Due at End of Class              | -->
+📅 **Project due at the end of class:**
+- G9 - 11 May
+- G10 - 12 May 
 
 ---
 
-{{< code-action "Push your work to Github:" >}}
+{{< code-action "Merge your work to Github:" >}}
+Follow the steps exactly in order to merge (combine) your work on github. Let a teacher know if you get any error message. 
+
+Student 1:
 - `git status`
 - `git add -A`
 - `git status`
 - `git commit -m "your message goes here"`
     - be sure to customize this message, do not copy and paste this line
 - `git push`
+
+Student 2:
+- `git pull`
+- `git status`
+- `git add -A`
+- `git status`
+- `git commit -m "your message goes here"`
+    - be sure to customize this message, do not copy and paste this line
+    - If you enter a text editor on your terminal, asking for merge message:
+        - Press `esc`
+        - Type `:wq`
+        - Press `enter`
+- `git push`
+
+Student 1:
+- `git pull`
 {{< /deliverables >}}
 
 ---
 
 ## [4] Resources
 
-ADD TIPS FOR PYXEL & LOOKING AT TILESETS
+<!-- ADD TIPS FOR PYXEL & LOOKING AT TILESETS -->
 
 
 ### 👾 Games for inspiration
 
-REPLCAE WITH GAMES 
+- [Student example: dinoducka](http://sycs.student.isf.edu.hk/games/dinoducka)
+- [Student example: amqndac](http://sycs.student.isf.edu.hk/games/amqndac)
+- [Hopping Hiyoko](https://kitao.github.io/pyxel/web/launcher/?play=rococomico.Pyxel_games.hopping_hiyoko.hopping_hiyoko&gamepad=enabled)
+- [Super Mario](https://supermarioplay.com/)
+- [Donkey Kong](https://freekong.org/)
+- [Frogger](https://happyhopper.org/)
+- [Space Invaders](https://freeinvaders.org/)
+- [Flappy Bird](https://flappybird.io/)
 
 ---
 
