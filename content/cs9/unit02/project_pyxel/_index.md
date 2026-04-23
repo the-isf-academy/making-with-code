@@ -116,28 +116,9 @@ This repo includes the following files:
 
 {{< deliverables  "" >}}
 
-- A `Unit 02 Games Project: Planning Document` 
-- A `project_pyxel_GROUPNAME` repository will include some if not all the following files:
-    - assets.pyxres
-    - coin.py
-    - game.py
-    - helpers.py
-    - player.py
-    - any other files you created
-<!-- 
----
-**🗓️ Timeline**
-
-**You have 5 in class days to complete this project.**
-
-
-| CS9.1 Dates  | CS9.2 Dates  | Agenda                           |
-|--------------|--------------|----------------------------------|
-| 19 Apr       | 17 Apr       | Project Intro & Planning Booklet |
-| 24 Apr       | 22 Apr       | Work Day                         |
-| 25 Apr       | 23 Apr       | Work Day                         |
-| 26 Apr       | 25 Apr       | Work Day                         |
-| 30 Apr       | 29 Apr       | Due at End of Class              | -->
+📅 **Project due at the end of class:**
+- G9 - 11 May
+- G10 - 12 May 
 
 ---
 
