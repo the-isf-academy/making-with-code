@@ -1,7 +1,7 @@
 ---
 title: 06. Functions I
 
-# draft: true
+draft: true
 ---
 # Functions Lab | Part I
 

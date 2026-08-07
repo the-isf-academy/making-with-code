@@ -1,6 +1,6 @@
 ---
 title: 08. Version Control
-# draft: true
+draft: true
 ---
 # Version Control Lab
 

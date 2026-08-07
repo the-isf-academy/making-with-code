@@ -1,7 +1,7 @@
 ---
 title: 05. While Loops
 
-# draft: true
+draft: true
 ---
 
 # While loops
