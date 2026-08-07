@@ -33,6 +33,7 @@ python app.py
 
 
 ---
+
 ## [1] Creating a new color with a form
 
 **Now we're going to extend the app to let users create their own colors.** For this we use [wtfforms](https://wtforms.readthedocs.io/en/3.2.x/) and [flask-wtf](https://flask-wtf.readthedocs.io/en/1.2.x/) libraries. 
