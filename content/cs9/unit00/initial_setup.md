@@ -13,22 +13,32 @@ If you get stuck or are unsure what to do, first check out the debugging section
 
 
 ---
-## Visual Studio Code
+
+## VSCodium 
+
+{{< figure src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEs4IkfQwl2bFc7MHdgg_6FQYmlRCyd_O83WSA5hnNzQoYDdWQsOb2nNk&s=10" width="10%" alt-text="mwc setup" >}}
+
 *This is the editor that you will use to write your code.*
 
-(0) **Download and Install.** [Open this link](https://code.visualstudio.com/), click "Download for macOS," or click on "other plaforms" to choose your operating system. Follow the installation instructions.
+
+(0) **Download VSCodium.** [Click this link for Mac](https://github.com/VSCodium/vscodium/releases/download/1.126.04524/VSCodium.x64.1.126.04524.dmg) and [this link for Windows](https://github.com/VSCodium/vscodium/releases/download/1.126.04524/VSCodiumUserSetup-x64-1.126.04524.exe).
+
 
 (1) **Drag to Applications Folder.** Open up the `Finder` application on your Mac. On the left hand side, click on `Downloads`.  Drag `Visual Studio Code` to the folder named `Applications`.
 
-{{< figure src="images/courses/cs9/unit00/-000_initialsetup12.gif" width="25%" alt-text="mwc setup" >}}
+{{< figure src="images/courses/cs9/unit00/-000_initialsetup16.png" width="50%" alt-text="mwc setup" >}}
 
-(2) **Install Shell Commands.** Open up your freshly installed `Visual Studio Code` application. From the top menu, select `View > Command Pallete`. 
+
+(2) **Install Shell Commands.** Open up your freshly installed `VSCodium` application. From the top menu, select `View > Command Pallete`. 
 
 {{< figure src="images/courses/cs9/unit00/-000_initialsetup7.png" width="75%" alt-text="mwc setup" >}}
 
-In the prompt, type `Shell Commands` and click on the first option to install the `code` command in your PATH.
+In the prompt, type `Shell Commands` and click on the first option to install the `codium` command in your PATH. This may require you to enter your Admin password. 
 
 {{< figure src="images/courses/cs9/unit00/-000_initialsetup6.png" width="75%" alt-text="mwc setup" >}}
+
+
+*You may now close VSCodium.*
 
 ---
 
@@ -66,6 +76,11 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 ```
 {{</ aside >}}
 
+
+*You may now close the Terminal.*
+
+
+
 ---
 
 ## Installing Python
@@ -75,10 +90,10 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 
 
 (1) **Once the installation finishes, you will see a Finder window showing what was installed**.
-(If you closed the window, open Finder, click on "Applications," and then "Python 3.13" (or whatever version of Python you just installed).
+(If you closed the window, open Finder, click on "Applications," and then "Python 3.14" (or whatever version of Python you just installed).
 
 
-(2) **Check Python installed successfully by typing `python3 --version` into the Terminal.** You should see version number  `3.13`.
+(2) **Check Python installed successfully by typing `python3 --version` into the Terminal.** You should see version number  `3.14`.
 
 {{< figure src="images/courses/cs9/unit00/-000_initialsetup14.png" width="50%" alt-text="mwc setup" >}}
 
@@ -98,10 +113,15 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 
 <!-- {{< youtube "OiCiOgeyaWA" >}} -->
 
+
+*You may now close the Terminal windows.*
+
 ---
 
 ## Installing Homebrew
 *Homebrew helps you install different libraries and packages*
+
+{{< code-action "Open a new Terminal window." >}}
 
 {{< code-action "Run the below command to install homebrew." >}} This will install homebrew onto your computer. This may take up to an hour to complete. Don't worry, you can still use your computer and have it running in the background. If you already have homebrew, then this step will be quick.
 > *You may want to follow along with [this youtube video](https://www.youtube.com/watch?v=IWJKRmFLn-g) (watch 1:30 - 3:00)*
@@ -136,11 +156,17 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
+*You may now close the Terminal.*
+
+
 ---
 
 
 ## Installing Poetry
 *Poetry makes sure your coding environment is set up to work for all your coding projects*
+
+{{< code-action "Open a new Terminal window." >}}
+
 
 {{< code-action "Run the below command to install Pipx with Brew." >}} You MUST install `pipx` after installing `homebrew`. 
 ```shell
