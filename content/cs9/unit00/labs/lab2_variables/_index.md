@@ -1,7 +1,7 @@
 ---
 title: 02. Variables
 
-# draft: true
+draft: true
 
 ---
 
