@@ -4,7 +4,7 @@ type: lab
 slug: lab_riddler
 repo_url: https://github.com/the-isf-academy/lab-riddler
 init_action: clone
-draft: true
+# draft: true
 ---
 
 # Riddler
