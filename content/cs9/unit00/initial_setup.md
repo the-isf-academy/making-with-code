@@ -21,10 +21,10 @@ If you get stuck or are unsure what to do, first check out the debugging section
 *This is the editor that you will use to write your code.*
 
 
-(0) **Download VSCodium.** [Click this link for Mac](https://github.com/VSCodium/vscodium/releases/download/1.126.04524/VSCodium.x64.1.126.04524.dmg) and [this link for Windows](https://github.com/VSCodium/vscodium/releases/download/1.126.04524/VSCodiumUserSetup-x64-1.126.04524.exe).
+(0) **Download and Install VSCodium.** [Click this link for Mac](https://github.com/VSCodium/vscodium/releases/download/1.126.04524/VSCodium.x64.1.126.04524.dmg) and [this link for Windows](https://github.com/VSCodium/vscodium/releases/download/1.126.04524/VSCodiumUserSetup-x64-1.126.04524.exe).
 
 
-(1) **Drag to Applications Folder.** Open up the `Finder` application on your Mac. On the left hand side, click on `Downloads`.  Drag `Visual Studio Code` to the folder named `Applications`.
+(1) **Drag to Applications Folder.** Open up the `Finder` application on your Mac. On the left hand side, click on `Downloads`.  Drag `VSCodium` to the folder named `Applications`.
 
 {{< figure src="images/courses/cs9/unit00/-000_initialsetup16.png" width="50%" alt-text="mwc setup" >}}
 
@@ -197,10 +197,10 @@ poetry self add poetry-plugin-shell
 
 💻 **Run each of the following checks one at a time to check your setup.** If you do not see an `version number`, there was an error with the install. You can try to debug yourself by referencing the below `Debugging` section. 
 
-✔️ *Checks `Visual Studio Code`*
+✔️ *Checks `VSCodium`*
 
 ```shell
-code --version
+codium --version
 ```
 
 ✔️ *Checks `Xcode`*
@@ -246,14 +246,14 @@ A successful setup will look something like below. It is okay if the version num
 
 ## Debugging 
 
-**If `code --version` showes `EACCES: permission denied, unlink '/usr/local/bin/code'`**
-1.  First double check `VS Code` is in your “Applications” folder
+**If `codium --version` showes `EACCES: permission denied, unlink '/usr/local/bin/codium'`**
+1.  First double check `VSCodium` is in your “Applications” folder
 2.  In the top menu click `View > Comannd Palette...`
-3.  Type `uninstall code`, click the option 
-4.  Type `install code`, click the option
-5.  In Terminal, try `code --version`.
+3.  Type `uninstall codium`, click the option 
+4.  Type `install codium`, click the option
+5.  In Terminal, try `codium --version`.
 6.  If you do not see a version number, run this command: `sudo chown -R your_user_name /usr/local/bin`
-7.  In Terminal, try `code --version`.
+7.  In Terminal, try `codium --version`.
 3. If still does not show a verison number, ask a teacher.
 
 ---

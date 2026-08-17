@@ -20,7 +20,7 @@ You may see more information output than your Mac peers, but all commands should
 
 ## [0] Setup
 
-First, we want to make some folders to store our work. Do this we'll be using these three commands:
+First, we want to make some folders to store our work. To do this we'll be using these three commands:
 
 | Command              | What it does                                 |
 | --------------       | -------------------------------------------- |
@@ -29,7 +29,7 @@ First, we want to make some folders to store our work. Do this we'll be using th
 | `cd folder`       | Go to `folder`                            |
 | `cd ..`       | Go up one to the previous folder                            |
 
-{{< code-action >}} **Open Terminal and use `ls` to list out all the files at your current location.** 
+{{< code-action >}} **Open Terminal and use `ls` to list out all the folders and files at your current location.** 
 
 ```shell
 ls
@@ -59,7 +59,7 @@ cd Desktop
 mkdir making_with_code
 ```
 
-{{< code-action >}} **Use `ls` to check the folder was created.** 
+{{< code-action >}} **Use `ls` to check that the folder was created.** 
 
 ```shell
 ls
@@ -92,7 +92,7 @@ cd CS9
 ```shell
 mkdir unit00_drawing
 ```
-{{< code-action  >}} **Go into the `unit00_drawing` folder**
+{{< code-action  >}} **Go into the `unit00_drawing` folder.**
 ```shell
 cd unit00_drawing
 ```
@@ -113,7 +113,7 @@ cd lab_terminal_adventure
 ---
 
 {{< code-action "Next, we enter the Poetry shell." >}} This will ensure all of the correct packages and versions of those packages are being used. 
-> You will use `poetry shell`, everytime you want to work on a lab or project. 
+> You will use `poetry shell`, every time you want to work on a lab or project. 
 ```shell
 poetry shell
 ```
@@ -128,7 +128,7 @@ poetry shell
 When you want to exit the shell, you can type `exit` or `^D`
 {{< /aside >}}
 
-📁 **Your folders are now all properly setup for `cs`!**
+📁 **Your folders are now all properly setup for cs!**
 
 ---
 
@@ -169,10 +169,12 @@ Use Terminal to explore the contents of the `adventure` directory.
 
 
 
-{{< code-action "Begin by going into into the" >}}  `adventure` **directory:**
+{{< code-action "Begin by going into the" >}}  `adventure` **directory:**
 
 ```shell
 cd adventure
+```
+```shell
 ls
 ```
 > You should see the following output:
@@ -189,7 +191,7 @@ cat sinking.txt
 ```
 
 
-{{< code-action >}} **Continue exploring into the depths of the sea to find the treasure!** Return to the `lab_00_terminal_adventure` directory and run the `returnToShip.py` file to see if you were successful. If you were unable to escape the monster, try again!
+{{< code-action >}} **Continue exploring into the depths of the sea to find the treasure!** Return to the `lab_terminal_adventure` directory and run the `returnToShip.py` file to see if you were successful. If you were unable to escape the monster, try again!
 
 
 {{< figure src="https://sealifeart.co.uk/wp-content/uploads/2019/11/treasure-chest-drawing.jpg" width="25%"  >}}
