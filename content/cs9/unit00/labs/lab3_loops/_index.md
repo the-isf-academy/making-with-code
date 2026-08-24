@@ -59,7 +59,7 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ### Repetition
 
-{{< code-action "Let's start by opening" >}} `repetition.py` **in Atom.**
+{{< code-action "Let's start by opening" >}} `repetition.py` **in Visual Studio Code.**
 
 ```shell
 code repetition.py
@@ -135,7 +135,8 @@ Loops are particularly useful when we need to do things over time. To see this, 
 **Geometric sequences are sequences where there is a common ratio between each
 number in the sequence.** A geometric sequence always begins with `1`. Each subsequent number in the sequence is calculated by finding the product of the number that precedes it and the ratio.
 
-{{< figure src="<https://www.storyofmathematics.com/wp-content/uploads/2021/01/geometeric-sequence-example.png>" width="50%" alt-text="geometric sequence" >}}
+![Geometric Sequence](https://www.storyofmathematics.com/wp-content/uploads/2021/01/geometeric-sequence-example.png)
+
 
 > For example, `1, 2, 4, 16,...` is a geometric sequence
 where each number is 2 times the number before it.
@@ -217,7 +218,7 @@ Geometric Sequences are great for creating interesting visualizations.
 
 {{< deliverables "When are you finished with the lab:" >}}
 
-✔️   **Fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSdOWzsFMqW9hewAfyS6ayG1svFHvJngwxK0U53dbGBeOlAMhw/viewform?usp=sf_link)**
+✔️   **Fill out [this Google form](https://www.storyofmathematics.com/wp-content/uploads/2021/01/geometeric-sequence-example.png)**
 
 ✏️  **Add a piece of your code and a screenshot to the `CS Year 1 Code Log` in your Google Drive.** Add a comment. You can:
 >
