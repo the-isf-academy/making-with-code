@@ -218,7 +218,7 @@ Geometric Sequences are great for creating interesting visualizations.
 
 {{< deliverables "When are you finished with the lab:" >}}
 
-✔️   **Fill out [this Google form](https://www.storyofmathematics.com/wp-content/uploads/2021/01/geometeric-sequence-example.png)**
+✔️   **Fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSdMLKO6VKyQe4vl5cmL_T9D9Mjgfga9JiWRFhxWTF6-Q-D36w/viewform?usp=header)**
 
 ✏️  **Add a piece of your code and a screenshot to the `CS Year 1 Code Log` in your Google Drive.** Add a comment. You can:
 >
