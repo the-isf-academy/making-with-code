@@ -1,7 +1,7 @@
 ---
 title: "5. Client w/AI"
 type: lab
-# draft: true
+draft: true
 ---
 
 # Client with AI
