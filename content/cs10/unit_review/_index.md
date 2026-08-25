@@ -1,7 +1,7 @@
 ---
 title: "Review" 
 bookFlatSection: false
-bookCollapseSection: false
+bookCollapseSection: true
 # draft: true
 weight: 0
 ---

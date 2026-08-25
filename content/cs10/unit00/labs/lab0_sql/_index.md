@@ -24,7 +24,24 @@ SQL allows you to interact with databases that store tables of information.
 
 ---
 
-## [1] SQL Murder
+
+## [2] SQL Mysteries
+
+![sqlnoir icon](https://www.sqlnoir.com/favicon-96x96.png)
+
+
+💻 **Go to [sqlnoir.com](https://www.sqlnoir.com/) and make an account with your ISF Google account.**
+
+
+💻  **How many mysteries can you solve?.**
+
+
+---
+
+## [2] SQL Murder Mystery
+
+<img src="https://mystery.knightlab.com/174092-clue-illustration.png" width="50%">
+
 
 👋 **Find a friend and get a whiteboard & marker** 
 
