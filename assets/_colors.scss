@@ -6,6 +6,7 @@
     --visited: #92b4c9;
     --primary: #f28482;
     --gray: #222222;
+    --code-backtick: #f0f0f0;
     --lightgray: #f0f0f0;
     --outlinegray: #cecece;
     --million-progress-bar-color: var(--secondary);
@@ -14,6 +15,7 @@
     --title: #355A37;
     --scrollbar: rgb(182, 191, 187);
     --scrollbar-track: #DDD;
+    --deliverables: #ECF5ED;
 }
 
 [saved-theme="dark"] {
@@ -24,6 +26,7 @@
     --tertiary: #97ceac !important;
     --primary: #f58382 !important;
     --gray: #d4d4d4 !important;
+    --code-backtick: #494653;
     --lightgray: #292633 !important;
     --outlinegray: #343434 !important;
     --highlighted: #574010;
@@ -31,4 +34,5 @@
     --title: rgb(255, 108, 196);
     --scrollbar: rgb(177, 177, 177);
     --scrollbar-track: rgb(51, 51, 51);
+    --deliverables: #222623;
 }
