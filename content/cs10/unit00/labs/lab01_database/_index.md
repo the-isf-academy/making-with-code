@@ -9,7 +9,7 @@ init_action: clone
 
 In this lab we will learn how to create an SQL (Structured Query Language) database.
 
-{{< figure src="https://www.netgen.co.za/wp-content/uploads/2023/05/SQL-Database.png" width="10%"  >}}
+{{< figure src="https://img.magnific.com/free-vector/databases-set-three_78370-6669.jpg?semt=ais_hybrid&w=740&q=80" width="25%"  >}}
 
 
 ## [0] Setup
@@ -63,7 +63,7 @@ code .
 
 ## [1] Riddles 
 
-**Let's start by exploring the `riddles.sql` file.** This sets up the table for `riddles` and defines each row and its data type. 
+**Our Riddle database is based of this SQL definition.**
 
 ```sql
 CREATE TABLE IF NOT EXISTS riddles (
@@ -75,11 +75,6 @@ CREATE TABLE IF NOT EXISTS riddles (
     difficulty TEXT DEFAULT 'easy'
 );
 ```
-
-
-👀 **Take a look at `init_db.py`.** This is where the `database.sql` is created and new rows are added to the riddles table. The riddles are populated from the `riddles.json` file which are cited from [this repo](https://github.com/Code-Institute-Submissions/riddle-1/blob/master/riddles.json).
-
-💻 **Run `init_db.py` to initialize your database.**
 
 💻 **View the database by running `open database.db` in your Terminal** This should open DB Browser for SQLite.
 - click `Browse Data`
@@ -100,56 +95,52 @@ CREATE TABLE IF NOT EXISTS riddles (
 
 ## [2] SQL functions
 
-Now that you understand how the `riddles` are structured as `SQL`, it's up to you use it and re-create the guessing game with a database. First, we will need to write a helper funcion to execute SQL.
+Now that you understand how the `riddles` are structured as `SQL`, it's up to you use it and re-create the guessing game with a database. First, we will need to write a helper functions to execute SQL.
 
-{{< code-action >}} **Open `helpers.py`. Here is where you will write the SQL queries in helper functions** Two functions are already written for you. 
-- `get_all_riddles()`
-- `increment_riddle_column(column, id)` 
 
-{{< code-action >}} **Run `helpers.py` to test the helper functions.** Be sure to refresh the database in the `DB Browser` to see Riddle #3 `total_guesses` increase by 1. 
+{{< checkpoint >}}
+
+✏️ **As a class, brainstorm how we will need to access and modify the database for our game.**
+
+{{< /checkpoint >}}
+
+
+{{< code-action >}} **Open `helpers.py`. Here is where you will write the SQL commands in helper functions.**  There is already one helper function written for you. 
+
+
+{{< code-action >}} **Write the helper functions we discussed as a class.** Reference the code block below as you're working through each function.
+
+### **[SQL in Python Tips]**
+
 ```python
-if __name__=="__main__":
-    # -- run python helpers.py to test your helper functions
-    # use comments to test section by section 
+# create connection to the database
+db_connection = sqlite3.connect("database.db")
 
-    # gets all Riddles from db and prints each ID and question
-    all_riddles = get_all_riddles()
-    for riddle in all_riddles:
-        print(riddle['id'], riddle['question'])
+# create cursor to database to access and modify data
+db_cursor = db_connection.cursor()
 
-    # # increments the total_guesses for Riddle #3
-    increment_row_value('total_guesses', 3)
+# query for multiple rows of data
+all_riddles = db_cursor.execute("SELECT * FROM riddles").fetchall()
+
+# query for one row of data with where
+one_riddle = db_cursor.execute("SELECT * FROM riddles WHERE id=1").fetchone()
+
+# query for one row of data with variable
+riddle_id = 1
+one_riddle = db_cursor.execute("SELECT * FROM riddles WHERE id = ?", (riddle_id,)).fetchone()
+
+# update data for one row of data
+db_cursor.execute(f"UPDATE riddles SET answer = 'egg'  WHERE id = 1")
+
+# commit the changes if the data were modified
+db_connection.commit()
+
+# Close the connection - you must always do this
+db_connection.close()
+
 ```
 
-{{< code-action >}} **You will need to write `get_random_riddles(num)`**
 
-- input: an Integer representing the number of riddles to request 
-- output: return a list of random Riddles with the correct number of Riddles
-
-{{< expand "👾 A few helpful SQL commands"  >}}
-
-#### Order by random
-```python
-conn.execute(
-            f"""
-            SELECT *
-            from riddles
-            ORDER BY random()"""
-        ).fetchall() 
-```
-
-#### Limit number
-```sql
-conn.execute(
-            f"""
-            SELECT *
-            from riddles
-            limit 1"""
-        ).fetchall() 
-```
-{{< /expand >}}
-
-{{< code-action >}} **Test `get_random_riddles(num)` at the bottom of the file.** Be sure to use comments (`#`) to focus on testing specific functions. 
 
 
 ---
@@ -199,33 +190,15 @@ Once you've successfully completed the lab, fill out [this Google form](https://
 
 ---
 
-## [4] Extension: Difficulty
 
-Now that we've got a basic riddle guessing game, let's improve it!
-
-It would be great if we could update the `difficulty` based on the `total_guesses` and `correct_guesses` in the database. 
-
-💻 **Incorporate the helper function `updated_difficulty()` into your game.** Based on the ratio of `correct_guesses` to `total_guesses`, it should assign `'easy'`, `'medium'`, or `'hard'` to the `difficulty` row value.
-
-Now, wouldn't it be great if users could customize their game by difficultly.
-
-💻 **Create a helper function `get_riddles_difficulty(difficulty, num_riddles)` into your game.** It should return `num_riddles` riddles of the specific `difficulty`.
-
-💻 **Update your game to include a difficulty selection.**
-
-
----
-
-## [5] More Extensions 
+## [4] Extensions 
 
 Choose from these options or think of your own! 
 
-- Allow users to add new Riddles to the database
+- update riddle difficulty as the stats are updated
+- allow users to add new Riddles to the database
     - write a helper function to add a new Riddle by using [insert into](https://www.w3schools.com/sql/sql_insert.asp) 
-- Add a category column to the Riddle SQL database 
-    - edit the `.sql` file and `init_db.py`
-    - incorporate the category into the game 
-- Create a `score` table in the database 
+- Create a `score` table in the existing database 
     - allow uses to add their high score of correct guesses
 
 
