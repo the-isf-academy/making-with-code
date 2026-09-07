@@ -2,7 +2,7 @@
 title: "3. API" 
 type: lab
 slug: lab_riddle_server
-draft: true
+# draft: true
 ---
 
 # Lab API
@@ -358,7 +358,7 @@ if 'question' not in request.args or 'answer' not in request.args:
     return {'error': 'Question and Answer are required.'}, 400
 ```
 
-Incorporate approprate error messages for each of your endpoints. Try to break them.
+Incorporate appropriate error messages for each of your endpoints. Try to break them.
 
 The important HTTP success response codes
 - `400` - incorrect payload
@@ -370,7 +370,7 @@ The important HTTP success response codes
 
 Since that we track `difficulty`, it would be nice if we could `GET` a list of riddles of `easy`, `medium,` or `hard` difficulty. 
 
-{{< code-action >}} **Write a function `get_riddles_difficulty(level)` that returns all of the riddles within the appropriate range.** 
+{{< code-action >}} **Write a function `get_riddles_difficulty(level)` that returns all of the riddles within the appropriate range. using URL parameters** 
 - reference [SQL WHERE operators](https://www.w3schools.com/sql/sql_where.asp)
 - consider what the difficulty ranges should be for easy, medium, hard (difficulty of 1 is impossibly hard, while a Riddle with a difficulty of 0 is easy)
 
@@ -411,30 +411,28 @@ def all_riddles_difficulty(level):
 }
 ```
 
----
+
 
 ### Delete Riddles
 
-{{< code-action >}} **Write a endpoint to delete riddles within a specific range of ID numbers.** You will need to write a helper function and an API endpoint.  
+{{< code-action >}} **Write a endpoint to delete riddles within a specific range of ID numbers.** You will need to write a helper function and an API endpoint. But be careful, deleting is permanent! Can you think of a non-permanent way to delete?
 - Payload: `id_start`, `id_end`
 - [SQL Delete](https://www.w3schools.com/sql/sql_delete.asp)
 - [HTTP DELETE method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/DELETE)
 
----
 
-### Secret Ansewr Route
+### Secret Answer Route
 
 {{< code-action >}} **Write a endpoint to view the answer of all riddles, but it reqires a secret password.** Consider, how will you implement a password? 
 
 
----
 
 ### Top 5 
 
 {{< code-action >}} **Write a endpoint to view the `/top/num`  most guessed riddles.** You will need to write a helper function.
 - you should be able to change the `num` and it will show you the designated amount of riddles
 
----
+
 
 ### Search 
 
@@ -442,8 +440,6 @@ def all_riddles_difficulty(level):
 - Payload: `keyword: string`
 
 
-<!-- 
----
 
 ### 404 error message 
 
@@ -453,4 +449,4 @@ def all_riddles_difficulty(level):
 ```python
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404 -->
+    return render_template('404.html'), 404
