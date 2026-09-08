@@ -24,7 +24,7 @@ We are now going to look at Riddles that are hosted on the internet!
 {{< figure src="images/courses/cs10/unit00/api_00.png" alt-text="databases" >}}
 
 
-{{< code-action >}} **Do you know the answer? Try sending a `PUT` request to make a guess.** This request to a different url `endpoint`: `/guess`
+{{< code-action >}} **Do you know the answer? Try sending a `POST` request to make a guess.** This request to a different url `endpoint`: `/guess`
 
 0. Add a new request
 0. Change `GET` to `PUT`
@@ -53,12 +53,13 @@ Here is a cheatsheet of the Riddle endpoints, what parameters they take in their
 | Method | URL                                | Required Payload     | Action                                                                                   |
 | ------ | ---------------------------------- | -------------------- | ---------------------------------------------------------------------------------------- |
 | `GET`  | `/`   |                      | Returns a short description of the API |
+| `GET`  | `/help`   |                      | Returns details on the API endpoints                                       |
 | `GET`  | `/all`   |                      | Returns a list of all the riddles, without answers.                                      |
-| `GET`  | `/random`   |                      | Returns a a random riddle.                                      |
-| `GET`  | `/one`   | `id`                 | Returns the riddle if it exists |
-| `POST` | `/new`   | `question`, `answer` | Creates a new riddle (with an automatically-assigned id). Returns the riddle.            |
-| `PUT` | `/guess` | `id`, `guess`        | Checks whether the guess is correct. In the response, `correct` is `True` or `False`.    |
-| `GET`  | `/difficulty`   | `id`                 | Returns the riddle if it exists with its difficulty score. (Otherwise, it returns an error with status code 404.)  |
+| `GET`  | `/one`   | `id: str`                 | Returns the riddle if it exists |
+| `GET`  | `/difficulty`   | `level:str`                 | Returns the riddle with that difficulty level its difficulty score. (Otherwise, it returns an error with status code 404.)  |
+| `POST` | `/new`   | `question:str`, `answer:str` | Creates a new riddle (with an automatically-assigned id). Returns the riddle.            |
+| `POST` | `/guess` | `id:int`, `guess:str`        | Checks whether the guess is correct. In the response, `correct` is `True` or `False`.    |
+
 
 
 
@@ -178,8 +179,9 @@ In this lab, you will build out the functionality of the Riddle server. Currentl
 
 **It is up to you to add the following endpoints:**
 - `riddle/one`
-- `riddle/random`
+- `riddle/difficulty`
 - `riddle/guess`
+
 
 {{< code-action "Start by opening up the folder:" >}} `code .`
 > You should first, open a new terminal tab with `⌘ + T`, so you can keep your server running in one tab, and use the other tab to access your filesystem
@@ -218,13 +220,12 @@ The important HTTP success response codes
 {{< checkpoint >}}
 
 💻 **Test the `riddle/one` endpoint in the `HTTPie desktop app`**
-
-```shell
-http://127.0.0.1:5000/riddle/one id=4
-```
+- `http://127.0.0.1:5000/riddle/one`
+- `id=4`
 
 
-✔️ **It should return `json` like:**
+
+**It should return `json` like:**
 
 ```json
 {
@@ -232,7 +233,8 @@ http://127.0.0.1:5000/riddle/one id=4
     "id": 1,
     "question": "I’m light as a feather, yet the strongest person can’t hold me for five minutes. What am I?",
     "total_guesses": 43,
-    "correct_guesses": 0  } 
+    "correct_guesses": 42,
+    "difficulty": "easy" } 
 }
 ```
 
@@ -240,37 +242,50 @@ http://127.0.0.1:5000/riddle/one id=4
 
 ---
 
+### Difficulty
 
-### riddle/random
+{{< code-action >}} **Write the `riddle/difficulty` endpoint.** 
+- **HTTP method:** `get`
+- **Payload/args:** `level`
+- **Return:** a list of `Riddles` with the `id`, `question`,  `correct`, and `guess` properties of the designated difficulty level
 
-{{< code-action >}} **Write the `riddle/random` endpoint.** 
-- **HTTP method:**`get`
-- **Payload/args:** none
-- **Return:**  a single `Riddle` with the `id`, `question`,  `correct`, and `guess` properties 
 
+🤔 *Which `functions` in `helpers.py`` could be useful?*
 
 {{< checkpoint >}}
 
-💻 **Test the `riddle/random` endpoint in the `HTTPie desktop app`**
+💻 **Test the `riddle/difficulty` endpoint in the `HTTPie desktop app`**
+- `http://127.0.0.1:5000/riddle/difficulty`
+- `level=hard`
 
-```shell
-http://127.0.0.1:5000/riddle/random 
-```
 
-✔️ **It should return `json` like:**
+**It should return `json` like:**
+
 
 ```json
 {
-    "correct_guesses": 0,
-    "difficulty": 0,
-    "id": 219,
-    "question": "What is full of holes, but can still hold a lot of water?",
-    "total_guesses": 0
+  "difficulty": "hard",
+ "riddles": [
+    {
+      "correct": 1,
+      "guesses": 44,
+      "id": 1,
+      "question": "I’m light as a feather, yet the strongest person can’t hold me for five minutes. What am I?",
+      "difficulty": "hard"
+    },
+    {
+      "correct": 4,
+      "guesses": 9,
+      "id": 2,
+      "question": "What comes down but never goes up?",
+      "difficulty": "hard"
+    }
+ ]
 }
-
 ```
 
 {{< /checkpoint >}}
+
 
 ---
 
@@ -282,22 +297,21 @@ http://127.0.0.1:5000/riddle/random
 - **Return:** 
   - if the guess was correct
     - message telling the user they were correct
-    - a single `Riddle` with all of row values
+    - a single `Riddle` with the answer and  id, question, difficulty
   - if the guess was incorrect
     - message telling the user they were incorrect
-    - a single `Riddle` without the answer
+    - a single `Riddle` without the answer -  only the id, question, difficulty
 
 🤔 *Which `functions` in `helpers.py` could be useful?*
 
 {{< checkpoint >}}
 
 💻 **Test the `riddle/guess` endpoint in the `HTTPie desktop app`**
+- `http://127.0.0.1:5000/riddle/guess`
+-  `id = 3`
+- `guess = Noon`
 
-```shell
-http://127.0.0.1:5000/riddle/guess
-```
-
-✔️ **It should return `json` like:**
+**It should return `json` like this if the guess is correct:**
 
 ```json
 {
@@ -305,14 +319,30 @@ http://127.0.0.1:5000/riddle/guess
     "riddle": {
         "answer": "Noon",
         "correct_guesses": 14,
-        "difficulty": 0.8235294117647058,
+        "difficulty": "hard",
         "id": 3,
         "question": "What time of day, when written in a capital letters, is the same forwards, backwards and upside down?",
         "total_guesses": 17
     }
 }
-
 ```
+
+**And `json` like this if the guess is incorrect:**
+
+```json
+{
+    "correct": false,
+    "riddle": {
+        "correct_guesses": 14,
+        "difficulty": "hard",
+        "id": 3,
+        "question": "What time of day, when written in a capital letters, is the same forwards, backwards and upside down?",
+        "total_guesses": 18
+    }
+}
+```
+
+
 {{< /checkpoint >}}
 
 
@@ -358,27 +388,25 @@ if 'question' not in request.args or 'answer' not in request.args:
     return {'error': 'Question and Answer are required.'}, 400
 ```
 
-Incorporate appropriate error messages for each of your endpoints. Try to break them.
+💻 **Incorporate appropriate error messages for each of your endpoints to communicate to the user what went wrong in their request. Ensure the server never crashes**
 
 The important HTTP success response codes
 - `400` - incorrect payload
 - `404` - no results found
 
+{{< code-action >}} **Implement a 404 error messages**
+
+```python
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+```
+
 ---
 
-### Difficulty
+### URL Parameters
 
-Since that we track `difficulty`, it would be nice if we could `GET` a list of riddles of `easy`, `medium,` or `hard` difficulty. 
-
-{{< code-action >}} **Write a function `get_riddles_difficulty(level)` that returns all of the riddles within the appropriate range. using URL parameters** 
-- reference [SQL WHERE operators](https://www.w3schools.com/sql/sql_where.asp)
-- consider what the difficulty ranges should be for easy, medium, hard (difficulty of 1 is impossibly hard, while a Riddle with a difficulty of 0 is easy)
-
-{{< code-action >}} **Write an endpoint returns riddles within a difficulty category** 
-- **HTTP method:**  `GET`
-- **Payload/args:**  `level` 
-- **Return:** 
-  - a list of `Riddles` with the `id`, `question`,  `correct`, and `guess` properties of the designated difficulty level
+💻 **Try changing `/one` or `/difficulty` or a URL parameter.** Then you would access the query directly from the URL (`/all/hard` or `/one/5`)
 
 You can use an url parameter like:
 ```python
@@ -386,32 +414,7 @@ You can use an url parameter like:
 def all_riddles_difficulty(level):
 ```
 
-
-✔️ **It should return `json` like:**
-
-```json
-{
-  "difficulty_level": "hard",
- "riddles": [
-    {
-      "correct": 1,
-      "guesses": 44,
-      "id": 1,
-      "question": "I’m light as a feather, yet the strongest person can’t hold me for five minutes. What am I?",
-      "difficulty": 0.9555555555555556
-    },
-    {
-      "correct": 4,
-      "guesses": 9,
-      "id": 2,
-      "question": "What comes down but never goes up?",
-      "difficulty": 0.875
-    }
- ]
-}
-```
-
-
+---
 
 ### Delete Riddles
 
@@ -420,33 +423,23 @@ def all_riddles_difficulty(level):
 - [SQL Delete](https://www.w3schools.com/sql/sql_delete.asp)
 - [HTTP DELETE method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/DELETE)
 
+---
 
 ### Secret Answer Route
 
 {{< code-action >}} **Write a endpoint to view the answer of all riddles, but it reqires a secret password.** Consider, how will you implement a password? 
 
-
+---
 
 ### Top 5 
 
 {{< code-action >}} **Write a endpoint to view the `/top/num`  most guessed riddles.** You will need to write a helper function.
 - you should be able to change the `num` and it will show you the designated amount of riddles
 
-
+---
 
 ### Search 
 
 {{< code-action >}} **Write 2 endpoints to query based on a keyword `/search/question` and `/search/prompt`.** You will need to write a helper function.
 - Payload: `keyword: string`
 
-
-
-### 404 error message 
-
-
-{{< code-action >}} **Implement helpful 404 error messages**
-
-```python
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template('404.html'), 404
