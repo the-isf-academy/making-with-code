@@ -1,7 +1,7 @@
 ---
 title: "2. HTTP"
 type: lab
-draft: true
+# draft: true
 ---
 
 
@@ -135,7 +135,7 @@ Status codes are used to signal how the communication between the client and the
 
 ✈️ **In this lab, we will look at the data for the HK International Airport**
 
-{{< figure src="https://experience.hongkongairport.com/images/grid-totem.jpg" width="100%" alt-text="An HTTP GET request" width=50% >}}
+{{< figure src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyzIw4S6yf9Y3imjTeAdoWu8qFq9PwuwUNrYGsbZl2bO8eTI37K-HD2Dk&s=10" width="100%" alt-text="HK Airport" width=50% >}}
 
 ---
 
