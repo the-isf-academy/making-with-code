@@ -2,7 +2,7 @@
 title: "4. Fortune"
 type: lab
 slug: lab_fortune_server
-draft: true
+# draft: true
 ---
 
 # Fortune
@@ -53,6 +53,8 @@ CREATE TABLE IF NOT EXISTS fortunes (
 );
 ```
 
+💻 **Run `init_db.py` to initialize the database:** `python init_db.py`.
+
 
 💻 **Open the database file to add a few fortunes:** `open database.db`.
 
@@ -75,25 +77,9 @@ python api.py
 ```
 
 
-💻 **Test the server using `HTTPie`:**  `127.0.0.1:5000/fortune`
+💻 **Test the server using `HTTPie`:**  `127.0.0.1:5000/fortune` and `127.0.0.1:5000/help` 
 
 👀 **Look at the JSON response in the `help` key and make requests to all of the endpoints.**
-
-```shell
-{
-  "help": {
-    "GET /all": {
-      "description": "returns all fortunes",
-      "payload": ""
-    },
-    "POST /new": {
-      "description": "adds new fortune to database",
-      "payload": "statement: string, is_happy: boolean"
-    }
-  },
-  "overview": "This is the fortune server."
-}
-```
 
 
 ---
@@ -117,199 +103,14 @@ For each each feature, you will write a helper function to run the SQL commands 
 
 
 {{< code-action >}} **It is up to you to write the add the following features:**
-- `/is_happy` - filters riddles by `is_happy` payload
-- `/update_statement` - add to the end of an exisitng fortune
-- `/delete` - delete a fortune with a specific `id` if the `key` is valid 
-
---- 
-
-
-### `/is_happy`
-
-
-{{< code-action >}} **In `helpers.py` write the `get_all_ishappy()` function.** It should use SQL to fetch all riddles filtered on the `is_happy` parameter.
-- **parameter:** `is_happy: boolean`
-
-{{< checkpoint >}}
-
-💻 **Test the function in bottom of `helpers.py`** 
-
-Be sure to test with `False` and `True`. Look at `database.db` to confirm it is working.
-
-```python
-all_fortunes = get_all_ishappy(False) 
-for fortune in all_fortunes:
-  print(fortune['id'])
-```
-{{< /checkpoint >}}
+- `/search`
+- `/append` 
 
 ---
-
-
-{{< code-action >}} **In `api.py` write the `/is_happy` endpoint.** You should `get_all_ishappy()` function.
-- **HTTP method:**  `GET`
-- **Params/Payload:**  `is_happy`
-
-
-{{< checkpoint >}}
-
-💻 **Test the endpoint in the `HTTPie desktop app`**
-
-```shell
-http://127.0.0.1:5000/fortune/is_happy is_happy=True
-```
-
-
-✔️ **It should return `json` like:**
-
-```json
-{
-  "fortunes": [
-    {
-      "fortune": "you will win money everyday",
-      "id": 1,
-      "is_happy": true,
-      "last_updated": "2025-09-15 04:06:14",
-      "num_updates": 1
-    },
-```
-{{< /checkpoint >}}
-
----
-
-### `/update`
-
-{{< code-action >}} **In `helpers.py` write the `update_fortune()` function.** 
-- **parameter:** `id: int, update_string: string`
-- It should 
-  - add `update_string` to the end of the existing `staetment`
-  - increase `num_updates` by 1
-  - updated `last_updated` to the current datetime
-  - return the updated fortune 
-
-{{< expand "hints" >}}
-Remove extra spaces after string
-```python
-statement = "hello, it is monday "
-statement.strip() # returns -> "hello it is monday"
-
-```
-
-Update more than one column
-```SQL 
-UPDATE fortunes
-SET 
-  num_updates = num_updates + 1, 
-  statement = "updated statement"
-WHERE id = 4
-```
-
-Get the current datetime in HKT
-```SQL
-(STRFTIME('%Y-%m-%d %H:%M:%S', 'now', '+8 hours')). 
-);
-```
-{{< /expand >}}
-
-
-{{< checkpoint >}}
-
-💻 **Test the function in bottom of `helpers.py`**
-
-Refresh the `database.db` file to confirm the fortune is properly updated. 
-
-```python
-updated_fortune = update_fortune(1, 'money')
-print(updated_fortune['statement'], updated_fortune['num_updates'], updated_fortune['last_updated'] )
-```
-{{< /checkpoint >}}
-
-{{< expand "solution" >}}
-
-```python
-def update_fortune(id, update_string):
-    '''Returns all riddles from the database'''
-
-    conn = get_db_connection()
-
-    fortune = conn.execute(
-        """
-        SELECT *
-        FROM fortunes
-        WHERE id=?
-        """,(id,)).fetchone()  
-    
-
-    new_fortune = fortune['statement'].strip() + " " + update_string
-
-    conn.execute(
-        f"""
-        UPDATE fortunes
-        SET 
-            statement = "{new_fortune}",
-            num_updates = num_updates + 1,
-            last_updated = (STRFTIME('%Y-%m-%d %H:%M:%S', 'now', '+8 hours'))
-        WHERE id = {id}
-        """,
-       
-    )
-    conn.commit()
-
-    updated_fortune = conn.execute(
-        """
-        SELECT *
-        FROM fortunes
-        WHERE id=?
-        """,(id,)).fetchone()  
-
-    return updated_fortune
-```
-
-{{< /expand >}}
-
----
-
-{{< code-action >}} **In `api.py` write the `/update` endpoint.** 
-- **HTTP method:**  `PUT`
-- **Payload/args:**  `id:integer`, `update_text:string`
-- if the fortune exists 
-    - call the `update_fortune()` function
-- else  
-    - a helpful error message communicating the fortune does not exist 
-
-{{< checkpoint >}}
-
-💻 **Test the endpoint in the `HTTPie desktop app`**
-
-```shell
-http://127.0.0.1:5000/fortune/update id=6 update_text=non-stop
-```
-
-✔️ **It should return `json` like:**
-
-```json
-{
-  "message": "Fortune updated successfully",
-  "question": {
-    "fortune": "tomorrow will rain non-stop",
-    "id": 5,
-    "is_happy": false,
-    "last_updated": "2025-09-16 14:47:33",
-    "num_updates": 2
-  }
-}
-```
-{{< /checkpoint >}}
-
-
-
-
----
-
 
 ### `/search`
 
-{{< code-action >}} **In `helpers.py` write the `serach()` function.** 
+{{< code-action >}} **In `helpers.py` write the `search()` function.** 
 - **parameter:** `keyword: string`
 - return the fortunes from the database that contains the keyword
 
@@ -332,7 +133,7 @@ for fortune in all_fortunes:
 ```
 {{< /checkpoint >}}
 
-{{< expand "solution" >}}
+<!-- {{< expand "solution" >}}
 
 ```python
 def search(keyword):
@@ -352,7 +153,7 @@ def search(keyword):
     return keyword_fortunes
 ```
 
-{{< /expand >}}
+{{< /expand >}} -->
 
 ---
 
@@ -401,6 +202,154 @@ http://127.0.0.1:5000/fortune/search keyword="surprise"
 {{< /checkpoint >}}
 
 ---
+
+### `/append`
+
+{{< code-action >}} **In `helpers.py` write the `append()` function.** 
+- **parameter:** `id: int, append_string: string`
+- It should 
+  - add `append_string` to the end of the existing `statement`
+  - increase `num_updates` by 1
+  - updated `last_updated` to the current datetime
+  - return the updated fortune 
+
+{{< expand "hints" >}}
+Remove extra spaces after string
+```python
+statement = "hello, it is monday "
+statement.strip() # returns -> "hello it is monday"
+
+```
+
+Update more than one column
+```SQL 
+UPDATE fortunes
+SET 
+  num_updates = num_updates + 1, 
+  statement = "updated statement"
+WHERE id = 4
+```
+
+Get the current datetime in HKT
+```SQL
+(STRFTIME('%Y-%m-%d %H:%M:%S', 'now', '+8 hours')). 
+);
+```
+{{< /expand >}}
+
+
+{{< checkpoint >}}
+
+💻 **Test the function in bottom of `helpers.py`**
+
+Refresh the `database.db` file to confirm the fortune is properly updated. 
+
+```python
+updated_fortune = update_fortune(1, 'money')
+print(updated_fortune['statement'], updated_fortune['num_updates'], updated_fortune['last_updated'] )
+```
+{{< /checkpoint >}}
+
+<!-- {{< expand "solution" >}}
+
+```python
+def update_fortune(id, update_string):
+    '''Returns all riddles from the database'''
+
+    conn = get_db_connection()
+
+    fortune = conn.execute(
+        """
+        SELECT *
+        FROM fortunes
+        WHERE id=?
+        """,(id,)).fetchone()  
+    
+
+    new_fortune = fortune['statement'].strip() + " " + update_string
+
+    conn.execute(
+        f"""
+        UPDATE fortunes
+        SET 
+            statement = "{new_fortune}",
+            num_updates = num_updates + 1,
+            last_updated = (STRFTIME('%Y-%m-%d %H:%M:%S', 'now', '+8 hours'))
+        WHERE id = {id}
+        """,
+       
+    )
+    conn.commit()
+
+    updated_fortune = conn.execute(
+        """
+        SELECT *
+        FROM fortunes
+        WHERE id=?
+        """,(id,)).fetchone()  
+
+    return updated_fortune
+```
+
+{{< /expand >}} -->
+
+---
+
+{{< code-action >}} **In `api.py` write the `/update` endpoint.** 
+- **HTTP method:**  `PUT`
+- **Payload/args:**  `id:integer`, `update_text:string`
+- if the fortune exists 
+    - call the `update_fortune()` function
+- else  
+    - a helpful error message communicating the fortune does not exist 
+
+{{< checkpoint >}}
+
+💻 **Test the endpoint in the `HTTPie desktop app`**
+
+```shell
+http://127.0.0.1:5000/fortune/update id=6 update_text=non-stop
+```
+
+✔️ **It should return `json` like:**
+
+```json
+{
+  "message": "Fortune updated successfully",
+  "question": {
+    "fortune": "tomorrow will rain non-stop",
+    "id": 5,
+    "is_happy": false,
+    "last_updated": "2025-09-16 14:47:33",
+    "num_updates": 2
+  }
+}
+```
+{{< /checkpoint >}}
+
+---
+
+### Error Handling
+
+💻 **Try to break your server.**
+
+💻 **Now, add in proper error handling so the server never crashes, but instead provides helpful error messages.**
+
+Here is an example of an error message:
+
+```python
+if riddle is None:
+      return {'error': 'Riddle not found'}, 404
+```  
+
+```python
+if 'question' not in request.args or 'answer' not in request.args:
+    return {'error': 'Question and Answer are required.'}, 400
+```
+
+
+
+<!-- ---
 
 ### `API documentation`
 
@@ -462,7 +411,7 @@ When designing an API, it is important to write helpful documentation so others 
 }
 ```
 
-{{< /checkpoint >}}
+{{< /checkpoint >}} -->
 
 
 
@@ -493,14 +442,6 @@ When designing an API, it is important to write helpful documentation so others 
 - archive v. delete 
 - URL parameters -->
 
-### Error Handling 
-
-💻 **Try to break your server.**
-
-💻 **Now, add in proper error handling so the server never crashes, but instead provides helpful error messages.**
-
-
----
 
 ### Archive 
 

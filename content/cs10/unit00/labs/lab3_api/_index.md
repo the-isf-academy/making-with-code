@@ -399,7 +399,7 @@ The important HTTP success response codes
 ```python
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404
+    return {'error': 'route not found'}, 404
 ```
 
 ---
@@ -410,7 +410,7 @@ def page_not_found(e):
 
 You can use an url parameter like:
 ```python
-@app.route(f'/{BASE_URL}/all/<string:difficulty>', methods=['GET'])
+@app.route(f'/{BASE_URL}/all/<string:level>', methods=['GET'])
 def all_riddles_difficulty(level):
 ```
 
