@@ -1,6 +1,6 @@
 ---
 title: 10. SuperTurtle
-draft: true
+# draft: true
 ---
 
 # SuperTurtle Lab
@@ -44,10 +44,6 @@ For example, let's consider baking again.
 
 ## [1] Set Up
 
-{{< code-action "Add a shortcut command to easily open Github" >}} 
-```shell
-echo 'alias remote="open \"\$(git remote get-url origin | sed \"s/\.git\$//\")\""' >> ~/.zshrc
-```
 
 {{< code-action "Go to your" >}} `unit00_drawing` **folder.**
 
@@ -155,6 +151,7 @@ code .
 0. `git status`
 0. `git commit -m "describe changes here"` 
 0. `git push`
+0. `remote`
 
 {{< /deliverables >}}
 
