@@ -1,13 +1,13 @@
 ---
 Title: "Project"
-draft: true
+# draft: true
 ---
 
 # Networking: Social Computing Project
 
 In this unit you will create the backend of a social computing app using SQL and Flask. 
 
-🎨 **The design prompt for this project is:** `A social computing API that invites fun, joyful social interaction.`
+🎨 **The design prompt for this project is:** `A social computing API that invites social interaction in your local community.`
 
 
 
@@ -139,14 +139,16 @@ Successful computer scientists should be able to make the following claims:
 
 You have 6 in-class work days. You may find it necessary to work outside of school, however if you are focused in class you can complete the project within the allotted blocks. Our office hours are Wednesdays during CCA in B403. 
 
-| CS10.1 Dates | CS10.2 Dates | Agenda                         |
+**The project is due on October 6th at the end of class.**
+
+<!-- | CS10.1 Dates | CS10.2 Dates | Agenda                         |
 |--------------|--------------|--------------------------------|
 | 27 Oct       | 28 Oct       | Project Planning |
 | 28 Oct       | 30 Oct       | Work Day                  |
 | 31 Oct       | 04 Nov       | Work Day  - Teacher Feedback        |
 | 06 Nov       | 06 Nov       | Work Day       |
 | 07 Nov       | 07 Nov       | Work Day - Peer Feedback           |
-| 10 Nov       | 11 Nov       | Due at End of Class            |
+| 10 Nov       | 11 Nov       | Due at End of Class            | -->
 
 ---
 
@@ -158,4 +160,5 @@ You have 6 in-class work days. You may find it necessary to work outside of scho
 - `git commit -m "#today I worked on X  #next I will do Y"`
   > be sure to customize this message, do not copy and paste this line
 - `git push`
+- `remote`
 {{< /deliverables >}}
