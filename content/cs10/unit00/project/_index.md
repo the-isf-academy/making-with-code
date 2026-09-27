@@ -1,13 +1,13 @@
 ---
 Title: "Project"
-draft: true
+draft: false
 ---
 
 # Networking: Social Computing Project
 
 In this unit you will create the backend of a social computing app using SQL and Flask. 
 
-🎨 **The design prompt for this project is:** `A social computing API that invites fun, joyful social interaction.`
+🎨 **The design prompt for this project is:** `A social computing API that invites social interaction for your local community.`
 
 
 
