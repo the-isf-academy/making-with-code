@@ -70,18 +70,6 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 This mini lab is designed to be a pick and choose adventure for practice animating with `SuperTurtle`.
 
-{{< aside "Documentation" >}}  
-
-For lab, we recommend referencing the previous lab repository, `lab_superturtle`, and the offical documentation. 
-
-📖 **SuperTurtle Documentation:** [superturtle.readthedocs.io/en/latest/animation.html](https://superturtle.readthedocs.io/en/latest/animation.html)
-
-The offical documentation has a lot of information, so be sure to ask a teacher and experiment if you have any questions.
-
-{{< /aside >}}
-
-
----
 
 {{< code-action >}} **Let's start by running `animation_tree.py`**
 ```shell
