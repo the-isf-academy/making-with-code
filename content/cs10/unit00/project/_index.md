@@ -1,13 +1,13 @@
 ---
 Title: "Project"
-# draft: true
+draft: false
 ---
 
 # Networking: Social Computing Project
 
 In this unit you will create the backend of a social computing app using SQL and Flask. 
 
-🎨 **The design prompt for this project is:** `A social computing API that invites social interaction in your local community.`
+🎨 **The design prompt for this project is:** `A social computing API that invites social interaction for your local community.`
 
 
 
@@ -95,7 +95,7 @@ The `project_networking` repository containing the following:
 
 Successful computer scientists should be able to make the following claims:
 - I can thoughtfully plan a large computer science project prior to coding.  
-    - I can consider fun, joyful social interactions in the design of my database and API
+    - I can consider social interactions for my local community in the design of my database and API
     - I can consider the structure of my database and appropriate helper functions
     - I can design the API architecture with appropriate HTTP methods and payload
 - I can develop my project iteratively over time
@@ -104,19 +104,26 @@ Successful computer scientists should be able to make the following claims:
     - I can work on my project in small chunks
 - I can independently write database architecture
   - I can define the SQL table with appropriate data types and default values
-  - I can write abstract helper functions that execute SQL to interact with the database
-  - I can write abstract functions to interact with the database 
+  - I can write abstract helper functions that execute SQL to query and modify the database
   - I can write helper functions to format a row as JSON 
 - I can independently write API architecture
   - I can write HTTP requests endpoints with appropriate payload(s)
   - I can return descriptive and accurate JSON with appropriate HTTP status codes
   - I can return helpful error messages with appropriate HTTP status codes 
 - I can write code with readability in mind 
-  - I can use descriptive names for functions, variables, and endpoints 
+  - I can use descriptive names for functions, parameters, variables, routes, and payloads  
   - I can write comments to describe functions and complex pieces of the code
-  - I can write a `/help` endpoint that is clear enough for someone with no prior knowledge of my project to understand by providing the HTTP method, route name, and description
+  - I can write a `/help` endpoint that is clear enough for someone with no prior knowledge of my project to understand by providing the HTTP method, route name, payload, and description
 
 *Keep these success claims in mind when coding your project and assessing yourself.*
+
+### [AI Policy]
+
+- AI is not allowed to assist constructing code in this project. If AI is suspected, a teacher will meet one-on-one ask you to explain your work
+- AI is allowed for syntax or understanding packages (Flask)
+  - e.g. “how to split a string in a python” 
+  - e.g. “what are the status codes in flask http” 
+
 
 ---
 
@@ -139,16 +146,7 @@ Successful computer scientists should be able to make the following claims:
 
 You have 6 in-class work days. You may find it necessary to work outside of school, however if you are focused in class you can complete the project within the allotted blocks. Our office hours are Wednesdays during CCA in B403. 
 
-**The project is due on October 6th at the end of class.**
-
-<!-- | CS10.1 Dates | CS10.2 Dates | Agenda                         |
-|--------------|--------------|--------------------------------|
-| 27 Oct       | 28 Oct       | Project Planning |
-| 28 Oct       | 30 Oct       | Work Day                  |
-| 31 Oct       | 04 Nov       | Work Day  - Teacher Feedback        |
-| 06 Nov       | 06 Nov       | Work Day       |
-| 07 Nov       | 07 Nov       | Work Day - Peer Feedback           |
-| 10 Nov       | 11 Nov       | Due at End of Class            | -->
+**The project is due on October 6th, end of class Block 5.**
 
 ---
 
