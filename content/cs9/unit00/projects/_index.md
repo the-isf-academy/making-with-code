@@ -87,7 +87,7 @@ poetry install
 {{< aside "Animating with Superturtle" >}}  
 You will be using superturtle to create your animation. Check out the documetation for examples of how to use it!
 
-[📖 **Superturtle Animation**](https://superturtle.readthedocs.io/en/latest/animation.html) lets you:
+📖 **Superturtle Animation** lets you:
 
 - Rotate
 - Scale
@@ -95,7 +95,7 @@ You will be using superturtle to create your animation. Check out the documetati
 - Interpolate
 
 
-[📖 **Superturtle Movement**](https://superturtle.readthedocs.io/en/latest/movement.html) lets you:
+📖 **Superturtle Movement** lets you:
 - Fly
 - Update Position
 - *...and more...*
