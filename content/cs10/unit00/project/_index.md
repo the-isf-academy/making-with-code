@@ -158,5 +158,4 @@ You have 6 in-class work days. You may find it necessary to work outside of scho
 - `git commit -m "#today I worked on X  #next I will do Y"`
   > be sure to customize this message, do not copy and paste this line
 - `git push`
-- `remote`
 {{< /deliverables >}}
