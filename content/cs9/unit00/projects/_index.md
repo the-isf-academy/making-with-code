@@ -132,7 +132,47 @@ Successful computer scientists should be able to make the following claims:
 
 ---
 
+
+
 ## [3] Deliverables
+
+
+### 🗓️ Timeline
+
+You may find it necessary to work outside of school, however if you are focused in class you should be able to complete the project within the allotted blocks. Our office hours are Wednesday during CCA in B403. 
+
+
+{{< expand "CS9.1 Timeline" >}}
+
+
+| Week | Date | Task / Deliverable |
+| :--- | :--- | :--- |
+| **Week 9** | 02 Oct | Brainstorm & Planning Document |
+| | 23 Oct | Finish & Submit Planning Document |
+| **Week 10** | 02 Nov | Work on Modules |
+| | 06 Nov | Finish & Submit Modules |
+| **Week 12** | 09 Nov | Work on Animation |
+| | 12 Nov | Finish & Submit Animation |
+
+{{< /expand >}}
+
+
+{{< expand "CS9.2 Timeline" >}}
+
+
+| Week | Date | Task / Deliverable |
+| :--- | :--- | :--- |
+| **Week 9** | 05 Oct | Brainstorm & Planning Document |
+| | 06 Oct | Finish & Submit Planning Document |
+| **Week 10** | 20 Oct | Work on Modules |
+| | 22 Oct | Finish & Submit Modules |
+| **Week 12** | 03 Nov | Work on Animation |
+| | 05 Nov | Finish & Submit Animation |
+
+{{< /expand >}}
+
+
+
 
 {{< deliverables  "Your submit the following items:" >}}
 
@@ -142,14 +182,6 @@ Successful computer scientists should be able to make the following claims:
     - `project.py` When this program runs, it should draw your project.
     - `settings.py` This is where you settings for your animation should be stored.
     - At least one additional module (written by you)
-
----
-
-**🗓️ Timeline**
-- CS9.1 project due on 12 November 
-- CS9.2 project due on 05 November
-
-You may find it necessary to work outside of school, however if you are focused in class you should be able to complete the project within the allotted blocks. Our office hours are Wednesday during CCA in B403. 
 
 
  ---
