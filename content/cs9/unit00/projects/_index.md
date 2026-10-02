@@ -5,7 +5,7 @@ draft: true
 
 # Animation Project
 
-In this project you will make an animated drawing (or a GIF!) using Python's turtle library.
+In this project you will make an animated drawing using Python's Turtle library. It must be a self-repeating animation, like a GIF!
 
 It's up to you to make a drawing you actually care about making. Your teachers will help you choose a project that's a good level of challenge.
 
@@ -83,29 +83,6 @@ poetry install
 
 ---
 
-### Superturtle
-
-{{< aside "Animating with Superturtle" >}}  
-You will be using superturtle to create your animation. Check out the documetation for examples of how to use it!
-
-📖 **Superturtle Animation** lets you:
-
-- Rotate
-- Scale
-- Translate
-- Interpolate
-
-
-📖 **Superturtle Movement** lets you:
-- Fly
-- Update Position
-- *...and more...*
-
-Feel free to use **any** of the superturtle modules in your project!
-
-{{< /aside >}}
-
----
 
 ## [2] Criteria
 
@@ -141,24 +118,27 @@ Feel free to use **any** of the superturtle modules in your project!
 Successful computer scientists should be able to make the following claims:
 - I can thoughtfully plan a large computer science project.  
     - I can design my animation 
-    - I can consider the components of my project before coding
+    - I can consider the details of my modules, functions, and animation prior to coding
 - I can develop my project iteratively over time
     - I can track the development of my project by successfully committing to Github at least once per class work session
     - I can track my current progress and next steps by writing specific commit messages 
     - I can work on my project in small chunks
+    - I can complete each portion project plan by the corresponding deadline 
 - I can write code with readability in mind
-    - I can write readable code that another CS student could understand
     - I can use descriptive names for modules, functions, and variables
     - I can write descriptive comments to describe functions and complex pieces of the code
-- I can effectively use the principle of abstraction to make my code more efficient and elegant
-    - I can write a function with parameters that can be used in multiple situations 
-    - I can manipulate control flow with conditional statements, when appropriate 
+- I can write modules that effectively use the principles of abstraction and decomposition 
+    - I can write functions with parameters that can be used in multiple situations
     - I can use loops to repeat commands, when appropriate
+    - I can manipulate control flow with conditional statements, when appropriate 
+
+- I can construct an animation that effectively use the principles of abstraction and decomposition 
+    - I can effectively create a self-repeating animation by utilizing `superturtle`
     - I can include customize settings in `setting.py` that customize elements of the animation
-- I can effectively use the principle of decomposition to make my code more efficient and elegant
-    - I can breakdown my animation to appropriate modules
-    - I can breakdown my animation into appropriate functions  
-    - I can and functions to break down my animation into smaller pieces 
+    - I can breakdown my animation into appropriate sections
+    - I can use loops to repeat commands, when appropriate
+    - I can manipulate control flow with conditional statements, when appropriate 
+
 
 *Keep the success claims in mind when coding your project.*
 
@@ -173,7 +153,6 @@ Successful computer scientists should be able to make the following claims:
 - `project_animation` repository containing the following files:
     - `project.py` When this program runs, it should draw your project.
     - `settings.py` This is where you settings for your animation should be stored.
-    - `README.md` This is documentation for your project
     - At least one additional module (written by you)
 
 
