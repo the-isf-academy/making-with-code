@@ -147,7 +147,7 @@ Successful computer scientists should be able to make the following claims:
 
 **🗓️ Timeline**
 - CS9.1 project due on 12 November 
-- CS9.2 project due on 09 November
+- CS9.2 project due on 05 November
 
 You may find it necessary to work outside of school, however if you are focused in class you should be able to complete the project within the allotted blocks. Our office hours are Wednesday during CCA in B403. 
 
