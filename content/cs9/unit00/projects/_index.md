@@ -1,6 +1,6 @@
 ---
 Title: Project
-draft: true
+# draft: true
 ---
 
 # Animation Project
@@ -87,20 +87,12 @@ poetry install
 ## [2] Criteria
 
 
-
-{{< columns >}}
-
-{{< figure src="images/courses/cs9/unit00/00_project_2023_alex.gif" width="75%" title="by Alex" >}}
-<--->
-{{< figure src="images/courses/cs9/unit00/00_project_2022_brandon.gif" width="75%" title="by Brandon" >}}
-{{< /columns >}}
-
 **This project will be assessed on the following criteria:**
 - project planning
 - iterative development
 - readability
-- abstraction
-- decomposition
+- modules
+- animation
 
 **For each criteria you will be assessed on a score from 0-3:**
 - 0 - no evidence of the criteria
@@ -108,7 +100,7 @@ poetry install
 - 2 - satisfactory evidence of the criteria
 - 3 - substantial evidence of the criteria
 
-*To do well in this project, you should be able to concretely demonstrate that you can successfully do each practice*
+*To do well in this project, you should be able to concretely demonstrate that you can successfully do each demonstrate each criteria. Substantial evidence requires you to extend beyond the work in the lab.*
 
 ---
 
@@ -117,8 +109,7 @@ poetry install
 
 Successful computer scientists should be able to make the following claims:
 - I can thoughtfully plan a large computer science project.  
-    - I can design my animation 
-    - I can consider the details of my modules, functions, and animation prior to coding
+    - I can design the details of my modules, functions, and animation prior to coding
 - I can develop my project iteratively over time
     - I can track the development of my project by successfully committing to Github at least once per class work session
     - I can track my current progress and next steps by writing specific commit messages 
@@ -135,12 +126,9 @@ Successful computer scientists should be able to make the following claims:
 - I can construct an animation that effectively use the principles of abstraction and decomposition 
     - I can effectively create a self-repeating animation by utilizing `superturtle`
     - I can include customize settings in `setting.py` that customize elements of the animation
-    - I can breakdown my animation into appropriate sections
     - I can use loops to repeat commands, when appropriate
     - I can manipulate control flow with conditional statements, when appropriate 
 
-
-*Keep the success claims in mind when coding your project.*
 
 ---
 
@@ -155,10 +143,13 @@ Successful computer scientists should be able to make the following claims:
     - `settings.py` This is where you settings for your animation should be stored.
     - At least one additional module (written by you)
 
+---
 
-**🗓️ Timeline [Due: 12 November]**
+**🗓️ Timeline**
+- CS9.1 project due on 12 November 
+- CS9.2 project due on 09 November
 
-You have 5 in-class work days. You may find it necessary to work outside of school, however if you are focused in class you can complete the project within the allotted blocks. Our office hours are Wednesday during CCA in B403. 
+You may find it necessary to work outside of school, however if you are focused in class you should be able to complete the project within the allotted blocks. Our office hours are Wednesday during CCA in B403. 
 
 
  ---
@@ -171,6 +162,8 @@ You have 5 in-class work days. You may find it necessary to work outside of scho
 - `git commit -m "#today what I worked on today #next what I will work on next class"`
   > be sure to customize this message, do not copy and paste this line
 - `git push`
+- `remote` 
+    - check your work is updated on Github
 {{< /deliverables >}}
 
 
@@ -211,3 +204,11 @@ You have 5 in-class work days. You may find it necessary to work outside of scho
 
 
 
+
+
+{{< columns >}}
+
+{{< figure src="images/courses/cs9/unit00/00_project_2023_alex.gif" width="75%" title="by Alex" >}}
+<--->
+{{< figure src="images/courses/cs9/unit00/00_project_2022_brandon.gif" width="75%" title="by Brandon" >}}
+{{< /columns >}}
