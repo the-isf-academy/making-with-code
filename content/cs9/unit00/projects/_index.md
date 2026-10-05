@@ -9,15 +9,7 @@ In this project you will make an animated drawing using Python's Turtle library.
 
 It's up to you to make a drawing you actually care about making. Your teachers will help you choose a project that's a good level of challenge.
 
-Here are a few examples from last year to get you started. 
-
-{{< columns >}}
-
-{{< figure src="images/courses/cs9/unit00/00_project_2022_alden.gif" width="75%" title="by Alden" >}}
-<--->
-{{< figure src="images/courses/cs9/unit00/00_project_2023_claire.gif" width="75%" title="by Claire" >}}
-{{< /columns >}}
-
+{{< figure src="images/courses/cs9/unit00/00_project_2023_claire.gif" width="50%" title="by Claire" >}}
 
 
 
@@ -114,7 +106,8 @@ Successful computer scientists should be able to make the following claims:
     - I can track the development of my project by successfully committing to Github at least once per class work session
     - I can track my current progress and next steps by writing specific commit messages 
     - I can work on my project in small chunks
-    - I can complete each portion project plan by the corresponding deadline 
+    - I can complete each portion of the project by the corresponding deadline 
+    - I can cite external sources
 - I can write code with readability in mind
     - I can use descriptive names for modules, functions, and variables
     - I can write descriptive comments to describe functions and complex pieces of the code
@@ -122,7 +115,6 @@ Successful computer scientists should be able to make the following claims:
     - I can write functions with parameters that can be used in multiple situations
     - I can use loops to repeat commands, when appropriate
     - I can manipulate control flow with conditional statements, when appropriate 
-
 - I can construct an animation that effectively use the principles of abstraction and decomposition 
     - I can effectively create a self-repeating animation by utilizing `superturtle`
     - I can include customize settings in `setting.py` that customize elements of the animation
@@ -132,7 +124,15 @@ Successful computer scientists should be able to make the following claims:
 
 ---
 
+### AI Policy
+- AI is NOT allowed to assist generating code in this project. If AI is suspected, a teacher will meet one-on-one ask you to explain your work
+- You cannot use AI Overview, must find actual source 
+- Any excessive referencing will not be counted as your work 
+- You must cite all sources, except sources we’ve given you (website, labs) 
+Source examples: geeksforgeeks, stackoverflow, Turtle documentation
 
+
+---
 
 ## [3] Deliverables
 
@@ -207,7 +207,10 @@ You may find it necessary to work outside of school, however if you are focused 
 
 {{< figure src="images/courses/cs9/unit00/00_project_2023_owen.gif" width="75%" title="by Owen" >}}
 <--->
-{{< figure src="images/courses/cs9/unit00/00_project_2023_kelley.gif" width="75%" title="by Kelley" >}}
+
+{{< figure src="images/courses/cs9/unit00/00_project_2024_brandon.gif" width="75%" title="by Brandon" >}}
+
+
 {{< /columns >}}
 
 {{< columns >}}
@@ -231,16 +234,17 @@ You may find it necessary to work outside of school, however if you are focused 
 
 {{< figure src="images/courses/cs9/unit00/00_project_2020_eric.gif" width="75%" title="by Eric" >}}
 <--->
-{{< figure src="images/courses/cs9/unit00/00_project_2020_austin.gif" width="75%" title="by Austin" >}}
+{{< figure src="images/courses/cs9/unit00/00_project_2022_alden.gif" width="75%" title="by Alden" >}}
 {{< /columns >}}
 
 
 
-
+<!-- 
 
 {{< columns >}}
 
 {{< figure src="images/courses/cs9/unit00/00_project_2023_alex.gif" width="75%" title="by Alex" >}}
 <--->
 {{< figure src="images/courses/cs9/unit00/00_project_2022_brandon.gif" width="75%" title="by Brandon" >}}
-{{< /columns >}}
+{{< /columns >}} -->
+
