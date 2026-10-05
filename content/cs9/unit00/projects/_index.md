@@ -148,11 +148,11 @@ You may find it necessary to work outside of school, however if you are focused 
 
 | Week | Date | Task / Deliverable |
 | :--- | :--- | :--- |
-| **Week 9** | 02 Oct | Brainstorm & Planning Document |
-| | 23 Oct | Finish & Submit Planning Document |
-| **Week 10** | 02 Nov | Work on Modules |
+| **Week 9** | 05 Oct | Brainstorm & Planning Document |
+| **Week 10**  | 23 Oct | Finish & Submit Planning Document |
+| **Week 12** | 02 Nov | Work on Modules |
 | | 06 Nov | Finish & Submit Modules |
-| **Week 12** | 09 Nov | Work on Animation |
+| **Week 13** | 09 Nov | Work on Animation |
 | | 12 Nov | Finish & Submit Animation |
 
 {{< /expand >}}
