@@ -8,7 +8,7 @@ weight: 10
 
 In this lab, you will start learning to write `HTML` code! HTML defines the content and the structural elements of a web site.
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png" width="15%" >}}
+{{< figure src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" width="15%" >}}
 
 
 ---
