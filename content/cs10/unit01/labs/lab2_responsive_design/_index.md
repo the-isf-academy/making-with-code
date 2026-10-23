@@ -1,7 +1,7 @@
 ---
 title: "2: Responsive Design"
 weight: 10
-# draft: true
+draft: true
 ---
 
 # Responsive Design 
