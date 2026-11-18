@@ -95,7 +95,7 @@ code .
 
 ### A Few Helpful Functions
 
-- 🌈 Explore color options [here](https://trinket.io/docs/colors)
+- 🌈 Explore color options [here](https://coddy.tech/tools/color-converter#named-colors)
 
 | Function |       Input      |   Example Use  | Explanation                                                                                                                      |
 |:--------:|:----------------:|:--------------:|----------------------------------------------------------------------------------------------------------------------------------|
@@ -103,7 +103,7 @@ code .
 | backward |      amount      |  `backward(100)` | Moves the turtle backward by the specified amount                                                                                |
 |   right  | angle in degrees |    `right(45)`   | Turns the turtle clockwise by the specified angle                                                                                |
 |   left   | angle in degress |    `left(45)`    | Turns the turtle counter clockwise by the specified angle                                                                        |
-|   color  |     colorname    |  `color('red') ` | Sets the color for drawing. Use "red", "black", etc.  [Here's a list of all the colors](https://trinket.io/docs/colors).                                           |
+|   color  |     colorname    |  `color('red') ` | Sets the color for drawing. Use "red", "black", etc.  [Here's a list of all the colors](https://coddy.tech/tools/color-converter#named-colors).                                           |
 |   speed  | number from 0-10 |    `speed(0)`    | Determines the speed at which the turtle moves around the window. 1 for slowest, 3 for normal speed, 10 for fast, 0 for fastest. |
 |  pendown |       None       |    `pendown()`   | Puts down the turtle/pen so that it draws when it moves                                                                          |
 |   penup  |       None       |    ` penup()`    | Picks up the turtle/pen so that it doesn’t draw when it moves                                                                    |

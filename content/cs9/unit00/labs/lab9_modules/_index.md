@@ -210,7 +210,7 @@ python fancy_drawing_example.py
 
 {{< figure src="images/courses/cs9/unit00/lab_09_modules_example.png" width="50%" >}}
 
-{{< look-action >}} Explore more color options [HERE](https://trinket.io/docs/colors)
+{{< look-action >}} Explore more color options [HERE](https://coddy.tech/tools/color-converter#named-colors)
 
 ---
 
